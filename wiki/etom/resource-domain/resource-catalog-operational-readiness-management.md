@@ -25,6 +25,34 @@ These business activities implement the Resource Catalog through Release and Dep
 
 — GB921 v25.5 Excel master, process ID `1.5.16`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.5.16.1 Release Resource Catalog
+
+**Extended Description.**
+
+Release Resource Catalog business activity ensure all cross-functional activities needed to support catalog maintenance and operations, such as training and updating the support of the catalog are in place.
+
+Release Resource Catalog business activity includes identifying stakeholders, catalog integration, catalog federation etc. for any scenario in support of the organizations business goals, including Release conditions that support users, customers and business partners.
+
+**L4 sub-processes:**
+
+- **1.5.16.1.1** Plan & Schedule Resource Catalog Release — Plan & Schedule Resource Catalog Release business activity is used to handle the release plan for the Resource Catalog.
+- **1.5.16.1.2** Control Resource Catalog Release — Control Resource Catalog Release business activity is used to support the various catalog release tasks.
+- **1.5.16.1.3** Test Resource Catalog — Test Resource Catalog business activity is used to establish the quality, reliability and performance requirement of the catalog according to the Resource management needs.
+
+### 1.5.16.2 Deploy Resource Catalog
+
+**Extended Description.**
+
+Deploy Resource Catalog business activity manage the availability and use of the Resource catalog in operations.
+
+Deploy Resource Catalog business activity includes identifying stakeholders, creating catalog category hierarchies, catalog integration, and catalog federation for any scenario, such as with business partners and between business functions.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

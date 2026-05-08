@@ -26,6 +26,32 @@ These processes are often handled by appropriate network elements.
 
 — GB921 v25.5 Excel master, process ID `1.5.10`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.5.10.1 Mediate Resource Usage Records
+
+**Extended Description.**
+
+The purpose of the Mediate Usage Records processes is to validate, normalize, convert and correlate usage records collected from various pieces of equipment in the network. It also removes any duplicate usage records that have already been processed.
+
+**L4 sub-processes:**
+
+- **1.5.10.1.1** Validate Resource Usage Records — Validate resource usage record collected from the network.
+- **1.5.10.1.2** Normalize Resource Usage Records — Normalize resource usage records to specific expression format.
+- **1.5.10.1.3** Convert Resource Usage Records — Convert resource usage records to specific data format.
+- **1.5.10.1.4** Correlate Resource Usage Records — Correlate collected resource usage records.
+- **1.5.10.1.5** Remove Duplicate Resource Usage Records — Remove duplicate resource usage records.
+
+### 1.5.10.2 Report Resource Usage Records
+
+**Extended Description.**
+
+The purpose of the Report Resource Usage Records is to generate reports on usage records based on requests from other processes. These processes produce reports that may identify abnormalities, which may be caused by fraudulent activity or related to customer complaints or network problems.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

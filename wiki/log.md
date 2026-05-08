@@ -1072,3 +1072,47 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
       was source-only. Anatomy unchanged — `## L3 Process Details` is an
       additional H2 between Overview and L3 Processes; the linter accepts
       arbitrary H2s between required ones in their original order.
+
+---
+
+## 2026-05-09T09:30Z — RESOURCE DOMAIN DEEPEN (9 L2 pages, TODO #2 continued)
+
+- **File(s):** `raw/tmf/etom/GB921_Business_Process_Framework_Processes_Excel_v25.5.xlsx`
+  (read directly via openpyxl; same approach as Service Domain deepen)
+- **Pages created/updated:**
+    - 9 in-scope Resource Domain L2 pages — added `## L3 Process Details`
+      section between `## Overview` and `## L3 Processes`:
+        - resource-support-management (1.5.4) — 8 L3s
+        - resource-order-management (1.5.5) — 8 L3s
+        - resource-data-management (1.5.7) — 7 L3s
+        - resource-trouble-management (1.5.8) — 7 L3s
+        - resource-performance-management (1.5.9) — 7 L3s
+        - resource-mediation-and-reporting (1.5.10) — 2 L3s
+        - resource-catalog-operational-readiness-management (1.5.16) — 2 L3s
+        - resource-catalog-content-management (1.5.17) — 4 L3s
+        - resource-anomaly-management (1.5.21) — 5 L3s
+- **Sections skipped (out of scope):** none — Resource Domain in-scope L2s
+  all covered
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved
+  by this entry)
+- **Open questions filed:** none
+- **Notes:**
+    - **Same pattern as Service Domain (2026-05-09T09:00Z).** Direct read
+      from the .xlsx via openpyxl, formatted into a per-L3 section with
+      Extended Description + L4 listings, inserted between Overview and L3
+      Processes. Linter anatomy passes (arbitrary H2s allowed between
+      required ones in original order).
+    - **50 L3s total now have full Extended Descriptions and L4 sub-process
+      listings** in the Resource Domain. Combined with Service Domain (39 L3s
+      from prior deepen), 89 L3 process bodies are now wiki-readable across
+      the two domains.
+    - **Resource Support Management (1.5.4) is the largest at 401 lines.**
+      It has 8 L3s including Enable Resource Provisioning, which itself
+      carries the substantial L4 hierarchy that absorbed R20.5 1.5.6
+      Resource Provisioning (per OQ-040 Production sweep cross-walk).
+    - **Resource Order Management (1.5.5) at 171 lines, 8 L3s.** This is
+      the v25.5 ID that R20.5 used for Workforce Management — entirely
+      different process. The L3s here are about resource order capture,
+      scheduling, fulfilment.
+    - **Next domain target:** Product Domain (12 in-scope L2s). Same script
+      pattern; expected ~50–100 L3s based on Product Domain breadth.

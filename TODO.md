@@ -94,7 +94,8 @@ extract truncates long cells).
 
 - ✅ **Service Domain (8 L2s)** — done 2026-05-09T09:00Z. 6+5+5+5+4+3+6+5 =
   39 L3s with Extended Descriptions and L4 listings now in the wiki.
-- ⬜ **Resource Domain (9 L2s)** — same approach pending.
+- ✅ **Resource Domain (9 L2s)** — done 2026-05-09T09:30Z. 8+8+7+7+7+2+2+4+5
+  = 50 L3s with Extended Descriptions and L4 listings.
 - ⬜ **Product Domain (12 L2s)** — same approach pending.
 
 The v24.0/v24.0 Service/Resource/Product Decomposition PDFs remain in
