@@ -1,8 +1,8 @@
 # AGENTS.md — Orientation for AI Agents Resuming Work
 
 You are continuing an in-progress project. The v1 corpus is built and committed.
-This file orients you. Read it fully, then `tmf-kb/CLAUDE.md` (the binding
-constitution), then check `tmf-kb/wiki/log.md` (event history) before acting.
+This file orients you. Read it fully, then `CLAUDE.md` (the binding
+constitution), then check `wiki/log.md` (event history) before acting.
 
 For the **outstanding task list**, see `TODO.md`.
 For **human-facing project context**, see `README.md`.
@@ -17,22 +17,22 @@ represented: process (eTOM), data (SID), component (ODA), with foundational conc
 above. The corpus is built; v1 ingests are complete; remaining work is depth and
 sweep, not new structure. The user cannot share company data with cloud LLMs, so the
 corpus serves as a self-contained reference they consult during their own analytical
-work — `tmf-kb/project/` is therefore a permanent security boundary and is empty by
+work — `project/` is therefore a permanent security boundary and is empty by
 design.
 
 ## First three things to do in a new session
 
-1. **Read `tmf-kb/CLAUDE.md` in full.** It is the constitution — verbatim discipline,
+1. **Read `CLAUDE.md` in full.** It is the constitution — verbatim discipline,
    training-data prohibition, page-type anatomies, ingest workflow, lint rules,
    forbidden actions. It overrides default Claude behaviour wherever it speaks.
-2. **Read `tmf-kb/wiki/log.md`** end-to-end. It is the append-only audit trail of
+2. **Read `wiki/log.md`** end-to-end. It is the append-only audit trail of
    every ingest event, every schema decision, every deferral. It tells you exactly
    where you left off. The most recent entry is the v1 completion summary.
-3. **Run the linter:** `cd tmf-kb && python3 lint/lint.py`. Should print
+3. **Run the linter:** `python3 lint/lint.py`. Should print
    `PASS — 117 page(s) checked, 0 findings.` If it doesn't, something has drifted
    since the v1 commit and that is your first task.
 
-After those three, read `tmf-kb/wiki/open-questions.md` for the 39 OQs filed during
+After those three, read `wiki/open-questions.md` for the 39 OQs filed during
 v1 — many are deferral markers that point at items in `TODO.md`.
 
 ## Current state (v1 complete, committed)
@@ -69,23 +69,23 @@ The settled workflow:
 6. **Update** `wiki/index.md`, the relevant `_index.md`, append to `wiki/log.md`.
 7. **Lint** — `python3 lint/lint.py` must PASS before declaring complete.
 
-Worked examples: the v1 log entries in `tmf-kb/wiki/log.md` are documented ingest
+Worked examples: the v1 log entries in `wiki/log.md` are documented ingest
 events. The Python scripts I used to generate eTOM L2 pages from Excel are not
 preserved as files (one-off generation), but the pattern is straightforward to
 reproduce from the log entries' notes.
 
 ## What you must not do
 
-The constitution in `tmf-kb/CLAUDE.md` is binding. The non-negotiable items, in
+The constitution in `CLAUDE.md` is binding. The non-negotiable items, in
 priority of severity:
 
 1. **No training-data recall for TMF facts.** If a fact isn't in `raw/` or `wiki/`,
    it doesn't exist for this project. Say "not in corpus", file an OQ. This rule is
    the entire reason the corpus exists; violating it once corrupts the trust model.
-2. **Never read or write `tmf-kb/project/`.** It is a security boundary, not a
+2. **Never read or write `project/`.** It is a security boundary, not a
    deferral. Reading `project/` would put company data in the LLM context, which
    the user has explicitly disallowed. CLAUDE.md §10.4.
-3. **Don't modify `tmf-kb/raw/`.** The only legitimate write target inside `raw/`
+3. **Don't modify `raw/`.** The only legitimate write target inside `raw/`
    is `raw/extracted/`. PDFs are immutable.
 4. **Don't paraphrase canonical names, IDs, enums, attributes.** Verbatim or open
    question. Even obvious-looking smoothing corrupts the corpus.
@@ -115,17 +115,17 @@ priority of severity:
 
 ## File map (quick reference)
 
-- `tmf-kb/CLAUDE.md` — the constitution. Read it first.
-- `tmf-kb/wiki/index.md` — top-level catalogue by category.
-- `tmf-kb/wiki/log.md` — append-only event history. Last entry tells you where you are.
-- `tmf-kb/wiki/open-questions.md` — 39 OQs.
-- `tmf-kb/templates/` — page templates (etom-l2, sid-abe, oda-component, foundation, view).
-- `tmf-kb/lint/lint.py` — deterministic linter. Run before declaring any ingest complete.
-- `tmf-kb/lint/lint_checks.md` — lint rules in prose.
-- `tmf-kb/raw/tmf/` — source PDFs and Excel (immutable). Do not modify.
-- `tmf-kb/raw/extracted/` — markdown working copies (regenerable).
-- `tmf-kb/wiki/{etom,sid,oda,foundations,views}/` — the corpus content.
-- `tmf-kb/project/` — DO NOT TOUCH. Security boundary.
+- `CLAUDE.md` — the constitution. Read it first.
+- `wiki/index.md` — top-level catalogue by category.
+- `wiki/log.md` — append-only event history. Last entry tells you where you are.
+- `wiki/open-questions.md` — 39 OQs.
+- `templates/` — page templates (etom-l2, sid-abe, oda-component, foundation, view).
+- `lint/lint.py` — deterministic linter. Run before declaring any ingest complete.
+- `lint/lint_checks.md` — lint rules in prose.
+- `raw/tmf/` — source PDFs and Excel (immutable). Do not modify.
+- `raw/extracted/` — markdown working copies (regenerable).
+- `wiki/{etom,sid,oda,foundations,views}/` — the corpus content.
+- `project/` — DO NOT TOUCH. Security boundary.
 
 ## Tooling already installed
 

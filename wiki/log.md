@@ -500,3 +500,23 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     2. GB921 Decomposition PDFs — narrative depth for eTOM L2s
     3. SID BE-level attribute tables (per OQ-009)
     4. User-decision OQs to revisit: OQ-013, OQ-021, OQ-024+OQ-031, OQ-030
+
+---
+
+## 2026-05-08 — RESTRUCTURE (corpus flattened to repo root)
+
+- **Action:** Moved corpus contents from `tmf-kb/` subdirectory up one level to
+  the repo root. The nested `tmf-kb/` folder is removed.
+- **Pages affected:** 0 (path changes are at the repo-structure level, not within
+  the wiki). Wikilinks (`[[wiki/...]]`) continue to resolve because they were
+  always relative to the wiki root, which is unchanged.
+- **Lint result:** PASS — 117 pages, 0 findings (verified at the new project root).
+- **Notes:**
+    - Top-level docs (`README.md`, `AGENTS.md`, `TODO.md`) updated to remove
+      `tmf-kb/` path prefixes. README expanded with full ingest process.
+    - Linter (`lint/lint.py`) unchanged — `REPO_ROOT = Path(__file__).parent.parent`
+      still resolves correctly to the new project root.
+    - All `source_paths` and `source_extract_paths` in frontmatter remain valid
+      because they were stored relative to the wiki root.
+    - `cd tmf-kb && ...` invocations in docs simplified to direct execution at
+      project root.

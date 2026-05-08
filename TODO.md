@@ -5,9 +5,9 @@ The v1 corpus is complete. This file tracks remaining work.
 **Before picking up any task here:**
 
 1. Read `AGENTS.md` for orientation (current state, working style, ingest workflow)
-2. Read `tmf-kb/CLAUDE.md` for binding discipline rules
-3. Read `tmf-kb/wiki/log.md` for ingest worked examples
-4. Run `cd tmf-kb && python3 lint/lint.py` — must pass before any new work
+2. Read `CLAUDE.md` for binding discipline rules
+3. Read `wiki/log.md` for ingest worked examples
+4. Run `python3 lint/lint.py` — must pass before any new work
 
 The user picks priorities. The order below is recommended, not strict.
 
@@ -44,7 +44,7 @@ focused batches per ODA block.
 
 ## 2. GB921 Decomposition PDFs (eTOM narrative depth)
 
-**Why:** Three PDFs in `tmf-kb/raw/tmf/etom/` cover Service (217 pp), Resource
+**Why:** Three PDFs in `raw/tmf/etom/` cover Service (217 pp), Resource
 (305 pp), Product (304 pp). Current eTOM L2 pages are overview-level from the
 Excel master — verbatim IDs, names, Extended Descriptions, and L3 listings. The
 PDFs add narrative prose, diagrams, and inter-process relationships. **OQ-035** is
@@ -126,9 +126,9 @@ OQs" session unless the user asks.
 ## How to mark something done
 
 - File any new OQs raised during the work
-- Append a log entry in `tmf-kb/wiki/log.md` per the format defined in
+- Append a log entry in `wiki/log.md` per the format defined in
   CLAUDE.md §9
-- Run `python3 tmf-kb/lint/lint.py` — must pass
+- Run `python3 lint/lint.py` — must pass
 - Commit with a descriptive message; end with the standard
   `Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>` line per
   the session's git convention
