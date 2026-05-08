@@ -1,217 +1,178 @@
-# TMF Knowledge Base — Working Context
+# TMF Knowledge Base — Resume Working Context
 
-You are continuing work on a TMF Knowledge Base project. This document is the
-complete handoff. Read it fully before acting.
+You are continuing an in-progress project. The v1 corpus is built and committed.
+This document tells you how to resume cleanly. Read it fully before acting.
 
-## Goal
+## In one paragraph
 
-Build a TMF authoritative knowledge base in markdown, viewable in Obsidian,
-that serves as the *only* permitted source of TMF knowledge for this project.
-Training-data recall of TMF material is forbidden; if a fact is not in the
-wiki, it does not exist for project purposes. Uncertainty surfaces as
-explicit open questions, never as inferred answers.
+This project is a TMF authoritative knowledge base in markdown, viewable in Obsidian.
+It serves the user's mapping goal: current-state monolithic OSS → TMF target state
+organised on the **PSR (Product, Service, Resource) modelling principle**, with
+explicit production-vs-commercial separation. Three architectural layers are
+represented: process (eTOM), data (SID), component (ODA), with foundational concepts
+above. The corpus is built; v1 ingests are complete; the remaining work is depth and
+sweep, not new structure. The user cannot share company data with cloud LLMs, so the
+corpus serves as a self-contained reference they consult during their own analytical
+work — `project/` is therefore a permanent security boundary and is empty by design.
 
-A future phase (deliberately deferred) will add a project layer for
-current-state team/process mapping. For v1 we are building only the TMF
-authoritative corpus and the schema (CLAUDE.md) that governs it.
+## First three things to do in a new session
 
-## Pattern
+1. **Read `tmf-kb/CLAUDE.md` in full.** It is the constitution — verbatim discipline,
+   training-data prohibition, page-type anatomies, ingest workflow, lint rules,
+   forbidden actions. It overrides default Claude behaviour wherever it speaks.
+2. **Read `tmf-kb/wiki/log.md`** end-to-end. It is the append-only audit trail of
+   every ingest event, every schema decision, every deferral. It tells you exactly
+   where you left off. The most recent entry is the v1 completion summary.
+3. **Run the linter:** `cd tmf-kb && python3 lint/lint.py`. Should print
+   `PASS — 117 page(s) checked, 0 findings.` If it doesn't, something has drifted
+   since the v1 commit and that is your first task.
 
-The project follows Karpathy's "LLM Wiki" pattern (April 2026 gist) with
-adaptations for normative — not descriptive — corpus discipline:
+After those three, read `tmf-kb/wiki/open-questions.md` for the 39 OQs filed during
+v1 — many of them are deferral markers that point at the deferred-work items below.
 
-- Three layers: raw sources (immutable), wiki (LLM-maintained markdown),
-  schema (CLAUDE.md, the constitution).
-- Operations: ingest, query, lint.
-- Obsidian as the IDE; Claude Code as the maintainer.
+## Current state (v1 complete, committed)
 
-Adaptations from Karpathy's pattern, because TMF is a normative corpus:
+- 117 wiki pages, lint clean
+- 7 foundation pages from GB991
+- 56 SID ABE pages from GB922 (4 categories: Product, Service, Resource, Common)
+- 29 eTOM L2 pages from GB921 Excel master (3 domains × OFAB verticals)
+- 6 ODA Functional Block pages from GB1022 + IG1167 summary in `wiki/oda/_index.md`
+- 39 open questions filed (`wiki/open-questions.md`)
+- Initial trilateral sweep done — 16 eTOM/SID pages have reciprocal ODA back-links
+- Git committed at `/Users/adam/projects/tmf-kd/` (commit `fdf60b0`)
 
-1. Distillation preserves TMF terminology *exactly*. No paraphrasing of
-   canonical resource names, no smoothing of ambiguity, no inferring intent.
-2. Training-data contamination is explicitly forbidden. The schema must
-   make this uncompromising.
-3. Ambiguities surface to `wiki/open-questions.md` rather than being
-   resolved by the LLM.
-4. A deterministic linter enforces page-type anatomy and link integrity.
+The corpus is **structurally complete and analytically usable**. The user can already
+do meaningful PSR mapping work navigating the wiki in Obsidian.
 
-## Scope
+## Outstanding work, in priority order
 
-eTOM Service & Resource domains. Strategy/Infrastructure/Product Lifecycle
-Management is out of scope. Operations, Fulfilment, Assurance, Billing
-verticals are in scope where they touch Service or Resource domains.
+The user picks priorities. These are the natural follow-ups, ranked by my reading of
+their value:
 
-In-scope L2 process groups:
-- Service Configuration & Activation
-- Service Problem Management
-- Service Quality Management
-- Service Guiding & Mediation
-- Resource Provisioning
-- Resource Trouble Management
-- Resource Performance Management
-- Resource Mediation & Reporting
-- Resource Data Collection & Distribution
+### 1. Full eTOM↔SID↔ODA trilateral sweep
+GB1022 §4.3.3, §4.4.3, §4.5.2, §4.6.2 contain mapping tables that connect the 6 ODA
+Functional Blocks to many eTOM L2 processes and SID ABEs. Most of those mappings are
+not yet wikilinked because they reference R20.5 IDs (see OQ-037), and resolving them
+to v25.x equivalents requires careful per-mapping judgement. The 16 already-linked
+reciprocals show the pattern: each forward link from an ODA block needs a reciprocal
+back-link on the target SID/eTOM page. The linter enforces bidirectional consistency.
 
-In-scope APIs: TMF638, TMF639, TMF641, TMF645, TMF633, TMF634, plus TMF630
-as cross-cutting design conventions.
+**Approach when you do this:** read each ODA block's GB1022 mapping tables, resolve
+where unambiguous (e.g. "Customer Order Processing Management" → 1.3.3 in v25.5),
+file open questions where uncertain (e.g. R20.5 process moved to a different domain
+in v25.5). Don't infer; cite the source mapping.
 
-## Repository structure
-tmf-kb/
-├── CLAUDE.md                    # Schema — the constitution (write first)
-├── raw/
-│   ├── tmf/                     # TMF specs (user will populate)
-│   │   ├── etom/
-│   │   ├── sid/
-│   │   └── apis/
-│   └── tmf-adjacent/            # MEF, ODA, etc. — secondary authority
-├── wiki/
-│   ├── index.md                 # Catalog, categorised
-│   ├── log.md                   # Append-only ingest/lint log
-│   ├── etom/
-│   │   ├── service-domain/
-│   │   ├── resource-domain/
-│   │   └── _index.md
-│   ├── sid/
-│   │   ├── service-abe.md
-│   │   ├── resource-abe.md
-│   │   ├── common-abe.md
-│   │   └── _index.md
-│   ├── apis/
-│   │   ├── tmf630-design-guidelines.md
-│   │   ├── tmf633-service-catalog.md
-│   │   ├── tmf634-resource-catalog.md
-│   │   ├── tmf638-service-inventory.md
-│   │   ├── tmf639-resource-inventory.md
-│   │   ├── tmf641-service-ordering.md
-│   │   ├── tmf645-service-qualification.md
-│   │   └── _index.md
-│   ├── views/                   # Practitioner cross-cuts (e.g.
-│   │   │                          service-activation-end-to-end.md).
-│   │   │                          Derivative; cite, don't authorise.
-│   │   └── _index.md
-│   └── open-questions.md        # Ambiguities escalated to user
-├── lint/
-│   ├── lint.py
-│   └── lint_checks.md
-└── project/                     # Empty for v1. Reserved.
-## Versioning policy
+### 2. GB921 Decomposition PDFs (eTOM narrative depth)
+Three PDFs in `raw/tmf/etom/` cover Service (217pp), Resource (305pp), Product
+(304pp). Current eTOM L2 pages are overview-level from the Excel master — verbatim
+IDs, names, Extended Descriptions, and L3 listings. The PDFs add narrative prose,
+diagrams, and inter-process relationships. OQ-035 is the placeholder for this.
 
-- Single version per spec, recorded in frontmatter (spec ID, version,
-  retrieval date).
-- eTOM: latest available version.
-- SID and APIs: latest generally-available versions (not pre-release).
-- eTOM/SID/API version mismatches are expected and acceptable; record them
-  honestly. Where an older API references obsolete eTOM process IDs,
-  resolve to current in the wiki and note the original reference. Do not
-  paper over mismatches — file as open questions if material.
+**Approach:** one ingest event per PDF. For each in-scope L2, append a "## Detailed
+Description" or similar section to the existing L2 page with verbatim prose from the
+PDF. Don't restructure the existing page; add depth alongside.
 
-## Authority tiers
+### 3. SID BE-level attribute detail (OQ-009)
+v1 ingest captured ABE-level overviews. Many ABEs have rich attribute tables and BE
+definitions in source not yet in the wiki. Specific OQs flag the largest gaps:
+OQ-016 (Calendar), OQ-017 (Location), OQ-018 (Root Business Entities, 131pp),
+OQ-019 (Metric, 110pp), OQ-020 (Project, 170pp), OQ-029 (Resource Computing &
+Software addendum). Deepen specific ABEs as the user's mapping work demands them.
 
-- `raw/tmf/` — primary authority. Wiki claims must cite a file here.
-- `raw/tmf-adjacent/` — secondary authority (MEF, ODA, etc.). Cited
-  differently; pages clearly marked as adjacent. Empty initially; user
-  will populate as needed.
+### 4. User-decision OQs (worth revisiting when user has bandwidth)
+- **OQ-013** — Strategic Product Portfolio Plan ABE: keep, flag, or remove? (sits
+  in Strategy-to-Readiness lifecycle area; partially out of scope per CLAUDE.md §3)
+- **OQ-021** — Project ABE relevance to OSS mapping
+- **OQ-024 + OQ-031** — Service Problem and Resource Trouble both
+  «notFullyDeveloped» in source. Partial blocker for production-side fault mapping
+  work; may need supplementation from other TMF documents
+- **OQ-030** — Stock Item ABE supply-chain relevance to typical OSS monolith
 
-## Trilateral linking discipline
+Don't make these decisions yourself; surface them when relevant.
 
-Every API wiki page must link to:
-- The eTOM L2/L3 processes it supports
-- The SID ABE entities it exposes
+## How to ingest more material (if user adds source files)
 
-Every eTOM L2 wiki page must link to:
-- The SID entities its processes manipulate
-- The APIs that realise its processes
+The settled workflow:
 
-Every SID ABE page must link to:
-- The APIs that expose it
-- The eTOM processes that manipulate it
+1. **Verify source** — confirm in scope per CLAUDE.md §3, GA status from PDF metadata
+   ("Release Status: Production"). For pre-release, ask user. For Excel files use
+   `pandas` + `openpyxl` (already installed via `--break-system-packages`).
+2. **Extract** — `pdftotext -layout <src.pdf> <dst.md>` mirrors source path under
+   `raw/extracted/`. Excel: Python script using openpyxl producing markdown table.
+3. **Identify page type** — etom-l2, sid-abe, oda-component, foundation, or view
+   (CLAUDE.md §5).
+4. **Write pages** — copy the relevant `templates/{type}.md`, fill verbatim. Citation
+   format `— SOURCE-ID §X.Y, p. NN` at end of quoted blocks.
+5. **Trilateral sections** — populate where sources are explicit; file open question
+   and use `See open-questions.md — OQ-NNN` where uncertain. Bidirectional sweep is
+   real work — when you add an ODA→SID link, the SID page needs a back-link.
+6. **Update** `wiki/index.md`, the relevant `_index.md`, append to `wiki/log.md`.
+7. **Lint** — `python3 lint/lint.py` must PASS before declaring complete.
 
-The linter enforces this. Pages without trilateral links fail lint.
+Patterns to copy from existing ingests: the v1 log entries in `wiki/log.md` are
+worked examples. The Python scripts I used to generate eTOM L2 pages from Excel
+are not preserved as files (one-off generation), but the pattern is straightforward
+to reproduce.
 
-## Page-type anatomy (to be finalised in CLAUDE.md)
+## What you must not do
 
-Each page type has a fixed structure with frontmatter (spec ID, version,
-retrieval date, source path in raw/, page type) and required sections.
-Templates to be defined for: eTOM L2 page, SID ABE page, API page,
-view page. The linter validates page anatomy against these templates.
+The constitution in `tmf-kb/CLAUDE.md` is binding. The non-negotiable items, in
+priority of severity:
 
-## Source materials — download list
+1. **No training-data recall for TMF facts.** If a fact isn't in `raw/` or `wiki/`,
+   it doesn't exist for this project. Say "not in corpus", file an OQ. This rule is
+   the entire reason the corpus exists; violating it once corrupts the trust model.
+2. **Never read or write `tmf-kb/project/`.** It is a security boundary, not a
+   deferral. Reading project/ would put company data in the LLM context, which the
+   user has explicitly disallowed. CLAUDE.md §10.4.
+3. **Don't modify `tmf-kb/raw/`.** The only legitimate write target inside raw/ is
+   `raw/extracted/`. PDFs are immutable.
+4. **Don't paraphrase canonical names, IDs, enums, attributes.** Verbatim or open
+   question. Even obvious-looking smoothing corrupts the corpus.
+5. **Don't resolve open questions yourself.** They escalate to the user. You can
+   propose resolutions in your own message, but don't close OQs in
+   `wiki/open-questions.md` without user direction.
 
-User is downloading from TMF (account required). Tiered list previously
-agreed:
+## Working style — what the user expects from you
 
-Tier 1 (essential for v1):
-- GB921 eTOM, latest, including Service Domain and Resource Domain Addenda
-- GB922 SID Service ABE, Resource ABE, Common Business Entities
-- TMF638, TMF639, TMF641, TMF645, TMF633, TMF634 (User Guide,
-  Specification, Swagger for each)
-- TMF630 Design Guidelines
+- **Be direct.** State conclusions before reasoning. When you have a recommendation,
+  give it; don't present a menu of options. The user prefers decisions made over
+  hedging.
+- **Push back when wrong.** The user does. They expect the same in return. If a
+  request would corrupt the corpus discipline, refuse and propose a compliant
+  alternative.
+- **Surface decisions you cannot make autonomously.** Schema additions, scope
+  expansions, OQ resolutions are user calls. Use `AskUserQuestion` for binary or
+  multi-option choices. Don't ask about minor logistics.
+- **The user has often said "continue" across many turns.** Take that as approval
+  to maintain momentum on the established pattern. If you hit something genuinely
+  blocking or ambiguous, surface it concisely and ask. Otherwise proceed.
+- **Acknowledge mistakes promptly.** If you stated a TMF fact from training data,
+  fabricated a cross-reference, or made a schema decision the user pushed back on,
+  fix it cleanly and note it. Don't argue.
+- **Keep messages tight.** Long messages of exploration text aren't valuable. Show
+  outputs, decisions, and next-step questions.
 
-Tier 2 (TMF-adjacent, into raw/tmf-adjacent/):
-- ODA Functional Architecture (IG1167 or equivalent)
-- MEF 6.x, 10.x, 55 (relevant to user's Access/Delivery work)
+## File map (quick reference)
 
-Tier 3: deferred. (TAM, full ODA component specs, TMF640 unless service
-activation enters scope, other Open APIs out of current Service/Resource
-boundary.)
+- `tmf-kb/CLAUDE.md` — the constitution. Read it first.
+- `tmf-kb/wiki/index.md` — top-level catalog by category.
+- `tmf-kb/wiki/log.md` — append-only event history. Last entry tells you where you are.
+- `tmf-kb/wiki/open-questions.md` — 39 OQs.
+- `tmf-kb/templates/` — page templates (etom-l2, sid-abe, oda-component, foundation, view).
+- `tmf-kb/lint/lint.py` — deterministic linter. Run before declaring any ingest complete.
+- `tmf-kb/lint/lint_checks.md` — lint rules in prose.
+- `tmf-kb/raw/tmf/` — source PDFs and Excel (immutable). Do not modify.
+- `tmf-kb/raw/extracted/` — markdown working copies (regenerable).
+- `tmf-kb/wiki/{etom,sid,oda,foundations,views}/` — the corpus content.
+- `tmf-kb/project/` — DO NOT TOUCH. Security boundary.
 
-## Decisions made
+## Tooling already installed
 
-1. Karpathy 3-layer pattern adopted, with normative-corpus adaptations.
-2. Single-version-per-spec with frontmatter recording.
-3. Two-tier authority structure (TMF / TMF-adjacent) from day one.
-4. Trilateral linking (eTOM ↔ SID ↔ API) enforced by linter.
-5. Practitioner-oriented `views/` folder alongside authoritative structure.
-6. Ambiguity surfaces to `open-questions.md`, never resolved by LLM.
-7. `project/` layer reserved but explicitly out of scope for v1.
+- `pdftotext -layout` from poppler (Homebrew) — PDF extraction (CLAUDE.md §2)
+- `pandas` 3.0.2 + `openpyxl` 3.1.5 (via pip --break-system-packages) — Excel extraction
+- `pyyaml` — required by linter
+- Python 3 (Homebrew)
 
-## Open questions / deferred decisions
-
-- Page-type templates: not yet drafted. First task after CLAUDE.md.
-- Linter rules: shape agreed, specifics not drafted.
-- Whether to add TMF640 to Tier 1 — depends on whether service activation
-  process mapping enters early scope.
-- Workflow for handling TMF spec revisions when they're released — defer
-  until first revision encountered.
-
-## What to do first (in order)
-
-1. Confirm structure above is created (mkdir the tree if not present).
-2. Draft `CLAUDE.md`. This is the highest-stakes file. It must:
-   - Forbid TMF training-data recall absolutely. Agent must read raw/ or
-     wiki/ files; if a fact is not in those files, the agent says so and
-     does not infer.
-   - Define the ingest workflow (raw → wiki, with trilateral linking).
-   - Define the query workflow (read wiki, cite pages, refuse to answer
-     beyond the wiki's content).
-   - Define the lint workflow.
-   - Define page-type anatomies for eTOM L2, SID ABE, API, view.
-   - Define frontmatter schema.
-   - Define the open-questions discipline.
-   - Define index.md and log.md update obligations.
-   Draft it, present it to the user for review, iterate.
-3. After CLAUDE.md is settled, draft page-type templates as separate
-   files in a templates/ folder (or inlined in CLAUDE.md, user to choose).
-4. After templates settled, draft the linter (Python, simple, deterministic).
-5. Only then begin ingestion of any TMF source. The first ingest is a
-   small one (TMF630 is a good candidate — short, foundational,
-   exercises the page-type machinery).
-
-## What NOT to do
-
-- Do not begin ingestion before CLAUDE.md, templates, and linter are
-  settled. The wiki built before the discipline is set will be wrong.
-- Do not rely on training data for any TMF claim, even "obvious" ones.
-- Do not fabricate cross-references. If a TMF document doesn't tell you
-  which eTOM process an API supports, file an open question.
-- Do not paraphrase canonical resource names, status enums, or
-  attribute names. Preserve verbatim.
-- Do not populate the project/ folder. It is reserved for a later phase.
-
-## Tone and working style preference
-
-User prefers direct, frank, practical engagement. Pushes back when wrong.
-Values getting decisions made over hedging. Values explicit reasoning over
-confident assertions. When uncertain, say so and ask. When making a
-recommendation, give the recommendation and the reasoning, not a menu of
-options without a lean.
+If extraction fails due to missing tools after a system change, reinstall via the
+same paths and verify by re-running `python3 lint/lint.py`.
