@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor / OS
+.idea/
+.vscode/
+*.swp
+*~
+
+# Obsidian — workspace state is local-only.
+# Comment out the line below if you want to share vault config across machines.
+.obsidian/workspace*.json
