@@ -1002,3 +1002,73 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
   depth), TODO #3 (SID BE-level attribute detail), TODO #4 (user-decision OQs
   to revisit). These are all extension/depth work, not structural. The corpus
   is structurally complete for v1.
+
+---
+
+## 2026-05-09T09:00Z — TODO #2 PIVOT + SERVICE DOMAIN DEEPEN (8 L2 pages)
+
+- **File(s):**
+    - `raw/tmf/etom/GB921_Service_Process_Decompositions_v24.0.pdf` (extracted
+      to `raw/extracted/.../GB921_Service_Process_Decompositions_v24.0.md` —
+      217 pages → 8909 lines; retained for figure reference but not added to
+      L2 page source_paths after pivot decision)
+    - `raw/tmf/etom/GB921_Business_Process_Framework_Processes_Excel_v25.5.xlsx`
+      (read directly via openpyxl; the existing markdown extract truncates
+      long cells)
+- **Pages created/updated:**
+    - 8 in-scope Service Domain L2 pages — added `## L3 Process Details`
+      section between `## Overview` and `## L3 Processes`:
+        - service-support-management (1.4.4) — 6 L3s with Extended
+          Descriptions and L4 listings
+        - service-activation-management (1.4.5) — 5 L3s
+        - service-problem-management (1.4.6) — 5 L3s
+        - service-performance-management (1.4.7) — 5 L3s
+        - service-guiding-and-mediation (1.4.8) — 4 L3s
+        - service-catalog-operational-readiness-management (1.4.14) — 3 L3s
+        - service-catalog-content-management (1.4.15) — 6 L3s
+        - service-anomaly-management (1.4.18) — 5 L3s
+    - `wiki/open-questions.md` — OQ-035 marked **Resolved 2026-05-09** with
+      pivot rationale
+- **Sections skipped (out of scope):** none — Service Domain in-scope L2s all
+  covered; out-of-scope Service Domain L2s (Strategy/Readiness verticals)
+  remain unchanged
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved
+  by this entry)
+- **Open questions filed:** none new. OQ-035 closed.
+- **Notes:**
+    - **Pivot decision recorded.** TODO #2 was originally framed as "ingest
+      GB921 Process Decomposition PDFs to add narrative depth to eTOM L2
+      pages". On starting the work, spot-checking confirmed the v24.0
+      decomposition PDF and v25.5 Excel master have substantially identical
+      content — the PDF is structured per-L2-chapter; the Excel is structured
+      per-process-row; same prose either way. The PDF's only unique content
+      is process hierarchy figures (extracted as low-quality ASCII).
+    - **Pivot to v25.5 Excel as source.** What the wiki actually lacked was
+      display of L3 Extended Descriptions (currently shown only with Brief
+      Descriptions) and L4 process listings (not currently displayed).
+      Sourcing both from the v25.5 Excel master (more current than v24.0 PDF;
+      same content) avoids a same-spec version mismatch with no content gain.
+    - **Extraction note: openpyxl direct, not the .md extract.** The existing
+      `GB921_Business_Process_Framework_Processes_Excel_v25.5.md` extract
+      truncates long cells (~500 char cap). For full Extended Descriptions
+      (some L3s have 1500+ chars including bullet lists), the deepen script
+      reads the .xlsx directly via openpyxl. The .md extract remains useful
+      for grep / overview but is not authoritative for full-cell content;
+      future work needing full content should go straight to the .xlsx.
+    - **v24.0 PDF retained, not re-cited.** The extracted markdown
+      (`raw/extracted/tmf/etom/GB921_Service_Process_Decompositions_v24.0.md`)
+      is kept on disk for figure reference and process-hierarchy-diagram
+      provenance. L2 page source_paths frontmatter is unchanged — pages
+      remain sourced from the v25.5 Excel master only. The v24.0 PDF source
+      is not added because (a) its prose content is the same, (b) its
+      version (v24.0) is older than the master (v25.5) and would create a
+      misleading dual-version provenance.
+    - **Pattern set for Resource and Product domains.** Same approach
+      (xlsx-direct deepen) will apply when TODO #2 work continues for
+      Resource (9 L2s) and Product (12 L2s) domains.
+    - **Service Domain L2 pages now include L4 listings.** Each L3 sub-section
+      lists its L4 children with verbatim names and brief descriptions. This
+      is the first time L4 process detail appears in the wiki; previously L4
+      was source-only. Anatomy unchanged — `## L3 Process Details` is an
+      additional H2 between Overview and L3 Processes; the linter accepts
+      arbitrary H2s between required ones in their original order.

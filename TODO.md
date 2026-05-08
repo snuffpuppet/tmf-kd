@@ -79,7 +79,31 @@ Integration confirmed as source-supported no-ops. See log entry
 
 ---
 
-## 2. GB921 Decomposition PDFs (eTOM narrative depth)
+## 2. eTOM L3+L4 narrative depth (pivoted: v25.5 Excel master, not v24.0 PDFs)
+
+**Pivot recorded 2026-05-09 (OQ-035 resolved):** the v24.0 Service Process
+Decompositions PDF and the v25.5 Excel master have substantially identical
+prose content. What the wiki actually lacked was display of L3 Extended
+Descriptions and L4 process listings — both available from the more-current
+Excel master. Approach: append a `## L3 Process Details` section to each
+in-scope L2 page with per-L3 Extended Descriptions and L4 sub-process
+listings, sourced via openpyxl directly from the .xlsx (the existing .md
+extract truncates long cells).
+
+**Per-domain status:**
+
+- ✅ **Service Domain (8 L2s)** — done 2026-05-09T09:00Z. 6+5+5+5+4+3+6+5 =
+  39 L3s with Extended Descriptions and L4 listings now in the wiki.
+- ⬜ **Resource Domain (9 L2s)** — same approach pending.
+- ⬜ **Product Domain (12 L2s)** — same approach pending.
+
+The v24.0/v24.0 Service/Resource/Product Decomposition PDFs remain in
+`raw/tmf/etom/` and `raw/extracted/tmf/etom/` (Service is extracted; Resource
+and Product PDFs not yet extracted as they would not change the approach).
+They are useful for figure / hierarchy diagram reference but not as a
+source for L2 page text.
+
+### Original framing (superseded)
 
 **Why:** Three PDFs in `raw/tmf/etom/` cover Service (217 pp), Resource
 (305 pp), Product (304 pp). Current eTOM L2 pages are overview-level from the

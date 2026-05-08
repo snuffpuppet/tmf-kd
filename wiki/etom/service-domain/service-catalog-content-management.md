@@ -25,6 +25,56 @@ Service Catalog Content Management business processes include administering the 
 
 — GB921 v25.5 Excel master, process ID `1.4.15`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.4.15.1 Maintain Service Catalog Content
+
+**Extended Description.**
+
+Maintain Service Catalog Content business activity handles catalog content entry through adding or updating the Catalog by following the established Catalog Content Management standards and policies.
+
+Manage Catalog Entry support the following activities and sub-activities:
+
+Maintaining Catalog Content Versions
+
+Maintain Catalog Content Relationship
+
+Maintain Catalog Content taxonomy
+
+Organize Catalog Entry
+
+Classify Catalog Entry
+
+**L4 sub-processes:**
+
+- **1.4.15.1.1** Maintain Service Catalog Content Version — Maintain Service Catalog Content Version business activity handles tracking and controlling changes for Service catalog entries.
+- **1.4.15.1.2** Maintain Service Catalog Content Relationship — Maintain Service Catalog Content Relationship business activity handles associating Service catalog entries.
+- **1.4.15.1.3** Maintain Service Catalog Content Entry — Maintain Service Catalog Content Entry business activity handles content entry, content organization, content classification in the Service Catalog according to the Service Catalog model.
+
+### 1.4.15.2 Manage Service Catalog Access
+
+**Extended Description.**
+
+Manage Service Catalog Access business activity handles access to the catalog according to the Catalog Content Management standards and policies.
+
+Manage Service Catalog Access will handle assigning catalog managers and granting privileges.
+
+### 1.4.15.3 Manage Service Catalog Content Lifecycle
+
+**Extended Description.**
+
+Manage Service Catalog Content Lifecycle business activity handles changes to catalog content according to the Catalog Content Management standards and policies.
+
+### 1.4.15.4 Distribute Service Catalog
+
+**Extended Description.**
+
+Distribute Service Catalog business activity handles exchange and distribution of catalogs according to the Catalog Content Management standards and policies.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

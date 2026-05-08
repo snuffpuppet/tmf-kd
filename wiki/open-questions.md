@@ -450,6 +450,21 @@ in [[CLAUDE]] §8.
   (217 pages) is not yet layered in. To be added in a follow-up ingest event keyed
   to that PDF.
 - **Blocking:** None. The L2 pages are usable as-is; PDF prose adds depth.
+- **Resolved:** 2026-05-09 — material finding while starting TODO #2: the v24.0
+  Service Process Decompositions PDF and the v25.5 Excel master have substantially
+  identical content (verified by spot-checking L2/L3/L4 Extended Descriptions across
+  multiple processes). The Excel master is structured per-process-row; the PDF is
+  structured per-L2-chapter; same prose either way. The PDF's only unique content
+  is process hierarchy figures (extracted as low-quality ASCII in our markdown
+  extract). What the wiki actually lacked was display of the v25.5 Excel's L3
+  Extended Descriptions and L4 process listings — neither of which required a new
+  source. **Pivoted to deepen pages from the v25.5 Excel master** rather than
+  layering v24.0 PDF onto v25.5 pages (which would have introduced a same-spec
+  version mismatch with no content gain). The v24.0 PDF extraction is retained at
+  `raw/extracted/tmf/etom/GB921_Service_Process_Decompositions_v24.0.md` for
+  figure reference and provenance, but is not added to L2 page source_paths.
+  Same plan will apply to Resource and Product domains when their TODO #2 work
+  runs.
 
 ---
 
