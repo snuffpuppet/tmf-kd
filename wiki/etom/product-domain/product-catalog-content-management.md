@@ -25,6 +25,56 @@ Product Catalog Content Management business processes include administering the 
 
 — GB921 v25.5 Excel master, process ID `1.2.22`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.22.1 Maintain Product Catalog Content
+
+**Extended Description.**
+
+Maintain Product Catalog Content business activity handles catalog content entry through adding or updating the Catalog by following the established Catalog Content Management standards and policies.
+
+Manage Catalog Entry support the following activities and sub-activities:
+
+Maintaining Catalog Content Versions
+
+Maintain Catalog Content Relationship
+
+Maintain Catalog Content taxonomy
+
+Organize Catalog Entry
+
+Classify Catalog Entry
+
+**L4 sub-processes:**
+
+- **1.2.22.1.1** Maintain Product Catalog Content Version — Maintain Product Catalog Content Version business activity handles tracking and controlling changes for Product catalog entries.
+- **1.2.22.1.2** Maintain Product Catalog Content Relationship — Maintain Product Catalog Content Relationship business activity handles associating Product catalog entries.
+- **1.2.22.1.3** Maintain Product Catalog Content Entry — Maintain Product Catalog Content Entry business activity handles content entry, content organization, content classification in the Product Catalog according to the Product Catalog model.
+
+### 1.2.22.2 Manage Product Catalog Access
+
+**Extended Description.**
+
+Manage Product Catalog Access business activity handles access to the catalog according to the Catalog Content Management standards and policies.
+
+Manage Product Catalog Access will handle assigning catalog managers and granting privileges.
+
+### 1.2.22.3 Manage Product Catalog Content Lifecycle
+
+**Extended Description.**
+
+Manage Product Catalog Content Lifecycle business activity handles changes to catalog content according to the Catalog Content Management standards and policies.
+
+### 1.2.22.4 Distribute Product Catalog
+
+**Extended Description.**
+
+Distribute Product Catalog business activity handles exchange and distribution of catalogs according to the Catalog Content Management standards and policies.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

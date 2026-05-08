@@ -96,7 +96,13 @@ extract truncates long cells).
   39 L3s with Extended Descriptions and L4 listings now in the wiki.
 - ✅ **Resource Domain (9 L2s)** — done 2026-05-09T09:30Z. 8+8+7+7+7+2+2+4+5
   = 50 L3s with Extended Descriptions and L4 listings.
-- ⬜ **Product Domain (12 L2s)** — same approach pending.
+- ✅ **Product Domain (12 L2s)** — done 2026-05-09T10:00Z. 7+3+5+7+4+5+4+2+4+5+5+6
+  = 57 L3s with Extended Descriptions and L4 listings.
+
+**Status: complete.** All 29 in-scope eTOM L2 pages now carry L3 Extended
+Descriptions and L4 hierarchies. 146 L3s deepened total across the three
+operational PSR domains. See log entry 2026-05-09T10:05Z for the milestone
+summary.
 
 The v24.0/v24.0 Service/Resource/Product Decomposition PDFs remain in
 `raw/tmf/etom/` and `raw/extracted/tmf/etom/` (Service is extracted; Resource

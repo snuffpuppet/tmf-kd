@@ -39,6 +39,63 @@ Responsibilities of these processes include, but are not limited to:
 
 — GB921 v25.5 Excel master, process ID `1.2.11`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.11.1 Identify Relevant Product Inventory Information
+
+**Extended Description.**
+
+Not used for this process element
+
+### 1.2.11.2 Maintain Product Inventory facilities
+
+**Extended Description.**
+
+Not used for this process element
+
+### 1.2.11.3 Control Product Inventory Access
+
+**Extended Description.**
+
+Not used for this process element
+
+### 1.2.11.4 Ensure Product Inventory Quality
+
+**Extended Description.**
+
+Ensuring the product inventory repository accurately captures and records all identified product details, through use of automated or manual audits. Monitoring and reporting on the quality of the information maintained in the inventory. The product inventory maintains records of all products, their interactions with the enterprise, and any other product related- information, required to support CRM and other processes. The product inventory is also responsible for maintaining the association between customers and purchased product instances, created as a result of the Order Handling processes.
+
+### 1.2.11.5 Track Product Inventory Usage
+
+**Extended Description.**
+
+Not used for this process element
+
+### 1.2.11.6 Identify Product Inventory Shortcomings
+
+**Extended Description.**
+
+Not used for this process element
+
+### 1.2.11.7 Product Lifecycle Management Support
+
+**Extended Description.**
+
+Product Lifecycle Management Support supports the management of the lifecycle of a product and pricing associated with a product.
+
+It can create a product, specify the involvement one or more parties have with it, updates information about the product including the status and relationships with Product Specification, Product Offering, Account and all related roles.
+
+The lifecycle of a product also includes prices associated with it which are also managed by this process.
+
+**L4 sub-processes:**
+
+- **1.2.11.7.1** Product Lifecycle Administration Support — Create a product, specify the involvement one or more parties have with it, update information about the product, and remove the product when it is no longer of interest to an enterprise and/or the primary party responsible for the product at request from Operations processes.
+- **1.2.11.7.2** Product Pricing — Apply, update, and remove a price associated with a product.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

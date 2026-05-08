@@ -27,6 +27,34 @@ Release Product Catalog business activity includes identifying stakeholders, cat
 
 — GB921 v25.5 Excel master, process ID `1.2.21`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.21.1 Release Product Catalog
+
+**Extended Description.**
+
+Release Product Catalog business activity ensure all cross-functional activities needed to support catalog maintenance and operations, such as training and updating the support of the catalog are in place.
+
+Release Product Catalog business activity includes identifying stakeholders, catalog integration, catalog federation etc. for any scenario in support of the organizations business goals, including Release conditions that support users, customers and business partners.
+
+**L4 sub-processes:**
+
+- **1.2.21.1.1** Plan & Schedule Product Catalog Release — Plan & Schedule Product Catalog Release business activity is used to handle the release plan for the Product Catalog.
+- **1.2.21.1.2** Control Product Catalog Release — Control Product Catalog Release business activity is used to support the various catalog release tasks.
+- **1.2.21.1.3** Test Product Catalog — Test Product Catalog business activity is used to establish the quality, reliability and performance requirement of the catalog according to the Product management needs.
+
+### 1.2.21.2 Deploy Product Catalog
+
+**Extended Description.**
+
+Deploy Product Catalog business activity manage the availability and use of the Product catalog in operations.
+
+Deploy Product Catalog business activity includes identifying stakeholders, creating catalog category hierarchies, catalog integration, and catalog federation for any scenario, such as with business partners and between business functions.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

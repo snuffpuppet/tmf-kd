@@ -30,6 +30,66 @@ The Product Usage records are edited and if necessary reformatted (mediated) to 
 
 — GB921 v25.5 Excel master, process ID `1.2.16`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.16.1 Enrich Product Usages
+
+**Extended Description.**
+
+The Enrich Product Usages processes will augment the product usage records by adding data to the records from sources such as customer, product, or other reference data.
+
+**L4 sub-processes:**
+
+- **1.2.16.1.1** Add Product Usage Data — Add data to the records from sources such as customer, product, or other reference data to augment the product usage records.
+- **1.2.16.1.2** Assign Product Usage Price — Assign a price to product usage without consideration of specific product or customer information. The assigned price may be used to enrich the product usage record.
+
+### 1.2.16.2 Guide and Assign Product Usages
+
+**Extended Description.**
+
+The Guide Product Usages processes ensure that the event records used in the billing process relate to the correct customer billing account and products. A specific product usage record may be related to multiple customer billing accounts and subscribed products.
+
+Distribution of product usage records to other processes may also occur.
+
+**L4 sub-processes:**
+
+- **1.2.16.2.1** Assign Product Usages — Ensure that the Product Usages used in the billing process relate to the correct Product.
+- **1.2.16.2.2** Distribute Product Usage — Distribute billing event records to other processes.
+- **1.2.16.2.3** Guide Product Usages — Guide Product Usages process is in charge of identifying Product Usages based on Service Usages.
+
+### 1.2.16.3 Mediate Product Usages
+
+**Extended Description.**
+
+The Mediate Product Usages process edits and reformats the data record to meet the needs of a recipient application.
+
+**L4 sub-processes:**
+
+- **1.2.16.3.1** Edit Product Usages — Edit the data record for recipient applications.
+- **1.2.16.3.2** Reformat Product Usages — Reformat the data record for recipient applications.
+
+### 1.2.16.4 Report Product Usage Records
+
+**Extended Description.**
+
+The purpose of the Report Product Usage Record processes is to generate reports on Product Usage records based on requests from other processes.
+
+These processes produce reports that may identify abnormalities, which may be caused by fraudulent activity or related to customer complaints.
+
+Investigation of problems related to these product usage records is also part of this process.
+
+These processes also support other processes such as customer review of product usages (pre-billing and post-billing).
+
+**L4 sub-processes:**
+
+- **1.2.16.4.1** Generate Product Usage Report — Generate reports on product usage records based on requests from other processes.
+- **1.2.16.4.2** Investigate Product Usage Related Problem — Investigate problems related to product usage records.
+- **1.2.16.4.3** Support Product Usage Related Process — Support other processes such as customer review of product usages (pre-billing and post-billing).
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

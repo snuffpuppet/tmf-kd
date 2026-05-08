@@ -24,6 +24,63 @@ Product Performance Management business process manage activities that define an
 
 — GB921 v25.5 Excel master, process ID `1.2.6`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.6.10 Establish Product Performance Goals
+
+**Extended Description.**
+
+Undertaking proactive monitoring regimes of groups of similar purchased product offerings as required to ensure ongoing performance within agreed parameters over time.
+
+**L4 sub-processes:**
+
+- **1.2.6.10.1** Determine Product Performance Criteria — Establishing and managing facilities to inform customers of, and negotiate agreement for, planned service outages.
+- **1.2.6.10.2** Define Product Performance Plan — Define Product Performance Plan business activity describe in detail the activities that support accomplishing or meeting product performance objectives/goals.
+- **1.2.6.10.3** Establish Product Performance Objectives — Establish Product Performance Objectives business activity set up the desired measurable outcome to fulfilling product proposition.
+- **1.2.6.10.4** Set Product Performance Targets — Set Product Performance Targets business activity establish performance management targets.
+
+### 1.2.6.11 Monitor Product Performance
+
+**Extended Description.**
+
+Monitor Product Performance business activity checks and logs product performance. Monitor Product Performance relies on performance measures identified for products by their categories and business objectives to support observing and validating performance of products according to intended design or use. Monitor Product Performance measures may include, but not be limited to defined QoS/SLA management processes, problem related concerns, or other associated concerns.
+
+P.S. A product is an offer to a customer.
+
+**L4 sub-processes:**
+
+- **1.2.6.11.1** Determine Product Performance Data Source — Determine Product Performance Data Source business activity source and identify all relevant data to support product performance management.
+- **1.2.6.11.2** Collect Product Performance Data — Collect Product Performance Data business activity gather data according to prescribed data sources.
+- **1.2.6.11.3** Track Product Performance Measures — Track Product Performance Measure business activity trace product performance measures to identify trends.
+
+### 1.2.6.12 Analyze Product Performance
+
+**Extended Description.**
+
+Analyze Product Performance business activity aggregates, provides research findings and product performance reports. Analyze Product Performance includes the collection and strategic evolution of data points (metrics, indicators etc.) related to the purchasing funnel, like how many times visitors view a product page, how many times a product is left abandoned in a cart, how many times a particular product gets to checkout, unique purchases, and more.
+
+**L4 sub-processes:**
+
+- **1.2.6.12.1** Research Product Performance — Research Product Performance business activity review and investigate product performance concerns.
+- **1.2.6.12.2** Evaluate Product Performance Insights — Develop Product Performance Insights business activity provide deep understanding on product performance requirements and concerns (such as performance criteria, performance targets, performance hinderance etc.).
+- **1.2.6.12.3** Report Product Performance Analysis — Report Product Performance Analysis business activity provides detailed account of research findings and outcome of evaluation of product performance.
+
+### 1.2.6.13 Control Product Performance
+
+**Extended Description.**
+
+Control Product Performance business activity determine and administer changes and directives the manage product performance accomplishment. Control Product Performance may establish and manage actions that directly or indirectly impact on products, their impact on customers and ultimately their performance in the market.
+
+### 1.2.6.14 Report Product Performance
+
+**Extended Description.**
+
+Report Product Performance Analysis business activity provides detailed account of research findings and outcome of evaluation of product performance. Product Performance Analysis reports is created and re-created repeatedly over the lifecycle of each product.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

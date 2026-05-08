@@ -26,6 +26,46 @@ Online charging is performed in real-time, requiring an authorization component 
 
 — GB921 v25.5 Excel master, process ID `1.2.17`, sheet `eTOM25,5`.
 
+## L3 Process Details
+
+Per-L3 Extended Descriptions and L4 sub-process listings, verbatim from GB921 v25.5 Excel master. The L2 Overview above gives the L2-level brief; this section provides the L3 narrative depth and the L4 hierarchy.
+
+### 1.2.17.1 Perform Rating
+
+**Extended Description.**
+
+Process responsible for calculating the value of a product usage or a set of product usages, before, during or after the rendering of the service, based on parameters of the request (type, quantity, etc.), parameters of the customer/subscriber (tariffs, price plans, accumulated usage, contracts, etc.) and other parameters (time-of-day, taxes, etc.). The same request maybe rated differently for different subscribers based on their purchased offers or agreements.
+
+### 1.2.17.2 Aggregate Items For Rate Assignment
+
+**Extended Description.**
+
+This process is responsible for accumulating contributing items, which can be quantities, values (monetary or other) or both. Aggregation can occur over time or can be initiated to gather a “snapshot” of the items at a point in time.
+
+### 1.2.17.3 Manage Customer Assignment Hierarchy
+
+**Extended Description.**
+
+Customer hierarchies are commonly used for corporate customers, family plans or other type of affinity groups. This process manages the assignment relationships among subscribers, e.g. sharing, inheriting or restricting balances, price plans and discounts. Thereby assuring that a charge is added to or subtracted from the correct account balance.
+
+### 1.2.17.4 Provide Advice of Rate
+
+**Extended Description.**
+
+The activity of Provide Advice of Rate (aka Advice of Charge) is responsible for providing advice on rates, in real-time or offline, an estimate or value of the rate for a specific usage request. The advice is usually based upon performing a full rating process for the request.
+
+### 1.2.17.5 Apply Rate Level Discounts
+
+**Extended Description.**
+
+This process applies discounts to product prices at an individual product level. A discount may be expressed as a monetary amount or percentage, and modifies a price for a product. When a discount is expressed as a percentage, the discounting process determines the discount calculated in relation to the price for the product.
+
+The discount may be displayed as a separate entry on the bill or may be combined with the rate for the product to only show as one entry.
+
+Discounts may be a one-time event or may have some duration (days, months, life of product, etc.). Discounts may apply to a specific customer or be generally available based on selection of products (for example - bundles). Discounting structures may involve tiers, tapers, or thresholds.
+
+— GB921 v25.5 Excel master, sheet `eTOM25,5`.
+
 ## L3 Processes
 
 The following L3 processes decompose this L2. Verbatim from GB921 v25.5:

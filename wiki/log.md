@@ -1116,3 +1116,79 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
       scheduling, fulfilment.
     - **Next domain target:** Product Domain (12 in-scope L2s). Same script
       pattern; expected ~50–100 L3s based on Product Domain breadth.
+
+---
+
+## 2026-05-09T10:00Z — PRODUCT DOMAIN DEEPEN (12 L2 pages, TODO #2 complete)
+
+- **File(s):** `raw/tmf/etom/GB921_Business_Process_Framework_Processes_Excel_v25.5.xlsx`
+  (read directly via openpyxl; same approach as Service and Resource deepens)
+- **Pages created/updated:**
+    - 12 in-scope Product Domain L2 pages — added `## L3 Process Details`
+      section between `## Overview` and `## L3 Processes`:
+        - product-support-management (1.2.4) — 7 L3s
+        - product-configuration-management (1.2.5) — 3 L3s
+        - product-performance-management (1.2.6) — 5 L3s
+        - product-inventory-management (1.2.11) — 7 L3s
+        - product-usage-management (1.2.16) — 4 L3s
+        - product-rating-and-rate-assignment (1.2.17) — 5 L3s
+        - product-balance-management (1.2.18) — 4 L3s
+        - product-catalog-operational-readiness-management (1.2.21) — 2 L3s
+        - product-catalog-content-management (1.2.22) — 4 L3s
+        - product-anomaly-management (1.2.25) — 5 L3s
+        - product-problem-management (1.2.26) — 5 L3s
+        - product-order-management (1.2.27) — 6 L3s
+- **Sections skipped (out of scope):** none — Product Domain in-scope L2s
+  all covered
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved
+  by this entry)
+- **Open questions filed:** none
+- **Notes:**
+    - **57 L3s now have full Extended Descriptions and L4 sub-process
+      listings** in the Product Domain. Combined totals across all three
+      operational PSR domains: 39 (Service) + 50 (Resource) + 57 (Product) =
+      **146 L3 process bodies** wiki-readable, plus their L4 children
+      verbatim.
+    - **TODO #2 is complete.** All 29 in-scope eTOM L2 pages (8 Service +
+      9 Resource + 12 Product) now carry L3 Extended Descriptions and L4
+      hierarchies sourced from the v25.5 Excel master via openpyxl.
+    - **Notable: 1.2.27 Product Order Management.** This is the v25.5 L2
+      that I declined to source-link to Core Commerce Management during
+      OQ-042 (no Table 4-6 entry); it carries 6 L3s including Manage Product
+      Order Capture, Manage Product Order Fulfillment etc. Its content is a
+      strong match for R20.5 1.3.3 Customer Order Handling that GB1022 §4.4.2
+      Table 4-6 does include — strengthens the OQ-042 hypothesis that
+      Customer Order Handling responsibilities moved into the Product Domain
+      at v25.5. Still left unlinked pending source confirmation per CLAUDE.md
+      §1.
+
+---
+
+## 2026-05-09T10:05Z — MILESTONE: TODO #2 complete
+
+- **Scope:** All 29 in-scope eTOM L2 pages across Service (8), Resource (9),
+  and Product (12) domains now display L3 Extended Descriptions and L4
+  sub-process listings.
+- **Source:** GB921 v25.5 Excel master, read directly via openpyxl. The
+  pre-existing `.md` extract in `raw/extracted/` truncates long cells; for
+  full-fidelity content, the .xlsx is the canonical source. Future depth
+  work needing full cell content should similarly read .xlsx directly.
+- **Pivot decision (OQ-035 resolved 2026-05-09):** the original TODO #2
+  framing assumed the GB921 Process Decomposition PDFs would add narrative
+  depth beyond the Excel master. Spot-checking confirmed the v24.0 PDF and
+  v25.5 Excel have substantially identical prose; the wiki's actual gap was
+  display of L3 Extended + L4 listings, both available from the more-current
+  Excel. Pivoted to xlsx-direct deepen.
+- **Numbers:**
+    - 146 L3s deepened across 29 L2 pages
+    - 8 commits in the campaign so far (linter fix + 5 ODA sweeps + 2
+      no-ops + Common gap fill + 3 domain deepens) — but Service/Resource/
+      Product deepens land as 3 separate commits per domain
+    - 0 lint errors throughout
+- **What remains in TODO.md:**
+    - TODO #3 — SID BE-level attribute detail per high-value ABE (per
+      OQ-016/017/018/019/020/029)
+    - TODO #4 — User-decision OQs to revisit (OQ-013, OQ-021, OQ-024+031,
+      OQ-030)
+    Both are extension/depth work, not structural. The corpus's structural
+    completeness from v1 is now augmented with deeper process-layer narrative.
