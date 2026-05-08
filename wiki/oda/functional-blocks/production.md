@@ -85,37 +85,88 @@ Operations groupings. — GB1022 §4.5, p. 38
 
 ## SID Entities Owned
 
-GB1022 §4.5.2 (Standard Business Information Objects) provides verbatim mapping
-tables from Frameworx SID ABEs to the Production block (source GB922 R20.5). Primary
-domains covered: Service, Resource, and supporting Common ABEs.
+GB1022 §4.5.2 Table 4-10 enumerates the SID ABEs owned by the Production block,
+sourced from GB922 R20.5. The table covers Service, Resource, Enterprise (Workforce),
+and Common (Topology, Location) domains. Cross-walk to our v25.0 / v23.0 / v25.5
+corpus and the resulting links are recorded in [[wiki/open-questions#OQ-040]].
 
-In v25.x corpus terms, Production owns or directly references:
+**Service Domain ABEs** (Table 4-10 entries 01–08) — resolved to GB922 Service v25.0:
 
-- Service Domain ABEs: Service Specification, Service, Service Configuration,
-  Service Order, Service Usage, Service Test, Service Performance, Service Capacity,
-  Service Problem (NotFullyDeveloped) — see
-  [[wiki/sid/service-abe]]
-- Resource Domain ABEs: Resource Specification, Resource, Resource Configuration,
-  Resource Order, Resource Usage, Resource Test, Resource Performance, Resource
-  Capacity, Resource Trouble (NotFullyDeveloped) — see
-  [[wiki/sid/resource-abe]]
-- Common Domain ABEs: Capacity, Configuration, Test, Performance (canonical patterns
-  specialised by Service/Resource) — see [[wiki/sid/common-abe]]
+- [[wiki/sid/service/service-abe]] (Table 4-10 #01 Service ABE)
+- [[wiki/sid/service/service-order-abe]] (#02 Service Order ABE)
+- [[wiki/sid/service/service-specification-abe]] (#03 Service Specification ABE)
+- [[wiki/sid/service/service-strategy-and-plan-abe]] (#04 Service Strategy & Plan ABE)
+- [[wiki/sid/service/service-configuration-abe]] (#05 Service Configuration ABE)
+- [[wiki/sid/service/service-usage-abe]] (#06 Service Usage ABE)
+- [[wiki/sid/service/service-problem-abe]] (#07 Service Problem ABE)
+- [[wiki/sid/service/service-test-abe]] (#08 Service Test ABE)
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]]. The full
-mapping table is in source pp. 41–45.
+**Resource Domain ABEs** (Table 4-10 entries 01–09) — resolved to GB922 Resource v25.5:
+
+- [[wiki/sid/resource/resource-abe]] (#01 Resource ABE)
+- [[wiki/sid/resource/resource-order-abe]] (#02 Resource Order ABE)
+- [[wiki/sid/resource/resource-specification-abe]] (#03 Resource Specification ABE)
+- [[wiki/sid/resource/resource-topology-abe]] (#04 Resource Topology ABE)
+- [[wiki/sid/resource/resource-configuration-abe]] (#05 Resource Configuration ABE)
+- [[wiki/sid/resource/resource-usage-abe]] (#06 Resource Usage ABE)
+- [[wiki/sid/resource/resource-strategy-and-plan-abe]] (#07 Resource Strategy & Plan ABE)
+- [[wiki/sid/resource/resource-trouble-abe]] (#08 Resource Trouble ABE)
+- [[wiki/sid/resource/resource-test-abe]] (#09 Resource Test ABE)
+
+**Common Domain ABEs** (Table 4-10 entries 01–02) — resolved to GB922 Common v23.0:
+
+- [[wiki/sid/common/topology-abe]] (#01 Common Topology ABE — diagram-only ABE in
+  v23.0; resolved during the v1 Common ingest gap fill, see
+  [[wiki/open-questions#OQ-041]])
+- [[wiki/sid/common/location-abe]] (#02 Location ABE)
+
+**Enterprise Domain Workforce ABE** (Table 4-10 #01) — out of corpus scope per
+CLAUDE.md §3 (Enterprise Domain not in v1).
+
+— GB1022 §4.5.2, Table 4-10, pp. 41–45.
 
 ## eTOM Processes Realised
 
-GB1022 §4.5 maps Production to the Service and Resource Domain operational L2s. In
-v25.5 corpus terms (with renaming caveats per OQ-036), Production realises:
+GB1022 §4.5 Table 4-9 enumerates the eTOM L2 processes carried by the Production
+block, sourced from GB921 R20.5. Cross-walk to our GB921 v25.5 corpus and the
+resulting links are recorded in [[wiki/open-questions#OQ-040]].
 
-- Service Domain operational L2s ([[wiki/etom/service-domain/_index]]) — all 8
-  in-scope L2s
-- Resource Domain operational L2s ([[wiki/etom/resource-domain/_index]]) — all 9
-  in-scope L2s
+**Service Domain L2s** — resolved to v25.5:
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
+- [[wiki/etom/service-domain/service-support-management]] (Table 4-9 R20.5 1.4.4
+  "SM&O Support & Readiness"; same ID, renamed in v25.5; v25.5 1.4.4 also absorbs
+  R20.5 1.4.10 Service Test Management as L3 1.4.4.6 — see OQ-040)
+- [[wiki/etom/service-domain/service-activation-management]] (R20.5 1.4.5 "Service
+  Configuration & Activation"; same ID, renamed; v25.5 Extended Description still
+  references the legacy name)
+- [[wiki/etom/service-domain/service-problem-management]] (R20.5 1.4.6; same ID,
+  same name)
+- [[wiki/etom/service-domain/service-guiding-and-mediation]] (R20.5 1.4.8; same ID,
+  same name)
+
+**Resource Domain L2s** — resolved to v25.5:
+
+- [[wiki/etom/resource-domain/resource-support-management]] (R20.5 1.5.4 "RM&O
+  Support & Readiness"; same ID, renamed; v25.5 1.5.4 also absorbs R20.5 1.5.12
+  Resource Test Management as L3 1.5.4.9, and parts of R20.5 1.5.5 Workforce
+  Management and R20.5 1.5.6 Resource Provisioning — see OQ-040)
+- [[wiki/etom/resource-domain/resource-data-management]] (R20.5 1.5.7 "Resource Data
+  Collection & Distribution"; same ID, renamed)
+- [[wiki/etom/resource-domain/resource-trouble-management]] (R20.5 1.5.8; same ID,
+  same name)
+- [[wiki/etom/resource-domain/resource-mediation-and-reporting]] (R20.5 1.5.10; same
+  ID, same name)
+
+**R20.5 entries deferred or out of scope:**
+
+- R20.5 1.4.1, 1.4.2, 1.4.3, 1.5.2, 1.5.3 (Strategy / Capability / Specification
+  L2s) — out of corpus scope per CLAUDE.md §3 (SIP vertical excluded)
+- R20.5 1.X.Y Service Balance Management — source itself flags as "to be discussed
+  for next versions"; no v25.5 target
+- R20.5 1.4.10, 1.5.5, 1.5.6, 1.5.12 — restructured in v25.5; absorbing L2s already
+  linked above; full reasoning in [[wiki/open-questions#OQ-040]]
+
+— GB1022 §4.5, Table 4-9, pp. 38–40.
 
 ## Component Dependencies
 
@@ -132,5 +183,6 @@ See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
 - OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x
+- OQ-040: Production block trilateral sweep — R20.5→v25.x cross-walk decisions
+  (resolved mappings, restructured L2s, Common Topology ABE gap)

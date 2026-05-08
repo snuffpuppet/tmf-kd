@@ -63,40 +63,102 @@ and Table 4-6 (SID ABE mappings) in §4.4.3.
 
 ## SID Entities Owned
 
-GB1022 §4.4.3 (Standard Business Information Objects) provides a verbatim mapping
-table from Frameworx SID ABEs to the Core Commerce Management block (source GB922
-R20.5). Primary domains covered: Product, Customer, Common.
+GB1022 §4.4.3 Table 4-7 enumerates the SID ABEs owned by the Core Commerce
+Management block, sourced from GB922 R20.5. The table covers Customer (#01–#04),
+Product (#01–#08), Business Partner (#01–#06), and Common (#01–#02) domains.
+Cross-walk to our v25.0 / v25.5 / v23.0 corpus and the resulting links are recorded
+in [[wiki/open-questions#OQ-042]].
 
-The full mapping table is in source pp. 33–36. Key entries (R20.5 source naming) and
-their v25.x equivalents in this corpus:
+**Product Domain ABEs** (Table 4-7 #01–#08) — resolved to GB922 Product v25.5:
 
-- Product Specification, Product Offering, Product, Product Order, Product Usage,
-  Product Configuration, Loyalty, Product Catalog →
-  [[wiki/sid/product-abe]] category (12 ABEs in v25.5)
-- Catalog (canonical) → [[wiki/sid/common/catalog-abe]]
-- Agreement → [[wiki/sid/common/agreement-abe]]
-- Account → [[wiki/sid/common/account-abe]]
-- Customer Bill, Customer Bill Inquiry, Customer Bill Cycle (Customer Domain — out
-  of corpus scope; preserved as source reference)
-- Business Interaction → [[wiki/sid/common/business-interaction-abe]]
+- [[wiki/sid/product/product-and-offering-instance-abe]] (#01 Product ABE — R20.5
+  "Product ABE" represented Product instance; v25.5 hosts both Product instance
+  and Offering instance content here)
+- [[wiki/sid/product/product-specification-abe]] (#02 Product Specification ABE)
+- [[wiki/sid/product/strategic-product-portfolio-plan-abe]] (#03 Strategic Product
+  Portfolio Plan ABE)
+- [[wiki/sid/product/product-offering-specification-abe]] (#04 Product Offering
+  ABE — R20.5 entry described offering definitions; v25.5 spec side lives here.
+  Offering instance side is also covered by
+  [[wiki/sid/product/product-and-offering-instance-abe]] linked above)
+- [[wiki/sid/product/product-usage-abe]] (#05 Product Usage ABE)
+- [[wiki/sid/product/product-configuration-abe]] (#06 Product Configuration ABE)
+- [[wiki/sid/product/loyalty-abe]] (#07 Loyalty ABE)
+- [[wiki/sid/product/product-test-abe]] (#08 Product Test ABE)
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
+**Common Domain ABEs** (Table 4-7 #01–#02) — resolved to GB922 Common v23.0:
+
+- [[wiki/sid/common/agreement-abe]] (#01 Agreement ABE)
+- [[wiki/sid/common/capacity-abe]] (#02 Capacity ABE)
+
+**Additional Common Domain ABEs from v1 partial sweep (not in Table 4-7):**
+
+The following three Common ABE pages carry CCM back-links added during the v1
+partial sweep (see AGENTS.md "Initial trilateral sweep done"). They are not in
+GB1022 §4.4.3 Table 4-7 but the inferences are plausible (Catalog is the canonical
+parent of Product Catalog; Business Interaction is the canonical parent of
+ProductOrder; Account is the canonical parent of CustomerBillingAccount). Linked
+here to maintain bidirectional consistency with the existing back-links; flagged
+in [[wiki/open-questions#OQ-042]] for source-supported review.
+
+- [[wiki/sid/common/account-abe]] (legacy v1 sweep; not in Table 4-7)
+- [[wiki/sid/common/business-interaction-abe]] (legacy v1 sweep; not in Table 4-7)
+- [[wiki/sid/common/catalog-abe]] (legacy v1 sweep; not in Table 4-7)
+
+**Customer Domain ABEs** (Table 4-7 entries 01–04: Customer Product Order, Customer
+Problem, Customer SLA, Applied Customer Billing Rate) — out of corpus scope per
+CLAUDE.md §3 (Customer Domain not in v1).
+
+**Business Partner Domain ABEs** (Table 4-7 entries 01–06: Party Problem, Business
+Partner Product Order, Party Product Specification & Offering, Party Revenue
+Settlement, Party Service Level Agreement, Applied Party Billing Rate
+«Preliminary - Ongoing study») — out of corpus scope per CLAUDE.md §3 (Business
+Partner Domain not in v1).
+
+— GB1022 §4.4.3, Table 4-7, pp. 33–36.
 
 ## eTOM Processes Realised
 
-GB1022 §4.4.2 (Business Processes in the Core Commerce Management Block) provides a
-verbatim mapping table from eTOM L2 processes to the CCM block (source GB921 R20.5).
-The full mapping is in source pp. 29–33.
+GB1022 §4.4.2 Table 4-6 enumerates the eTOM L2 processes realised by the Core
+Commerce Management block, sourced from GB921 R20.5. Cross-walk to our GB921
+v25.5 corpus and the resulting links are recorded in
+[[wiki/open-questions#OQ-042]].
 
-In v25.5 corpus terms, CCM is the ODA realisation of much of:
-- Product Domain operational L2s ([[wiki/etom/product-domain/_index]]) — particularly
-  Product Order Management (1.2.27), Product Configuration Management (1.2.5),
-  Product Inventory Management (1.2.11), Product Catalog Operational Readiness /
-  Content Management (1.2.21, 1.2.22), Product Usage / Rating / Balance Management
-  (1.2.16, 1.2.17, 1.2.18), Product Anomaly / Problem Management (1.2.25, 1.2.26),
-  Product Performance Management (1.2.6), Product Support Management (1.2.4)
+**Product Domain L2s** — resolved to v25.5:
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
+- [[wiki/etom/product-domain/product-configuration-management]] (Table 4-6 R20.5
+  1.2.5; same ID, same name)
+- [[wiki/etom/product-domain/product-inventory-management]] (R20.5 1.2.11; same
+  ID, same name)
+- [[wiki/etom/product-domain/product-usage-management]] (R20.5 1.2.16; same ID,
+  same name)
+- [[wiki/etom/product-domain/product-rating-and-rate-assignment]] (R20.5 1.2.17;
+  same ID, same name)
+- [[wiki/etom/product-domain/product-balance-management]] (R20.5 1.2.18; same ID,
+  same name)
+- [[wiki/etom/product-domain/product-support-management]] (v25.5 1.2.4 absorbs
+  R20.5 1.2.9 "Product Offering Purchasing" as L3 1.2.4.4 "Support Product
+  Offering Purchasing", and R20.5 1.2.15 "Product Test Management" as L3 1.2.4.9
+  "Manage Product Test" — same restructuring pattern as Service/Resource Test
+  ABEs into Service/Resource Support Management; see OQ-042)
+
+**R20.5 entries deferred or out of scope:**
+
+- R20.5 1.1.5, 1.1.9, 1.1.19 (Sales / Selling / Loyalty Program Management) —
+  Market & Sales Domain, out of corpus scope per CLAUDE.md §3
+- R20.5 1.2.1, 1.2.2 (Product & Offer Portfolio Planning / Capability Delivery)
+  — Strategy/Capability lifecycle, out per §3
+- R20.5 1.2.7 — v25.5 retains 1.2.7 in "Business Value Development" vertical, out
+  of OFAB scope per §3
+- R20.5 1.2.8 (Product Capacity Management) — not in v25.5 OFAB in-scope set
+- R20.5 1.3.x (Customer Order Handling / Problem Handling / QoS-SLA Management)
+  — Customer Domain, out per §3. Note 1.3.3 likely re-emerges in v25.5 1.2.27
+  Product Order Management; left unlinked pending source confirmation (OQ-042)
+- R20.5 1.6.x (Party Offering Development & Retirement / Agreement / Order /
+  Problem / Special Event / Revenue Sharing) — Business Partner Domain, out
+  per §3
+
+— GB1022 §4.4.2, Table 4-6, pp. 29–33.
 
 ## Component Dependencies
 
@@ -111,5 +173,7 @@ See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
 - OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x
+- OQ-042: Core Commerce Management trilateral sweep — R20.5→v25.x cross-walk
+  decisions (resolved Product/Common ABE mappings, eTOM L2 absorption pattern,
+  domains out of corpus scope)

@@ -56,14 +56,22 @@ Additional functionalities are listed in source Table 4-1.
 
 ## SID Entities Owned
 
-The Decoupling & Integration Block is a non-business block per GB1022 §4.1.1 — it
-holds no operational data (SID) of its own. See [[wiki/open-questions#OQ-038]] for
-the structural exemption.
+The Decoupling & Integration Block holds no operational data per GB1022 §4.1.1
+(non-business functions). The trilateral sweep performed 2026-05-08T21:30Z
+confirmed: GB1022 §4.1 contains no SID ABE mapping table for this block (unlike
+§4.3.3 / §4.4.3 / §4.5.2 / §4.6.2 which carry Tables 4-4 / 4-7 / 4-10 / 4-13 for
+the business blocks). §4.1.2 Table 4-1 lists only integration functionalities
+(Normalized APIs, Message Routing). Source-supported absence, not a gap. See
+[[wiki/open-questions#OQ-038]].
 
 ## eTOM Processes Realised
 
-The Decoupling & Integration Block is a non-business block per GB1022 §4.1.1 — it
-holds no business processes (eTOM) of its own. See [[wiki/open-questions#OQ-038]].
+The Decoupling & Integration Block holds no business processes per GB1022 §4.1.1
+(non-business functions). The trilateral sweep performed 2026-05-08T21:30Z
+confirmed: GB1022 §4.1 contains no eTOM L2 mapping table for this block (unlike
+§4.3.2 / §4.4.2 / §4.5 / §4.6.1 which carry Tables 4-3 / 4-6 / 4-9 / 4-12 for
+the business blocks). Source-supported absence, not a gap. See
+[[wiki/open-questions#OQ-038]].
 
 ## Component Dependencies
 
@@ -77,6 +85,5 @@ D&I borders all other ODA Functional Blocks as the integration layer:
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
-- OQ-038: Non-business ODA block (D&I, Engagement Management) trilateral exemption
-- OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x
+- OQ-038: Non-business ODA block trilateral exemption — source-supported absence
+  of eTOM/SID mappings for Decoupling & Integration (§4.1.1)

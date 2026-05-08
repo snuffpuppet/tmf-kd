@@ -117,9 +117,14 @@ it from A instead.
 
 ### `LINK-BROKEN` [error]
 **Rule.** Every `[[wikilink]]` must resolve to an existing wiki page (or `CLAUDE.md`,
-`templates/README.md`).
+`templates/README.md`). Wikilinks inside fenced code blocks (```` ``` ````) and inline
+code spans (`` ` `` … `` ` ``) are skipped — these are syntax illustrations, not real
+links. The same skip applies to trilateral and bidirectional checks: a code-spanned
+wikilink does not satisfy `TRI-EMPTY` and does not register for `BI-MISSING`.
 **Why.** Broken wikilinks degrade Obsidian navigation and indicate stale references.
-**Fix.** Correct the path, or create the target page if it should exist.
+**Fix.** Correct the path, or create the target page if it should exist. If the
+wikilink-shaped text is intentionally illustrative (e.g. in `wiki/log.md`), wrap it in
+backticks.
 
 ### `SRC-MISSING` [error for `source_paths`, warning for `source_extract_paths`]
 **Rule.** Files referenced by `source_paths` and `source_extract_paths` must exist.

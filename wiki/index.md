@@ -80,11 +80,18 @@ cross-framework concepts above.
 
 ## SID — Common Business Entities
 - [[wiki/sid/common-abe|Browse Common category]]
-- 19 ABEs (§4.4–§4.22 of GB922 Common v23.0):
+- 31 ABEs total — 27 per-chapter (§4.4–§4.30) + 4 diagram-only (§4.1 brief)
+- Per-chapter ABEs §4.4–§4.22 (v1 ingest, 2026-05-08T15:00Z):
   Party, Party Privacy, Party Payment, Communication Interaction (Shared sub-domain),
   Digital Identity, Calendar, Location, Base Types, Root Business Entities, Account,
   Business Interaction, Agreement, Capacity (canonical), Catalog (canonical),
   Configuration and Profiling (canonical), Metric, Performance, Policy, Project
+- Per-chapter ABEs §4.23–§4.30 (gap fill, 2026-05-08T19:00Z, OQ-041):
+  Test (canonical), Usage (canonical), Segmentation, Intent, Closed Loop
+  «Preliminary», Goal «Preliminary», Workflow «Preliminary», Anomaly
+- Diagram-only ABEs (gap fill, 2026-05-08T19:00Z, OQ-041):
+  Topology, Event («not fully developed»), Trouble Ticket («not fully
+  developed»), Trouble or Problem
 
 ## ODA
 _(none yet)_

@@ -540,4 +540,410 @@ in [[CLAUDE]] §8.
 
 ---
 
+## OQ-040 — Production block trilateral sweep: R20.5→v25.x cross-walk decisions
+
+- **Raised:** 2026-05-08
+- **Source page:** wiki/oda/functional-blocks/production.md
+- **Question:** GB1022 §4.5 Table 4-9 (eTOM mapping) and Table 4-10 (SID mapping) are
+  sourced from GB921 R20.5 and GB922 R20.5. Resolving these to the v25.5 / v25.0 /
+  v23.0 corpus required per-row decisions. Decisions taken in this sweep (recorded
+  here for audit; reversible if the user disagrees):
+
+  **eTOM L2 — resolved to v25.5 (linked):**
+    - R20.5 1.4.4 SM&O Support & Readiness → v25.5 1.4.4 Service Support Management
+      (same ID; renamed)
+    - R20.5 1.4.5 Service Configuration & Activation → v25.5 1.4.5 Service Activation
+      Management (same ID; renamed; v25.5 Extended Description explicitly references
+      the legacy "Service Configuration & Activation" name)
+    - R20.5 1.4.6 Service Problem Management → v25.5 1.4.6 (same ID, same name)
+    - R20.5 1.4.8 Service Guiding & Mediation → v25.5 1.4.8 (same ID, same name)
+    - R20.5 1.5.4 RM&O Support & Readiness → v25.5 1.5.4 Resource Support Management
+      (same ID; renamed)
+    - R20.5 1.5.7 Resource Data Collection & Distribution → v25.5 1.5.7 Resource Data
+      Management (same ID; renamed)
+    - R20.5 1.5.8 Resource Trouble Management → v25.5 1.5.8 (same ID, same name)
+    - R20.5 1.5.10 Resource Mediation & Reporting → v25.5 1.5.10 (same ID, same name)
+
+  **eTOM L2 — absorbed/restructured in v25.5 (NOT linked at L2; L3 evidence noted):**
+    - R20.5 1.4.10 Service Test Management → demoted in v25.5 to L3 1.4.4.6 "Manage
+      Service Test" under 1.4.4 Service Support Management
+    - R20.5 1.5.5 Workforce Management → restructured in v25.5; L4 Workforce
+      activities now live under 1.5.4 Resource Support Management (e.g. 1.5.4.8.x).
+      v25.5 ID 1.5.5 is now Resource Order Management (different process)
+    - R20.5 1.5.6 Resource Provisioning → distributed in v25.5; "Enable Resource
+      Provisioning" lives at L3 1.5.4.1 under 1.5.4 Resource Support Management;
+      provisioning lifecycle activities also under 1.5.5 Resource Order Management
+    - R20.5 1.5.12 Resource Test Management → demoted in v25.5 to L3 1.5.4.9 "Manage
+      Resource Test" under 1.5.4 Resource Support Management
+
+    These four R20.5 L2s are not linked individually because the v25.5 reorganisation
+    is not a clean rename — the source content was demoted, distributed, or merged.
+    The absorbing v25.5 L2s (1.4.4, 1.5.4, 1.5.5) are already linked from the
+    "resolved" list above.
+
+  **eTOM — out of scope:**
+    - R20.5 1.4.1, 1.4.2, 1.4.3 (Service Strategy/Capability/Specification) — SIP
+      vertical, out of corpus scope per CLAUDE.md §3
+    - R20.5 1.5.2, 1.5.3 (Resource Capability/Specification) — same
+    - R20.5 1.X.Y Service Balance Management — flagged "to be discussed" in source
+
+  **SID ABEs — resolved (linked):**
+    - All 8 Service ABEs in Table 4-10 → wiki/sid/service/* (Service, Service Order,
+      Service Specification, Service Strategy & Plan, Service Configuration, Service
+      Usage, Service Problem, Service Test)
+    - All 9 Resource ABEs in Table 4-10 → wiki/sid/resource/* (Resource, Resource
+      Order, Resource Specification, Resource Topology, Resource Configuration,
+      Resource Usage, Resource Strategy & Plan, Resource Trouble, Resource Test)
+    - Common Location ABE → wiki/sid/common/location-abe
+
+  **SID ABEs — gap:**
+    - Common Topology ABE listed in Table 4-10 has **no corresponding entity in our
+      GB922 Common v23.0 corpus** (the v23.0 Common ingest covered §4.4–§4.22 with
+      19 ABEs; no Topology ABE). Resource Topology ABE exists separately in our
+      Resource corpus and is the one linked. Whether v23.0 dropped Common Topology,
+      renamed it, or whether it was never a top-level Common ABE in v23.0 is
+      uncertain. Not linked. May warrant a focused look at GB922 Common v23.0 §4
+      structure to verify.
+
+  **SID — Enterprise Workforce ABE:** out of corpus scope (Enterprise Domain not in
+    v1 corpus per CLAUDE.md §3).
+
+- **Blocking:** None. Sweep complete for Production; remaining gaps are documented
+  here. The cross-walk pattern set here is the template for the other 5 ODA blocks
+  (Core Commerce Management, Engagement Management, Party Management, Intelligence
+  Management, Decoupling & Integration).
+
+---
+
+## OQ-041 — v1 Common ingest stopped at §4.22; 12 ABEs missed
+
+- **Raised:** 2026-05-08
+- **Source page:** wiki/sid/common/_index.md
+- **Question:** GB922 Common v23.0 contains ABE chapters §4.4 through §4.30 plus
+  four ABEs declared in the §4.1 [ComD-01] Common ABEs Level 1 diagram with brief
+  descriptions but no dedicated chapter. The v1 Common ingest (2026-05-08T15:00Z)
+  covered §4.4–§4.22 only — 19 ABE pages — leaving 12 Common ABEs absent from the
+  corpus. Discovered during the Production block trilateral sweep, where GB1022
+  §4.5 Table 4-10 references Common Topology ABE (one of the missing entries).
+
+  **Missed per-chapter ABEs (8):**
+    - §4.23 Test ABE — canonical Test pattern; Product Test, Service Test, Resource
+      Test all specialise from it
+    - §4.24 Usage ABE — canonical Usage pattern; Product Usage, Service Usage,
+      Resource Usage all specialise from it
+    - §4.25 Segmentation ABE — entity-grouping criteria
+    - §4.26 Intent ABE — Intent and IntentReport
+    - §4.27 Closed Loop ABE «Preliminary»
+    - §4.28 Goal ABE «Preliminary»
+    - §4.29 Workflow ABE «Preliminary»
+    - §4.30 Anomaly ABE — ties to v25.5 eTOM Anomaly Management L2s
+
+  **Missed diagram-only ABEs (4)** — listed as top-level Common ABEs in §4.1 with
+  one-paragraph definitions, no dedicated chapter:
+    - Topology ABE — referenced by GB1022 §4.5 Table 4-10 (Production owner)
+    - Event ABE («not fully developed»)
+    - Trouble Ticket ABE («not fully developed»)
+    - Trouble or Problem ABE
+
+  **Resolution:** filling the gap with 12 new pages in the same ingest event that
+  raises this OQ. Per-chapter pages get full anatomy from §4.x content. Diagram-only
+  pages are honest about thinness — overview from §4.1 brief description, no
+  chapter content available. «Preliminary» pages set `release_status: draft` per
+  CLAUDE.md §6.
+
+- **Blocking:** None now (resolved in same ingest event). Logged for audit so the
+  v1 truncation is not silent.
+
+---
+
+## OQ-042 — Core Commerce Management trilateral sweep: R20.5→v25.x cross-walk decisions
+
+- **Raised:** 2026-05-08
+- **Source page:** wiki/oda/functional-blocks/core-commerce-management.md
+- **Question:** GB1022 §4.4.2 Table 4-6 (eTOM mapping) and §4.4.3 Table 4-7 (SID
+  mapping) are sourced from GB921 R20.5 and GB922 R20.5. Resolving these to the
+  v25.5 / v25.0 / v23.0 corpus produced the following per-row decisions; logged
+  for audit (reversible if user disagrees).
+
+  **Table 4-6 (eTOM L2) — out of corpus scope:**
+    - R20.5 1.1.5 Sales Development, 1.1.9 Selling, 1.1.19 Loyalty Program
+      Management — Market & Sales Domain, not in v1 corpus per CLAUDE.md §3
+    - R20.5 1.2.1 Product & Offer Portfolio Planning, 1.2.2 Product & Offer
+      Capability Delivery — Strategy/Capability lifecycle (S-T-R), out per §3
+    - R20.5 1.2.7 Product Specification & Offering Development & Retirement —
+      v25.5 retains 1.2.7 but in "Business Value Development" vertical (out of
+      OFAB scope per §3)
+    - R20.5 1.2.8 Product Capacity Management — not in v25.5 OFAB in-scope set
+    - R20.5 1.3.x Customer Order/Problem/QoS Handling — Customer Domain, not in
+      v1 corpus per §3
+    - R20.5 1.6.x Party (Offering / Agreement / Order / Problem / Special Event /
+      Revenue) — Business Partner Domain, not in v1 corpus per §3
+
+  **Table 4-6 (eTOM L2) — resolved to v25.5 (linked):**
+    - R20.5 1.2.5 Product Configuration Management → v25.5 1.2.5 (same ID, same
+      name)
+    - R20.5 1.2.11 Product Inventory Management → v25.5 1.2.11 (same ID, same
+      name)
+    - R20.5 1.2.16 Product Usage Management → v25.5 1.2.16 (same ID, same name)
+    - R20.5 1.2.17 Product Rating & Rate Assignment → v25.5 1.2.17 (same ID,
+      same name)
+    - R20.5 1.2.18 Product Balance Management → v25.5 1.2.18 (same ID, same
+      name)
+    - R20.5 1.2.9 Product Offering Purchasing + R20.5 1.2.15 Product Test
+      Management → both demoted/restructured in v25.5; activities live under
+      v25.5 1.2.4 Product Support Management (L3 1.2.4.4 "Support Product
+      Offering Purchasing"; L3 1.2.4.9 "Manage Product Test"). Linking 1.2.4 as
+      the absorbing L2 — same precedent as Production block (OQ-040) where
+      1.4.4/1.5.4 absorbed equivalent R20.5 L2s.
+
+  **Table 4-6 — NOT linked despite being in v25.5 in-scope Product Domain:**
+    - 1.2.27 Product Order Management, 1.2.21/1.2.22 Product Catalog L2s,
+      1.2.25/1.2.26 Product Anomaly/Problem Management, 1.2.6 Product
+      Performance Management — none of these v25.5 L2s appear in GB1022 §4.4.2
+      Table 4-6. The earlier Core Commerce page asserted these mappings by
+      inference; per CLAUDE.md §1 they are removed pending source backing (e.g.
+      an updated GB1022 or a future TMF mapping document). Note: 1.2.27
+      Product Order Management is a strong candidate by content (its Extended
+      Description matches R20.5 1.3.3 Customer Order Handling, which is in
+      Table 4-6 but in the out-of-scope Customer Domain). Reasonable hypothesis
+      that the v25.5 reorg moved Customer Order Handling responsibilities into
+      the Product Domain; not in our corpus until a source confirms.
+
+  **Table 4-7 (SID ABE) — out of corpus scope:**
+    - Customer Domain entries 01–04 (Customer Product Order, Customer Problem,
+      Customer SLA, Applied Customer Billing Rate) — Customer Domain not in v1
+      corpus per §3
+    - Business Partner Domain entries 01–06 (Party Problem, Business Partner
+      Product Order, Party Product Specification & Offering, Party Revenue
+      Settlement, Party Service Level Agreement, Applied Party Billing Rate
+      «Preliminary - Ongoing study») — Business Partner Domain not in v1 corpus
+      per §3
+
+  **Table 4-7 (SID ABE) — resolved (linked):**
+    - Product 01 Product ABE → v25.5
+      `wiki/sid/product/product-and-offering-instance-abe` (R20.5 "Product ABE"
+      definition focused on product instance; v25.5 split into separate
+      Specification and Instance ABEs, with both Product and Offering instances
+      living in product-and-offering-instance-abe)
+    - Product 02 Product Specification ABE → v25.5
+      `wiki/sid/product/product-specification-abe` (clean rename)
+    - Product 03 Strategic Product Portfolio Plan ABE →
+      `wiki/sid/product/strategic-product-portfolio-plan-abe` (clean)
+    - Product 04 Product Offering ABE → v25.5
+      `wiki/sid/product/product-offering-specification-abe` (R20.5 "Product
+      Offering ABE" focused on offering definitions; v25.5 separates the spec
+      side here; offering instance side lives in
+      product-and-offering-instance-abe — which is also linked from #01)
+    - Product 05 Product Usage ABE → `wiki/sid/product/product-usage-abe`
+    - Product 06 Product Configuration ABE →
+      `wiki/sid/product/product-configuration-abe`
+    - Product 07 Loyalty ABE → `wiki/sid/product/loyalty-abe`
+    - Product 08 Product Test ABE → `wiki/sid/product/product-test-abe`
+    - Common 01 Agreement ABE → `wiki/sid/common/agreement-abe`
+    - Common 02 Capacity ABE → `wiki/sid/common/capacity-abe`
+
+  **Pre-existing legacy back-links — preserved with flag, source unknown:**
+
+    Three Common ABE pages have CCM back-links added during the v1 partial sweep
+    (referenced in AGENTS.md "Initial trilateral sweep done — 16 eTOM/SID pages
+    have reciprocal ODA back-links") with no recorded rationale. They are not in
+    GB1022 §4.4.3 Table 4-7. The inferences are plausible:
+      - `wiki/sid/common/account-abe` — likely on the basis that Account is
+        canonical parent of CustomerBillingAccount, and CCM handles billing
+      - `wiki/sid/common/business-interaction-abe` — likely on the basis that
+        BusinessInteraction is canonical parent of ProductOrder, and CCM handles
+        Order Capture
+      - `wiki/sid/common/catalog-abe` — likely on the basis that Catalog is
+        canonical parent of Product Catalog, which is core to CCM
+    Preserved as forward links from `wiki/oda/functional-blocks/core-commerce-management`
+    in an "Additional Common Domain ABEs from v1 partial sweep" sub-section to
+    maintain bidirectional consistency. Flagged here for review when a source
+    mapping table for these specific links surfaces — until then, treat as
+    legacy / inferential rather than Table 4-7-supported.
+
+- **Blocking:** None. Sweep complete for Core Commerce Management; remaining
+  v25.5 Product Domain L2s (1.2.27, 1.2.21, 1.2.22, 1.2.25, 1.2.26, 1.2.6, 1.2.4
+  for the parts not derived from R20.5 1.2.9/1.2.15) await a source mapping
+  document before linking. Pattern continues from OQ-040 / Production block.
+
+---
+
+## OQ-043 — Party Management trilateral sweep: R20.5→v23.0 cross-walk decisions
+
+- **Raised:** 2026-05-08
+- **Source page:** wiki/oda/functional-blocks/party-management.md
+- **Question:** GB1022 §4.3.2 Table 4-3 (eTOM mapping) and §4.3.3 Table 4-4 (SID
+  mapping) are sourced from GB921 R20.5 and GB922 R20.5. Cross-walk to our
+  corpus; decisions logged for audit.
+
+  **Table 4-3 (eTOM L2) — out of corpus scope (entire table):**
+    - All 32 R20.5 entries in Table 4-3 fall in Market (1.1.x), Customer (1.3.x),
+      or Business Partner (1.6.x) domains. None are in Service / Resource /
+      Product domains. Per CLAUDE.md §3, all 32 entries are out of corpus
+      scope — Party Management produces **zero eTOM L2 wikilinks**. The 1.X.Y
+      "Party Identification & Authentication" placeholder is also out of scope
+      and source-flagged "to be discussed for next versions".
+    - Note: Party Management is fundamentally a cross-cutting block over
+      Market/Sales/Customer/Business-Partner domains (per its name). The corpus's
+      operational PSR scope intentionally excludes those domains, so an empty
+      eTOM trilateral for PM is the source-supported correct outcome (similar
+      to Engagement Management's structural exemption per OQ-038, but for a
+      different reason — scope exclusion rather than structural absence).
+
+  **Table 4-4 (SID ABE) — domain reorganization R20.5 → v23.0:**
+    - GB1022 Table 4-4 places "Party" (#02) and "Party Privacy" (#08) under
+      Business Partner Domain. Our v23.0 GB922 Common places them under Common
+      Domain. This is a R20.5 → v23.0 reorganization (Party concepts moved to
+      Common because they are truly cross-cutting). The CONCEPT is the same;
+      the domain placement differs. The v23.0 Common Party / Party Privacy ABEs
+      are linked here as the v23.0 successors of the R20.5 entries Table 4-4
+      points at.
+
+  **Table 4-4 (SID ABE) — resolved (linked):**
+    - R20.5 Common #01 Communication Interaction → v23.0
+      `wiki/sid/common/communication-interaction-abe`
+    - R20.5 Business Partner #02 Party → v23.0 `wiki/sid/common/party-abe`
+      (domain reorg per above)
+    - R20.5 Business Partner #03 Business Partner Account → v23.0
+      `wiki/sid/common/account-abe` (v23.0 Common Account ABE explicitly
+      includes BusinessPartnerAccount per its overview)
+    - R20.5 Business Partner #08 Party Privacy → v23.0
+      `wiki/sid/common/party-privacy-abe` (domain reorg per above)
+    - R20.5 Product #01 Product Party Roles → v25.5
+      `wiki/sid/product/product-party-roles-abe`
+    - R20.5 Service #01 Service Party Roles → v25.0
+      `wiki/sid/service/service-party-roles-abe`
+    - R20.5 Resource #01 Resource Party Roles → v25.5
+      `wiki/sid/resource/resource-party-roles-abe`
+
+  **Table 4-4 (SID ABE) — out of corpus scope:**
+    - Market/Sales Domain entries 01–07 (Strategy and Plan, Market Segment,
+      Competitor, Contact/Lead/Prospect, Sales Channel, Market Sales Forecast,
+      Market Sales Party Roles) — Market/Sales Domain not in v1 corpus per §3
+    - Customer Domain entries 01–05 (Customer Party Roles, Customer
+      Interaction, Customer Bill, Customer Bill Collection, Customer Bill
+      Inquiry) — Customer Domain not in v1 corpus per §3
+    - Business Partner Domain entries 01 Party Strategy & Plan, 04 Party Bill
+      «preliminary», 05 Party Bill Collection (about Dunning — uncertain
+      v23.0 mapping; Common Party Payment ABE covers payment methods/plans
+      not Dunning specifically), 06 Business Partner Party Roles, 07 Party
+      Interaction (overlaps R20.5 Common #01 Communication Interaction
+      already linked) — Business Partner Domain not in v1 corpus per §3
+    - Common #02 Users and Roles — no clean v23.0 successor; closest match
+      would be PartyRole within Party ABE but that's already linked. Skip.
+    - Enterprise #01 Enterprise Party Roles — Enterprise Domain not in v1
+      corpus per §3
+
+  **Pre-existing legacy back-links — preserved with flag:**
+
+    Two Common ABE pages had v1-partial-sweep PM back-links not directly
+    supported by Table 4-4:
+      - `wiki/sid/common/agreement-abe` — NOT in Table 4-4. The inference is
+        plausible (Party Agreement Management is mentioned in §4.3.1 as a PM
+        responsibility; v23.0 Agreement ABE is the canonical Agreement model).
+        Preserved on PM page in an "Additional Common ABEs from v1 partial
+        sweep" sub-section, flagged for source-supported review.
+      - `wiki/sid/common/party-payment-abe` — partial support via R20.5 BP
+        #05 Party Bill Collection (which mentions "all what is related to
+        PartyPayment"). The v23.0 Party Payment ABE covers PaymentMethod,
+        PaymentPlan, Bank — broader than Bill Collection / Dunning. Preserved
+        with the same flag.
+
+- **Blocking:** None. Sweep complete for Party Management. Note PM is the
+  block where corpus scope (operational PSR) most diverges from the source's
+  organizational placement — most of GB1022 §4.3 references Customer / Business
+  Partner / Market-Sales domain content that is intentionally out of v1 scope.
+
+---
+
+## OQ-044 — Intelligence Management trilateral sweep: R20.5→v25.x cross-walk decisions
+
+- **Raised:** 2026-05-08
+- **Source page:** wiki/oda/functional-blocks/intelligence-management.md
+- **Question:** GB1022 §4.6.1 Table 4-12 (eTOM mapping) and §4.6.2 Table 4-13
+  (SID mapping) are sourced from GB921 R20.5 and GB922 R20.5. Cross-walk
+  decisions logged for audit.
+
+  **Table 4-12 (eTOM L2) — out of corpus scope:**
+    - R20.5 1.1.7, 1.1.12, 1.1.13, 1.1.15 (Market Sales Support & Readiness,
+      Market Performance, Sales Performance, Marketing Campaign) — Market/Sales
+      Domain not in v1 corpus per CLAUDE.md §3
+    - R20.5 1.3.1, 1.3.2 (Customer Support, Customer Experience Management) —
+      Customer Domain not in v1 corpus per §3
+    - R20.5 1.6.6, 1.6.11 (Party Support, Party Performance Management) —
+      Business Partner Domain not in v1 corpus per §3
+    - R20.5 1.2.13 Product Test Quality Analysis → v25.5 L3 1.2.1.6 "Analyze
+      Product Test Quality" but in **Strategy Management vertical**, out of
+      OFAB scope per §3
+    - R20.5 1.4.11 Service Test Quality Analysis → v25.5 L3 1.4.1.9 "Analyze
+      Service Test Quality", Strategy Management vertical, OOS
+    - R20.5 1.5.13 Resource Test Quality Analysis → v25.5 L3 1.5.1.9 "Analyze
+      Resource Test Quality", Strategy Management vertical, OOS
+
+  **Table 4-12 (eTOM L2) — resolved to v25.5 (linked):**
+    - R20.5 1.2.4 Product Support → v25.5 1.2.4 Product Support Management
+      (same ID; slight rename)
+    - R20.5 1.2.6 Product Performance Management → v25.5 1.2.6 (same ID, same
+      name)
+    - R20.5 1.4.4 SM&O Support and Readiness → v25.5 1.4.4 Service Support
+      Management (same ID; renamed; same as Production OQ-040 cross-walk)
+    - R20.5 1.4.7 Service Quality Management → v25.5 1.4.7 Service Performance
+      Management (same ID; renamed Quality→Performance — v25.5 Extended
+      Description explicitly references "Service Quality" as a performance
+      objective, confirming the lineage)
+    - R20.5 1.5.4 RM&O Support and Readiness → v25.5 1.5.4 Resource Support
+      Management (same ID; renamed; same as Production OQ-040)
+    - R20.5 1.5.9 Resource Performance Management → v25.5 1.5.9 (same ID,
+      same name)
+
+  **Note on Support Management L2s.** v25.5 1.2.4 / 1.4.4 / 1.5.4 each appear
+  in TWO ODA blocks' mapping tables — Production (Table 4-9 for 1.4.4/1.5.4)
+  and Intelligence Management (Table 4-12 for 1.2.4/1.4.4/1.5.4). This is
+  consistent with the source-stated "split into 2" guidance in §4.6.1: an L2
+  can be realised by multiple ODA blocks where it manages SID ABEs that are
+  themselves mapped to different blocks. The reciprocal back-links on the
+  Support Management L2 pages will list both Production and Intelligence
+  Management.
+
+  **Table 4-13 (SID ABE) — out of corpus scope:**
+    - Market/Sales 01 Marketing Campaign, 02 Market Sales Statistics — out of
+      scope
+    - Customer 01 Customer Statistic — out of scope
+    - Business Partner 01 Party Statistic — out of scope
+    - Common 01 Party / Party Profile (L2) — no clean v23.0 Common ABE
+      successor for the marketing-targeting flavour of "Party Profile" Table
+      4-13 references (the v23.0 Party ABE contains PartyRole and Party
+      profile concepts, but the source's "Party Profile (L2)" is specifically
+      about marketing-segment characteristics; out of scope by content even
+      though Party concept itself is in our v23.0 Common). Not linked.
+
+  **Table 4-13 (SID ABE) — resolved (linked):**
+    - Product 01 Product Performance ABE → v25.5
+      `wiki/sid/product/product-performance-abe` (notFullyDeveloped per OQ-011)
+    - Service 01 Service Performance ABE → v25.0
+      `wiki/sid/service/service-performance-abe`
+    - Resource 01 Resource Performance ABE → v25.5
+      `wiki/sid/resource/resource-performance-abe`
+
+  **Pre-existing legacy back-links — preserved with flag:**
+
+    Two Common ABE pages had v1-partial-sweep IM back-links not in Table 4-13:
+      - `wiki/sid/common/performance-abe` — NOT in Table 4-13. The inference is
+        plausible (Common Performance ABE is the canonical pattern that the
+        domain Performance ABEs specialise from; if IM owns the domain
+        Performance ABEs, the canonical parent is reasonably IM-related). Not
+        directly source-supported. Preserved with flag.
+      - `wiki/sid/common/metric-abe` — NOT in Table 4-13. The inference is
+        plausible (Metric ABE provides standards of measurement, thresholds,
+        metrics — central to performance analytics and Insight Management per
+        Table 4-14 #04 "Analytic Models"). Not directly source-supported.
+        Preserved with flag.
+
+- **Blocking:** None. Sweep complete for Intelligence Management. Pattern
+  consistent with OQ-040/042/043 (R20.5→v25.x cross-walk for both clean
+  renames and out-of-scope reorganization, plus legacy v1 back-link
+  preservation).
+
+---
+
 _(more open questions will accumulate as further ingestion proceeds)_

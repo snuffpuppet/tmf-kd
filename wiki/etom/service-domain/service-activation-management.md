@@ -58,7 +58,9 @@ entity pages with reciprocal links).
 
 ## ODA Components That Realise This Process
 
-See open-questions.md — OQ-008 (ODA layer not yet ingested).
+- [[wiki/oda/functional-blocks/production]]
+
+See open-questions.md — OQ-008 (further ODA components pending trilateral sweep).
 
 ## Open Questions
 

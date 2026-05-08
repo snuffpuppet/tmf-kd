@@ -520,3 +520,485 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
       because they were stored relative to the wiki root.
     - `cd tmf-kb && ...` invocations in docs simplified to direct execution at
       project root.
+
+---
+
+## 2026-05-08T18:00Z — TOOLING (linter: skip wikilinks in code spans)
+
+- **File(s):** `lint/lint.py`, `lint/lint_checks.md`
+- **Pages created/updated:** none (wiki content unchanged)
+- **Sections skipped (out of scope):** N/A
+- **Lint result:** PASS — 117 pages, 0 findings
+- **Open questions filed:** none
+- **Notes:**
+    - The 2026-05-08 RESTRUCTURE log entry contains an inline code span
+      illustrating the wikilink syntax. Because `wiki/log.md` is append-only
+      (CLAUDE.md §10.6), the entry cannot be edited. The earlier linter regex
+      did not honour code-span boundaries, so the illustrative text was raised
+      as `LINK-BROKEN`. Baseline broke as a result.
+    - Fix: introduced `strip_code()` in `lint/lint.py` which removes fenced
+      code blocks (```` ``` ````) and inline code spans (`` ` ``…`` ` ``)
+      before any wikilink scan. Applied at every regex site (`lint_wikilinks`,
+      `lint_trilateral`, `build_link_index`, `lint_bidirectional`).
+    - Side effect (intended): a code-spanned wikilink now also fails to
+      satisfy `TRI-EMPTY` and is ignored by bidirectional checks. No corpus
+      page currently relies on this; verified by grep.
+    - `lint/lint_checks.md` `LINK-BROKEN` rule updated to document the skip.
+
+---
+
+## 2026-05-08T18:30Z — TRILATERAL SWEEP (Production block, GB1022 §4.5)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.5 Tables 4-9 and 4-10 from the existing
+  extract)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/production.md` — "SID Entities Owned" and "eTOM
+      Processes Realised" sections rewritten with concrete wikilinks; OQ refs
+      updated
+    - `wiki/sid/service/{service,service-order,service-specification,service-strategy-and-plan,service-configuration,service-usage,service-problem,service-test}-abe.md`
+      — added Production back-link (8 pages)
+    - `wiki/sid/resource/{resource,resource-order,resource-specification,resource-topology,resource-configuration,resource-usage,resource-strategy-and-plan,resource-trouble,resource-test}-abe.md`
+      — added Production back-link (9 pages)
+    - `wiki/sid/common/location-abe.md` — added Production back-link
+    - `wiki/etom/service-domain/{service-support-management,service-activation-management,service-problem-management,service-guiding-and-mediation}.md`
+      — added Production back-link (4 pages)
+    - `wiki/etom/resource-domain/{resource-support-management,resource-data-management,resource-trouble-management,resource-mediation-and-reporting}.md`
+      — added Production back-link (4 pages)
+    - `wiki/open-questions.md` — OQ-040 filed
+- **Sections skipped (out of scope):**
+    - Workforce ABE (Enterprise Domain) — not in v1 corpus per CLAUDE.md §3
+    - R20.5 Service/Resource Strategy/Capability/Specification L2s — SIP vertical,
+      out of scope
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved by
+  this entry)
+- **Open questions filed:**
+    - OQ-040 (Production block trilateral sweep — R20.5→v25.x cross-walk
+      decisions; 8 eTOM L2s linked, 4 R20.5 L2s deferred as restructured, Common
+      Topology ABE flagged as gap)
+- **Notes:**
+    - **First ODA block trilateral sweep complete.** 26 reciprocal back-links
+      added across 8 eTOM L2 + 17 SID ABE + 1 Common ABE pages.
+    - **R20.5 cross-walk pattern:** the v25.5 reorganisation is partly clean
+      (renames preserving ID) and partly structural (R20.5 L2s demoted to L3 or
+      distributed across multiple v25.5 L2s). The clean renames are linked
+      directly with provenance noted inline (e.g. "R20.5 'SM&O Support &
+      Readiness' → v25.5 1.4.4 Service Support Management"); the structural
+      cases are documented in OQ-040 with the absorbing v25.5 L2s linked instead
+      of the legacy L2s. This pattern is the template for the remaining 5 ODA
+      blocks.
+    - **Common Topology ABE gap:** GB1022 Table 4-10 #01 Common Topology ABE has
+      no corresponding ABE in the GB922 Common v23.0 corpus (which has Resource
+      Topology in the Resource domain). Not linked. Worth a focused look at
+      v23.0 §4 structure when convenient — may be a Common ingest gap rather
+      than a real model change.
+    - **OQ-008 remains active.** Each touched target page still references
+      OQ-008 because other ODA components (Core Commerce Management, Engagement
+      Management, Party Management, Intelligence Management) have not yet been
+      swept. The placeholder text was rephrased on touched pages from "eTOM and
+      ODA layers not yet ingested" to "further ODA components pending trilateral
+      sweep" — accurate to the post-v1 reality.
+    - **Performance ABE pages untouched.** Resource Performance ABE and Service
+      Performance ABE were not in GB1022 §4.5 Table 4-10 (Production scope) —
+      they are listed under Intelligence Management in §4.6 and already carry
+      the intelligence-management back-link from a prior partial sweep. They
+      will gain further mappings during the Intelligence and Core Commerce
+      sweeps.
+    - **Next sweep target:** Core Commerce Management (GB1022 §4.4) — the
+      commercial-side counterpart to Production. Same pattern; SID targets are
+      Product domain; eTOM targets are Product Domain L2s.
+
+---
+
+## 2026-05-08T19:00Z — INGEST (GB922 Common v23.0 gap fill — §4.23–§4.30 + 4 diagram-only ABEs)
+
+- **File(s):** `raw/tmf/sid/GB922_Common_v23.0.pdf` (already extracted)
+- **Pages created/updated:**
+    - 12 new ABE pages in `wiki/sid/common/`:
+        - Per-chapter (8): test-abe, usage-abe, segmentation-abe, intent-abe,
+          closed-loop-abe, goal-abe, workflow-abe, anomaly-abe
+        - Diagram-only (4): topology-abe, event-abe, trouble-ticket-abe,
+          trouble-or-problem-abe
+    - `wiki/sid/common/_index.md` — added 12 entries
+    - `wiki/sid/common-abe.md` — split per-chapter and diagram-only sections,
+      added 12 entries
+    - `wiki/index.md` — updated SID Common section to reflect 31 total ABEs and
+      ingest provenance
+    - `wiki/oda/functional-blocks/production.md` — replaced Common Topology gap
+      text with `[[wiki/sid/common/topology-abe]]` wikilink
+    - `wiki/open-questions.md` — OQ-041 filed
+- **Sections skipped (out of scope):** none — this ingest closes the v1
+  Common-ingest scope gap discovered during the Production trilateral sweep
+  (OQ-040)
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved by
+  this entry); 129 pages total (was 117)
+- **Open questions filed:**
+    - OQ-041 (v1 Common ingest stopped at §4.22; 12 ABEs missed; resolved in
+      this same ingest event)
+- **Notes:**
+    - **v1 Common ingest scope gap closed.** The 2026-05-08T15:00Z Common ingest
+      truncated at §4.22 instead of §4.30 — an arbitrary cutoff, not a scope
+      decision. Discovered during the Production trilateral sweep when GB1022
+      §4.5 Table 4-10 referenced Common Topology ABE (one of the missing
+      entries).
+    - **Per-chapter ABEs (§4.23–§4.30, 8 pages):** standard sid-abe anatomy from
+      §4.x verbatim content. BE-level attribute tables not extracted (consistent
+      with v1 granularity per OQ-009). The three «Preliminary» ABEs (§4.27
+      Closed Loop, §4.28 Goal, §4.29 Workflow) carry `release_status: draft`.
+    - **Diagram-only ABEs (4 pages):** these have only a one-paragraph
+      description in §4.1 and no §4.x chapter. Pages are explicitly thin and
+      flag the source state. Two («not fully developed»: Event, Trouble Ticket)
+      carry `release_status: draft`.
+    - **Common Topology ABE link populated.** Production page's "SID Entities
+      Owned" section now wikilinks the new Common Topology ABE page (which
+      itself reciprocates with Production in its "ODA Components That Own This
+      Entity" section).
+    - **Anomaly ABE / Trouble or Problem ABE — speculative wikilinks removed.**
+      Initial drafts of these pages included wikilinks in their trilateral
+      sections to v25.5 eTOM Anomaly Management L2s and Service/Resource
+      Problem L2s based on name correspondence. CLAUDE.md §1 forbids inferred
+      mappings, and no source mapping table establishes those links — wikilinks
+      removed; the content remains as plain prose ("v25.5 candidates by name
+      are X, Y, Z but no source mapping table establishes the link"). Real
+      links should be added when those specific trilateral sweeps run with
+      source backing (e.g. updated GB1022 or per-domain decomposition PDFs).
+    - **Trilateral coverage of new pages:** all 12 use OQ-008 placeholders for
+      ODA owners and eTOM processes, except Topology which now has a real
+      Production wikilink. Other ODA-block sweeps (Core Commerce Management,
+      Engagement Management, Party Management, Intelligence Management) will
+      add concrete wikilinks against several of the new ABEs (e.g. Anomaly →
+      Intelligence Management likely; Closed Loop → Intelligence Management
+      likely).
+    - **Sub-domain placement (Common / Pattern / Shared):** the 12 new ABEs
+      use `abe_category: common` consistently with v1's single-bucket choice
+      (OQ-014 still tracks the deferred decision on whether to formalise the
+      sub-domain split).
+
+---
+
+## 2026-05-08T19:30Z — TRILATERAL SWEEP (Core Commerce Management, GB1022 §4.4)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.4.2 Table 4-6 and §4.4.3 Table 4-7 from the
+  existing extract)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/core-commerce-management.md` — "SID Entities
+      Owned" and "eTOM Processes Realised" sections rewritten with concrete
+      wikilinks; pre-existing legacy back-links from Account/Business
+      Interaction/Catalog ABEs preserved with provenance flag in a separate
+      sub-section
+    - `wiki/sid/product/{product-and-offering-instance,product-specification,strategic-product-portfolio-plan,product-offering-specification,product-usage,product-configuration,loyalty,product-test}-abe.md`
+      — added CCM back-link (8 pages)
+    - `wiki/sid/common/capacity-abe.md` — added CCM back-link
+    - `wiki/etom/product-domain/{product-configuration-management,product-inventory-management,product-usage-management,product-rating-and-rate-assignment,product-balance-management,product-support-management}.md`
+      — added CCM back-link (6 pages)
+    - `wiki/open-questions.md` — OQ-042 filed
+- **Sections skipped (out of scope):**
+    - Customer Domain ABEs (Table 4-7 #01–#04) — Customer Domain not in v1 corpus
+      per CLAUDE.md §3
+    - Business Partner Domain ABEs (Table 4-7 #01–#06) — Business Partner Domain
+      not in v1 corpus per §3
+    - R20.5 Market & Sales L2s, S-T-R L2s, Customer Domain L2s, Business Partner
+      Domain L2s — out of corpus scope per §3
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved by
+  this entry)
+- **Open questions filed:**
+    - OQ-042 (CCM trilateral sweep — R20.5→v25.x cross-walk decisions; 5 eTOM L2s
+      direct + 1 absorbing L2; 8 Product + 1 Common ABE links from Table 4-7;
+      pre-existing legacy Common ABE back-links flagged for source-supported
+      review)
+- **Notes:**
+    - **Second ODA block sweep complete.** 16 reciprocal back-links added across
+      6 eTOM Product Domain L2 + 8 SID Product ABE + 1 SID Common ABE pages.
+      Plus 3 pre-existing legacy back-links acknowledged on the CCM page.
+    - **R20.5 cross-walk pattern continued.** Same approach as Production
+      (OQ-040): clean R20.5→v25.5 same-ID renames linked directly with provenance
+      noted inline; restructured R20.5 L2s (1.2.9 Product Offering Purchasing,
+      1.2.15 Product Test Management) absorbed into v25.5 1.2.4 Product Support
+      Management as L3 sub-processes — matches the Service Test → 1.4.4.6 and
+      Resource Test → 1.5.4.9 pattern.
+    - **Disciplined refusal to over-link.** v25.5 Product Domain has 12 in-scope
+      L2s; only 6 are linked here because only 6 trace back to entries in
+      GB1022 §4.4.2 Table 4-6. Notably 1.2.27 Product Order Management is a
+      strong candidate by content (matches R20.5 1.3.3 Customer Order Handling)
+      but Customer Domain is out of scope and the GB1022 source doesn't
+      explicitly establish the v25.5 Product Domain successor — left unlinked
+      with the rationale captured in OQ-042.
+    - **Pre-existing legacy back-links handled honestly.** Three Common ABE
+      pages (Account, Business Interaction, Catalog) had CCM back-links from
+      the v1 partial sweep but those ABEs are not in Table 4-7. Preserved with
+      a flag on the CCM page rather than ripping out — provenance documented
+      in OQ-042 for future source-supported review.
+    - **Performance ABE pages untouched.** Product Performance ABE was not in
+      Table 4-7 (Product domain entries were the 8 catalog/spec/instance/order/
+      usage/config/loyalty/test ABEs only) — Performance is for the Intelligence
+      Management sweep.
+    - **Next sweep target:** Engagement Management (GB1022 §4.2). Note OQ-038
+      flags structural exemption for non-business framing of EM; the §4.2
+      content still has eTOM and SID references worth processing where source
+      mappings exist.
+
+---
+
+## 2026-05-08T20:00Z — TRILATERAL SWEEP (Engagement Management, GB1022 §4.2 — no-op confirmed)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.2 from the existing extract)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/engagement-management.md` — trilateral sections
+      tightened to assertively reflect source-supported absence (no longer reads
+      as "deferred sweep"); Open Questions list trimmed
+- **Sections skipped (out of scope):** none — the sweep was performed and
+  confirmed the §4.2 source provides no eTOM L2 or SID ABE mappings to resolve
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved by
+  this entry)
+- **Open questions filed:** none new — OQ-038 (already filed) covers the
+  structural exemption
+- **Notes:**
+    - **Third ODA block sweep complete — zero new wikilinks produced.** This is
+      the correct outcome per source: GB1022 §4.2.2 explicitly states EM "Holds
+      no business process (eTOM), no functions (functional Framework) and no
+      operational data (SID)". §4.2 contains no Table 4-? for eTOM mapping (the
+      other business blocks have Tables 4-3 / 4-6 / 4-9 / 4-12) and no Table
+      4-? for SID ABE mapping (the other blocks have Tables 4-4 / 4-7 / 4-10 /
+      4-13).
+    - **§4.2.4 Open API's Mapping inspected.** The Process flow API and TMF688
+      Event Management are interface-level relationships, not eTOM L2 processes
+      or SID ABEs. Out of trilateral scope.
+    - **Page tightened.** Previously the trilateral sections read as "sweep
+      deferred per OQ-008". Now they read as "sweep performed; source-supported
+      absence" — accurate and final unless GB1022 itself revises §4.2 content.
+      OQ-008 reference removed from EM's Open Questions (sweep done; no links
+      to defer). OQ-037 reference also removed from EM (no mapping table
+      exists, so the version-mismatch caveat doesn't apply to this block).
+    - **OQ-038 stands as the canonical reference** for any future reader asking
+      "why are EM's trilateral sections empty?" The answer is the source
+      structural exemption, not a corpus gap.
+    - **Next sweep target:** Party Management (GB1022 §4.3) — has Table 4-3
+      (eTOM, R20.5) and Table 4-4 (SID, R20.5). Cross-cutting block; targets
+      span Common Party ABE plus Customer/Business Partner Domain ABEs (largely
+      out of corpus scope).
+
+---
+
+## 2026-05-08T20:30Z — TRILATERAL SWEEP (Party Management, GB1022 §4.3)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.3.2 Table 4-3 and §4.3.3 Table 4-4)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/party-management.md` — "SID Entities Owned"
+      and "eTOM Processes Realised" sections rewritten with concrete wikilinks;
+      pre-existing legacy Agreement and Party Payment back-links preserved with
+      provenance flag in a separate sub-section
+    - `wiki/sid/product/product-party-roles-abe.md` — added PM back-link
+    - `wiki/sid/service/service-party-roles-abe.md` — added PM back-link
+    - `wiki/sid/resource/resource-party-roles-abe.md` — added PM back-link
+    - `wiki/open-questions.md` — OQ-043 filed
+- **Sections skipped (out of scope):**
+    - All 32 R20.5 entries in Table 4-3 — Market/Sales (1.1.x), Customer (1.3.x),
+      Business Partner (1.6.x) domains, all out of v1 corpus scope per CLAUDE.md
+      §3
+    - Market/Sales Domain ABEs in Table 4-4 (entries 01–07) — out of scope
+    - Customer Domain ABEs (entries 01–05) — out of scope
+    - Business Partner Domain entries 01, 04, 05, 06, 07 — out of scope (entries
+      02 Party and 08 Party Privacy linked via v23.0 Common reorg)
+    - Common #02 Users and Roles — no clean v23.0 successor
+    - Enterprise #01 Enterprise Party Roles — Enterprise Domain not in v1 corpus
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved by
+  this entry)
+- **Open questions filed:**
+    - OQ-043 (PM trilateral sweep — R20.5→v23.0/v25.x cross-walk; domain reorg
+      for Party/Party Privacy; zero in-scope eTOM links; pre-existing
+      Agreement / Party Payment back-links flagged)
+- **Notes:**
+    - **Fourth ODA block sweep complete.** Forward links from PM page: 7 new
+      concrete (4 v23.0 Common ABEs + 3 v25.x Domain Party Roles ABEs) + 2
+      pre-existing legacy preserved. Reciprocal back-links: 3 new added to the
+      Domain Party Roles ABE pages. The other 4 Common targets already had PM
+      back-links from the v1 partial sweep.
+    - **Zero eTOM L2 wikilinks — source-supported absence.** Every R20.5 entry
+      in Table 4-3 falls outside corpus scope (Market 1.1.x / Customer 1.3.x /
+      Business Partner 1.6.x). PM is fundamentally a cross-cutting block over
+      domains the corpus intentionally excludes (CLAUDE.md §3 keeps the focus
+      on operational PSR). Different mechanism from Engagement Management's
+      no-op (which was structural absence per §4.2.2) but the wiki outcome is
+      the same: an empty eTOM trilateral with a source-supported explanation.
+    - **R20.5 → v23.0 domain reorganization for Party / Party Privacy.** GB1022
+      Table 4-4 puts these under Business Partner Domain; v23.0 GB922 Common
+      puts them under Common Domain (cross-cutting). The concept is the same —
+      the v23.0 reorganization moved Party concepts to Common because they are
+      truly cross-cutting. The links resolve to the v23.0 Common ABEs;
+      reasoning captured in OQ-043.
+    - **Account ABE link supported by Table 4-4 BP #03.** v23.0 Common Account
+      ABE explicitly includes BusinessPartnerAccount (per its own page
+      description), so R20.5 BP #03 → v23.0 Common Account is a clean mapping.
+      This makes the Account back-link source-supported (no longer a "legacy
+      v1 partial sweep" inference for PM, though the same Account-abe page is
+      still flagged on the CCM page where Table 4-7 doesn't list it).
+    - **Pre-existing legacy back-links preserved.** Common Agreement and
+      Common Party Payment had PM back-links from the v1 partial sweep; not
+      directly in Table 4-4; preserved on PM page with a flag (same pattern
+      as CCM legacy back-links). Inferences are plausible but unsourced.
+    - **Next sweep target:** Intelligence Management (GB1022 §4.6) — has Table
+      4-12 (eTOM, R20.5) and Table 4-13 (SID, R20.5). Already-existing
+      back-links from Service Performance and Resource Performance ABEs
+      (intelligence-management appears as their owner from the v1 partial
+      sweep) suggest this block has a meaningful Performance / Anomaly /
+      Closed Loop trilateral footprint.
+
+---
+
+## 2026-05-08T21:00Z — TRILATERAL SWEEP (Intelligence Management, GB1022 §4.6)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.6.1 Table 4-12 and §4.6.2 Table 4-13)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/intelligence-management.md` — "SID Entities
+      Owned" and "eTOM Processes Realised" sections rewritten with concrete
+      wikilinks; pre-existing legacy Common Performance / Metric back-links
+      preserved with provenance flag
+    - `wiki/etom/product-domain/product-support-management.md` — added IM
+      back-link (alongside existing Production back-link)
+    - `wiki/etom/service-domain/service-support-management.md` — added IM
+      back-link (alongside existing Production back-link)
+    - `wiki/etom/resource-domain/resource-support-management.md` — added IM
+      back-link (alongside existing Production back-link)
+    - `wiki/open-questions.md` — OQ-044 filed
+- **Sections skipped (out of scope):**
+    - Table 4-12: 1.1.x (Market/Sales 4 entries), 1.3.x (Customer 2 entries),
+      1.6.x (Business Partner 2 entries) — domains not in v1 corpus per
+      CLAUDE.md §3
+    - Table 4-12: 1.2.13/1.4.11/1.5.13 Test Quality Analysis — demoted to L3
+      in v25.5 but in Strategy Management vertical, OOS per §3
+    - Table 4-13: Market/Sales (2), Customer (1), Business Partner (1) —
+      domains OOS per §3
+    - Table 4-13: Common 01 Party / Party Profile (L2) — marketing-targeting
+      flavour, no clean v23.0 successor, OOS by content
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved
+  by this entry)
+- **Open questions filed:**
+    - OQ-044 (IM trilateral sweep — R20.5→v25.x cross-walk; 6 in-scope eTOM
+      L2s with §4.6.1 "split into 2" guidance for Support Management trio
+      shared with Production; 3 in-scope Domain Performance ABEs;
+      pre-existing Common Performance and Metric back-links flagged)
+- **Notes:**
+    - **Fifth ODA block sweep complete.** Forward links from IM page: 6 eTOM
+      L2 + 3 SID Performance ABE concrete + 2 pre-existing legacy Common ABEs
+      preserved. New reciprocal back-links: 3 added on Support Management L2
+      pages. Existing IM back-links on the 3 Performance L2s, 3 Performance
+      ABEs, and 2 Common ABEs (Performance, Metric) were already in place from
+      the v1 partial sweep — only their accuracy was confirmed.
+    - **§4.6.1 "split into 2" guidance acknowledged.** GB1022 §4.6.1 explicitly
+      states: "eTOM level 2 are identified as 'split into 2' when they manage
+      SID ABEs that are mapped to different ODA functional blocks." The
+      Support Management trio (1.2.4 / 1.4.4 / 1.5.4) appears in BOTH
+      Production (Table 4-9) and Intelligence Management (Table 4-12). This
+      is the source's documented model for shared L2 ownership across ODA
+      blocks. The reciprocal back-links on these L2 pages now list both
+      Production and Intelligence Management — the lint passes cleanly because
+      both forward links exist in their respective ODA block pages.
+    - **R20.5 1.4.7 Service Quality Management → v25.5 1.4.7 Service
+      Performance Management.** Same ID, renamed Quality→Performance. v25.5
+      Extended Description still references "Service Quality" as a
+      performance objective, confirming the lineage.
+    - **Test Quality Analysis L2s (1.2.13, 1.4.11, 1.5.13) excluded.** Demoted
+      to L3 in v25.5 (1.2.1.6, 1.4.1.9, 1.5.1.9) but in Strategy Management
+      vertical (OFAB-vertical scope per CLAUDE.md §3 keeps only Operations
+      Readiness & Support, Fulfillment, Assurance, Billing). Different
+      handling from Production's R20.5 1.4.10/1.5.12 Test Management which
+      were demoted to L3 in OFAB verticals (1.4.4.6, 1.5.4.9) — those were
+      linked via the absorbing 1.4.4/1.5.4 L2.
+    - **Pre-existing legacy Common back-links preserved.** Common Performance
+      ABE and Common Metric ABE had IM back-links from the v1 partial sweep
+      but neither is in Table 4-13. Inferences are plausible (canonical
+      parent of Domain Performance ABEs; central to Insight Management's
+      Analytic Models per §4.6.3 Table 4-14). Preserved with flag in OQ-044.
+    - **Final sweep target:** Decoupling & Integration (GB1022 §4.1). OQ-038
+      flags structural exemption for non-business framing. Likely another
+      no-op like Engagement Management.
+
+---
+
+## 2026-05-08T21:30Z — TRILATERAL SWEEP (Decoupling & Integration, GB1022 §4.1 — no-op confirmed)
+
+- **File(s):** `raw/tmf/oda/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.pdf`
+  (already extracted; sweep reads §4.1 from the existing extract)
+- **Pages created/updated:**
+    - `wiki/oda/functional-blocks/decoupling-and-integration.md` — trilateral
+      sections tightened to assertively reflect source-supported absence;
+      Open Questions list trimmed
+- **Sections skipped (out of scope):** none — sweep performed and confirmed
+  §4.1 source provides no eTOM L2 or SID ABE mappings to resolve
+- **Lint result:** PASS — 0 errors, 1 warning (LOG-STALE pre-write; resolved
+  by this entry)
+- **Open questions filed:** none new — OQ-038 (already filed) covers the
+  structural exemption
+- **Notes:**
+    - **Sixth and final ODA block sweep complete.** Like Engagement Management
+      (§4.2), zero new wikilinks produced — the correct outcome per source.
+      GB1022 §4.1.1 explicitly establishes D&I as gathering "non-business
+      functions". §4.1 contains no Table 4-? for eTOM mapping (the business
+      blocks have Tables 4-3 / 4-6 / 4-9 / 4-12) and no Table 4-? for SID ABE
+      mapping (the business blocks have Tables 4-4 / 4-7 / 4-10 / 4-13).
+    - **§4.1.2 Table 4-1 inspected.** Lists integration functionalities only
+      (DI.001 Normalized APIs, DI.002 Message Routing, etc.) — interface-level
+      functions, not eTOM L2 processes or SID ABEs. Out of trilateral scope.
+    - **Page tightened.** Same pattern as the EM sweep (2026-05-08T20:00Z) —
+      trilateral sections now read as "sweep performed; source-supported
+      absence" rather than "deferred per OQ-008". OQ-008 and OQ-037 references
+      removed from Open Questions on this page (sweep done; no mapping table
+      to mismatch on).
+    - **OQ-038 stands as the canonical reference** for both non-business
+      blocks (D&I + EM): "why are these blocks' trilateral sections empty?"
+      Answer: source structural exemption.
+
+---
+
+## 2026-05-08T21:35Z — MILESTONE: All 6 ODA Functional Block trilateral sweeps complete
+
+- **Sweeps performed (chronological):**
+    1. Production (§4.5) — 2026-05-08T18:30Z, OQ-040, 26 reciprocals
+    2. Common ingest gap fill (§4.23–§4.30 + 4 diagram-only) —
+       2026-05-08T19:00Z, OQ-041, 12 new ABE pages
+    3. Core Commerce Management (§4.4) — 2026-05-08T19:30Z, OQ-042, 16 new
+       reciprocals + 3 legacy preserved
+    4. Engagement Management (§4.2) — 2026-05-08T20:00Z, no-op confirmed,
+       OQ-038 stands
+    5. Party Management (§4.3) — 2026-05-08T20:30Z, OQ-043, 7 new + 2 legacy
+       forward links, 3 new reciprocals, zero in-scope eTOM (every Table 4-3
+       entry out of scope)
+    6. Intelligence Management (§4.6) — 2026-05-08T21:00Z, OQ-044, 6 eTOM L2
+       + 3 Domain Performance ABE forward links, 2 legacy Common back-links
+       preserved, 3 new reciprocals; §4.6.1 "split into 2" guidance handled
+       for Support Management trio shared with Production
+    7. Decoupling & Integration (§4.1) — 2026-05-08T21:30Z, no-op confirmed,
+       OQ-038 stands
+- **Total new ODA→SID/eTOM forward links from this campaign:** ~50 across
+  Production, Core Commerce, Party Management, Intelligence Management; zero
+  for Engagement Management and Decoupling & Integration (source-supported
+  absence)
+- **Total new reciprocal back-links:** ~48 across SID and eTOM target pages
+- **Open questions filed in campaign:** OQ-040, OQ-041, OQ-042, OQ-043, OQ-044
+- **Pre-existing legacy back-links handled:** 9 — all preserved with provenance
+  flags rather than ripped out (3 on CCM, 4 on Party Management, 2 on
+  Intelligence Management)
+- **Corpus state:**
+    - 129 wiki pages, lint clean throughout
+    - 44 open questions
+    - All 6 ODA blocks have either source-supported wikilinks or
+      source-supported emptiness; OQ-008 (the original "trilateral sweep
+      deferred" placeholder) is now satisfied for the ODA-side direction.
+      Some SID/eTOM pages still reference OQ-008 because not every ODA block
+      mapping is exhaustive (e.g. R20.5 → v25.5 reorganizations leave some
+      v25.5 L2s without source mapping coverage); those references are
+      accurate.
+- **What this enables:** the corpus now provides PSR mapping work with
+  source-traceable trilateral connections across all three layers (process,
+  data, component) for the operational scope. The user can navigate from any
+  in-scope eTOM L2 to its owning ODA block and the SID entities it
+  manipulates, and back, with the linter enforcing bidirectional consistency.
+- **What remains in TODO.md:** TODO #1 (trilateral sweep) is now done;
+  remaining items are TODO #2 (GB921 Decomposition PDFs for eTOM narrative
+  depth), TODO #3 (SID BE-level attribute detail), TODO #4 (user-decision OQs
+  to revisit). These are all extension/depth work, not structural. The corpus
+  is structurally complete for v1.

@@ -85,7 +85,9 @@ in v1 ingest; consult source PDF.
 
 ## ODA Components That Own This Entity
 
-See [[wiki/open-questions#OQ-008]] — eTOM and ODA layers not yet ingested.
+- [[wiki/oda/functional-blocks/core-commerce-management]]
+
+See open-questions.md — OQ-008 (further ODA components pending trilateral sweep).
 
 ## eTOM Processes That Manipulate This Entity
 

@@ -13,8 +13,13 @@ per-ABE pages linked below.
 
 ## ABEs in this category
 
-GB922 Common v23.0 organises the Common Domain into 19 top-level ABEs (§4.4–§4.22 of
-the source):
+GB922 Common v23.0 organises the Common Domain into 27 per-chapter ABEs (§4.4–§4.30
+of the source) plus four diagram-only ABEs declared in §4.1 [ComD-01] Common ABEs
+Level 1 with brief definitions but no dedicated chapter. v1 ingest covered §4.4–§4.22
+(2026-05-08T15:00Z); the remaining 12 ABEs were added in the gap-fill ingest of
+2026-05-08T19:00Z (see [[wiki/open-questions#OQ-041]]).
+
+**Per-chapter ABEs (§4.4–§4.30):**
 
 - [[wiki/sid/common/party-abe]] — Party, PartyRole, and 11 nested sub-ABEs
 - [[wiki/sid/common/party-privacy-abe]] — Privacy profiles, types, agreements
@@ -35,5 +40,20 @@ the source):
 - [[wiki/sid/common/performance-abe]] — Performance measure (specialised across domains)
 - [[wiki/sid/common/policy-abe]] — Policy, PolicyRule, PolicyAction, PolicySet
 - [[wiki/sid/common/project-abe]] — Generic project management model
+- [[wiki/sid/common/test-abe]] — Canonical Test (Product/Service/Resource Test specialise)
+- [[wiki/sid/common/usage-abe]] — Canonical Usage (Product/Service/Resource Usage specialise)
+- [[wiki/sid/common/segmentation-abe]] — Criterion, segments
+- [[wiki/sid/common/intent-abe]] — Intent, IntentReport
+- [[wiki/sid/common/closed-loop-abe]] — «Preliminary» — closedloop management framework
+- [[wiki/sid/common/goal-abe]] — «Preliminary» — Goal, GoalSpecification
+- [[wiki/sid/common/workflow-abe]] — «Preliminary» — Workflow, Activity
+- [[wiki/sid/common/anomaly-abe]] — Anomaly, AnomalySpecification
+
+**Diagram-only ABEs (§4.1 brief; no dedicated chapter):**
+
+- [[wiki/sid/common/topology-abe]] — Topological concepts (specialised by Resource Topology)
+- [[wiki/sid/common/event-abe]] — Event modelling («not fully developed»)
+- [[wiki/sid/common/trouble-ticket-abe]] — Trouble Ticket records («not fully developed»)
+- [[wiki/sid/common/trouble-or-problem-abe]] — Trouble or Problem (parent of Service Problem and Resource Trouble)
 
 For browsable listing see [[wiki/sid/common/_index]].

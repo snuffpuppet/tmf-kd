@@ -40,6 +40,43 @@ ODA Component back-links.
 **Estimated scope:** 50–100 reciprocal links across ~30 pages; can be done in
 focused batches per ODA block.
 
+**Per-block status:**
+
+- ✅ **Production** — done 2026-05-08T18:30Z (26 reciprocals: 8 eTOM L2 + 17 SID
+  ABE + 1 Common ABE; OQ-040 captures R20.5→v25.x cross-walk decisions). Pattern
+  set; reuse it.
+- ✅ **Core Commerce Management** — done 2026-05-08T19:30Z (16 new reciprocals:
+  6 eTOM Product Domain L2 + 8 SID Product ABE + 1 SID Common ABE; plus 3
+  pre-existing legacy Common ABE back-links preserved with provenance flag;
+  OQ-042 captures cross-walk decisions). Same pattern as Production.
+- ✅ **Engagement Management** — done 2026-05-08T20:00Z (no-op confirmed: §4.2.2
+  structural exemption verified against source; no eTOM L2 or SID ABE mapping
+  tables exist in GB1022 §4.2; page tightened to read as source-supported
+  absence rather than "sweep deferred"; OQ-038 covers).
+- ✅ **Party Management** — done 2026-05-08T20:30Z (7 new + 2 legacy forward
+  links: 4 Common ABEs from Table 4-4 with R20.5→v23.0 domain reorg for
+  Party/Party Privacy + 3 Domain Party Roles ABEs; 3 new reciprocals on the
+  Party Roles ABEs; zero eTOM links — every Table 4-3 entry is in
+  Market/Sales/Customer/Business-Partner domains, all out of corpus scope per
+  §3; OQ-043 captures decisions).
+- ✅ **Intelligence Management** — done 2026-05-08T21:00Z (6 eTOM L2 + 3 Domain
+  Performance ABE concrete forward links; 2 pre-existing legacy Common Common
+  Performance / Metric back-links preserved; 3 new reciprocals on Support
+  Management L2 pages; §4.6.1 "split into 2" guidance acknowledged for Support
+  Management trio shared with Production; OQ-044 captures decisions).
+- ✅ **Decoupling & Integration** — done 2026-05-08T21:30Z (no-op confirmed:
+  §4.1.1 establishes D&I as gathering "non-business functions"; no eTOM L2 or
+  SID ABE mapping tables exist in GB1022 §4.1; page tightened to source-supported
+  absence; OQ-038 covers).
+
+**Status: complete.** All 6 ODA Functional Block trilateral sweeps performed.
+~50 new ODA→SID/eTOM forward links established with source backing across
+Production / Core Commerce / Party Management / Intelligence Management; ~48
+reciprocal back-links added on target pages; 9 pre-existing legacy back-links
+preserved with provenance flags; Engagement Management and Decoupling &
+Integration confirmed as source-supported no-ops. See log entry
+2026-05-08T21:35Z for the campaign milestone summary.
+
 ---
 
 ## 2. GB921 Decomposition PDFs (eTOM narrative depth)

@@ -126,6 +126,19 @@ HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$", re.MULTILINE)
 OQ_REF_RE = re.compile(r"OQ-(\d{3,})")
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n(.*)\Z", re.DOTALL)
 
+# Strip fenced code blocks and inline code spans before searching for wikilinks.
+# Wikilinks inside code (e.g. `[[wiki/...]]` as syntax illustration) are not real
+# links and must not register as broken or as satisfying trilateral requirements.
+FENCED_CODE_RE = re.compile(r"^```.*?^```", re.MULTILINE | re.DOTALL)
+INLINE_CODE_RE = re.compile(r"`[^`\n]*`")
+
+
+def strip_code(text: str) -> str:
+    """Remove fenced code blocks and inline code spans for wikilink scanning."""
+    text = FENCED_CODE_RE.sub("", text)
+    text = INLINE_CODE_RE.sub("", text)
+    return text
+
 
 # ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -299,8 +312,9 @@ def lint_trilateral(page: Page) -> list[Finding]:
         body = get_section_body(page.body, section)
         if body is None:
             continue  # already raised by ANAT-SECTION
-        has_link = bool(WIKILINK_RE.search(body))
-        has_oq = bool(OQ_REF_RE.search(body))
+        scannable = strip_code(body)
+        has_link = bool(WIKILINK_RE.search(scannable))
+        has_oq = bool(OQ_REF_RE.search(scannable))
         if not has_link and not has_oq:
             findings.append(Finding(page.relative_path, "error", "TRI-EMPTY",
                                     f"'## {section}' has neither a wikilink nor an OQ-NNN reference"))
@@ -309,7 +323,7 @@ def lint_trilateral(page: Page) -> list[Finding]:
 
 def lint_wikilinks(page: Page, known_paths: set[str]) -> list[Finding]:
     findings: list[Finding] = []
-    for m in WIKILINK_RE.finditer(page.body):
+    for m in WIKILINK_RE.finditer(strip_code(page.body)):
         raw_target = m.group(1).strip()
         target_no_anchor = raw_target.split("#", 1)[0].strip()
         if not target_no_anchor:
@@ -353,7 +367,7 @@ def build_link_index(pages: list[Page]) -> dict[tuple[str, str], set[str]]:
                 continue
             targets = {
                 normalise_wikilink_target(m.group(1).split("#", 1)[0])
-                for m in WIKILINK_RE.finditer(body)
+                for m in WIKILINK_RE.finditer(strip_code(body))
             }
             index[(page.relative_path, section)] = targets
     return index
@@ -381,7 +395,7 @@ def lint_bidirectional(pages: list[Page],
                 continue
             recip_targets = {
                 normalise_wikilink_target(m.group(1).split("#", 1)[0])
-                for m in WIKILINK_RE.finditer(recip_body)
+                for m in WIKILINK_RE.finditer(strip_code(recip_body))
             }
             if src_path not in recip_targets:
                 findings.append(Finding(target_path, "error", "BI-MISSING",

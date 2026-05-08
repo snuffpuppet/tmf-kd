@@ -22,7 +22,6 @@ l2_name: "Product Usage Management"
 
 The Product Usage management processes encompass the functions required to guide, distribute, mediate, summarize, accumulate, and analyze Product Usage records. These processes may occur in real-time, near real-time (i.e. just at the end of the usage), or may be executed on a periodic basis.
 
-
 Based on Service Usage, this process aims at identifying Product Usage. For example, for a Video on Demand where you can watch a video as many time as you want during 72 hours, several Service Usages might have been tracked (each time the user watches the video) and only one Product Usage will be identified for all Service Usages in the 72 hours after the first watch.
 
 The guiding processes ensures that the Product Usage records used in the billing processes are appropriately related to the correct customer billing account and products. 
@@ -48,7 +47,9 @@ entity pages with reciprocal links).
 
 ## ODA Components That Realise This Process
 
-See open-questions.md — OQ-008 (ODA layer not yet ingested).
+- [[wiki/oda/functional-blocks/core-commerce-management]]
+
+See open-questions.md — OQ-008 (further ODA components pending trilateral sweep).
 
 ## Open Questions
 

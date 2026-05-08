@@ -55,39 +55,95 @@ GB921 R20.5) and the §4.6.3 Block functionalities table.
 
 ## SID Entities Owned
 
-GB1022 §4.6.2 (Standard Business Information Objects) provides verbatim mapping
-table to the Intelligence Management block (source GB922 R20.5). Primary content:
-Performance, Metric, KPI/KQI, and analytics-related ABEs that span domains.
+GB1022 §4.6.2 Table 4-13 enumerates the SID ABEs owned by the Intelligence
+Management block, sourced from GB922 R20.5. The table covers Market/Sales
+(#01–#02), Customer (#01), Product (#01), Service (#01), Resource (#01), Common
+(#01), and Business Partner (#01) domains. Cross-walk to our corpus and the
+resulting links are recorded in [[wiki/open-questions#OQ-044]].
 
-In v25.x corpus terms:
+**Domain Performance ABEs** — resolved to GB922 v25.x:
 
-- Performance ABEs: [[wiki/sid/common/performance-abe]] (canonical),
-  [[wiki/sid/service/service-performance-abe]],
-  [[wiki/sid/resource/resource-performance-abe]],
-  [[wiki/sid/product/product-performance-abe]] (notFullyDeveloped)
-- Metric ABE: [[wiki/sid/common/metric-abe]]
+- [[wiki/sid/product/product-performance-abe]] (Table 4-13 Product #01 Product
+  Performance ABE; notFullyDeveloped per OQ-011)
+- [[wiki/sid/service/service-performance-abe]] (Table 4-13 Service #01 Service
+  Performance ABE)
+- [[wiki/sid/resource/resource-performance-abe]] (Table 4-13 Resource #01
+  Resource Performance ABE)
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
+**Additional Common ABEs from v1 partial sweep (not in Table 4-13):**
+
+The following two Common ABE pages carry pre-existing IM back-links from the v1
+partial sweep, not directly supported by Table 4-13. Inferences are plausible
+(Common Performance ABE is the canonical parent of the domain Performance ABEs
+that ARE in Table 4-13; Metric ABE is central to the Insight Management /
+Analytic Models functionalities described in §4.6.3 Table 4-14). Linked here to
+maintain bidirectional consistency; flagged in [[wiki/open-questions#OQ-044]] for
+source-supported review.
+
+- [[wiki/sid/common/performance-abe]] (legacy v1 sweep; not in Table 4-13)
+- [[wiki/sid/common/metric-abe]] (legacy v1 sweep; not in Table 4-13)
+
+**Out of corpus scope:**
+
+- Market/Sales Domain entries 01 Marketing Campaign, 02 Market Sales Statistics
+  — Market/Sales Domain not in v1 corpus per CLAUDE.md §3
+- Customer Domain entry 01 Customer Statistic — out of scope
+- Business Partner Domain entry 01 Party Statistic — out of scope
+- Common entry 01 Party / Party Profile (L2) — Table 4-13 references the
+  marketing-targeting flavour of Party Profile (used to typify MarketSegments
+  for MarketingCampaigns); no clean v23.0 successor and out of scope by content
+
+— GB1022 §4.6.2, Table 4-13, pp. 50–51.
 
 ## eTOM Processes Realised
 
-GB1022 §4.6.1 (Business Processes in the Intelligence Management Block) provides a
-verbatim mapping. Source Table 4-12 covers L2s including (R20.5 IDs):
+GB1022 §4.6.1 Table 4-12 enumerates the eTOM L2 processes realised by the
+Intelligence Management block, sourced from GB921 R20.5. The §4.6.1 source text
+notes "eTOM level 2 are identified as 'split into 2' when they manage SID ABEs
+that are mapped to different ODA functional blocks" — explaining why several
+L2s here also appear in the Production block's Table 4-9 (specifically the
+Support Management L2s 1.4.4 / 1.5.4). Cross-walk to our v25.5 corpus and the
+resulting links are recorded in [[wiki/open-questions#OQ-044]].
 
-- 1.1.7 Market Sales Support & Readiness — out of corpus scope
-- 1.1.12 Market Performance Management — out of corpus scope
-- 1.1.13 Sales Performance Management — out of corpus scope
-- 1.1.15 Marketing Campaign Management — out of corpus scope
-- Performance Management processes across Customer/Service/Resource — partial corpus
-  overlap
+**Product Domain L2s** — resolved to v25.5:
 
-Most directly in-corpus: Service Performance Management
-([[wiki/etom/service-domain/service-performance-management]]), Resource Performance
-Management ([[wiki/etom/resource-domain/resource-performance-management]]), Product
-Performance Management
-([[wiki/etom/product-domain/product-performance-management]]).
+- [[wiki/etom/product-domain/product-support-management]] (Table 4-12 R20.5 1.2.4
+  Product Support; same ID, slight rename)
+- [[wiki/etom/product-domain/product-performance-management]] (R20.5 1.2.6; same
+  ID, same name)
 
-See [[wiki/open-questions#OQ-008]] and [[wiki/open-questions#OQ-037]].
+**Service Domain L2s** — resolved to v25.5:
+
+- [[wiki/etom/service-domain/service-support-management]] (R20.5 1.4.4 SM&O
+  Support and Readiness; same ID, renamed; co-realised with Production per
+  §4.6.1 split guidance)
+- [[wiki/etom/service-domain/service-performance-management]] (R20.5 1.4.7
+  Service Quality Management; same ID, renamed Quality→Performance — v25.5
+  Extended Description explicitly references "Service Quality" as a performance
+  objective)
+
+**Resource Domain L2s** — resolved to v25.5:
+
+- [[wiki/etom/resource-domain/resource-support-management]] (R20.5 1.5.4 RM&O
+  Support and Readiness; same ID, renamed; co-realised with Production per
+  §4.6.1 split guidance)
+- [[wiki/etom/resource-domain/resource-performance-management]] (R20.5 1.5.9;
+  same ID, same name)
+
+**R20.5 entries deferred or out of scope:**
+
+- R20.5 1.1.7, 1.1.12, 1.1.13, 1.1.15 (Market Sales Support & Readiness, Market
+  Performance, Sales Performance, Marketing Campaign Management) — Market/Sales
+  Domain, out of corpus scope per CLAUDE.md §3
+- R20.5 1.3.1, 1.3.2 (Customer Support, Customer Experience Management) —
+  Customer Domain, out per §3
+- R20.5 1.6.6, 1.6.11 (Party Support, Party Performance Management) — Business
+  Partner Domain, out per §3
+- R20.5 1.2.13, 1.4.11, 1.5.13 (Test Quality Analysis L2s) — demoted to L3 in
+  v25.5 (1.2.1.6 / 1.4.1.9 / 1.5.1.9) but in Strategy Management vertical, out
+  of OFAB scope per §3
+
+— GB1022 §4.6.1, Table 4-12, pp. 48–50.
 
 ## Component Dependencies
 
@@ -104,5 +160,9 @@ Intelligence Management is cross-cutting — it analyses data from all other blo
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
 - OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x
+- OQ-044: Intelligence Management trilateral sweep — R20.5→v25.x cross-walk
+  decisions (6 in-scope eTOM L2s with §4.6.1 "split into 2" guidance for the
+  Support Management trio shared with Production; 3 in-scope Domain Performance
+  ABEs; pre-existing Common Performance and Metric back-links flagged for
+  source-supported review)

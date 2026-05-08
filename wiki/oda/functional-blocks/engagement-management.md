@@ -70,13 +70,21 @@ Interface Orchestration, plus additional entries in source.
 
 ## SID Entities Owned
 
-Engagement Management holds no operational data per GB1022 §4.2.2. See
-[[wiki/open-questions#OQ-038]].
+Engagement Management holds no operational data per GB1022 §4.2.2. The trilateral
+sweep performed 2026-05-08T20:00Z confirmed: GB1022 §4.2 contains no SID ABE
+mapping table for this block (unlike §4.4.3 / §4.5.2 / §4.6.x which carry Tables
+4-7 / 4-10 / 4-13 for the other blocks). Source-supported absence, not a gap.
+See [[wiki/open-questions#OQ-038]].
 
 ## eTOM Processes Realised
 
-Engagement Management holds no business processes per GB1022 §4.2.2. See
-[[wiki/open-questions#OQ-038]].
+Engagement Management holds no business processes per GB1022 §4.2.2. The
+trilateral sweep performed 2026-05-08T20:00Z confirmed: GB1022 §4.2 contains no
+eTOM L2 mapping table for this block (unlike §4.3.2 / §4.4.2 / §4.5 / §4.6 which
+carry Tables 4-3 / 4-6 / 4-9 / 4-12 for the other blocks). The §4.2.4 Open API's
+Mapping section establishes interface-level relationships (Process flow API,
+TMF688 Event Management) but those are not eTOM L2 processes. Source-supported
+absence, not a gap. See [[wiki/open-questions#OQ-038]].
 
 ## Component Dependencies
 
@@ -91,6 +99,5 @@ processes/data through user journeys):
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
-- OQ-038: Non-business ODA block trilateral exemption
-- OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x
+- OQ-038: Non-business ODA block trilateral exemption — source-supported absence
+  of eTOM/SID mappings for Engagement Management (§4.2.2)

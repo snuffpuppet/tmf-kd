@@ -53,44 +53,80 @@ Table 4-4 (SID ABE mappings) in §4.3.
 
 ## SID Entities Owned
 
-GB1022 §4.3.3 (Standard Business Information Entities) provides a verbatim mapping
-table from Frameworx SID ABEs to the Party Management block (source GB922 R20.5).
-Domains covered: Market/Sales, Customer, Business Partner, Common (Party).
+GB1022 §4.3.3 Table 4-4 enumerates the SID ABEs owned by the Party Management
+block, sourced from GB922 R20.5. The table covers Market/Sales (#01–#07), Customer
+(#01–#05), Business Partner (#01–#08), Common (#01–#02), Enterprise (#01),
+Product (#01), Service (#01), and Resource (#01) domains. Cross-walk to our
+v23.0 / v25.0 / v25.5 corpus and the resulting links are recorded in
+[[wiki/open-questions#OQ-043]].
 
-The full mapping table is in source pp. 24–27. Sample entries (R20.5 source naming):
-- Customer Party Roles, Customer Interaction, Customer Bill (Customer Domain)
-- Market & Sales Strategy and Plan, Market Segment, Competitor, Sales Channel
-  (Market/Sales Domain)
-- Party (Common Domain) — corresponds to [[wiki/sid/common/party-abe]] in v23.0
-  corpus
-- Privacy management ABEs — correspond to [[wiki/sid/common/party-privacy-abe]]
-- Party Payment, Bank — correspond to [[wiki/sid/common/party-payment-abe]]
-- Communication Interaction — corresponds to
-  [[wiki/sid/common/communication-interaction-abe]]
-- Account — corresponds to [[wiki/sid/common/account-abe]]
-- Agreement — corresponds to [[wiki/sid/common/agreement-abe]]
+Note: GB1022 Table 4-4 places Party (#02) and Party Privacy (#08) under Business
+Partner Domain. Our v23.0 GB922 Common places them under Common Domain — a R20.5
+→ v23.0 reorganization (Party concepts moved to Common because they are truly
+cross-cutting). The same concepts are linked below to their v23.0 Common ABE
+homes; the domain reorg is documented in OQ-043.
 
-See [[wiki/open-questions#OQ-008]] (trilateral sweep deferred) and
-[[wiki/open-questions#OQ-037]] (R20.5 → v25.x version mismatch). Many R20.5 ABEs
-referenced (Market Sales Domain ABEs, Customer Domain ABEs) are NOT in our v1
-corpus scope (Customer/Sales/Market domains excluded per CLAUDE.md §3); those
-references are preserved verbatim in source but not wikilinked.
+**Common Domain ABEs** — resolved to GB922 Common v23.0:
+
+- [[wiki/sid/common/communication-interaction-abe]] (Table 4-4 Common #01
+  Communication Interaction)
+- [[wiki/sid/common/party-abe]] (Table 4-4 Business Partner #02 Party — domain
+  reorg R20.5→v23.0; same canonical Party concept)
+- [[wiki/sid/common/account-abe]] (Table 4-4 Business Partner #03 Business
+  Partner Account — v23.0 Common Account ABE explicitly includes
+  BusinessPartnerAccount)
+- [[wiki/sid/common/party-privacy-abe]] (Table 4-4 Business Partner #08 Party
+  Privacy — domain reorg R20.5→v23.0)
+
+**Domain Party Roles ABEs** — resolved to GB922 v25.x:
+
+- [[wiki/sid/product/product-party-roles-abe]] (Table 4-4 Product #01)
+- [[wiki/sid/service/service-party-roles-abe]] (Table 4-4 Service #01)
+- [[wiki/sid/resource/resource-party-roles-abe]] (Table 4-4 Resource #01)
+
+**Additional Common ABEs from v1 partial sweep (not in Table 4-4):**
+
+The following two Common ABE pages carry pre-existing PM back-links from the v1
+partial sweep, not directly supported by Table 4-4. Inferences are plausible
+(Agreement: Party Agreement Management is in §4.3.1; Party Payment: R20.5 BP #05
+Party Bill Collection mentions PartyPayment but is narrower than the v23.0 Party
+Payment ABE). Linked here to maintain bidirectional consistency; flagged in
+[[wiki/open-questions#OQ-043]] for source-supported review.
+
+- [[wiki/sid/common/agreement-abe]] (legacy v1 sweep; not in Table 4-4)
+- [[wiki/sid/common/party-payment-abe]] (legacy v1 sweep; partial support via
+  R20.5 BP #05)
+
+**Out of corpus scope:**
+
+- Market/Sales Domain entries 01–07 — Market/Sales Domain not in v1 corpus per
+  CLAUDE.md §3
+- Customer Domain entries 01–05 — Customer Domain not in v1 corpus per §3
+- Business Partner Domain entries 01 Party Strategy & Plan, 04 Party Bill
+  «preliminary», 05 Party Bill Collection, 06 Business Partner Party Roles,
+  07 Party Interaction (overlaps Communication Interaction already linked) —
+  Business Partner Domain not in v1 corpus per §3
+- Common #02 Users and Roles — no clean v23.0 successor (closest match would
+  be PartyRole within Party ABE which is already linked)
+- Enterprise #01 Enterprise Party Roles — Enterprise Domain not in v1 corpus
+  per §3
+
+— GB1022 §4.3.3, Table 4-4, pp. 24–27.
 
 ## eTOM Processes Realised
 
-GB1022 §4.3.2 (Business Processes in the Party Management Block) provides a
-verbatim mapping table from eTOM L2 processes to the Party Management block (source
-GB921 R20.5). The full mapping covers many L1.1 (Market) and L1.2 (Sales) processes
-that are out of corpus scope per CLAUDE.md §3, plus selected Customer/Common
-processes.
+GB1022 §4.3.2 Table 4-3 enumerates the eTOM L2 processes realised by the Party
+Management block, sourced from GB921 R20.5. **All 32 entries fall in domains
+outside corpus scope** (Market 1.1.x, Customer 1.3.x, Business Partner 1.6.x —
+none in Service / Resource / Product per CLAUDE.md §3). Party Management
+therefore produces zero eTOM L2 wikilinks under v1 corpus scope. This is
+source-supported absence, not a corpus gap — see [[wiki/open-questions#OQ-043]]
+for the full enumeration.
 
-The full mapping table is in source pp. 18–24.
+The 1.X.Y "Party Identification & Authentication" placeholder in Table 4-3 is
+also out of scope and source-flagged "to be discussed for next versions".
 
-See [[wiki/open-questions#OQ-008]] (trilateral sweep deferred) and
-[[wiki/open-questions#OQ-037]] (R20.5 → v25.x version mismatch). Most processes
-mapped from Party Management are out of scope (Market/Sales/Customer domains); those
-that fall in Product/Service/Resource Domain × OFAB will be linked during the
-trilateral sweep.
+— GB1022 §4.3.2, Table 4-3, pp. 18–23.
 
 ## Component Dependencies
 
@@ -104,6 +140,9 @@ trilateral sweep.
 
 ## Open Questions
 
-- OQ-008: ODA↔eTOM↔SID trilateral linking sweep deferred
 - OQ-037: GB1022 mapping tables reference GB921/GB922 R20.5; corpus uses v25.x;
   many references resolve to scope-excluded domains (Market/Sales/Customer)
+- OQ-043: Party Management trilateral sweep — R20.5→v23.0/v25.x cross-walk
+  decisions (domain reorganization for Party / Party Privacy; out-of-scope
+  enumeration for Market/Sales/Customer/Business Partner; pre-existing
+  Agreement and Party Payment back-links flagged for source-supported review)

@@ -26,3 +26,15 @@ Individual ABE pages from GB922 Common v23.0. Category landing:
 | [[wiki/sid/common/performance-abe]]                    | §4.20 | 40 | Performance measure |
 | [[wiki/sid/common/policy-abe]]                         | §4.21 | 91 | Policy, rules, actions |
 | [[wiki/sid/common/project-abe]]                        | §4.22 | 170| Largest single chapter; generic project model |
+| [[wiki/sid/common/test-abe]]                           | §4.23 | 7  | Canonical Test (Product/Service/Resource Test specialise) — added 2026-05-08 gap fill |
+| [[wiki/sid/common/usage-abe]]                          | §4.24 | 29 | Canonical Usage (Product/Service/Resource Usage specialise) — added 2026-05-08 gap fill |
+| [[wiki/sid/common/segmentation-abe]]                   | §4.25 | 18 | Criterion, segments — added 2026-05-08 gap fill |
+| [[wiki/sid/common/intent-abe]]                         | §4.26 | 7  | Intent, IntentReport — added 2026-05-08 gap fill |
+| [[wiki/sid/common/closed-loop-abe]]                    | §4.27 | 13 | «Preliminary» — closedloop management framework; added 2026-05-08 gap fill |
+| [[wiki/sid/common/goal-abe]]                           | §4.28 | 5  | «Preliminary» — Goal, GoalSpecification; added 2026-05-08 gap fill |
+| [[wiki/sid/common/workflow-abe]]                       | §4.29 | 4  | «Preliminary» — Workflow, Activity; added 2026-05-08 gap fill |
+| [[wiki/sid/common/anomaly-abe]]                        | §4.30 | 38 | Anomaly, AnomalySpecification — added 2026-05-08 gap fill |
+| [[wiki/sid/common/topology-abe]]                       | §4.1 brief | – | Diagram-only ABE; thin page; added 2026-05-08 gap fill |
+| [[wiki/sid/common/event-abe]]                          | §4.1 brief | – | Diagram-only «not fully developed»; thin page; added 2026-05-08 gap fill |
+| [[wiki/sid/common/trouble-ticket-abe]]                 | §4.1 brief | – | Diagram-only «not fully developed»; thin page; added 2026-05-08 gap fill |
+| [[wiki/sid/common/trouble-or-problem-abe]]             | §4.1 brief | – | Diagram-only ABE; thin page; added 2026-05-08 gap fill |
