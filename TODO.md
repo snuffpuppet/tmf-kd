@@ -191,6 +191,37 @@ OQs" session unless the user asks.
 
 ---
 
+## 5. S2R-vertical scope expansion (Strategy + Capability + optional BVD)
+
+**Why:** Capability map Phase 3 — the user asked during the Phase 1 review of
+`wiki/views/capability-map.md` why Strategy and Capability verticals were absent.
+Source-grounded answer: CLAUDE.md §3 explicitly excludes the SIP / S2R lifecycle
+("strategic, not operational"). This TODO captures the work to expand the corpus
+and capability map into the S2R Lifecycle Area for stakeholders who need a fuller
+strategic-/capability-planning maturity view alongside the operational gap analysis.
+
+**Status:** Scoping complete; awaiting user decisions before any ingest begins.
+
+**Scope plan:** [`S2R-EXPANSION-SCOPE.md`](./S2R-EXPANSION-SCOPE.md) — comprehensive
+scoping document covering L2 inventory (10 L2s for Strategy + Capability; 16 L2s
+if Business Value Development included), SID ABE coverage (mostly already in
+corpus), CLAUDE.md amendment options, capability-map structural choices,
+visualisation strategy, effort estimate (17–39 hr range depending on scope), and
+five user decisions to surface.
+
+**Five user decisions awaited (per `S2R-EXPANSION-SCOPE.md` §10):**
+1. Include Business Value Development vertical or not?
+2. Capability map structural choice — flat verticals / Lifecycle-Area subgrouping / two view pages?
+3. Mermaid diagram strategy — single growing / two diagrams / restructure?
+4. Phasing — pilot (2 L2s) / full Strategy + Capability (10 L2s) / full S2R (16 L2s)?
+5. Trilateral verification approach — incremental (per-L2 OQ filing during ingest) or pre-ingest baseline sweep?
+
+**Acceptance:** user reviews `S2R-EXPANSION-SCOPE.md` and signals decisions on the
+five items. Scoping document gets updated with the decisions, then the document
+becomes the execution brief for the actual ingest work.
+
+---
+
 ## How to mark something done
 
 - File any new OQs raised during the work
