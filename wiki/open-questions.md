@@ -961,4 +961,14 @@ in [[CLAUDE]] §8.
 
 ---
 
-_(more open questions will accumulate as further ingestion proceeds)_
+## OQ-045 — Resource Anomaly Management Overview text references non-existent L2 "Resource Problem Management"
+
+- **Raised:** 2026-05-10
+- **Source page:** [[wiki/etom/resource-domain/resource-anomaly-management]] (1.5.21 in GB921 v25.5); surfaced during capability map Batch 2 (Anomaly) — see [[wiki/views/capability-map#cap-resource-anomaly]]
+- **Question:** GB921 v25.5's 1.5.21 Overview text reads:
+  > "Resource Anomaly Management business processes establish actions that predict and detect aberrations or outlier events/activities, assess them for their impact, mitigate them, and record them before they ever become **Resource Problem Management** concerns. […] Resource Anomaly Management is different from **Resource Problem Management** as the later addresses known issues, faults or problems."
+
+  No L2 named "Resource Problem Management" exists in v25.5 — the corresponding Resource-domain L2 is **1.5.8 Resource Trouble Management**. The conceptual intent is unambiguous (Anomaly is pre-Trouble; Trouble addresses known faults), but the text appears to be a copy-paste from the Service Anomaly L2 (1.4.18) Overview where the analog L2 *is* "Service Problem Management" (1.4.6), and the term wasn't substituted.
+
+  Two possible interpretations: (a) source-text bug — should read "Resource Trouble Management"; (b) terminology lineage from a prior version where Resource Trouble was called Resource Problem and the Anomaly text was not refreshed.
+- **Blocking:** Nothing. Capability map Batch 2 proceeded with the verbatim quote preserved and a parenthetical note attached to the Resource Anomaly entry's TMF-distinctions list. Filed for audit-trail completeness; will not affect downstream batches.

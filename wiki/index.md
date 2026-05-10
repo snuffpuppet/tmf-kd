@@ -97,4 +97,5 @@ cross-framework concepts above.
 _(none yet)_
 
 ## Views
-_(none yet)_
+
+- [[wiki/views/capability-map]] — OSS-layer capability map for gap-analysis heat-map overlay and change roadmap, derived from eTOM L2 content for Service and Resource Domains. 17 L2 capabilities + 8 H5 sub-capabilities (security ×2, workforce ×2, inventory ×2, test ×2) = 25 stable heat-map anchors. Promoted from draft 2026-05-10. Phase 3 (S2R-vertical scope expansion) in scoping.

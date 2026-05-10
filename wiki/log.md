@@ -1192,3 +1192,666 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
       OQ-030)
     Both are extension/depth work, not structural. The corpus's structural
     completeness from v1 is now augmented with deeper process-layer narrative.
+
+---
+
+## 2026-05-09T11:00Z — CAPABILITY-MAP — FRAMING SETTLED, DRAFT CREATED
+
+- **File(s):** none ingested. New derivative view; sources are 17 in-scope eTOM L2 wiki pages + `wiki/foundations/domains.md` (already in corpus).
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` (new) — `view`-type derivative page; framing decisions locked in `## Session State` callout; L1 frame populated (8 GB991 horizontal business-area domains, Service + Resource in scope, 6 greyed); Service / Resource L2 skeleton organised by OFAB vertical with all 17 in-scope L2 pages wikilinked; capability content awaiting batched proposals.
+    - `wiki/views/_index.md` (updated) — Drafts section added listing the capability map draft.
+    - `wiki/index.md` (updated) — Views section now lists the capability map draft entry.
+- **Sections skipped (out of scope):** N/A — no source ingest. View scope explicitly narrows away from corpus-ingested Product Domain L2s for the OSS-layer practitioner cross-cut; those L2 pages remain on disk and are referenced in the L1 frame's greyed Product entry.
+- **Lint result:** PASS — see lint command output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **New work direction.** Capability map derivation initiated as collaborative iterative process. Not in TODO.md as of v1 completion; this is post-v1 extension work.
+    - **Framing decisions locked (do not relitigate):**
+        1. Output format — single view page.
+        2. Naming — hybrid (derived capability label H3 + verbatim eTOM L2 name and ID).
+        3. Cross-cutting capabilities — twice in domain-specific form (Service X + Resource X as siblings; not one X with two PSR specialisations).
+        4. Anchor IDs — `cap-<layer>-<kebab-name>` for user-private overlay wikilinks.
+        5. Trilateral inline — process-only (ODA/SID via L2 page wikilinks).
+    - **Refined goal (per user 2026-05-09):** capability map for gap-analysis heat-map overlay and change roadmap. Designed to surface PSR-driven distinctions monolithic BSS/OSS conflates (Service Problem vs Resource Trouble; Service Catalog vs Service Activation; Service Performance vs Service Anomaly vs Service Problem; ticketing-as-fault vs three-way TMF assurance split).
+    - **L1 frame derived from GB991 §1.1.1.** Eight business-area horizontal domains; Service + Resource in scope; Market, Sales, Product, Customer, Business Partner, Enterprise greyed (Product greyed for the view despite corpus ingestion of operational Product L2s — view-level scoping, not corpus change). Three non-business GB991 domains (Shared, Patterns, Integration) omitted by their own definitions.
+    - **L2 organisation:** OFAB vertical grouping within each L1 (Operations Readiness & Support → Fulfillment → Assurance → Billing). Two cross-vertical L2s footnoted: 1.5.5 Resource Order (Fulfillment + ORS), 1.5.7 Resource Data (multi-vertical, primary ORS).
+    - **Security boundary reaffirmed.** Capability map is pure TMF-derivative. Current-state status, Nokia mapping notes, and gap analysis live entirely in `project/` (which Claude does not read per CLAUDE.md §10.4). User's `project/` overlay file wikilinks the capability map's stable anchors.
+    - **Honest derivation note** in draft banner: GB991 §1.2 (Business Capability Map) marked FUTURE WORK in TMF source per OQ-005. There is no TMF-canonical operational capability map; the draft is one defensible derivation.
+    - **6 thematic batches planned**, all PENDING: Catalog (4 L2s), Anomaly (2), Performance (2), Problem/Trouble (2), Support (2), Activation/Order/Data/Mediation (5). Total 17.
+    - **Next action:** propose Batch 1 (Catalog) for user review with HIGH/MEDIUM/LOW confidence labels per rollup; wait for sign-off before Batch 2.
+
+---
+
+## 2026-05-09T11:30Z — CAPABILITY-MAP — BATCH 1 (CATALOG) SETTLED
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 1 baked in: 4 H4 capability entries
+      added (`cap-service-catalog-operational-readiness`, `cap-service-catalog-content`,
+      `cap-resource-catalog-operational-readiness`, `cap-resource-catalog-content`);
+      Session State callout updated (Batch 1 → DONE; H3→H4 correction; new Last
+      activity; Next action → propose Batch 2 Anomaly); `## L2 Capability Frame
+      Diagram` H2 added (Mermaid `flowchart` showing all 17 in-scope L2s grouped by
+      L1 + OFAB plus 6 greyed L1 domains); Service Domain ORS placeholder reduced to
+      Batch-5 reference for 1.4.4; Resource Domain ORS placeholder reduced to
+      Batch-5/6 references for 1.5.4/1.5.7.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Batch 1 verdict:** 4 separate capabilities, no rollups. HIGH on all four.
+      Operational Readiness vs Content are distinct L2s in GB921 v25.5 with distinct
+      scope statements (Operational Readiness → support / release / deploy machinery;
+      Content → catalog substance — specifications, offerings, attributes,
+      versioning, lifecycle). Collapsing them would erase a TMF distinction directly
+      relevant to the user's gap-analysis goal — the user's stated current-state
+      gap ("dev team implicitly handles service specification; no service catalog")
+      sits squarely in Catalog Content, not Operational Readiness.
+    - **Naming.** eTOM-aligned phrasing per user direction: capability labels track
+      the L2 wording ("Service Catalog — Operational Readiness", "Service Catalog —
+      Content") for traceability, with the verbatim L2 name + ID on the italic line
+      below the H4 heading.
+    - **TMF distinctions per capability.** Each H4 carries two distinction call-outs:
+      (a) within-pair (OR vs Content), (b) cross-batch reference to Service Activation
+      (1.4.5; Batch 6 pending) for the Service catalog pair, and cross-PSR reference
+      to the matching Service catalog capability for the Resource catalog pair.
+      Distinctions cite source pages; no interpretation introduced.
+    - **Verbatim source.** Scope statements are the verbatim ## Overview text from
+      the four L2 wiki pages (which were sourced from GB921 v25.5 Excel master via
+      openpyxl during TODO #2). Citation format `— GB921 v25.5` retained.
+    - **H3→H4 correction.** Initial draft Session State said "capability label
+      (H3)". With OFAB verticals as H3 (Operations Readiness & Support, Fulfillment,
+      Assurance, Billing) under each L1 H2, capabilities sit as H4 beneath. Caught
+      during Batch 1 proposal; corrected in this commit.
+    - **Mermaid frame diagram.** Single `flowchart TB` with three top-level
+      subgraphs: Out of scope (greyed; LR layout for compactness), Service Domain
+      (TB; OFAB subgraphs nested), Resource Domain (TB; OFAB subgraphs nested).
+      Greyed nodes get `classDef` styling (light grey fill, dashed border, muted
+      text). All 17 in-scope L2 nodes carry verbatim ID + name. Rendered inline in
+      Obsidian. Frame is fixed; capability content fills in below as batches settle
+      but the diagram itself doesn't change.
+    - **Heat-map / overlay model unchanged.** Capability map remains pure
+      TMF-derivative. Anchors `cap-service-catalog-operational-readiness`,
+      `cap-service-catalog-content`, `cap-resource-catalog-operational-readiness`,
+      `cap-resource-catalog-content` are stable for user-private overlay wikilinks
+      from `project/`.
+    - **Next action:** propose Batch 2 (Anomaly) — Service Anomaly (1.4.18) and
+      Resource Anomaly (1.5.21), both Assurance vertical. Both expected HIGH; the
+      interesting work is surfacing TMF distinctions against Performance and
+      Problem/Trouble (Batches 3 and 4 — same Assurance vertical; the three-way
+      Assurance split is exactly the gap pattern the user flagged for current-state
+      monolithic ticketing).
+
+---
+
+## 2026-05-10T09:00Z — CAPABILITY-MAP — BATCH 2 (ANOMALY) SETTLED + OQ-045 FILED
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 2 baked in: 2 H4 capability
+      entries added under Service Domain Assurance (`cap-service-anomaly`) and
+      Resource Domain Assurance (`cap-resource-anomaly`). Service Assurance
+      placeholder reduced to Batches 3+4 references for 1.4.6/1.4.7. Resource
+      Assurance placeholder reduced to Batches 3+4 references for 1.5.8/1.5.9.
+      Session State callout updated (Batch 2 → DONE; Last activity 2026-05-10;
+      Next action → propose Batch 3 Performance).
+    - `wiki/open-questions.md` — OQ-045 filed (Resource Anomaly Management 1.5.21
+      Overview text references non-existent L2 "Resource Problem Management"; the
+      v25.5 L2 is 1.5.8 Resource Trouble Management; verbatim quote preserved with
+      parenthetical note in capability map entry).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** OQ-045 (1.5.21 source-text terminology quirk).
+- **Notes:**
+    - **Batch 2 verdict:** 2 separate capabilities, no rollups, HIGH on both.
+      Clean PSR siblings per framing decision #3.
+    - **Source-grounded TMF distinctions, unusually direct.** GB921 v25.5's
+      Anomaly L2 Overviews include explicit "is different from
+      [Problem|Trouble]" sentences, and "record them before they ever become
+      [Problem|Trouble] concerns" — meaning the pre-Problem nature of Anomaly
+      is stated in the source, not an interpretation. Surfaced in both
+      capability entries' TMF-distinctions sections with verbatim quotes.
+      Directly serves the user's stated current-state gap (monolithic ticketing
+      handles known faults; pre-fault detection is a distinct TMF capability).
+    - **Three-way Assurance split visibility.** Batch 2 plus the upcoming
+      Batches 3 (Performance) and 4 (Problem/Trouble) populate the full TMF
+      Assurance triad: Anomaly (pre-Problem) → Performance (metrics) →
+      Problem/Trouble (restoration). Capability map will surface this
+      structurally adjacent on the page — exactly the cluster where
+      monolithic ticketing collapses three TMF capabilities into one.
+    - **OQ-045 source-text quirk.** GB921 v25.5's 1.5.21 Resource Anomaly
+      Management Overview reads *"…before they ever become Resource Problem
+      Management concerns"* and *"…is different from Resource Problem
+      Management as the later addresses known issues, faults or problems."*
+      No L2 named "Resource Problem Management" exists in v25.5; the
+      corresponding Resource-domain analog is 1.5.8 Resource Trouble Management.
+      Likely a copy-paste from the Service Anomaly L2 (1.4.18) Overview where
+      the analog L2 *is* "Service Problem Management" (1.4.6), with the term
+      not substituted. Verbatim quote preserved in the capability map entry
+      with a `> **Source-text quirk**` callout pointing to OQ-045 — fidelity
+      maintained without silently smoothing the source.
+    - **Forward-reference wikilinks.** Both Anomaly entries cite
+      `[[#cap-service-problem]]`, `[[#cap-service-performance]]`,
+      `[[#cap-resource-trouble]]`, `[[#cap-resource-performance]]` — anchors
+      that don't exist until Batches 3 & 4 land. Linter skips in-page anchor
+      wikilinks (lint.py line 329: `if not target_no_anchor: continue`), so
+      no LINK-BROKEN findings. The wikilinks become live navigation as the
+      target anchors get added.
+    - **Next action:** propose Batch 3 (Performance) — 1.4.7 Service Performance
+      Management + 1.5.9 Resource Performance Management. Source establishes
+      Performance ↔ Trouble information flow (1.5.9 explicitly: "if the
+      analysis identifies a resource performance violation or a potential
+      service performance violation, information will be passed to Resource
+      Trouble Management and/or Service Quality Management"). Source also
+      notes 1.4.7 was renamed in v23.5 from "Service Quality Management" —
+      provenance worth surfacing in the Service Performance distinction notes.
+
+---
+
+## 2026-05-10T10:30Z — CAPABILITY-MAP — BATCH 3 (PERFORMANCE) SETTLED
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 3 baked in: 2 H4 capability
+      entries added (`cap-service-performance` under Service Domain Assurance,
+      `cap-resource-performance` under Resource Domain Assurance), placed in L2
+      ID order ahead of the existing Anomaly H4s. Service Assurance placeholder
+      reduced to Batch-4 reference for 1.4.6; Resource Assurance placeholder
+      reduced to Batch-4 reference for 1.5.8. Session State updated (Batch 3 →
+      DONE; provenance-line convention recorded; Next action → propose Batch 4
+      Problem/Trouble).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Batch 3 verdict:** 2 separate capabilities, no rollups, HIGH on both.
+      Clean PSR siblings.
+    - **v23.5 rename surfaced prominently for Service Performance.**
+      `cap-service-performance` carries a second italic provenance line above
+      Scope: *"v23.5 rename: previously named 'Service Quality Management'…"*
+      User-approved at Batch 3 review. Two reasons: (1) older TMF documents
+      and stakeholders may still use Service Quality Management; (2) the v25.5
+      source for 1.5.9 Resource Performance Management itself still uses the
+      old name when referring to Service Performance — the rename wasn't
+      propagated everywhere. Reader hits the rename context before reading the
+      Scope or sibling distinctions, preventing confusion.
+    - **Counterpart disambiguation in Resource Performance.**
+      `cap-resource-performance` Scope quote preserves verbatim source text
+      ("Service Quality Management" reference included). A
+      `> Note on referenced L2 names` callout follows, pointing to
+      `cap-service-performance` and clarifying the rename. Verbatim discipline
+      maintained without leaving the reader confused.
+    - **Provenance-line convention recorded in Session State.** When a TMF L2
+      carries a documented version-rename, surface it as a second italic line
+      immediately above Scope (under `eTOM L2:`). Apply to any future
+      capability where source flags a rename. Settled at Batch 3 review with
+      user approval.
+    - **Source-grounded Performance↔Trouble boundary.** GB921 v25.5 1.5.9
+      Overview directly establishes the handoff: *"if the analysis identifies
+      a resource performance violation or a potential service performance
+      violation, information will be passed to Resource Trouble Management
+      and/or Service Quality Management as appropriate."* Cited verbatim in
+      `cap-resource-performance` TMF distinctions; the cleanest source-grounded
+      Performance→Trouble boundary in the corpus.
+    - **Cross-PSR escalation captured.** Source establishes that resource
+      performance violations may be passed to Service Performance / Service
+      Quality Management — meaning Resource Performance can trigger Service
+      Performance attention. Both `cap-service-performance` and
+      `cap-resource-performance` TMF distinctions reflect this bidirectional
+      flow (each cites the other's source-grounded direction).
+    - **Three-way Assurance triad now half-visible.** With Batch 3 done, the
+      capability map shows Anomaly + Performance under both Service and
+      Resource Assurance subsections, leaving only Problem/Trouble (Batch 4)
+      to close the triad. The structural adjacency in the page already
+      surfaces the lifecycle progression for the user's gap analysis.
+    - **Next action:** propose Batch 4 (Problem / Trouble) — 1.4.6 Service
+      Problem Management + 1.5.8 Resource Trouble Management. Closes the
+      three-way Assurance triad on both PSR sides. Source has explicit
+      Service↔Resource cross-PSR language in 1.5.8 ("interact with the Service
+      Problem Management processes, as the latter have a view on service
+      impact… informing Service Problem Management of any potential service
+      problems") — gives a strong source-grounded distinction set.
+
+---
+
+## 2026-05-10T11:30Z — CAPABILITY-MAP — BATCH 4 (PROBLEM / TROUBLE) SETTLED
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 4 baked in: 2 H4 capability
+      entries added (`cap-service-problem` under Service Domain Assurance,
+      `cap-resource-trouble` under Resource Domain Assurance), placed in L2 ID
+      order ahead of the existing Performance + Anomaly H4s. Service Assurance
+      and Resource Assurance placeholder lists removed (sections now contain
+      three H4 capabilities each, in L2 ID order: Problem/Trouble → Performance
+      → Anomaly). Session State updated (Batch 4 → DONE; naming-asymmetry
+      convention recorded; Next action → propose Batch 5 Support).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Batch 4 verdict:** 2 separate capabilities, no rollups, HIGH on both.
+      Three-way TMF Assurance triad now structurally complete on both PSR
+      sides. Capability map shows lifecycle progression Anomaly → Performance
+      → Problem/Trouble adjacent on the page — exactly the cluster where
+      monolithic ticketing collapses three TMF capabilities into one.
+    - **TMF naming asymmetry preserved per eTOM-aligned framing.**
+      `cap-service-problem` (1.4.6 Service **Problem** Management) and
+      `cap-resource-trouble` (1.5.8 Resource **Trouble** Management) keep the
+      source's asymmetric terminology. Each entry's TMF-distinctions list
+      surfaces the asymmetry explicitly so a reader hitting either side sees
+      the explanation. User-approved at Batch 4 review; convention recorded
+      in Session State for any future PSR-pair where source uses asymmetric
+      terms.
+    - **Source-cited bidirectional cross-PSR coordination.** GB921 v25.5 1.5.8
+      Overview is the cleanest source-grounded cross-PSR boundary in the
+      corpus: *"Resource Trouble Management processes are responsible for
+      informing Service Problem Management of any potential service problems.
+      Where the original report arose as a result of service problems, the
+      Resource Trouble Management processes may be coordinated by Service
+      Problem Management processes."* Cited verbatim in both
+      `cap-service-problem` and `cap-resource-trouble` TMF-distinction lists.
+    - **Customer Domain Problem Handling — explicit boundary.** GB921 1.4.6
+      Overview references "Problem Handling processes" sitting in the
+      Customer Domain (greyed L1 in this view). `cap-service-problem` carries
+      a fourth distinction bullet calling out the boundary: Service Problem
+      manages service-restoration; Problem Handling owns customer-facing case
+      management; they interact but are distinct. Worth flagging because
+      monolithic ticketing typically blurs Service Problem ↔ Customer Problem
+      Handling.
+    - **Resource Trouble as convergence point.** Per 1.5.8 Overview's
+      input-flow paragraph, Resource Trouble takes inputs from three upstream
+      sources: resource alarms (from Resource Data Collection & Distribution
+      / 1.5.7 Resource Data in v25.5 — Batch 6 pending), resource performance
+      notifications (from Resource Performance), and service-side trouble
+      notifications (from Service Problem). Surfaced as a fourth distinction
+      bullet in `cap-resource-trouble` — operational convergence point for
+      resource-fault assurance.
+    - **Forward reference to `cap-resource-data`.** `cap-resource-trouble`
+      cites `[[#cap-resource-data|Resource Data]]` as the upstream alarm
+      source. That anchor doesn't exist yet (Batch 6 will create it).
+      In-page anchor wikilinks are skipped by the linter, so no LINK-BROKEN
+      finding. Becomes live navigation when Batch 6 lands.
+    - **Next action:** propose Batch 5 (Support) — 1.4.4 Service Support
+      Management + 1.5.4 Resource Support Management, both Operations
+      Readiness & Support vertical. Note GB1022 §4.6.1 "split into 2"
+      guidance: Support trio (1.2.4 Product Support — out of view scope —
+      plus 1.4.4 + 1.5.4 in scope) jointly owned by Production +
+      Intelligence Management ODA blocks per OQ-044. Worth surfacing in
+      capability commentary even though trilateral inline stays out per
+      framing decision #5.
+
+---
+
+## 2026-05-10T13:00Z — CAPABILITY-MAP — BATCH 5 (SUPPORT) SETTLED
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 5 baked in: 2 H4 capability
+      entries (`cap-service-support`, `cap-resource-support`) under Service/
+      Resource Domain Operations Readiness & Support sections; 2 H5 security
+      sub-capability entries (`cap-service-support-security`,
+      `cap-resource-support-security`) — heat-map overlay can mark security
+      maturity independently of broader Support coverage. Service ORS
+      placeholder removed; Resource ORS placeholder reduced to Batch 6 entry
+      for 1.5.7. Session State updated (Batch 5 → DONE; security-H5 +
+      TMF-pure-mental-category conventions recorded; Last activity 2026-05-10;
+      Next action → propose Batch 6 — final batch).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Batch 5 verdict:** 2 separate capabilities + 2 H5 security
+      sub-capabilities, all HIGH. Total 4 stable heat-map anchors from this
+      batch.
+    - **Two-step rename history per L2.** Both 1.4.4 and 1.5.4 carry verbatim
+      source notes documenting two renames each: `pre-v23.5 "[X] Readiness &
+      Support" → v23.5 "[X] Support Readiness" → v24.0+ "[X] Support
+      Management"`. Surfaced as italic provenance lines above Scope per the
+      Batch-3 convention. Older documents may reference any of three names per
+      L2 — stakeholder-facing context worth flagging.
+    - **Security promoted to H5 sub-capability (user direction at Batch 5
+      review).** GB921 v25.5 lists five security/risk responsibilities
+      verbatim on both 1.4.4 and 1.5.4 (Vulnerability Management, Threat
+      Assessments, Risk Assessments, Risk Mitigation, Secure Configuration
+      Activities). TMF v25.5 OFAB does not house a separate Security
+      Management L2 — security is a Support concern at the
+      infrastructure-readiness layer. The H5 sub-section duplicates these
+      verbatim bullets and carries a stable sub-anchor for heat-map overlay
+      independence. **Convention recorded in Session State** for any future
+      L2 carrying an explicit security/risk responsibility list.
+    - **Workforce-as-Resource-Support-responsibility distinction.** GB921
+      v25.5 1.5.4 lists *"Establishing and managing the workforce to support
+      the eTOM processes"* as a Resource Support Management responsibility.
+      Surfaced as a TMF distinction in `cap-resource-support` to close the
+      L1-frame Workforce Management question raised early in capability-map
+      framing — TMF v25.5 source position is workforce-management functions
+      reside under Resource Support at the operational-readiness layer, not
+      as a top-level horizontal domain.
+    - **Multi-ODA ownership / Intelligence-Management share.** Per OQ-044
+      and GB1022 §4.6.1, both Support L2s are "split into 2" — jointly owned
+      by Production + Intelligence Management ODA functional blocks.
+      Surfaced as a TMF distinction in both entries with the explicit
+      delineation: trend analysis & forecasting at the infrastructure layer
+      is the Intelligence Management share of the Support L2; KPI / objective
+      / metrics tracking lives in the Performance L2s (1.4.7 / 1.5.9). Source-
+      grounded answer to the user's "intelligence support is blurry against
+      service performance" question — the Intelligence-flavoured aspect of
+      Support is trend / forecasting / capability reporting, not KPI
+      management.
+    - **TMF-pure mental-category convention recorded.** User's organisational
+      mental categories (e.g. infrastructure / customer-services /
+      intelligence) are NOT synthesised into the wiki capability map.
+      Mental-category mapping lives in the user's `project/` overlay file,
+      which wikilinks the capability map's stable anchors. Wiki stays
+      TMF-source-pure; organisation-specific groupings stay outside per
+      CLAUDE.md §10.4 security boundary. Convention recorded in Session State
+      for any future similar refinement requests.
+    - **Forward references hold.** Both Support entries cite
+      `[[wiki/etom/.../<l2>]]` for L2s pending Batch 6 (Service Activation,
+      Resource Order). These resolve via the lint check (target wiki pages
+      exist on disk). The cross-Support forward references
+      (`[[#cap-service-support]]` ↔ `[[#cap-resource-support]]`) are
+      now both live (in-page anchor wikilinks; bidirectional navigation
+      works).
+    - **Heat-map anchor inventory after Batch 5.** Capability map now exposes
+      14 stable anchors: 4 from Catalog (Batch 1), 2 from Anomaly (Batch 2),
+      2 from Performance (Batch 3), 2 from Problem/Trouble (Batch 4), 2 from
+      Support + 2 H5 security sub-capabilities (Batch 5). Batch 6 will add 5
+      more (Service Activation, Service Guiding & Mediation, Resource Order,
+      Resource Data, Resource Mediation & Reporting), bringing the final
+      total to 19 stable anchors across the 17 in-scope L2s plus 2 security
+      sub-capabilities.
+    - **Next action:** propose Batch 6 (Activation / Order / Data / Mediation)
+      — the heterogeneous final batch. 5 L2s mixing Fulfillment, multi-vertical
+      ORS, and Billing. Most likely place for MEDIUM-confidence calls. Key
+      naming-similarity disambiguation: Service "Guiding & Mediation" (1.4.8)
+      vs Resource "Mediation & Reporting" (1.5.10) — both Billing vertical,
+      similar names, different scopes per source. Plus the multi-vertical
+      placements for 1.5.5 (Resource Order: Fulfillment + ORS) and 1.5.7
+      (Resource Data: all four OFAB verticals) need confirmation.
+
+---
+
+## 2026-05-10T15:00Z — CAPABILITY-MAP — BATCH 6 (ACTIVATION / ORDER / DATA / MEDIATION) SETTLED + WORKFORCE H5 RETROACTIVE — MAP STRUCTURALLY COMPLETE
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L2/L3 pages.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — Batch 6 baked in: 5 H4 capability
+      entries added (`cap-service-activation`, `cap-service-guiding-and-mediation`,
+      `cap-resource-order`, `cap-resource-data`, `cap-resource-mediation-and-reporting`)
+      across Service Fulfillment, Service Billing, Resource Fulfillment, Resource
+      ORS, Resource Billing sections. 1 fresh H5 sub-capability added in Resource
+      Order: `cap-resource-order-workforce` (surfaces L3 1.5.5.7 Manage Resource
+      Work Order with 6 L4 sub-processes verbatim). 1 retroactive H5 added inside
+      the Batch-5-baked Resource Support entry: `cap-resource-support-workforce`
+      (surfaces L3 1.5.4.8 Manage Field Workforce). All `_Pending Batch X_`
+      placeholders removed from the page. Session State updated (Batch 6 → DONE;
+      workforce-H5 convention recorded; PENDING list empties; Last activity
+      2026-05-10; Pending decision: draft → final promotion). All forward-
+      reference in-page anchor wikilinks (e.g. `[[#cap-resource-order]]`,
+      `[[#cap-resource-data]]`, `[[#cap-resource-order-workforce]]`) now resolve
+      to live anchors.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Batch 6 verdict:** 5 separate capabilities, no rollups, HIGH on all 5.
+      Predicted MEDIUM at framing-time; source turned out to be clear on each
+      L2's scope and clean on cross-batch / cross-PSR boundaries.
+    - **Three rename callouts handled** per the Batch-3 provenance-line
+      convention:
+        - 1.4.5 v24.0 rename from "Service Configuration & Activation". Note:
+          the v24.0 rename was not propagated to the responsibilities preamble
+          inside the Overview, which still reads *"Responsibilities of the
+          Service Configuration & Activation processes"*. Verbatim source
+          preserved with a `> source quirk` callout below the Scope quote.
+        - 1.5.7 v23.5 rename from "Resource Data Collection & Distribution".
+          **Cascade:** 1.5.8 Resource Trouble and 1.5.9 Resource Performance
+          source texts both still reference the old name when describing input
+          flows. Disambiguation note in `cap-resource-data` provenance line.
+        - 1.5.5 cross-version ID collision (per OQ-040 / OQ-044): R20.5 1.5.5
+          was Workforce Management; v25.5 1.5.5 is Resource Order Management.
+          Cross-version note as second italic provenance line.
+    - **Workforce surfaced as H5 sub-capabilities — TMF-aligned, source-grounded.**
+      User asked at Batch 6 review whether automated-vs-workforce resource
+      orders are different capabilities. Source answer: TMF doesn't carve out
+      "automated" but does carry dedicated L3 processes for workforce on both
+      Resource Support (1.5.4.8 Manage Field Workforce, with multiple L4s) and
+      Resource Order (1.5.5.7 Manage Resource Work Order, with 6 L4s). Both
+      promoted to H5 sub-capabilities with stable sub-anchors. Establishment /
+      planning side lives in `cap-resource-support-workforce`; per-order
+      execution side lives in `cap-resource-order-workforce`. Heat map can mark
+      these independently of the broader L2 cells — a fully-automated
+      provisioning system shows green on `cap-resource-order` overall but red
+      on `cap-resource-order-workforce`, exposing the user's stated current-
+      state gap pattern cleanly.
+    - **Workforce-H5 convention recorded.** Stricter test than the security-H5
+      convention: a workforce-style H5 sub-capability requires a *named L3
+      process* with substantive source scope (security-H5 was justified by a
+      multi-bullet block within an L2's responsibility list with no dedicated
+      L3). Going forward only invoke this when both criteria hold (recognised
+      practitioner concern + dedicated L3 backing).
+    - **Naming-similarity disambiguation 1.4.8 ↔ 1.5.10.** Service Guiding &
+      Mediation vs Resource Mediation & Reporting — both Billing vertical,
+      both involve mediation, both noted by source as *"often handled by
+      appropriate network elements"*. Distinction is event scope: 1.4.8 =
+      customer/service-related usage events; 1.5.10 = resource events.
+      Surfaced as bidirectional TMF distinctions in both entries.
+    - **Resource Data multi-vertical placement.** 1.5.7 spans all four OFAB
+      verticals per source; placed under ORS as primary because the scope is
+      foundational data infrastructure. Capability is upstream provider for
+      Resource Trouble, Resource Performance, and Resource Mediation &
+      Reporting. No service-side analog (no 1.4.x Service Data Management L2);
+      service-data concerns are distributed across Service Support (Service
+      Inventory), Service Guiding & Mediation (service-event mediation), and
+      Service Performance (service metrics).
+    - **Final stable-anchor inventory.** Capability map is structurally
+      complete. 21 stable anchors total:
+        - 17 L2 capability anchors: `cap-service-support`,
+          `cap-service-activation`, `cap-service-problem`,
+          `cap-service-performance`, `cap-service-guiding-and-mediation`,
+          `cap-service-catalog-operational-readiness`,
+          `cap-service-catalog-content`, `cap-service-anomaly`,
+          `cap-resource-support`, `cap-resource-order`,
+          `cap-resource-data`, `cap-resource-trouble`,
+          `cap-resource-performance`,
+          `cap-resource-mediation-and-reporting`,
+          `cap-resource-catalog-operational-readiness`,
+          `cap-resource-catalog-content`, `cap-resource-anomaly`.
+        - 2 H5 security sub-capability anchors:
+          `cap-service-support-security`, `cap-resource-support-security`.
+        - 2 H5 workforce sub-capability anchors:
+          `cap-resource-support-workforce`, `cap-resource-order-workforce`.
+    - **What's complete vs what's optional next.** Structurally complete: all
+      17 in-scope L2s have full H4 capability content with TMF distinctions,
+      provenance lines where applicable, and source-page wikilinks; 4 H5 sub-
+      capabilities (security ×2, workforce ×2) carry independent heat-map
+      sub-anchors. Optional future work: (a) promote `capability-map-draft.md`
+      → `capability-map.md` once user signals satisfaction; (b) selective L3
+      drill-down for any L2 where heat-map gap analysis demands finer
+      granularity (deferred per framing decision).
+
+---
+
+## 2026-05-10T16:30Z — CAPABILITY-MAP — PHASE 2 L3 REVIEW: INVENTORY + TEST H5 ADDITIONS + CLEANUP
+
+- **File(s):** none ingested. Derivative content drawn from existing in-corpus L3 process detail.
+- **Pages created/updated:**
+    - `wiki/views/capability-map-draft.md` — 4 new H5 sub-capabilities baked in:
+      `cap-service-support-inventory` (L3 1.4.4.1 Manage Service Inventory, with
+      its 4 L4 sub-processes verbatim); `cap-resource-support-inventory` (L3
+      1.5.4.5 Manage Resource Inventory, with 3 L4s — asymmetric to Service:
+      no Audit Tests L4); `cap-service-support-test` (L3 1.4.4.6 Manage Service
+      Test); `cap-resource-support-test` (L3 1.5.4.9 Manage Resource Test, with
+      a source-text quirk parenthetical akin to OQ-045 family). Service Support
+      and Resource Support TMF-distinction lists updated to add Inventory + Test
+      H5 pointers. Stale "; Batch X pending" forward-reference notes stripped
+      throughout the file (11 occurrences across Service Support, Resource
+      Support, Catalog Content / OR pairs, Anomaly entries, Performance entries,
+      and Resource Trouble convergence-point bullet). Service Activation and
+      Resource Order references in Support TMF distinctions upgraded from L2-
+      page wikilinks to in-page anchor wikilinks (now-live cross-references).
+      Session State updated (Last activity; Phase 2 entry added under DONE;
+      L3-derived sub-capability convention renamed and expanded with all three
+      observed instances; second Pending Decision added for S2R-vertical scope
+      expansion deferral).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint output following this entry.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Phase 2 origin.** User's review request after Batch 6 capability-map
+      completion: "Why is there no 'strategy' and 'capability' verticals?" and
+      "With security and workforce we identified new sub-categories by analysing
+      L3 processes. Review the other L3 etom processes to see if there are any
+      more sub-categories worth call out." Phase 1 (Strategy/Capability)
+      answered with corpus-grounded scope discipline — explicitly excluded per
+      CLAUDE.md §3 SIP-vertical exclusion; user deferred scope expansion
+      decision. Phase 2 (L3 review) surveyed all 132 L3s across 17 in-scope L2s
+      and identified 3 candidate concerns: Inventory (strong, both Support
+      L2s), Test (strong, both Support L2s), Number Portability (weaker,
+      single-PSR, telecom-specific). User approved Inventory + Test, declined
+      Number Portability.
+    - **L3-derived sub-capability convention renamed and expanded.** Originally
+      filed as "Workforce-H5 convention" at Batch 6 settlement; with three
+      instances now observed (workforce + inventory + test) the convention is
+      formally generalised. The bar — *named L3 process with substantive
+      scope, recognised practitioner concern, cross-cutting heat-map relevance*
+      — held cleanly across all three. Number Portability failed the
+      cross-cutting / PSR-symmetry test even though it has a substantive
+      named L3.
+    - **Inventory L3s — paired traceability backbone.** 1.4.4.1 (Service) and
+      1.5.4.5 (Resource) cross-reference each other via the
+      service↔resource-instance association recorded in the Resource Inventory
+      Database. Service Inventory cross-references customer-product-offering↔
+      service-instance associations. Together the two L3s form the OSS-layer
+      traceability backbone for state. Source asymmetry preserved: Service
+      Inventory has 4 L4s (Manage DB/Processes, Audit Tests, Track/Monitor,
+      Identify Issues); Resource Inventory has 3 L4s (Manage DB/Processes,
+      Track/Monitor, Identify Issues — no Audit Tests analog).
+    - **Test L3s — cross-PSR test orchestration.** Both 1.4.4.6 and 1.5.4.9
+      explicitly cite cross-PSR dependencies. 1.4.4.6 says Service Test relies
+      on Product + Resource Test Management. 1.5.4.9 has a source-text quirk
+      ("Product and Service Manage Resource Test process") where intent is
+      clearly "Product and Service Test Management processes". Verbatim quote
+      preserved with inline parenthetical noting OQ-045-family source-text
+      inconsistency. No new OQ filed (same pattern as OQ-045; not blocking;
+      preserved verbatim in the heat-map anchor).
+    - **Phase 1 — Strategy / Capability verticals — out of scope, deferred
+      decision recorded.** GB991 §1.1.2 defines two Lifecycle Areas: S2R
+      (Strategy-to-Readiness; contains Strategy Management, Capability
+      Management, Business Value Development, shared part of ORS) and
+      Operations (contains shared part of ORS, Fulfillment, Assurance,
+      Billing). Capability map shows the Operations area's OFAB grouping only.
+      CLAUDE.md §3 explicitly excludes the SIP / S2R lifecycle ("strategic,
+      not operational"). User approved staying narrow ("finish this piece of
+      work then we'll scope out the work on this one — ask me at that time").
+      Recorded as second Pending Decision in Session State for future user
+      prompt.
+    - **Stale "Batch X pending" forward-reference notes cleaned.** 11
+      occurrences removed across the page — all forward references that were
+      qualified with "; Batch N pending" or "— Batch N pending" because the
+      target capability hadn't been baked in yet at the time the source bullet
+      was written. Batches 3, 4, and 6 are all now done; the qualifications
+      were stale. Stripped via sed; lint clean.
+    - **Final stable-anchor inventory after Phase 2.**
+        - 17 L2 capability anchors (unchanged from Batch 6).
+        - 8 H5 sub-capability anchors:
+            - Security: `cap-service-support-security`, `cap-resource-support-security`.
+            - Workforce: `cap-resource-support-workforce`, `cap-resource-order-workforce`.
+            - Inventory: `cap-service-support-inventory`, `cap-resource-support-inventory`.
+            - Test: `cap-service-support-test`, `cap-resource-support-test`.
+        - **Total: 25 stable heat-map anchors.**
+    - **Next action:** capability map is structurally and content-complete
+      against the user's stated goal. Two pending user-decisions remain:
+      (1) promote `capability-map-draft.md` → `capability-map.md`;
+      (2) scope expansion to S2R-lifecycle verticals (deferred). User reviews
+      the full draft and signals readiness to move to overlay work in
+      `project/`.
+
+---
+
+## 2026-05-10T16:35Z — CAPABILITY-MAP — Session State callout sync
+
+- **File(s):** none ingested.
+- **Pages created/updated:** `wiki/views/capability-map-draft.md` — Session State callout (top of page) updated to reflect Phase 2 additions: Last activity line, batches DONE list (added Phase 2 entry under Batch 6), Pending decisions (added second item for S2R-vertical scope expansion deferral), Workforce-H5 convention renamed to **L3-derived sub-capability convention** with all three observed instances (workforce, inventory, test) listed, Next action updated. Page body content already baked at 16:30Z entry; this entry is the callout-sync follow-up so the canonical resume context matches the page content.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:** Two-step write happened due to Edit-tool re-read requirement after the mid-batch sed cleanup; harmless. Recorded for audit-trail completeness.
+
+---
+
+## 2026-05-10T17:00Z — CAPABILITY-MAP — PROMOTED FROM DRAFT + PHASE 3 START
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - **Renamed:** `wiki/views/capability-map-draft.md` → `wiki/views/capability-map.md` (file mv, no content reload). Active reference cleanup: H1 de-draftified ("# Capability Map (Draft) —" → "# Capability Map —"); Session State callout intro "for this draft" → "for this view"; Last activity line updated to record the promotion + Phase 3 start; Pending decisions block collapsed to _(none)_ since both prior items have been actioned; Next action repointed to Phase 3 scoping work.
+    - `wiki/index.md` — Views section entry repointed to `[[wiki/views/capability-map]]`; description updated with anchor counts and post-promotion status.
+    - `wiki/views/_index.md` — section heading "Drafts" → "Capability Maps"; entry repointed and described.
+    - `wiki/open-questions.md` — OQ-045 source-page reference repointed from `capability-map-draft#cap-resource-anomaly` to `capability-map#cap-resource-anomaly`.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none new.
+- **Notes:**
+    - **Promotion scope.** File rename only; no content was modified beyond active-reference cleanup. Body content (L1 frame, Mermaid diagram, all 17 H4 capability entries, all 8 H5 sub-capability entries, TMF distinctions, Source Pages) carried forward unchanged. Frontmatter `derived_from` unchanged (still references the 17 L2 wiki pages + foundations/domains.md). Stable anchor IDs unchanged — user's `project/` overlay file (which Claude does not read) can wikilink the new path `[[wiki/views/capability-map#cap-<anchor>]]` directly.
+    - **Historical references in past log entries left intact.** Previous log entries dated 2026-05-09T11:00Z through 2026-05-10T16:35Z reference the file by its original name `wiki/views/capability-map-draft.md`. Per CLAUDE.md §10.6, log.md is append-only — historical entries are not edited. The in-content historical mention in the post-promotion Last activity line (2026-05-10T17:00Z) is intentional narrative recording the rename event.
+    - **Phase 3 scoping started.** User direction "promote it then scope the S2R work" signals readiness to plan the Strategy & Capability verticals expansion. Phase 3 is a scoping exercise, not an ingest. Output planned as a separate artifact (working name `S2R-EXPANSION-SCOPE.md` or similar — to be confirmed in scoping). Heat-map overlay work in `project/` is the user's parallel-track activity, unblocked by the Phase 3 scoping.
+
+---
+
+## 2026-05-10T17:30Z — CAPABILITY-MAP — PHASE 3 SCOPING ARTIFACT CREATED
+
+- **File(s):** none ingested. Scoping artifact only — no corpus content modified.
+- **Pages created/updated:**
+    - **New:** `S2R-EXPANSION-SCOPE.md` (repo root, project-management content
+      sibling to `CLAUDE.md` / `AGENTS.md` / `TODO.md` / `README.md`).
+      Comprehensive Phase 3 scoping plan — 12 sections covering: goal, L2
+      inventory (10 L2s for Strategy + Capability; 16 if BVD included), SID
+      ABE situation (mostly already in corpus from v1 SID ingest), CLAUDE.md
+      §3 amendment options, capability-map structural choices, Mermaid
+      strategy options, sub-capability H5 review pattern, trilateral
+      considerations, effort estimate (17–39 hr range), phasing options,
+      5 user decisions, recommendation, and proposed next steps.
+    - `TODO.md` — TODO #5 added pointing to `S2R-EXPANSION-SCOPE.md`.
+- **Sections skipped:** N/A (no source-document ingest performed).
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none new. (5 user decisions surfaced in scoping
+  document, but not formalized as OQs because they're project-direction
+  decisions, not corpus-content questions.)
+- **Notes:**
+    - **Scoping methodology.** Pulled the full Service + Resource L2
+      inventory direct from `raw/tmf/etom/GB921_Business_Process_Framework_Processes_Excel_v25.5.xlsx`
+      via openpyxl, grouped by Vertical Group column. Confirmed:
+        - Strategy Management: 2 L2s (1.4.1 Service Strategy Management;
+          1.5.1 Resource Strategy Management)
+        - Capability Management: 8 L2s (1.4.2, 1.4.12, 1.4.16, 1.4.19,
+          1.5.2, 1.5.14, 1.5.18, 1.5.19)
+        - Business Value Development: 6 unique L2s (1.4.3, 1.4.13, 1.4.17,
+          1.5.3, 1.5.15, 1.5.20)
+        - 1.5.5 Resource Order is multi-vertical (BVD + Fulfillment + ORS) —
+          already in scope per OFAB.
+    - **SID burden surprisingly low.** Verified that
+      `service-strategy-and-plan-abe`, `resource-strategy-and-plan-abe`,
+      Specification ABEs (Service / Resource / Product / Product Offering),
+      Capacity ABEs (Service / Resource / Product / Common), and
+      `strategic-product-portfolio-plan-abe` are all already in the SID
+      corpus. SID coverage in CLAUDE.md §3 is by ABE category (Product /
+      Service / Resource / Common), not by vertical alignment — Strategy/
+      Capability ABEs were ingested at v1 because they're Service/Resource
+      Domain ABEs. **Estimated 0–4 new ABE pages needed**, mostly for any
+      Capability-specific Plan ABEs that may exist in GB922 v25.5 but
+      weren't called out at v1.
+    - **Net effort estimate.** 17–27 hr for Strategy + Capability (10 L2s);
+      25–39 hr for full S2R (16 L2s). Effort dominated by L2-page ingest
+      with verbatim source extraction and trilateral linking; SID side
+      mostly already done.
+    - **Recommendation in scoping doc:** Include BVD (full S2R coverage);
+      use two-view-page structure (Option 2C) — keeps `capability-map.md`
+      clean for primary OSS use case and isolates new content in
+      `capability-map-s2r.md`; two Mermaid diagrams (one per Lifecycle
+      Area); pilot first with 1.4.1 Service Strategy Management, then
+      pause for review before continuing.
+    - **Next action:** user reviews `S2R-EXPANSION-SCOPE.md` and signals
+      decisions on the five questions surfaced in §10. Scoping document
+      then becomes the execution brief.
