@@ -2518,3 +2518,22 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Why apply globally to `cell()` helper rather than per-callsite.** All cells in this file use `html=1` styling (set by `style_box()` and `style_text()` defaults). A central `\n` → `&#10;` conversion in the cell() emitter ensures every multi-line value renders consistently regardless of where in the script it's constructed. Single-line values are unaffected (no `\n` to convert).
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T20:00Z — DIAGRAMS — L2 box height fix + drop embellishment from Lifecycle Area band labels
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        1. **`L2_HEIGHT_BASE` 90 → 108.** The anchor footer at `y = box_h - 14` was sitting only 2px from the box's bottom border, causing visible clipping at typical render scales. Bumping base height + pushing the anchor footer up by 4px (`box_h - 14` → `box_h - 18`) gives proper bottom margin. Affects all 4 pages (S2R / Operations / Combined / Roadmap) since `L2_HEIGHT_BASE` is shared.
+        2. **Band labels stripped of embellishment.** Was *"STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver"* and *"OPERATIONS LIFECYCLE AREA — day-to-day customer operations"*; now just *"STRATEGY-TO-READINESS"* and *"OPERATIONS"*. The verbatim TMForum names from GB991 §1.1.2.1 are exactly *"Strategy-to-Readiness"* and *"Operations"*; the *"LIFECYCLE AREA"* suffix and the descriptive em-dash phrases were my additions, not source-faithful. Applied to both the original Combined page and the Roadmap page.
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated with both fixes.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why the box height fix was needed.** drawio's text rendering positions text within the cell's geometry; with the anchor footer at `y = box_h - 14` (height 12, so reaching `y = box_h - 2`) and a 1.5px stroke, the visible inner space below the footer was effectively 0.5px. At display scales ≥ 100% the bottom of the anchor text was being clipped by the box border. Bumping base height to 108 + footer position to `box_h - 18` leaves ~6px clearance.
+    - **Verbatim discipline (CLAUDE.md §1) reinforced.** The *"LIFECYCLE AREA"* and descriptive phrases I had added were technically derivative content — fine in narrative prose but problematic on a diagram label that reads as if it were the canonical TMF term. Stripping back to just the GB991 verbatim terms is the right call. Applies to both view pages too if I add Lifecycle Area band labels there (currently they don't have them — capability-map.md and capability-map-s2r.md identify their area in the page H1 / Session State, not via embedded band labels).
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
