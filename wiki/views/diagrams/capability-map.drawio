@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T08:08:57.000Z" version="22.0.0" type="device">
+<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T08:18:25.000Z" version="22.0.0" type="device">
   <diagram id="Roadmap" name="Roadmap">
     <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0" background="#FFFFFF" pageBackground="#FFFFFF">
       <root>
@@ -611,7 +611,7 @@
         <mxCell id="202" value="Pre-billing mediation of resource usage events" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="199">
           <mxGeometry x="5" y="43" width="189" height="24" as="geometry"/>
         </mxCell>
-        <mxCell id="203" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3D3D3D;strokeColor=#3D3D3D;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;" vertex="1" parent="1">
+        <mxCell id="203" value="    *  L2 spans multiple verticals, placed under primary vertical  —  1.5.5: Fulfillment + ORS  |  1.5.7: all four OFAB verticals" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3D3D3D;strokeColor=#3D3D3D;fontSize=8;fontColor=#DDDDDD;align=left;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="14" y="1129" width="786" height="26" as="geometry"/>
         </mxCell>
         <mxCell id="204" value="Document" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#5BB6E8;strokeColor=#5BB6E8;fontSize=9;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
