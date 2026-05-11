@@ -744,9 +744,10 @@ FOOTER_CONTENT_BG = "#FFFFFF"
 FOOTER_BORDER = "#A0A0A0"
 
 
-def emit_footer(idgen, x, y, w, h, fields):
-    """Emit a single-row footer strip: dark filler on the left, then alternating
-    blue label + white content cells for each (label, value) tuple in fields.
+def emit_footer(idgen, x, y, w, h, fields, legend=None):
+    """Emit a single-row footer strip: dark filler on the left (optionally
+    carrying a small legend note in white text), then alternating blue label +
+    white content cells for each (label, value) tuple in fields.
     Returns the XML string."""
     out = []
     label_w = 80
@@ -759,11 +760,13 @@ def emit_footer(idgen, x, y, w, h, fields):
         filler_w = 0  # safety; would mean too many pairs for the width
 
     cur_x = x
-    # Dark filler (left)
+    # Dark filler (left) — carries an optional legend note
     if filler_w > 0:
-        out.append(cell(next(idgen), "",
+        out.append(cell(next(idgen), legend or "",
                         cur_x, y, filler_w, h,
-                        style_box(FOOTER_DARK, FOOTER_DARK, font_size=8)))
+                        style_box(FOOTER_DARK, FOOTER_DARK,
+                                  font_size=8, font_color="#DDDDDD",
+                                  align="left", valign="middle")))
         cur_x += filler_w
 
     # Label + content pairs
@@ -815,7 +818,7 @@ def build_roadmap_page(idgen):
                                        y_start=matrix_y)
     out.append(grid_xml)
 
-    # Footer at bottom
+    # Footer at bottom — dark filler carries the asterisk legend
     footer_h = 26
     footer_y = PAGE_H - margin - footer_h
     fields = [
@@ -824,7 +827,9 @@ def build_roadmap_page(idgen):
         ("Version", "1.0"),
         ("Last Updated", "11 May 2026"),
     ]
-    out.append(emit_footer(idgen, margin, footer_y, body_w, footer_h, fields))
+    legend = ("    *  L2 spans multiple verticals, placed under primary vertical  "
+              "—  1.5.5: Fulfillment + ORS  |  1.5.7: all four OFAB verticals")
+    out.append(emit_footer(idgen, margin, footer_y, body_w, footer_h, fields, legend=legend))
 
     return "\n".join(out)
 

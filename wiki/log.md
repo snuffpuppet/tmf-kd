@@ -2611,3 +2611,23 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **What was sacrificed to fit A3.** The L2 anchor footer (small grey text at the bottom of each L2 box) and the H5 source line (`L3 1.4.1.8 — cap-...`) are hidden in compact mode. Both are still visible on the S2R / Operations / Combined pages (which use larger page sizes) and in the wiki source pages. The trade-off: the Roadmap page is now overview-friendly at A3 size; readers needing the source/anchor citations can drill into the other pages.
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T22:30Z — DIAGRAMS — Roadmap footer legend explaining the asterisk on multi-vertical L2s
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        - `emit_footer()` extended with optional `legend` parameter — text rendered as small light-gray label inside the dark filler area on the left of the footer (was previously empty space).
+        - `build_roadmap_page()` now passes a legend explaining the asterisk on multi-vertical L2 IDs: *"L2 spans multiple verticals, placed under primary vertical — 1.5.5: Fulfillment + ORS | 1.5.7: all four OFAB verticals"*.
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why the asterisk needed explanation.** Two L2s appear with `*` suffix — `1.5.5*` Resource Order Management and `1.5.7*` Resource Data Management. GB921 v25.5 places these L2s under multiple `Vertical Group` values (1.5.5 = Fulfillment + ORS; 1.5.7 = all four OFAB verticals). The capability map renders each L2 once under its primary vertical to avoid visual duplication; the asterisk flags that the L2 logically also covers other verticals. User noticed the asterisks and asked what they meant — fair feedback that the symbol needed a key.
+    - **Why in the dark filler rather than as a separate cell.** The footer's dark filler area was visual ballast (matching the source image's design template), carrying no information. Repurposing it for the legend removes wasted space and avoids restructuring the matrix-vs-footer layout. Light-gray text (`#DDDDDD`) on dark background is legible without competing with the more prominent blue/white document fields.
+    - **Other pages still don't carry this legend** — they have asterisks too (Operations and Combined pages render 1.5.5 and 1.5.7 with the same asterisk marker). Could be added there in a follow-up; the HTML renders' footers already explain the asterisk in their separate legend section.
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
