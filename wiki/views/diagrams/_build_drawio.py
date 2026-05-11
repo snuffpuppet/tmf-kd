@@ -219,6 +219,19 @@ OPS_GRID = [
     ("BILLING",     ["1.4.8"],                              ["1.5.10"]),
 ]
 
+# Full vertical names — used in the Roadmap page's horizontal column headers.
+# The short labels above are kept for the original Combined page's rotated/vertical
+# labels (where compact text fits the cell shape better).
+FULL_VERTICAL_NAMES = {
+    "STRATEGY MGMT":   "STRATEGY MANAGEMENT",
+    "CAPABILITY MGMT": "CAPABILITY MANAGEMENT",
+    "BVD":             "BUSINESS VALUE DEVELOPMENT",
+    "ORS":             "OPERATIONS READINESS & SUPPORT",
+    "FULFILLMENT":     "FULFILLMENT",
+    "ASSURANCE":       "ASSURANCE",
+    "BILLING":         "BILLING",
+}
+
 # ----------------------------------------------------------------------
 # Layout constants
 # ----------------------------------------------------------------------
@@ -456,8 +469,10 @@ def emit_grid(idgen, grid, area_dark, area_mid, area_cell, x_start, y_start, par
 # ----------------------------------------------------------------------
 
 def build_page(name, body_xml, page_w, page_h):
+    # background="#FFFFFF" forces white canvas regardless of the user's draw.io
+    # theme (dark mode would otherwise render the canvas dark).
     return f"""  <diagram id="{name.replace(' ','-')}" name="{escape(name)}">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="{page_w}" pageHeight="{page_h}" math="0" shadow="0">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="{page_w}" pageHeight="{page_h}" math="0" shadow="0" background="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -593,7 +608,7 @@ def emit_grid_roadmap(idgen, x_start, y_start):
                     "OPERATIONS LIFECYCLE AREA — day-to-day customer operations",
                     ops_band_x, y_start, ops_band_w, ROAD_BAND_H, band_style_ops))
 
-    # Vertical column headers (row 2)
+    # Vertical column headers (row 2) — use full vertical names for readability
     hdr_y = y_start + ROAD_BAND_H + 4
     for i, (vname, _, _) in enumerate(all_grids):
         is_s2r = i < n_s2r
@@ -601,9 +616,10 @@ def emit_grid_roadmap(idgen, x_start, y_start):
         hdr_style = style_box(hdr_color, hdr_color, font_size=11,
                               font_color="#FFFFFF", font_style=1)
         col_x = cols_x_start + i * (ROAD_COL_W + ROAD_CELL_GAP)
-        # Two-line column header: name + GB991 ref
+        full_name = FULL_VERTICAL_NAMES.get(vname, vname)
+        # Two-line column header: full name + GB991 ref
         out.append(cell(next(idgen),
-                        vname + "\nGB991 §1.1.2.2",
+                        full_name + "\nGB991 §1.1.2.2",
                         col_x, hdr_y, ROAD_COL_W, ROAD_HDR_H, hdr_style))
 
     # Pre-compute row heights from densest cell per row

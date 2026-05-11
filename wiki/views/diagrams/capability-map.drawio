@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T06:07:22.000Z" version="22.0.0" type="device">
+<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T06:14:00.000Z" version="22.0.0" type="device">
   <diagram id="S2R-area" name="S2R area">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1190" math="0" shadow="0">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1190" math="0" shadow="0" background="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -362,7 +362,7 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strok
     </mxGraphModel>
   </diagram>
   <diagram id="Operations-area" name="Operations area">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1400" math="0" shadow="0" background="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -771,7 +771,7 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strok
     </mxGraphModel>
   </diagram>
   <diagram id="Combined" name="Combined">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2384" pageHeight="1684" math="0" shadow="0">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2384" pageHeight="1684" math="0" shadow="0" background="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -1533,7 +1533,7 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strok
     </mxGraphModel>
   </diagram>
   <diagram id="Roadmap" name="Roadmap">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2480" pageHeight="1500" math="0" shadow="0">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2480" pageHeight="1500" math="0" shadow="0" background="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
@@ -1549,19 +1549,19 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strok
         <mxCell id="5" value="OPERATIONS LIFECYCLE AREA — day-to-day customer operations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1103" y="90" width="1216" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="6" value="STRATEGY MGMT
+        <mxCell id="6" value="STRATEGY MANAGEMENT
 GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="182" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="7" value="CAPABILITY MGMT
+        <mxCell id="7" value="CAPABILITY MANAGEMENT
 GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="489" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="8" value="BVD
+        <mxCell id="8" value="BUSINESS VALUE DEVELOPMENT
 GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="796" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="ORS
+        <mxCell id="9" value="OPERATIONS READINESS &amp; SUPPORT
 GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1103" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
