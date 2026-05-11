@@ -16,3 +16,6 @@ __pycache__/
 # Obsidian — workspace state is local-only.
 # Comment out the line below if you want to share vault config across machines.
 .obsidian/workspace*.json
+
+# draw.io desktop autosave/lock files
+.$*.dtmp
