@@ -304,17 +304,39 @@ def style_text(font_size=10, font_color="#333", font_style=0, align="left", vali
 # Higher-level emit functions
 # ----------------------------------------------------------------------
 
-def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None):
+def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None, compact=False):
     """Emit an L2 box with name/desc/id text inside, plus any H5 children
     nested as containers within. Returns (cells_xml, total_height).
 
     stroke: stroke color for the L2 box border + ID-text color (defaults to
-    S2R_MID; pass OPS_MID for Operations-area L2s in the roadmap layout)."""
+    S2R_MID; pass OPS_MID for Operations-area L2s in the roadmap layout).
+    compact: if True, use tighter A3-fit dimensions (smaller fonts + heights)."""
     if stroke is None:
         stroke = S2R_MID
+
+    # Layout dimensions — switch to compact for the A3-fit Roadmap page
+    if compact:
+        l2_h_base = 88
+        l2_name_h = 46
+        h5_h = 38
+        h5_g = 3
+        font_id, font_name, font_desc, font_anchor = 8, 9, 7, 6
+        font_h5_name, font_h5_desc, font_h5_src = 8, 7, 6
+        line_id_h, line_name_h, line_desc_h = 12, 16, 12
+        line_h5_name, line_h5_desc, line_h5_src = 12, 13, 11
+    else:
+        l2_h_base = L2_HEIGHT_BASE
+        l2_name_h = L2_NAME_HEIGHT
+        h5_h = H5_HEIGHT
+        h5_g = H5_GAP
+        font_id, font_name, font_desc, font_anchor = 9, 11, 8, 7
+        font_h5_name, font_h5_desc, font_h5_src = 9, 7, 6
+        line_id_h, line_name_h, line_desc_h = 14, 18, 14
+        line_h5_name, line_h5_desc, line_h5_src = 14, 14, 14
+
     h5s = H5S.get(l2_id, [])
-    body_h = L2_NAME_HEIGHT + (len(h5s) * (H5_HEIGHT + H5_GAP) if h5s else 0) + L2_PADDING
-    box_h = max(L2_HEIGHT_BASE, body_h)
+    body_h = l2_name_h + (len(h5s) * (h5_h + h5_g) if h5s else 0) + L2_PADDING
+    box_h = max(l2_h_base, body_h)
 
     box_id = next(idgen)
     name = L2_NAME[l2_id]
@@ -328,43 +350,40 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None):
     out = [cell(box_id, "", x, y, w, box_h, box_style, parent=parent)]
 
     # Inside-the-L2 children use box_id as parent; positions are relative to the L2's geometry.
-    # Header: ID line (small monospace-style, top-left) — colored to match stroke
     id_label_id = next(idgen)
-    out.append(cell(id_label_id, pid_label, 6, 4, w-12, 14,
-                    style_text(font_size=9, font_color=stroke, font_style=1, align="left"),
+    out.append(cell(id_label_id, pid_label, 5, 3, w-10, line_id_h,
+                    style_text(font_size=font_id, font_color=stroke, font_style=1, align="left"),
                     parent=box_id))
-    # Name
     name_id = next(idgen)
-    out.append(cell(name_id, name_clean, 6, 18, w-12, 18,
-                    style_text(font_size=11, font_color="#1A1A1A", font_style=1, align="left"),
+    out.append(cell(name_id, name_clean, 5, 3 + line_id_h, w-10, line_name_h,
+                    style_text(font_size=font_name, font_color="#1A1A1A", font_style=1, align="left"),
                     parent=box_id))
-    # Desc
     desc_id = next(idgen)
-    out.append(cell(desc_id, desc, 6, 36, w-12, 14,
-                    style_text(font_size=8, font_color=DESC_COLOR, font_style=2, align="left"),
+    out.append(cell(desc_id, desc, 5, 3 + line_id_h + line_name_h, w-10, line_desc_h,
+                    style_text(font_size=font_desc, font_color=DESC_COLOR, font_style=2, align="left"),
                     parent=box_id))
 
     # H5 children — yellow containers stacked below, each with name+desc+src+anchor inside
-    h5_y = L2_NAME_HEIGHT
+    h5_y = l2_name_h
     for (h5_anchor, h5_name, h5_src, h5_desc) in h5s:
         h5_id = next(idgen)
         h5_style = style_box(H5_FILL, H5_STROKE, font_size=8,
                              container=True, align="left", valign="top")
-        out.append(cell(h5_id, "", 6, h5_y, w-12, H5_HEIGHT, h5_style, parent=box_id))
-        # H5 children
+        out.append(cell(h5_id, "", 5, h5_y, w-10, h5_h, h5_style, parent=box_id))
         h5_name_id = next(idgen)
-        out.append(cell(h5_name_id, h5_name, 4, 2, w-20, 14,
-                        style_text(font_size=9, font_color="#6A4810", font_style=1, align="left"),
+        out.append(cell(h5_name_id, h5_name, 4, 1, w-18, line_h5_name,
+                        style_text(font_size=font_h5_name, font_color="#6A4810", font_style=1, align="left"),
                         parent=h5_id))
         h5_desc_id = next(idgen)
-        out.append(cell(h5_desc_id, h5_desc, 4, 16, w-20, 14,
-                        style_text(font_size=7, font_color="#6A4810", font_style=2, align="left"),
+        out.append(cell(h5_desc_id, h5_desc, 4, 1 + line_h5_name, w-18, line_h5_desc,
+                        style_text(font_size=font_h5_desc, font_color="#6A4810", font_style=2, align="left"),
                         parent=h5_id))
         h5_src_id = next(idgen)
-        out.append(cell(h5_src_id, h5_src + "  —  " + h5_anchor, 4, 32, w-20, 14,
-                        style_text(font_size=6, font_color="#999999", align="left"),
+        out.append(cell(h5_src_id, h5_src + "  —  " + h5_anchor,
+                        4, 1 + line_h5_name + line_h5_desc, w-18, line_h5_src,
+                        style_text(font_size=font_h5_src, font_color="#999999", align="left"),
                         parent=h5_id))
-        h5_y += H5_HEIGHT + H5_GAP
+        h5_y += h5_h + h5_g
 
     # Anchor ID footer (placed near bottom — leave 6px clearance for the box border)
     anchor_id = next(idgen)
@@ -560,26 +579,46 @@ def build_combined_page(idgen):
 # Roadmap layout — verticals across the top, domains down the side
 # ----------------------------------------------------------------------
 
-# Roadmap-specific layout constants (wider columns, taller cells)
-ROAD_DOMAIN_LABEL_W = 140
-ROAD_COL_W = 295
-ROAD_BAND_H = 30
-ROAD_HDR_H = 56
-ROAD_CELL_GAP = 12
+# Roadmap-specific layout constants — sized to fit A3 landscape (1684x1190)
+ROAD_DOMAIN_LABEL_W = 100
+ROAD_COL_W = 205
+ROAD_BAND_H = 22
+ROAD_HDR_H = 38
+ROAD_CELL_GAP = 6
+ROAD_CELL_PADDING = 6
+ROAD_L2_GAP = 6
+# Compact L2 dimensions used in roadmap (mirror the compact branch in emit_l2_box)
+ROAD_L2_HEIGHT_BASE = 88
+ROAD_L2_NAME_HEIGHT = 46
+ROAD_H5_HEIGHT = 38
+ROAD_H5_GAP = 3
 
 
-def stacked_height(l2_ids):
+def stacked_height(l2_ids, compact=False):
     """Height needed to stack L2s vertically inside a roadmap cell."""
+    if compact:
+        l2_h_base, l2_name_h, h5_h, h5_g = (
+            ROAD_L2_HEIGHT_BASE, ROAD_L2_NAME_HEIGHT, ROAD_H5_HEIGHT, ROAD_H5_GAP
+        )
+        cell_pad = ROAD_CELL_PADDING
+        row_gap = ROAD_L2_GAP
+    else:
+        l2_h_base, l2_name_h, h5_h, h5_g = (
+            L2_HEIGHT_BASE, L2_NAME_HEIGHT, H5_HEIGHT, H5_GAP
+        )
+        cell_pad = CELL_PADDING
+        row_gap = ROW_GAP
+
     if not l2_ids:
-        return L2_HEIGHT_BASE + 2 * CELL_PADDING
+        return l2_h_base + 2 * cell_pad
     total = 0
     for lid in l2_ids:
         h5_count = len(H5S.get(lid, []))
-        l2_h = max(L2_HEIGHT_BASE,
-                   L2_NAME_HEIGHT + h5_count * (H5_HEIGHT + H5_GAP) + L2_PADDING)
+        l2_h = max(l2_h_base,
+                   l2_name_h + h5_count * (h5_h + h5_g) + L2_PADDING)
         total += l2_h
-    total += (len(l2_ids) - 1) * ROW_GAP
-    return total + 2 * CELL_PADDING
+    total += (len(l2_ids) - 1) * row_gap
+    return total + 2 * cell_pad
 
 
 def emit_grid_roadmap(idgen, x_start, y_start):
@@ -597,44 +636,43 @@ def emit_grid_roadmap(idgen, x_start, y_start):
     s2r_band_w = n_s2r * ROAD_COL_W + (n_s2r - 1) * ROAD_CELL_GAP
     ops_band_w = n_ops * ROAD_COL_W + (n_ops - 1) * ROAD_CELL_GAP
 
-    band_style_s2r = style_box(S2R_DARK, S2R_DARK, font_size=12,
+    band_style_s2r = style_box(S2R_DARK, S2R_DARK, font_size=11,
                                font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
                     "STRATEGY-TO-READINESS",
                     cols_x_start, y_start, s2r_band_w, ROAD_BAND_H, band_style_s2r))
 
     ops_band_x = cols_x_start + s2r_band_w + ROAD_CELL_GAP
-    band_style_ops = style_box(OPS_DARK, OPS_DARK, font_size=12,
+    band_style_ops = style_box(OPS_DARK, OPS_DARK, font_size=11,
                                font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
                     "OPERATIONS",
                     ops_band_x, y_start, ops_band_w, ROAD_BAND_H, band_style_ops))
 
-    # Vertical column headers (row 2) — use full vertical names for readability
-    hdr_y = y_start + ROAD_BAND_H + 4
+    # Vertical column headers (row 2) — full vertical names + GB991 ref on separate lines
+    hdr_y = y_start + ROAD_BAND_H + 3
     for i, (vname, _, _) in enumerate(all_grids):
         is_s2r = i < n_s2r
         hdr_color = S2R_MID if is_s2r else OPS_MID
-        hdr_style = style_box(hdr_color, hdr_color, font_size=11,
+        hdr_style = style_box(hdr_color, hdr_color, font_size=9,
                               font_color="#FFFFFF", font_style=1)
         col_x = cols_x_start + i * (ROAD_COL_W + ROAD_CELL_GAP)
         full_name = FULL_VERTICAL_NAMES.get(vname, vname)
-        # Two-line column header: full name + GB991 ref
         out.append(cell(next(idgen),
                         full_name + "\nGB991 §1.1.2.2",
                         col_x, hdr_y, ROAD_COL_W, ROAD_HDR_H, hdr_style))
 
-    # Pre-compute row heights from densest cell per row
-    svc_heights = [stacked_height(svc_l2s) for (_, svc_l2s, _) in all_grids]
-    res_heights = [stacked_height(res_l2s) for (_, _, res_l2s) in all_grids]
+    # Pre-compute row heights from densest cell per row (compact mode)
+    svc_heights = [stacked_height(svc_l2s, compact=True) for (_, svc_l2s, _) in all_grids]
+    res_heights = [stacked_height(res_l2s, compact=True) for (_, _, res_l2s) in all_grids]
     svc_row_h = max(svc_heights)
     res_row_h = max(res_heights)
 
-    cells_y = hdr_y + ROAD_HDR_H + 4
+    cells_y = hdr_y + ROAD_HDR_H + 3
 
     # Domain row labels (left edge, span full row height per domain).
     # Three centered lines: domain name, GB991 ref, description.
-    dlabel_style = style_box("#444444", "#444444", font_size=12,
+    dlabel_style = style_box("#444444", "#444444", font_size=10,
                              font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
                     "SERVICE DOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\" — services realizing Product offerings",
@@ -662,41 +700,111 @@ def emit_grid_roadmap(idgen, x_start, y_start):
             cell_id = next(idgen)
             out.append(cell(cell_id, "", col_x, row_y, ROAD_COL_W, row_h, cell_style))
 
-            # Stack L2s vertically inside the cell
-            l2_w = ROAD_COL_W - 2 * CELL_PADDING
-            inner_y = CELL_PADDING
+            # Stack L2s vertically inside the cell (compact mode)
+            l2_w = ROAD_COL_W - 2 * ROAD_CELL_PADDING
+            inner_y = ROAD_CELL_PADDING
             for lid in l2_ids:
-                xml, l2_h = emit_l2_box(idgen, lid, CELL_PADDING, inner_y, l2_w,
-                                        parent=cell_id, stroke=cell_stroke)
+                xml, l2_h = emit_l2_box(idgen, lid, ROAD_CELL_PADDING, inner_y, l2_w,
+                                        parent=cell_id, stroke=cell_stroke,
+                                        compact=True)
                 out.append(xml)
-                inner_y += l2_h + ROW_GAP
+                inner_y += l2_h + ROAD_L2_GAP
 
-    total_w = ROAD_DOMAIN_LABEL_W + ROAD_CELL_GAP + n_total_cols(all_grids) * ROAD_COL_W \
-              + (n_total_cols(all_grids) - 1) * ROAD_CELL_GAP
+    total_w = ROAD_DOMAIN_LABEL_W + ROAD_CELL_GAP + len(all_grids) * ROAD_COL_W \
+              + (len(all_grids) - 1) * ROAD_CELL_GAP
     total_h = (cells_y - y_start) + svc_row_h + ROAD_CELL_GAP + res_row_h
     return "\n".join(out), total_w, total_h
 
 
-def n_total_cols(all_grids):
-    return len(all_grids)
+# Footer — mirrors the user-supplied "header strip" pattern (Document / Author / Version / Last Updated)
+FOOTER_DARK = "#3D3D3D"
+FOOTER_LABEL_BG = "#5BB6E8"
+FOOTER_CONTENT_BG = "#FFFFFF"
+FOOTER_BORDER = "#A0A0A0"
+
+
+def emit_footer(idgen, x, y, w, h, fields):
+    """Emit a single-row footer strip: dark filler on the left, then alternating
+    blue label + white content cells for each (label, value) tuple in fields.
+    Returns the XML string."""
+    out = []
+    label_w = 80
+    content_w = 130
+    pair_w = label_w + content_w
+    n_pairs = len(fields)
+    pairs_total_w = n_pairs * pair_w
+    filler_w = w - pairs_total_w
+    if filler_w < 0:
+        filler_w = 0  # safety; would mean too many pairs for the width
+
+    cur_x = x
+    # Dark filler (left)
+    if filler_w > 0:
+        out.append(cell(next(idgen), "",
+                        cur_x, y, filler_w, h,
+                        style_box(FOOTER_DARK, FOOTER_DARK, font_size=8)))
+        cur_x += filler_w
+
+    # Label + content pairs
+    for (label, value) in fields:
+        out.append(cell(next(idgen), label,
+                        cur_x, y, label_w, h,
+                        style_box(FOOTER_LABEL_BG, FOOTER_LABEL_BG,
+                                  font_size=9, font_color="#FFFFFF", font_style=1,
+                                  align="center", valign="middle")))
+        cur_x += label_w
+        out.append(cell(next(idgen), value,
+                        cur_x, y, content_w, h,
+                        style_box(FOOTER_CONTENT_BG, FOOTER_BORDER,
+                                  font_size=9, font_color="#1A1A1A",
+                                  align="center", valign="middle")))
+        cur_x += content_w
+
+    return "\n".join(out)
 
 
 def build_roadmap_page(idgen):
+    """Roadmap page sized for A3 landscape (1684×1190 pt). Centered title +
+    matrix + footer."""
+    PAGE_W = 1684
+    PAGE_H = 1190
+    margin = 18
+    body_w = PAGE_W - 2 * margin
+
     out = []
+
+    # Title (centered)
     out.append(cell(next(idgen),
-                    "Combined Capability Map — Roadmap Layout",
-                    PAGE_MARGIN, PAGE_MARGIN, 2200, 30,
-                    style_text(font_size=20, font_color="#1A1A1A", font_style=1, align="left", valign="middle")))
+                    "OSS Capability Map — Roadmap Layout",
+                    margin, margin, body_w, 24,
+                    style_text(font_size=16, font_color="#1A1A1A", font_style=1,
+                               align="center", valign="middle")))
+    # Subtitle (centered)
     out.append(cell(next(idgen),
                     "Verticals across (Strategy → Capability → BVD → ORS → Fulfillment → Assurance → Billing)  ·  "
-                    "Domains down (Service / Resource)  ·  47 stable heat-map anchors  ·  Phase 3 — 2026-05-12",
-                    PAGE_MARGIN, PAGE_MARGIN+30, 2200, 18,
-                    style_text(font_size=9, font_color="#555", align="left", valign="middle")))
+                    "Domains down (Service / Resource)  ·  47 stable heat-map anchors",
+                    margin, margin + 24, body_w, 14,
+                    style_text(font_size=8, font_color="#555",
+                               align="center", valign="middle")))
 
+    # Matrix
+    matrix_y = margin + 42
     grid_xml, _, _ = emit_grid_roadmap(idgen,
-                                       x_start=PAGE_MARGIN,
-                                       y_start=PAGE_MARGIN + 60)
+                                       x_start=margin,
+                                       y_start=matrix_y)
     out.append(grid_xml)
+
+    # Footer at bottom
+    footer_h = 26
+    footer_y = PAGE_H - margin - footer_h
+    fields = [
+        ("Document", "OSS Capability Map"),
+        ("Author", "Adam Moyes"),
+        ("Version", "1.0"),
+        ("Last Updated", "11 May 2026"),
+    ]
+    out.append(emit_footer(idgen, margin, footer_y, body_w, footer_h, fields))
+
     return "\n".join(out)
 
 
@@ -713,14 +821,14 @@ def main():
     road_body = build_roadmap_page(count(2))
 
     pages = []
-    # S2R page — A3 landscape (1684 x 1190 pt at 1 pt/px)
+    # Roadmap page — A3 landscape (1684 x 1190 pt) — placed first per primary use case
+    pages.append(build_page("Roadmap", road_body, 1684, 1190))
+    # S2R page — A3 landscape
     pages.append(build_page("S2R area", s2r_body, 1684, 1190))
     # Operations page — A3 landscape, extended height for dense ORS row
     pages.append(build_page("Operations area", ops_body, 1684, 1400))
     # Combined page — A2 landscape (2384 x 1684)
     pages.append(build_page("Combined", comb_body, 2384, 1684))
-    # Roadmap page — custom width to fit 7 columns × ~295pt + label column + margins
-    pages.append(build_page("Roadmap", road_body, 2480, 1500))
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     xml = (
