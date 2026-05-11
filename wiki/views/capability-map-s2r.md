@@ -161,6 +161,28 @@ flowchart TB
 
 `*` 1.5.5 Resource Order Management has a BVD-vertical aspect in GB921 v25.5 (alongside its primary Fulfillment + ORS verticals); it is canonical on [[wiki/views/capability-map#cap-resource-order|the Operations-area page]] and is not duplicated here. Future Phase 4 may revisit if the BVD-aspect of Resource Order needs separate heat-map cell.
 
+## Visual exports
+
+A boxes-in-boxes treemap render of this capability map for printing, embedding, and stakeholder presentations. The render shows the same 16 L2 + 6 H5 anchors as the Mermaid frame above, but with H5 sub-capabilities visually nested inside their parent L2 boxes — closer to the canonical TMF / business-architecture capability-map visual style than the Mermaid flowchart frame.
+
+![Capability Map — Strategy-to-Readiness Lifecycle Area](diagrams/capability-map-s2r.png)
+
+Files in [`diagrams/`](diagrams/) (regenerable via `diagrams/render.sh`):
+
+- **[capability-map-s2r.pdf](diagrams/capability-map-s2r.pdf)** — A3 landscape, print-quality
+- **[capability-map-s2r.png](diagrams/capability-map-s2r.png)** — 1800×1200 @ 2× DPI, for screen / embedding (rendered above)
+- **[capability-map-s2r.html](diagrams/capability-map-s2r.html)** — source HTML; edit + re-render to iterate
+
+**Combined view** — both Lifecycle Areas (this page + sister-page Operations area in one diagram, all 47 anchors visible together; useful when you want to see cross-Lifecycle composability — Test row / Anomaly pair / Catalog 4-L2 — in a single glance):
+
+- [capability-map-combined.pdf](diagrams/capability-map-combined.pdf) — A2 landscape
+- [capability-map-combined.png](diagrams/capability-map-combined.png)
+- [capability-map-combined.html](diagrams/capability-map-combined.html)
+
+**Operations-area sister render** — [capability-map.pdf](diagrams/capability-map.pdf) · [capability-map.png](diagrams/capability-map.png) · [capability-map.html](diagrams/capability-map.html).
+
+The diagram renders are derivative artefacts of this view page; they do not add new TMF facts. For normative claims, follow the wikilinks from individual capability anchors (below) to source pages.
+
 ## Service Domain — L2 Capabilities (in scope, S2R area)
 
 _Strategy Management vertical complete (pilot 2026-05-10). Capability Management and Business Value Development verticals pending — see Session State for ingest plan._
