@@ -490,13 +490,24 @@ def emit_grid(idgen, grid, area_dark, area_mid, area_cell, x_start, y_start, par
 # ----------------------------------------------------------------------
 
 def build_page(name, body_xml, page_w, page_h):
-    # background="#FFFFFF" forces white canvas regardless of the user's draw.io
-    # theme (dark mode would otherwise render the canvas dark).
+    # Belt-and-braces white background:
+    #   - mxGraphModel `background` attribute (older drawio versions)
+    #   - mxGraphModel `pageBackground` attribute (newer drawio versions)
+    #   - explicit white-fill rectangle as the first content cell (final fallback;
+    #     ensures white renders even if the canvas theme is dark)
+    bg_rect = (
+        f'        <mxCell id="bg" value="" '
+        f'style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=none;" '
+        f'vertex="1" parent="1">\n'
+        f'          <mxGeometry x="0" y="0" width="{page_w}" height="{page_h}" as="geometry"/>\n'
+        f'        </mxCell>'
+    )
     return f"""  <diagram id="{name.replace(' ','-')}" name="{escape(name)}">
-    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="{page_w}" pageHeight="{page_h}" math="0" shadow="0" background="#FFFFFF">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="{page_w}" pageHeight="{page_h}" math="0" shadow="0" background="#FFFFFF" pageBackground="#FFFFFF">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
+{bg_rect}
 {body_xml}
       </root>
     </mxGraphModel>
@@ -579,14 +590,14 @@ def build_combined_page(idgen):
 # Roadmap layout — verticals across the top, domains down the side
 # ----------------------------------------------------------------------
 
-# Roadmap-specific layout constants — sized to fit A3 landscape (1684x1190)
-ROAD_DOMAIN_LABEL_W = 100
-ROAD_COL_W = 205
+# Roadmap-specific layout constants — sized to fit drawio's A3 landscape preset (1654x1169)
+ROAD_DOMAIN_LABEL_W = 90
+ROAD_COL_W = 207
 ROAD_BAND_H = 22
-ROAD_HDR_H = 38
-ROAD_CELL_GAP = 6
-ROAD_CELL_PADDING = 6
-ROAD_L2_GAP = 6
+ROAD_HDR_H = 36
+ROAD_CELL_GAP = 5
+ROAD_CELL_PADDING = 5
+ROAD_L2_GAP = 5
 # Compact L2 dimensions used in roadmap (mirror the compact branch in emit_l2_box)
 ROAD_L2_HEIGHT_BASE = 88
 ROAD_L2_NAME_HEIGHT = 46
@@ -764,11 +775,11 @@ def emit_footer(idgen, x, y, w, h, fields):
 
 
 def build_roadmap_page(idgen):
-    """Roadmap page sized for A3 landscape (1684×1190 pt). Centered title +
-    matrix + footer."""
-    PAGE_W = 1684
-    PAGE_H = 1190
-    margin = 18
+    """Roadmap page sized for drawio's A3 landscape preset (1654×1169 pt).
+    Centered title + matrix + footer."""
+    PAGE_W = 1654
+    PAGE_H = 1169
+    margin = 14
     body_w = PAGE_W - 2 * margin
 
     out = []
@@ -821,14 +832,14 @@ def main():
     road_body = build_roadmap_page(count(2))
 
     pages = []
-    # Roadmap page — A3 landscape (1684 x 1190 pt) — placed first per primary use case
-    pages.append(build_page("Roadmap", road_body, 1684, 1190))
-    # S2R page — A3 landscape
-    pages.append(build_page("S2R area", s2r_body, 1684, 1190))
-    # Operations page — A3 landscape, extended height for dense ORS row
-    pages.append(build_page("Operations area", ops_body, 1684, 1400))
-    # Combined page — A2 landscape (2384 x 1684)
-    pages.append(build_page("Combined", comb_body, 2384, 1684))
+    # Roadmap page — drawio's A3 landscape preset (1654 x 1169 pt) — page 1
+    pages.append(build_page("Roadmap", road_body, 1654, 1169))
+    # S2R page — A3 landscape preset
+    pages.append(build_page("S2R area", s2r_body, 1654, 1169))
+    # Operations page — A3 landscape preset, extended height for dense ORS row
+    pages.append(build_page("Operations area", ops_body, 1654, 1400))
+    # Combined page — A2 landscape preset (2339 x 1654)
+    pages.append(build_page("Combined", comb_body, 2339, 1654))
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     xml = (

@@ -2564,3 +2564,26 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Other pages unchanged.** S2R / Operations / Combined pages still render as before (verticals down side, etc.). Only the Roadmap page got the A3 + footer + center treatment.
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T21:00Z — DIAGRAMS — Real A3 page size + triple-redundant white background
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        - **Page sizes corrected to drawio's actual A-series presets.** Was using `1684×1190` for "A3 landscape" — that's actually closer to A2 landscape; drawio doesn't recognize it as A3 in the page-format dropdown. Real drawio A3 landscape preset is **1654×1169 pt** (per drawio source: `gPresetPageFormats.a3 = mxRectangle(0,0,1169,1654)`). Updated all 4 pages: Roadmap + S2R + Operations now use 1654-wide; Combined uses 2339-wide (real A2 landscape). The Operations page keeps an extended height (1400 vs 1169) to fit the dense ORS row.
+        - **Triple-redundant white background** on every page via `build_page()`:
+            1. `background="#FFFFFF"` on `mxGraphModel` (older drawio)
+            2. `pageBackground="#FFFFFF"` on `mxGraphModel` (newer drawio attribute name)
+            3. Explicit white-fill rectangle as the first content cell on every page (`id="bg"`, fills the whole page area; final fallback that renders white even if the canvas theme is dark)
+        - **Roadmap page recompressed slightly** to fit the now-30pt-narrower page width (`ROAD_DOMAIN_LABEL_W` 100→90, `ROAD_COL_W` 205→207, `ROAD_CELL_GAP` 6→5, `ROAD_CELL_PADDING` 6→5, `ROAD_L2_GAP` 6→5, page margin 18→14).
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why background still appeared dark before this fix.** Newer drawio versions appear to ignore the `background` attribute in favour of `pageBackground` (or expect both). When the file specifies neither in a way the running drawio recognises, the canvas theme color shows through — `#121212` is the typical drawio dark-mode canvas. Setting both attributes plus an explicit white rectangle covers all known render paths.
+    - **Why `1654×1169` not `1684×1190` for A3 landscape.** drawio uses 100dpi for paper conversions: 297mm × 100/25.4 = 1169.29; 420mm × 100/25.4 = 1653.54. drawio's preset rounds to 1169 / 1654. Setting these exact values makes drawio's UI display the page as "A3 (Landscape)" rather than "Custom".
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
