@@ -121,7 +121,52 @@ See open-questions.md — OQ-008 (further ODA components pending trilateral swee
 
 ## eTOM Processes That Manipulate This Entity
 
-See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
+- [[wiki/etom/service-domain/service-specification-management]] — **primary
+  manipulator** for the Service Specification ABE. End-to-end specifications-
+  management process (describe, model, analyze service specifications). Net-new in
+  v25.5 (Original PID = None). Reciprocal back-link ingested 2026-05-11 under Phase 3
+  Capability Management batch (final PSR pair — Specification Management; closes the
+  4-pair Capability Management batch).
+- [[wiki/etom/service-domain/service-capability-delivery]] — upstream-input
+  manipulator. L3 1.4.2.4 Design Service Capabilities produces design specifications
+  for service infrastructure components (CFSSpec / RFSSpec characteristics, capability
+  infrastructure design specs) consumed in the capability-delivery flow. Reciprocal
+  back-link ingested 2026-05-10 under Phase 3 Capability Management batch
+  (Capability Delivery PSR pair).
+- [[wiki/etom/service-domain/service-catalog-planning-management]] — catalog-planning-
+  specific manipulator. L3 1.4.16.2 Define Service Catalog Specification produces
+  catalog specifications, mandatory/optional design requirements, and catalog entry
+  fields — these populate the §4.3.3 Service Catalog sub-ABE within the Service
+  Specification ABE. Reciprocal back-link ingested 2026-05-11 under Phase 3 Capability
+  Management batch (Catalog Planning PSR pair). **Note:** this L2 is also net-new in
+  v25.5 (Original PID = None).
+- [[wiki/etom/service-domain/service-specification-lifecycle-management]] — **class-
+  introduction-to-retirement lifecycle manipulator**. The L2 manages the introduction-
+  to-retirement lifecycle of service classes — L3 1.4.3.4 develops detailed service
+  specifications; L3 1.4.3.5 manages development incl. upgrades/enhancements; L3
+  1.4.3.7 manages exit/retirement. R20.5 lineage (Original PID 1.2.2.3 — *"Service
+  Specification Development & Retirement"* pre-v24.0); first S2R BVD L2 ingested
+  under Phase 3. Reciprocal back-link ingested 2026-05-11 under Phase 3 BVD batch
+  (Specification Lifecycle PSR pair).
+- [[wiki/etom/service-domain/service-catalog-lifecycle-management]] — **catalog-
+  implementation-lifecycle manipulator**. The L2 manages the implementation
+  lifecycle of the catalog itself — design → build → policy — producing catalog-
+  system implementations that populate the §4.3.3 Service Catalog sub-ABE. Distinct
+  from 1.4.16 Catalog Planning (which produces catalog *specifications*); this L2
+  produces catalog *implementations* against those specs. Net-new in v25.5 (Original
+  PID = None). Reciprocal back-link ingested 2026-05-11 under Phase 3 BVD batch
+  (Catalog Lifecycle PSR pair).
+
+**Note on manipulator-role density.** This SID ABE now carries **five eTOM back-
+links** distinguishing temporal and structural scope of the activity: primary
+specifications-management (1.4.19, ongoing-maintenance) → capability-delivery (1.4.2,
+project-driven-design) → catalog-planning (1.4.16, catalog-system-design) →
+specification-lifecycle (1.4.3, class-introduction-to-retirement) → catalog-
+implementation-lifecycle (1.4.13, catalog-system-implementation-lifecycle). Densest
+trilateral pattern in the corpus extended to five distinct manipulator roles.
+
+See open-questions.md — OQ-008 (further eTOM/ODA links pending broader trilateral
+sweep).
 
 ## Open Questions
 

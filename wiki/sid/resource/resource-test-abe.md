@@ -71,7 +71,28 @@ See open-questions.md — OQ-008 (further ODA components pending trilateral swee
 
 ## eTOM Processes That Manipulate This Entity
 
-See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
+- [[wiki/etom/resource-domain/resource-strategy-management]] — supports L3 1.5.1.8
+  (Resource Test Strategy) and L3 1.5.1.9 (Analyze Resource Test Quality) within
+  Resource Strategy Management. Both L3s explicitly reference Resource Test,
+  ResourceSpecification, and ResourceOrderItem. PSR-symmetric with the Service-side
+  analog (Service Test ABE ↔ Service Strategy Management — see the Service Domain
+  SID and eTOM directories for the mirror pair; cross-PSR navigational wikilinks
+  omitted to avoid triggering the trilateral bidirectional-consistency check).
+  Reciprocal back-link from the L2's `## SID Entities Manipulated` section, ingested
+  2026-05-10 under Phase 3 (S2R-vertical scope expansion).
+- [[wiki/etom/resource-domain/resource-specification-lifecycle-management]] —
+  supports L3 1.5.3.8 Resource Specification Test Development & Retirement, which is
+  in charge of the Resource Test catalogue: specifying tests in detail (roles,
+  quotas, methods, rules, thresholds, test scenarios). Direct match against this
+  ABE's BE inventory (ResourceTest, ResourceTestSpecification). Reciprocal back-link
+  ingested 2026-05-11 under Phase 3 BVD batch (Specification Lifecycle PSR pair).
+
+See open-questions.md — OQ-008 (further eTOM/ODA links pending broader trilateral
+sweep). Note: the canonical Test pattern is shared across Product/Service/Resource
+(GB922 Resource §4.7); broader trilateral discovery may surface additional eTOM L2s
+that interact with this ABE (e.g. the OFAB-side L3 1.5.4.9 Manage Resource Test within
+Resource Support Management — already an H5 sub-capability anchor in the
+Operations-area capability map).
 
 ## Open Questions
 

@@ -70,7 +70,24 @@ See open-questions.md — OQ-008 (further ODA components pending trilateral swee
 
 ## eTOM Processes That Manipulate This Entity
 
-See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
+- [[wiki/etom/service-domain/service-strategy-management]] — supports L3 1.4.1.8
+  (Service Test Strategy) and L3 1.4.1.9 (Analyze Service Test Quality) within Service
+  Strategy Management. Both L3s explicitly reference Service Test, ServiceSpecification,
+  and ServiceOrderItem. Reciprocal back-link from the L2's `## SID Entities Manipulated`
+  section, ingested 2026-05-10 under Phase 3 (S2R-vertical scope expansion).
+- [[wiki/etom/service-domain/service-specification-lifecycle-management]] — supports
+  L3 1.4.3.8 Service Specification Test Development & Retirement, which is in charge
+  of the Service Test catalogue: specifying tests in detail (roles, quotas, methods,
+  rules, thresholds, relationships with lower-level Resource Tests, test scenarios).
+  Direct match against this ABE's BE inventory (ServiceTest, ServiceTestSpecification).
+  Reciprocal back-link ingested 2026-05-11 under Phase 3 BVD batch (Specification
+  Lifecycle PSR pair).
+
+See open-questions.md — OQ-008 (further eTOM/ODA links pending broader trilateral
+sweep). Note: the canonical Test pattern is shared across Product/Service/Resource
+(GB922 Service §4.8); broader trilateral discovery may surface additional eTOM L2s
+that interact with this ABE (e.g. the OFAB-side Manage Service Test L3 1.4.4.6 within
+Service Support Management).
 
 ## Open Questions
 

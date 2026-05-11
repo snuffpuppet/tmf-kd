@@ -972,3 +972,34 @@ in [[CLAUDE]] §8.
 
   Two possible interpretations: (a) source-text bug — should read "Resource Trouble Management"; (b) terminology lineage from a prior version where Resource Trouble was called Resource Problem and the Anomaly text was not refreshed.
 - **Blocking:** Nothing. Capability map Batch 2 proceeded with the verbatim quote preserved and a parenthetical note attached to the Resource Anomaly entry's TMF-distinctions list. Filed for audit-trail completeness; will not affect downstream batches.
+
+---
+
+## OQ-046 — S2R-vertical eTOM L2s: ODA component cross-walk
+
+- **Raised:** 2026-05-10
+- **Source page:** [[wiki/etom/service-domain/service-strategy-management]] (1.4.1, the
+  pilot ingest under Phase 3 S2R-vertical scope expansion). Will apply forward to all
+  16 S2R-vertical eTOM L2 pages as they ingest (Strategy: 1.4.1, 1.5.1; Capability:
+  1.4.2, 1.4.12, 1.4.16, 1.4.19, 1.5.2, 1.5.14, 1.5.18, 1.5.19; Business Value
+  Development: 1.4.3, 1.4.13, 1.4.17, 1.5.3, 1.5.15, 1.5.20).
+- **Question:** GB1022 §4.x mapping tables (Production §4.3.3, Core Commerce §4.4.3,
+  Engagement Management §4.5.2, Intelligence Management §4.6.2) reference eTOM
+  processes by R20.5 Process Identifiers. The S2R-vertical L2s being ingested under
+  Phase 3 carry R20.5 SIP-vertical numbering as their Original Process Identifier in
+  the v25.5 Excel master (e.g. 1.4.1's Original PID is `1.2.2.1`, the R20.5 numbering
+  scheme for SIP-vertical processes). These R20.5 SIP-vertical IDs may not appear in
+  GB1022's §4.x mapping tables at all, because GB1022 was scoped operationally and
+  its mapping work focused on the FAB / OFAB-area eTOM processes (per the existing
+  trilateral-sweep findings in OQ-040 / 042 / 043 / 044). The cross-walk question:
+  for each S2R-vertical eTOM L2, does GB1022 establish an ODA-component owner via a
+  §4.x table entry, and if not, is that absence a true source-supported gap (analogous
+  to Engagement Management / Decoupling & Integration §4.x absences resolved as
+  "no-op confirmed" in OQ-038 family) or a v23.0+ TMF documentation gap that may be
+  filled by a later TMF source not yet in the corpus?
+- **Blocking:** Trilateral linking on the 16 S2R-vertical L2 pages (their `## ODA
+  Components That Realise This Process` sections) and reciprocal back-links on ODA
+  Functional Block pages. Ingest can proceed with the OQ as a placeholder per
+  CLAUDE.md §7 (place wikilink to `OQ-046` in the section); this defers the trilateral
+  closure to a dedicated ODA cross-walk pass after the 16 L2 pages exist as a coherent
+  set to evaluate together.

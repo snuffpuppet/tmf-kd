@@ -41,7 +41,8 @@ derived_from:
 > _Authoritative resume context for this view. Updated on every state transition. A
 > fresh Claude session reads this callout end-to-end before doing anything else._
 
-- **Last activity:** 2026-05-10 — Promotion + Phase 3 start. File promoted from `capability-map-draft.md` → `capability-map.md` (drop `-draft` suffix; H1 de-draftified; in-file Session-State references updated; `wiki/index.md`, `wiki/views/_index.md`, and OQ-045 reference all repointed). S2R-vertical scope expansion (was Pending decision #2) moved from deferred to active per user direction *"promote it then scope the S2R work."* Phase 3 work — scoping the S2R expansion — now in progress; not an ingest yet, scoping artifact only.
+- **Last activity:** 2026-05-12 — **PHASE 3 ENTIRELY CLOSED — sub-capability review complete.** Companion-page [[wiki/views/capability-map-s2r]] reached final form: 16 L2s + 6 H5 anchors. **6 new H5 anchors on the S2R page** completed v25.5's **3-stage × 2-PSR Test maturity row** (Strategy / Lifecycle / Operations × Service / Resource = 6 cells) plus **PSR-paired Specification end-of-life** anchors (Service narrative-only / Resource 4 L4s). **Cross-anchor wikilinks added to this page's existing test H5s** (`cap-service-support-test` and `cap-resource-support-test`) so the cross-Lifecycle Test row is fully connected from any entry point — only structural change to this page since Phase 2. Sister-page Session State carries the canonical Phase 3 closure context. Final corpus stable-anchor inventory: **47 anchors — 25 on this page (17 L2 + 8 H5) + 22 on the S2R page (16 L2 + 6 H5)**.
+- **Companion view:** [[wiki/views/capability-map-s2r]] — Strategy-to-Readiness Lifecycle Area capabilities. **16 L2s + 6 H5 sub-capabilities (Test ×4 + Exit ×2) — Phase 3 CLOSED 2026-05-12.** Strategy (2) + Capability Management (8) + Business Value Development (6) verticals all complete. Both pages share L1 Frame and `cap-<layer>-<kebab>` anchor convention. The S2R page's `pending` Mermaid style class is now empty — no remaining pending nodes.
 - **Batching choice:** Thematic across PSR (Service ↔ Resource pairs per theme), not by domain. Surfaces cross-PSR rollup decisions immediately so each pattern is debated once.
 - **Refined goal (per 2026-05-09 user direction):** Capability map for **gap-analysis heat-map overlay** and **change roadmap**. Visualises where the user's current monolithic, code-driven BSS/OSS stack diverges from a PSR-driven TMF/eTOM target architecture (Nokia OSS). Deliberately surfaces TMF distinctions that legacy systems typically conflate — e.g. Service Problem vs Resource Trouble, Service Catalog vs Service Activation, Service Performance vs Service Anomaly vs Service Problem, ticketing-as-fault vs the three-way TMF assurance split.
 - **Framing decisions settled (locked — do not relitigate):**
@@ -248,6 +249,14 @@ Service Test Management includes (verbatim, GB921 v25.5 1.4.4.6):
 (No L4 sub-processes documented for 1.4.4.6 in GB921 v25.5 Excel master.)
 
 **Cross-PSR test orchestration.** Source explicitly establishes that Service Test Management *"relies on Product and Resource Test Management processes due to dependencies between product tests and resource tests"* — Service Test sits at the cross-PSR test orchestration point. Heat-map readers should expect this cell's maturity to depend on [[#cap-resource-support-test|Resource Test]] (1.5.4.9) maturity. Note: a related per-activation L3 — **1.4.5.5 Test Service End-to-End** — sits inside [[#cap-service-activation|Service Activation]] (1.4.5) and exercises this test-orchestration capability per provisioning event rather than as an ongoing test-management facility.
+
+**Cross-Lifecycle Test maturity row (Phase 3 closing review, 2026-05-12).** This Operations-level test-execution anchor is the rightmost cell in v25.5's **3-stage × 2-PSR Test maturity row**. The other two Service-side cells live on the [[wiki/views/capability-map-s2r|S2R companion view page]]:
+
+- **Strategy-level** (S2R / Strategy Management) — [[wiki/views/capability-map-s2r#cap-service-strategy-test|`cap-service-strategy-test`]] (L3s 1.4.1.8 Service Test Strategy + 1.4.1.9 Analyze Service Test Quality) — defines test types per business activity; analyses test quality offline.
+- **Lifecycle-level** (S2R / Business Value Development) — [[wiki/views/capability-map-s2r#cap-service-specification-lifecycle-test|`cap-service-specification-lifecycle-test`]] (L3 1.4.3.8 Service Specification Test Development & Retirement) — owns the Service Test catalogue (roles, methods, rules, thresholds, lower-level Resource Test composition).
+- **Operations-level (this anchor)** — execution of test or test scenario; orchestrates Product + Resource Test composition.
+
+Heat-map overlay can mark each Lifecycle-stage cell independently; practitioner orgs typically have very different maturity profiles across the three stages.
 
 Stable sub-anchor `cap-service-support-test` for heat-map overlay.
 
@@ -503,6 +512,14 @@ Resource Test Management includes (verbatim, GB921 v25.5 1.5.4.9):
 (No L4 sub-processes documented for 1.5.4.9 in GB921 v25.5 Excel master.)
 
 **Resource-side test execution.** Parallel to [[#cap-service-support-test|Service Test]] (1.4.4.6) — both manage end-to-end test execution for their PSR side, with explicit cross-PSR dependencies. Resource Test produces the resource-test results that Service Tests (1.4.4.6) and Product Tests (out of view scope) consume.
+
+**Cross-Lifecycle Test maturity row (Phase 3 closing review, 2026-05-12).** This Operations-level test-execution anchor is the rightmost cell in the Resource-side leg of v25.5's **3-stage × 2-PSR Test maturity row**. The other two Resource-side cells live on the [[wiki/views/capability-map-s2r|S2R companion view page]]:
+
+- **Strategy-level** (S2R / Strategy Management) — [[wiki/views/capability-map-s2r#cap-resource-strategy-test|`cap-resource-strategy-test`]] (L3s 1.5.1.8 Resource Test Strategy + 1.5.1.9 Analyze Resource Test Quality).
+- **Lifecycle-level** (S2R / Business Value Development) — [[wiki/views/capability-map-s2r#cap-resource-specification-lifecycle-test|`cap-resource-specification-lifecycle-test`]] (L3 1.5.3.8 Resource Specification Test Development & Retirement) — owns the Resource Test catalogue. **Resource is the bottom of the cross-PSR test composition stack** — Service Test catalogues compose against Resource Test; Resource Test catalogues do not compose lower.
+- **Operations-level (this anchor)** — execution of test or test scenario; produces results that upstream Service / Product tests consume.
+
+Heat-map overlay calibrates each Lifecycle-stage cell independently.
 
 Stable sub-anchor `cap-resource-support-test` for heat-map overlay.
 

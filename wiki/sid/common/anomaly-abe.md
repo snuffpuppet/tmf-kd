@@ -73,11 +73,10 @@ Functional Block table to date.
 
 ## eTOM Processes That Manipulate This Entity
 
-See [[wiki/open-questions#OQ-008]] — eTOM mappings for Anomaly pending. Likely
-v25.5 candidates by name are the three Anomaly Management L2s (Product 1.2.25,
-Service 1.4.18, Resource 1.5.21) but no source mapping table establishes the link;
-the wikilinks will be added when a trilateral sweep against those L2s is run with
-source backing (e.g. an updated GB1022 or per-domain decomposition PDF).
+- [[wiki/etom/service-domain/service-anomaly-lifecycle-management]] — **1.4.17 Service Anomaly Lifecycle Management** (BVD vertical; closed-loop-lifecycle governance). Manipulates `ServiceAnomaly` / `ServiceAnomalySpecification` (Common §4.30.2 Service-domain specialisations). L2 Overview wording ("establish what is normal", "orchestrate / monitor / report on Closed Loops") matches this ABE's Overview verbatim — strongest match in the corpus for the Anomaly ABE's authoring intent. **First eTOM trilateral link populated on this ABE; replaces the OQ-008 deferral as primary forward link.**
+- [[wiki/etom/resource-domain/resource-anomaly-lifecycle-management]] — **1.5.20 Resource Anomaly Lifecycle Management** (BVD vertical; closed-loop-lifecycle governance). Manipulates the Resource-domain anomaly specialisations referenced in Common §4.30.2 ("Resource and other domain-specific anomaly specialisations follow the same pattern"). PSR-symmetric with the Service-side back-link above.
+
+> **Operations-side L2s are also expected manipulators.** The ABE's pre-existing OQ-008 note (now superseded by the two BVD-side back-links above) speculated that *"the three Anomaly Management L2s (Product 1.2.25, Service 1.4.18, Resource 1.5.21)"* are likely candidates. The corresponding **Operations-side** Anomaly L2 pages in the corpus (Service Anomaly Management 1.4.18; Resource Anomaly Management 1.5.21 — both in `wiki/etom/{service,resource}-domain/`) currently still defer their `## SID Entities Manipulated` to OQ-008 (general v1 trilateral-sweep deferral). Their forward links to this ABE are **not yet populated** — left as Phase-4 broader-trilateral-sweep work per tight-scope decision at the 2026-05-12 Anomaly Lifecycle PSR pair ingest. Wikilinks intentionally omitted here per the convention of no wikilinks in trilateral sections beyond the primary forward-link bullet targets.
 
 ## Open Questions
 
