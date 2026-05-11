@@ -5,7 +5,148 @@
 **Trigger:** User Phase 1 review question — *"Why is there no 'strategy' and 'capability' verticals?"*
 **Source-grounded answer:** They're excluded today by CLAUDE.md §3 ("Strategy / Infrastructure / Product Lifecycle Management (SIP) vertical — strategic, not operational"). v25.5 calls this the **Strategy-to-Readiness (S2R)** Lifecycle Area per GB991 §1.1.2.
 
-This document scopes what it would take to expand the corpus and the capability map to include S2R-area verticals. **Scoping only — no ingest happens until the user reviews and approves.**
+This document scopes what it would take to expand the corpus and the capability map to include S2R-area verticals. **Scoping complete — Phase 3 active per 2026-05-10 user sign-off on all five decisions in §10.**
+
+---
+
+## Session State
+
+> _Authoritative resume context for this S2R expansion work. Updated on every state
+> transition. A fresh Claude session reads this callout end-to-end before doing anything
+> else. Once the new view page `wiki/views/capability-map-s2r.md` exists, Session State
+> moves to the top of that page and this document becomes the historical scoping
+> artifact only._
+
+- **Last activity:** 2026-05-11 — **BVD batch — second PSR pair landed: 1.4.13 + 1.5.15 Catalog Lifecycle Management.** Both net-new in v25.5 (Original PID = None) — **structural break from BVD pair #1** (1.4.3/1.5.3 had R20.5 lineage); BVD batch is mixed-vintage. Smallest L4 footprint in BVD (3 L3s each, no L4s/L5s). **First PSR pair with completely PSR-agnostic L2 EDs** — both L2 EDs literally identical word-for-word; neither "Service" nor "Resource" appears; v25.5 treats Catalog Lifecycle as a domain-agnostic governance pattern. **Most prominent source-text inconsistency cluster in Phase 3** — six bugs total (three per side): L3 body texts mis-target activity names shifted by one position. **Completes the four-L2 Catalog lifecycle** structurally — all eight catalog anchors (Planning + Lifecycle + Operational Readiness + Content × Service + Resource) now resolve across both view pages; heat-map composability for catalog work fully wired. Both Spec ABEs extended to **five eTOM back-links** each — densest trilateral pattern in corpus extended (primary + capability-delivery + catalog-planning + spec-lifecycle + catalog-implementation-lifecycle). AI-free pattern continues — 7 of 8 PSR pairs AI-free. 14 of 16 S2R L2s now complete. Only Anomaly Lifecycle PSR pair (1.4.17 + 1.5.20) remains to close BVD batch and Phase 3 ingest. Lint: PASS — 145 pages, 0 findings, first try.
+- **Refined goal (2026-05-10):** Capability map for **current → target transformation
+  roadmap** — monolithic, code-driven BSS/OSS → PSR-driven TMF/eTOM target architecture
+  (Nokia OSS). Service + Resource focus, **all vertical groups including S2R**. BVD's
+  Specification Lifecycle and Catalog Lifecycle L2s are central to the "build services
+  in code → service spec / catalog" transition story; their inclusion is what makes the
+  map a transformation artifact rather than an operational gap-only view.
+- **Decisions locked (do not relitigate):**
+    1. **BVD: INCLUDE.** Full S2R coverage = Strategy Management + Capability Management
+       + Business Value Development = **16 new L2s**. Verified against
+       `GB921_…_v25.5.xlsx eTOM25,5` sheet (2026-05-10 read): Service Domain has 16
+       unique v25.5 L2s (8 already in corpus + 1 Strategy + 4 Capability + 3 BVD = 16
+       ✓); Resource Domain has 17 unique v25.5 L2s (9 already in corpus + 1 + 4 + 3 =
+       17 ✓; gaps at 1.5.6/11/12/13 captured in the `eTOM Deleted` sheet, not missed).
+       L2 inventory in §2 of this document is complete.
+    2. **Capability map structure: Option 2C — two view pages.** Existing
+       `wiki/views/capability-map.md` stays Operations-area only (17 OFAB L2s, 8 H5
+       sub-capabilities, anchors stable, `project/` overlay already wired). New
+       `wiki/views/capability-map-s2r.md` carries the 16 S2R L2s with matching anchor
+       conventions (`cap-<layer>-<kebab-name>`). Cross-link via top-of-page navigation.
+       Composable for the transformation-roadmap story; `project/` overlay can wikilink
+       both anchor sets.
+    3. **Mermaid: Option 3b — two diagrams, one per Lifecycle Area.** S2R diagram lives
+       in the new view page using the same `flowchart TB` template + greying convention
+       as the Operations diagram.
+    4. **Phasing: Option P1 — pilot first.** Pilot scope: 1.4.1 Service Strategy
+       Management + 1.5.1 Resource Strategy Management (paired-PSR; Strategy is the
+       simplest of the three new verticals). Review checkpoint after pilot. Then
+       Capability Management (8 L2s — heaviest batch); then BVD (6 L2s); then
+       L3-derived H5 sub-capability review; then a second `capability-map-s2r.md`
+       skeleton/integration pass once content is in place.
+    5. **Trilateral verification: incremental.** Per-L2 OQ filing during ingest, same
+       pattern as v1 and OFAB L2 ingests. Expect 5–10 new OQs from R20.5 → v25.5 ID
+       cross-walks on the ODA side (Original PIDs in v25.5 Excel show the new S2R L2s
+       carry R20.5 SIP-vertical numbering — e.g. 1.4.1 was 1.2.2.1).
+- **CLAUDE.md §3 amendment:** **APPLIED 2026-05-10T20:00Z.** Surgical rewrite of §3
+  → eTOM subsection: two-axis framing (Domain × Lifecycle-Area) anchored to GB991
+  §1.1.2; per-Domain × per-Lifecycle-Area in-scope statements (Service + Resource
+  both areas; Product Operations-area only); SIP exclusion lifted for S+R, preserved
+  as historical note; stale L2-name examples replaced with wikilinks to live
+  `_index.md` files; explicit Product-S2R out-of-scope (Phase 4 candidate);
+  catch-all out-of-scope for unenumerated branches. SID + ODA subsections
+  unchanged. See `wiki/log.md` 2026-05-10T20:00Z entry for full diff and rationale.
+- **Conventions inherited from capability-map work (apply forward to S2R ingest):**
+    - Verbatim discipline (CLAUDE.md §1, §10.3) — canonical names, IDs, attributes
+      copied exactly, including Excel encoding artefacts (`&;` → flag, do not silently
+      smooth).
+    - Provenance-line convention (Batch 3) — italic line above Scope for documented
+      version-renames. *1.4.1 has a rename: v24.0 "Service Strategy & Planning" → v25.5
+      "Service Strategy Management". Apply.*
+    - Naming-asymmetry convention (Batch 4) — preserve TMF's PSR-asymmetric labels.
+      Spot check during S2R: 1.4.1 Service Strategy Management vs 1.5.1 Resource
+      Strategy Management — symmetric here, but watch for asymmetry elsewhere
+      (especially in BVD: e.g. Anomaly Lifecycle Management).
+    - Security-H5 convention (Batch 5) — H5 sub-capability with stable anchor for
+      multi-bullet responsibility blocks within an L2.
+    - TMF-pure mental-category convention (Batch 5) — organisation-specific groupings
+      stay in `project/`, not the wiki.
+    - L3-derived sub-capability convention (Phase 2) — H5 sub-capability for named L3
+      processes with substantive scope, recognised practitioner concern, cross-PSR
+      symmetry. Review scheduled at end of S2R ingest (post-16-L2). Capability
+      Management L2s likely candidates given the transformation-roadmap framing.
+- **Pilot status:** **COMPLETE 2026-05-10.** Pilot deliverable per Phase 3 phasing
+  decision = both pilot L2s + the new view page skeleton + Strategy Management
+  vertical populated. All three components landed. Last filed OQ: **OQ-046**
+  (S2R-vertical eTOM L2 ODA cross-walk — applies forward to all 16 S2R L2 pages).
+- **Conventions recorded during pilot (apply forward to S2R batches):**
+    - Cross-PSR navigational wikilinks in trilateral sections (`## SID Entities
+      Manipulated`, `## eTOM Processes That Manipulate This Entity`, `## ODA
+      Components That…`) trigger bidirectional consistency lint errors per-entity,
+      not per-PSR-pair. Use plain prose for cross-PSR navigation in those sections;
+      wikilinks elsewhere (L3 anchored, body text outside trilateral sections) are
+      unaffected.
+    - Lifecycle-area italic line on view-page H4 capabilities — three dimensions
+      (eTOM L2 — Vertical — Lifecycle Area) on S2R-area capabilities; the Operations
+      sister page elides Lifecycle Area because all its capabilities are in the same
+      one.
+    - Mermaid `pending` style class for view-page diagrams introduced at pilot —
+      `classDef pending fill:#f4f4f4,stroke:#888,color:#666,stroke-dasharray:4 3`.
+      All 16 S2R L2 nodes appear in the diagram from day one; `:::pending` is
+      removed per node as the L2 ingests.
+- **Capability Management batch progress:**
+    - ✅ Pair 1: 1.4.2 + 1.5.2 Capability Delivery — done 2026-05-10.
+    - ✅ Pair 2: 1.4.12 + 1.5.14 Capacity Management — done 2026-05-10.
+    - ✅ Pair 3: 1.4.16 + 1.5.18 Catalog Planning Management — done 2026-05-11.
+    - ✅ Pair 4: 1.4.19 + 1.5.19 Specification Management — done 2026-05-11.
+    - **BATCH COMPLETE.**
+- **BVD batch progress:**
+    - ✅ Pair 1: 1.4.3 + 1.5.3 Specification Lifecycle Management — done 2026-05-11.
+    - ✅ Pair 2: 1.4.13 + 1.5.15 Catalog Lifecycle Management — done 2026-05-11.
+    - ⏳ Pair 3: 1.4.17 + 1.5.20 Anomaly Lifecycle Management — next, closes BVD +
+      Phase 3 ingest entirely.
+- **AI-distribution pattern crystallised after Capability Management closes.** 4 PSR
+  pairs without AI references on either side (Capacity Management, Catalog Planning,
+  Specification Management — 3 of 4 Capability Management pairs) vs 2 PSR pairs with
+  Resource-side AI (Strategy Management, Capability Delivery). Pattern: v25.5 AI
+  commentary is concentrated in Strategy + Capability Delivery, absent from the rest
+  of Capability Management. **BVD batch test:** likely Specification Lifecycle
+  (1.4.3/1.5.3) and Catalog Lifecycle (1.4.13/1.5.15) follow the AI-free pattern;
+  Anomaly Lifecycle (1.4.17/1.5.20) is the wildcard.
+- **Cross-L2 linkages established within Capability Management:**
+    - Capability Delivery → Capacity (capability-shortfalls input flow) on both PSR
+      sides; both ABEs carry two back-links (primary capacity-mgmt + upstream-input
+      capability-delivery).
+    - Capability Delivery + Catalog Planning + Specification Management → Specification
+      ABE (three-back-link triad on both PSR sides, densest pattern in corpus).
+    - Catalog Planning → Specification Management (back-reference resolution within
+      same SID ABE — Catalog Planning leverages Specification Management activities).
+    - Cross-domain handoff: Service Capability Delivery (1.4.2.1) → Resource Capability
+      Delivery (1.5.2.1) for resource-requirements pass-through.
+- **Four-L2 Catalog lifecycle visible across both view pages.** Planning (S2R-CM) +
+  Lifecycle (S2R-BVD, pending) + Operational Readiness (Ops-ORS) + Content (Ops-ORS).
+  Heat-map composability wired via anchored cross-page wikilinks. Load-bearing
+  transformation-roadmap callout.
+- **Specification-ABE three-back-link triad** on both PSR sides. Densest trilateral
+  pattern in the corpus, reflecting that Specification ABEs are central data-model
+  artefacts touched by multiple Capability Management activities at different scopes.
+- **Next action:** Propose **1.4.17 + 1.5.20 Anomaly Lifecycle Management** — third
+  and final BVD PSR pair; closes BVD batch and Phase 3 ingest. After ingest: L3-
+  derived sub-capability review closes Phase 3 entirely. The Anomaly pair pairs
+  with the Operations-area Anomaly Management H4s already in the sister capability
+  map — both pages will then carry full Anomaly story (Lifecycle S2R-BVD + the
+  pre-existing 1.4.18/1.5.21 Operations-area assurance Anomaly L2s).
+- **No pending decisions.** Phase 3 ingest at 14 of 16 S2R L2s (88% complete); BVD
+  has 2 of 3 PSR pairs done. Four-stage Catalog lifecycle now structurally complete
+  (Planning + Lifecycle + Operational Readiness + Content all wired). Five-back-
+  link densest-pattern extended on both Spec ABEs.
+- **Pending decisions:** _(none — the five primary decisions are locked. The CLAUDE.md
+  §3 amendment text is a derived artefact awaiting drafting and sign-off, not a separate
+  scope decision.)_
 
 ---
 

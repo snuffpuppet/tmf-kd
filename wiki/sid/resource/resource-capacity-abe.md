@@ -61,7 +61,24 @@ See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
 
 ## eTOM Processes That Manipulate This Entity
 
-See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
+- [[wiki/etom/resource-domain/resource-capacity-management]] — primary ongoing-
+  management manipulator. The L2 is dedicated end-to-end to resource capacity (plan,
+  align, gap-analyse, forecast, implement, analyse, optimize, monitor, report). The
+  Resource Capacity ABE is the data model. Reciprocal back-link from the L2's `## SID
+  Entities Manipulated` section, ingested 2026-05-10 under Phase 3 Capability
+  Management batch (Capacity Management PSR pair). **Note:** this L2 is net-new in
+  v25.5 (Original PID = None).
+- [[wiki/etom/resource-domain/resource-capability-delivery]] — upstream-input
+  manipulator. L3 1.5.2.1 explicitly manages capacity planning for resource
+  infrastructure with concrete metrics (transaction volumes, storage requirements,
+  traffic volumes, port availabilities); L3 1.5.2.2 (specifically L4 1.5.2.2.1)
+  captures resource capacity shortfalls. The Resource Capacity ABE is the data side
+  of the capacity-requirements and capacity-shortfalls artefacts. Reciprocal back-
+  link from the L2's `## SID Entities Manipulated` section, ingested 2026-05-10
+  under Phase 3 Capability Management batch (Capability Delivery PSR pair).
+
+See open-questions.md — OQ-008 (further eTOM/ODA links pending broader trilateral
+sweep).
 
 ## Open Questions
 

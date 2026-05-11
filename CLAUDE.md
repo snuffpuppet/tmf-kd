@@ -100,23 +100,47 @@ The corpus represents PSR (Product, Service, Resource) at three architectural la
 
 ### eTOM (process layer)
 
+GB921 v25.5 organises eTOM L2 process groups along two axes per GB991 §1.1.2 (see
+[[wiki/foundations/lifecycle]]):
+
+- **Horizontal Domains** — L1 (e.g. Service Domain, Resource Domain, Product Domain).
+- **Verticals (Lifecycle Stages)** — grouped into two **Lifecycle Areas**:
+  - **Operations** — Operations Readiness & Support (ORS), Fulfillment, Assurance,
+    Billing. Often called **OFAB**.
+  - **Strategy-to-Readiness (S2R)** — Strategy Management, Capability Management,
+    Business Value Development, plus a shared part of ORS.
+
 In scope:
-- **Service Domain L2 process groups:** Service Configuration & Activation, Service Problem
-  Management, Service Quality Management, Service Guiding & Mediation
-- **Resource Domain L2 process groups:** Resource Provisioning, Resource Trouble Management,
-  Resource Performance Management, Resource Mediation & Reporting, Resource Data Collection
-  & Distribution
-- **Operational Product L2 process groups** that intersect Operations/Fulfilment/Assurance/
-  Billing verticals — specific L2 list to be enumerated against GB921 at ingest. Expected
-  coverage area includes customer order handling and billing/revenue management at the
-  operational level. The exact L2s and their canonical eTOM groupings are determined from
-  GB921 verbatim, not inferred.
-- **OFAB verticals** (Operations, Fulfilment, Assurance, Billing) in scope where they
-  intersect Product, Service, or Resource
+
+- **Service Domain L2s** across **both** Lifecycle Areas (Operations + S2R). Live list
+  in [[wiki/etom/service-domain/_index]].
+- **Resource Domain L2s** across **both** Lifecycle Areas (Operations + S2R). Live
+  list in [[wiki/etom/resource-domain/_index]].
+- **Product Domain L2s** in the **Operations** Lifecycle Area only — operational
+  Product processes that intersect ORS / Fulfillment / Assurance / Billing verticals
+  (customer order handling and billing/revenue management at the operational level).
+  Live list in [[wiki/etom/product-domain/_index]]. The exact L2s and their canonical
+  eTOM groupings are determined from GB921 verbatim, not inferred.
 
 Out of scope:
-- The **Strategy / Infrastructure / Product Lifecycle Management (SIP) vertical** — this is
-  strategic, not operational. The goal is mapping operational processes.
+
+- **Product Domain L2s in the S2R Lifecycle Area** — Product strategy, Product
+  capability delivery, Product specification lifecycle, etc. Out of scope per the
+  OSS-mapping focus on service and resource transformation; Product-side strategic
+  processes intersect Customer / Market / Sales workflows that are themselves out of
+  corpus L1 scope. (Phase 4 candidate if stakeholder need surfaces.)
+- **All other GB921 process areas not enumerated above** — Market, Sales, Customer,
+  Business-Partner Domain L2s; Common Process L2s (1.8.x / 1.9.x branches);
+  Enterprise / Shared / Patterns / Integration domain content. Out of scope per the
+  L1 Frame decisions used in the capability-map views and per the OSS-layer mapping
+  focus.
+
+The S2R-area scope for Service and Resource Domains was added in **Phase 3**
+(decisions locked 2026-05-10). Prior to that, the entire **SIP vertical** — older
+GB921 nomenclature for S2R — was excluded as "strategic, not operational." See
+[S2R-EXPANSION-SCOPE.md](S2R-EXPANSION-SCOPE.md) for the Phase 3 scope and rationale,
+and [[wiki/views/capability-map-s2r]] for the resulting capability-map companion view
+to [[wiki/views/capability-map]].
 
 ### SID (data layer)
 - **Product ABE** entities

@@ -23,21 +23,35 @@ cross-framework concepts above.
 
 ## eTOM Service Domain
 - [[wiki/etom/service-domain/_index|Browse Service Domain L2s]]
-- 8 L2s in scope (OFAB verticals from GB921 v25.5):
-  Service Support Management (1.4.4), Service Activation Management (1.4.5), Service
-  Problem Management (1.4.6), Service Performance Management (1.4.7), Service
-  Guiding & Mediation (1.4.8), Service Catalog Operational Readiness Management
-  (1.4.14), Service Catalog Content Management (1.4.15), Service Anomaly Management
-  (1.4.18)
+- 16 L2s in scope from GB921 v25.5 (**Phase 3 S2R-expansion ingest CLOSED 2026-05-12**):
+  - **Operations Lifecycle Area** (8 L2s, OFAB verticals):
+    Service Support Management (1.4.4), Service Activation Management (1.4.5), Service
+    Problem Management (1.4.6), Service Performance Management (1.4.7), Service
+    Guiding & Mediation (1.4.8), Service Catalog Operational Readiness Management
+    (1.4.14), Service Catalog Content Management (1.4.15), Service Anomaly Management
+    (1.4.18)
+  - **Strategy-to-Readiness Lifecycle Area** (8 L2s — all ingested):
+    Service Strategy Management (1.4.1), Service Capability Delivery (1.4.2),
+    Service Specification Lifecycle Management (1.4.3), Service Capacity
+    Management (1.4.12), Service Catalog Lifecycle Management (1.4.13), Service
+    Catalog Planning Management (1.4.16), Service Anomaly Lifecycle Management
+    (1.4.17), Service Specification Management (1.4.19)
 
 ## eTOM Resource Domain
 - [[wiki/etom/resource-domain/_index|Browse Resource Domain L2s]]
-- 9 L2s in scope (OFAB verticals from GB921 v25.5):
-  Resource Support Management (1.5.4), Resource Order Management (1.5.5), Resource
-  Data Management (1.5.7), Resource Trouble Management (1.5.8), Resource Performance
-  Management (1.5.9), Resource Mediation & Reporting (1.5.10), Resource Catalog
-  Operational Readiness Management (1.5.16), Resource Catalog Content Management
-  (1.5.17), Resource Anomaly Management (1.5.21)
+- 17 L2s in scope from GB921 v25.5 (**Phase 3 S2R-expansion ingest CLOSED 2026-05-12**):
+  - **Operations Lifecycle Area** (9 L2s, OFAB verticals):
+    Resource Support Management (1.5.4), Resource Order Management (1.5.5), Resource
+    Data Management (1.5.7), Resource Trouble Management (1.5.8), Resource Performance
+    Management (1.5.9), Resource Mediation & Reporting (1.5.10), Resource Catalog
+    Operational Readiness Management (1.5.16), Resource Catalog Content Management
+    (1.5.17), Resource Anomaly Management (1.5.21)
+  - **Strategy-to-Readiness Lifecycle Area** (8 L2s — all ingested):
+    Resource Strategy Management (1.5.1), Resource Capability Delivery (1.5.2),
+    Resource Specification Lifecycle Management (1.5.3), Resource Capacity
+    Management (1.5.14), Resource Catalog Lifecycle Management (1.5.15), Resource
+    Catalog Planning Management (1.5.18), Resource Specification Management (1.5.19),
+    Resource Anomaly Lifecycle Management (1.5.20)
 
 ## eTOM Product Domain (operational)
 - [[wiki/etom/product-domain/_index|Browse Product Domain L2s]]
@@ -98,4 +112,5 @@ _(none yet)_
 
 ## Views
 
-- [[wiki/views/capability-map]] — OSS-layer capability map for gap-analysis heat-map overlay and change roadmap, derived from eTOM L2 content for Service and Resource Domains. 17 L2 capabilities + 8 H5 sub-capabilities (security ×2, workforce ×2, inventory ×2, test ×2) = 25 stable heat-map anchors. Promoted from draft 2026-05-10. Phase 3 (S2R-vertical scope expansion) in scoping.
+- [[wiki/views/capability-map]] — **Operations Lifecycle Area** OSS-layer capability map for gap-analysis heat-map overlay and change roadmap, derived from eTOM L2 content for Service and Resource Domains. 17 L2 capabilities + 8 H5 sub-capabilities = 25 stable heat-map anchors. Promoted from draft 2026-05-10.
+- [[wiki/views/capability-map-s2r]] — **Strategy-to-Readiness Lifecycle Area** companion. Phase 3 expansion (decisions locked 2026-05-10). 16 L2 capabilities + 6 H5 sub-capabilities (Test ×4 + Exit ×2) = **22 stable heat-map anchors. Phase 3 CLOSED 2026-05-12** — all ingested + L3-derived sub-capability review complete. Strategy (2) + Capability Management (8) + Business Value Development (6) verticals complete; Test maturity now rendered as a 3-stage × 2-PSR row spanning both view pages.

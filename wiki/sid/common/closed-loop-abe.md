@@ -74,7 +74,10 @@ when that block's trilateral sweep runs.
 
 ## eTOM Processes That Manipulate This Entity
 
-See [[wiki/open-questions#OQ-008]] — eTOM mappings for Closed Loop pending.
+- [[wiki/etom/service-domain/service-anomaly-lifecycle-management]] — **1.4.17 Service Anomaly Lifecycle Management** (BVD vertical). Every L3 in the L2 explicitly references "Closed Loop" / "Anomaly Closed Loop" / "Anomaly Management Closed Loop"; L3 .2 is named *Orchestrate Service Anomaly Management Closed Loop*; L3 .3 is *Monitor*; L3 .4 is *Report* — and L3 .4's ED cites the OODA pattern (Observe / Orient / Decide / Act) verbatim as the conceptual closed-loop model. **First eTOM trilateral link populated on this ABE; replaces the OQ-008 deferral as primary forward link.** Note: the ABE itself is `release_status: draft` («Preliminary»); the eTOM-side process treatment is more developed than the SID-side data treatment in this area as of v25.5.
+- [[wiki/etom/resource-domain/resource-anomaly-lifecycle-management]] — **1.5.20 Resource Anomaly Lifecycle Management** (BVD vertical). PSR-symmetric with Service-side back-link above; same closed-loop-orchestration / monitoring / reporting pattern across L3s.
+
+> **Phase-4 candidate manipulators.** Beyond the two BVD-side Anomaly Lifecycle L2s above, ClosedLoop is plausibly manipulated by the Operations-side Anomaly Management L2s (Service Anomaly Management 1.4.18 + Resource Anomaly Management 1.5.21 — both in `wiki/etom/{service,resource}-domain/`). Both reference closed-loop-related activities through their decompositions but neither has its `## SID Entities Manipulated` populated yet (deferred to OQ-008). Closed Loop is also the candidate ABE for Intelligence Management functional-block trilateral when ODA layer ingests further. Tight-scope decision at the 2026-05-12 Anomaly Lifecycle PSR pair ingest deferred those broader trilateral fills. Wikilinks intentionally omitted here per the convention of no wikilinks in trilateral sections beyond the primary forward-link bullet targets.
 
 ## Open Questions
 

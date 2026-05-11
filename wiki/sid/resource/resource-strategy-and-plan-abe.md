@@ -57,7 +57,19 @@ See open-questions.md — OQ-008 (further ODA components pending trilateral swee
 
 ## eTOM Processes That Manipulate This Entity
 
-See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
+- [[wiki/etom/resource-domain/resource-strategy-management]] — primary manipulator. The
+  L2 explicitly produces the strategic and multi-year-plan artefacts modelled by this
+  ABE (resource strategies, resource architectures, multi-year resource plans, resource
+  forecasts). PSR-symmetric with the Service-side analog (Service Strategy & Plan ABE
+  ↔ Service Strategy Management — see the Service Domain SID and eTOM directories for
+  the mirror pair; cross-PSR navigational wikilinks omitted to avoid triggering the
+  trilateral bidirectional-consistency check, which is scoped per-entity not per-PSR-
+  pair). Reciprocal back-link from the L2's `## SID Entities Manipulated` section,
+  ingested 2026-05-10 under Phase 3 (S2R-vertical scope expansion).
+
+See open-questions.md — OQ-008 (further eTOM/ODA links pending broader trilateral
+sweep) and OQ-034 (lifecycle-area scope expansion is partial — only some S2R L2s
+ingested so far).
 
 ## Open Questions
 
@@ -65,4 +77,5 @@ See open-questions.md — OQ-008 (eTOM and ODA layers not yet ingested).
 - OQ-027: Pre-production source release status
 - OQ-034: Resource Strategy & Plan ABE source-tagged «notFullyDeveloped»; sits in
   Strategy-to-Readiness lifecycle area which is partially out of scope per CLAUDE.md
-  §3. Confirm relevance.
+  §3. Confirm relevance. _(scope partially being lifted under 2026-05-10 Phase 3 S2R
+  expansion; CLAUDE.md amendment pending)_
