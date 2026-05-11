@@ -11,6 +11,7 @@ TARGETS=(
   "capability-map-s2r 1800 1200"
   "capability-map 1800 1400"
   "capability-map-combined 2200 2400"
+  "capability-map-roadmap 2400 1500"
 )
 
 for entry in "${TARGETS[@]}"; do
