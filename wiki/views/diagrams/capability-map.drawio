@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T08:36:00.000Z" version="22.0.0" type="device">
+<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T08:52:28.000Z" version="22.0.0" type="device">
   <diagram id="Roadmap" name="Roadmap">
     <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0" background="#FFFFFF" pageBackground="#FFFFFF">
       <root>
@@ -638,8 +638,8 @@
         <mxCell id="211" value="11 May 2026" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A0A0A0;fontSize=9;fontColor=#1A1A1A;align=center;verticalAlign=middle;" vertex="1" parent="1">
           <mxGeometry x="1510" y="1129" width="130" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="212" value="    ⓘ   *  L2 spans multiple verticals — placed under primary vertical only.    1.5.5  Resource Order Management:  Fulfillment + Operations Readiness &amp; Support.    1.5.7  Resource Data Management:  all four OFAB verticals." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#C8D4E0;strokeWidth=1;fontSize=9;fontColor=#3A4A5E;fontStyle=2;align=left;verticalAlign=middle;shadow=0;" vertex="1" parent="1">
-          <mxGeometry x="14" y="1099" width="1626" height="22" as="geometry"/>
+        <mxCell id="212" value="ⓘ   *  L2 spans multiple verticals — placed under primary vertical only.    1.5.5  Resource Order Management:  Fulfillment + Operations Readiness &amp; Support.    1.5.7  Resource Data Management:  all four OFAB verticals." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#C8D4E0;strokeWidth=1;fontSize=9;fontColor=#3A4A5E;fontStyle=2;align=left;verticalAlign=middle;spacingLeft=12;shadow=0;" vertex="1" parent="1">
+          <mxGeometry x="18" y="1099" width="1622" height="22" as="geometry"/>
         </mxCell>
         <mxCell id="213" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#5BB6E8;strokeColor=#5BB6E8;" vertex="1" parent="1">
           <mxGeometry x="14" y="1099" width="4" height="22" as="geometry"/>
