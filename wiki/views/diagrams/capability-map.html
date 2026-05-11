@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Capability Map — Operations Lifecycle Area</title>
+<style>
+  @page { size: A3 landscape; margin: 12mm; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 16px 20px;
+  }
+
+  .title {
+    border-bottom: 3px solid #1a5f4a;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+  .title h1 {
+    font-size: 18pt;
+    margin: 0 0 4px 0;
+    color: #1a5f4a;
+    letter-spacing: 0.2px;
+  }
+  .title .sub { font-size: 9pt; color: #555; }
+  .title .sub b { color: #1a5f4a; }
+
+  .matrix {
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr;
+    grid-auto-rows: auto;
+    border: 2px solid #1a5f4a;
+    background: #1a5f4a;
+    gap: 2px;
+  }
+
+  .corner { background: #fff; }
+
+  .domain-hdr {
+    background: #1a5f4a;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .domain-hdr .name { font-size: 12pt; font-weight: 600; letter-spacing: 0.5px; }
+  .domain-hdr .ref { font-size: 8pt; opacity: 0.85; margin-top: 2px; }
+
+  .vertical-label {
+    background: #2a8268;
+    color: #fff;
+    padding: 12px 8px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 10.5pt;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cell {
+    background: #f4faf7;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 8px;
+    align-content: start;
+  }
+  .cell.single { grid-template-columns: 1fr; }
+
+  .l2 {
+    background: #fff;
+    border: 1.5px solid #2a8268;
+    border-radius: 4px;
+    padding: 7px 9px 8px 9px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    min-height: 56px;
+  }
+  .l2.span2 { grid-column: span 2; }
+  .l2 .id {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 8pt;
+    color: #2a8268;
+    font-weight: 600;
+  }
+  .l2 .name {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 1px 0 3px 0;
+    line-height: 1.15;
+  }
+  .l2 .anchor {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 7pt;
+    color: #888;
+    margin-top: auto;
+  }
+  .l2 .badges { font-size: 7pt; margin-top: 3px; }
+  .badge {
+    display: inline-block;
+    background: #fff7e6;
+    color: #a06000;
+    border: 1px solid #e6c98a;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-size: 6.5pt;
+    margin-right: 3px;
+    font-weight: 500;
+  }
+  .badge.cross {
+    background: #f0e8f5;
+    color: #5a2a7a;
+    border-color: #c8a8d8;
+  }
+  .badge.multi {
+    background: #e8f0f8;
+    color: #1f5b8b;
+    border-color: #a8c8e0;
+  }
+
+  .h5-list {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px dashed #c0d8c8;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .h5 {
+    background: #fff7d6;
+    border: 1px solid #d8b860;
+    border-radius: 2px;
+    padding: 3px 6px;
+    font-size: 7.5pt;
+    line-height: 1.2;
+  }
+  .h5 .h5-name { font-weight: 600; color: #6a4810; }
+  .h5 .h5-src {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 6.5pt;
+    color: #999;
+    margin-top: 1px;
+  }
+  .h5 .h5-anchor {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 6pt;
+    color: #b08840;
+    margin-top: 1px;
+  }
+
+  .footer {
+    margin-top: 14px;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+    font-size: 8pt;
+    color: #555;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .footer h4 { margin: 0 0 4px 0; font-size: 8.5pt; color: #1a5f4a; }
+  .footer ul { margin: 0; padding-left: 14px; line-height: 1.4; }
+  .footer .legend-row { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
+  .swatch {
+    display: inline-block; width: 12px; height: 10px;
+    border-radius: 2px; border: 1px solid #888;
+  }
+  .swatch.l2 { background: #fff; border-color: #2a8268; border-width: 1.5px; }
+  .swatch.h5 { background: #fff7d6; border-color: #d8b860; }
+  .swatch.cross { background: #f0e8f5; border-color: #c8a8d8; }
+  .swatch.multi { background: #e8f0f8; border-color: #a8c8e0; }
+</style>
+</head>
+<body>
+
+<div class="title">
+  <h1>Capability Map — Operations Lifecycle Area</h1>
+  <div class="sub">
+    OSS-layer capability frame for transformation roadmap, derived from <b>GB921 v25.5</b>.
+    Service + Resource Domains × OFAB verticals (Operations Readiness &amp; Support / Fulfillment / Assurance / Billing).
+    <b>25 stable heat-map anchors</b> (17 L2 + 8 H5). Sister page: capability-map-s2r.html (Strategy-to-Readiness area, 22 anchors).
+    Promoted from draft 2026-05-10; Phase 2 sub-capability review 2026-05-10.
+  </div>
+</div>
+
+<div class="matrix">
+
+  <!-- Row 1: domain headers -->
+  <div class="corner"></div>
+  <div class="domain-hdr">
+    <div class="name">SERVICE DOMAIN</div>
+    <div class="ref">GB991 §1.1.1.5</div>
+  </div>
+  <div class="domain-hdr">
+    <div class="name">RESOURCE DOMAIN</div>
+    <div class="ref">GB991 §1.1.1.6</div>
+  </div>
+
+  <!-- Row 2: Operations Readiness & Support -->
+  <div class="vertical-label">OPERATIONS READINESS &amp; SUPPORT</div>
+  <div class="cell">
+    <div class="l2 span2">
+      <div class="id">1.4.4</div>
+      <div class="name">Service Support Management</div>
+      <div class="badges"><span class="badge cross">v23.5 / v24.0 renames</span></div>
+      <div class="anchor">cap-service-support</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Security &amp; risk responsibilities</div>
+          <div class="h5-src">L2 responsibilities block (Vulnerability / Threat / Risk)</div>
+          <div class="h5-anchor">cap-service-support-security</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Inventory management</div>
+          <div class="h5-src">L3 1.4.4.1 (4 L4s — incl. Audit Tests)</div>
+          <div class="h5-anchor">cap-service-support-inventory</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Test management</div>
+          <div class="h5-src">L3 1.4.4.6</div>
+          <div class="h5-anchor">cap-service-support-test</div>
+        </div>
+      </div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.14</div>
+      <div class="name">Service Catalog — Operational Readiness</div>
+      <div class="anchor">cap-service-catalog-operational-readiness</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.15</div>
+      <div class="name">Service Catalog — Content</div>
+      <div class="anchor">cap-service-catalog-content</div>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="l2 span2">
+      <div class="id">1.5.4</div>
+      <div class="name">Resource Support Management</div>
+      <div class="badges"><span class="badge cross">v23.5 / v24.0 renames</span></div>
+      <div class="anchor">cap-resource-support</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Security &amp; risk responsibilities</div>
+          <div class="h5-src">L2 responsibilities block</div>
+          <div class="h5-anchor">cap-resource-support-security</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Workforce management (establishment)</div>
+          <div class="h5-src">L3 1.5.4.8 Manage Field Workforce</div>
+          <div class="h5-anchor">cap-resource-support-workforce</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Inventory management</div>
+          <div class="h5-src">L3 1.5.4.5 (3 L4s — no Audit Tests, asymmetric to Service)</div>
+          <div class="h5-anchor">cap-resource-support-inventory</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Test management</div>
+          <div class="h5-src">L3 1.5.4.9 (carries OQ-045-family source-text quirk)</div>
+          <div class="h5-anchor">cap-resource-support-test</div>
+        </div>
+      </div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.7*</div>
+      <div class="name">Resource Data Management</div>
+      <div class="badges"><span class="badge cross">v23.5 rename</span><span class="badge multi">multi-vertical</span></div>
+      <div class="anchor">cap-resource-data</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.16</div>
+      <div class="name">Resource Catalog — Operational Readiness</div>
+      <div class="anchor">cap-resource-catalog-operational-readiness</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.17</div>
+      <div class="name">Resource Catalog — Content</div>
+      <div class="anchor">cap-resource-catalog-content</div>
+    </div>
+  </div>
+
+  <!-- Row 3: Fulfillment -->
+  <div class="vertical-label">FULFILLMENT</div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.4.5</div>
+      <div class="name">Service Activation Management</div>
+      <div class="badges"><span class="badge cross">v24.0 rename</span></div>
+      <div class="anchor">cap-service-activation</div>
+    </div>
+  </div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.5.5*</div>
+      <div class="name">Resource Order Management</div>
+      <div class="badges"><span class="badge cross">R20.5 rename (Workforce Mgmt → Resource Order)</span><span class="badge multi">multi-vertical</span></div>
+      <div class="anchor">cap-resource-order</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Workforce-related work orders (execution)</div>
+          <div class="h5-src">L3 1.5.5.7 Manage Resource Work Order</div>
+          <div class="h5-anchor">cap-resource-order-workforce</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 4: Assurance -->
+  <div class="vertical-label">ASSURANCE</div>
+  <div class="cell">
+    <div class="l2">
+      <div class="id">1.4.6</div>
+      <div class="name">Service Problem Management</div>
+      <div class="anchor">cap-service-problem</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.7</div>
+      <div class="name">Service Performance Management</div>
+      <div class="badges"><span class="badge cross">v23.5 rename (Service Quality Mgmt → Perf)</span></div>
+      <div class="anchor">cap-service-performance</div>
+    </div>
+    <div class="l2 span2">
+      <div class="id">1.4.18</div>
+      <div class="name">Service Anomaly Management</div>
+      <div class="anchor">cap-service-anomaly</div>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="l2">
+      <div class="id">1.5.8</div>
+      <div class="name">Resource Trouble Management</div>
+      <div class="anchor">cap-resource-trouble</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.9</div>
+      <div class="name">Resource Performance Management</div>
+      <div class="anchor">cap-resource-performance</div>
+    </div>
+    <div class="l2 span2">
+      <div class="id">1.5.21</div>
+      <div class="name">Resource Anomaly Management</div>
+      <div class="anchor">cap-resource-anomaly</div>
+    </div>
+  </div>
+
+  <!-- Row 5: Billing -->
+  <div class="vertical-label">BILLING</div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.4.8</div>
+      <div class="name">Service Guiding &amp; Mediation</div>
+      <div class="anchor">cap-service-guiding-and-mediation</div>
+    </div>
+  </div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.5.10</div>
+      <div class="name">Resource Mediation &amp; Reporting</div>
+      <div class="anchor">cap-resource-mediation-and-reporting</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>
+    <h4>Legend</h4>
+    <div class="legend-row"><span class="swatch l2"></span> L2 capability anchor (17 total)</div>
+    <div class="legend-row"><span class="swatch h5"></span> H5 sub-capability anchor (8 total — security ×2, workforce ×2, inventory ×2, test ×2)</div>
+    <div class="legend-row"><span class="swatch cross"></span> Renamed in v23.5 / v24.0 / R20.5 (provenance noted on source page)</div>
+    <div class="legend-row"><span class="swatch multi"></span> Multi-vertical L2 (placed under primary vertical; spans others — see below)</div>
+    <div style="margin-top: 6px; font-size: 7.5pt;">
+      <b>*</b> 1.5.5 Resource Order spans Fulfillment + Operations Readiness &amp; Support; 1.5.7 Resource Data spans all four OFAB verticals. Placed under primary vertical per Session State decisions.
+    </div>
+  </div>
+  <div>
+    <h4>Cross-Lifecycle composability (links to S2R capability map)</h4>
+    <ul>
+      <li><b>3-stage × 2-PSR Test maturity row</b> — Operations-side <code>cap-{service,resource}-support-test</code> (1.4.4.6 / 1.5.4.9) pair with S2R-side Strategy-test + Lifecycle-test H5s on the sister page.</li>
+      <li><b>Two-L2 Anomaly pattern</b> — 1.4.18 / 1.5.21 here (Operations executes) pair with S2R-side <code>cap-{service,resource}-anomaly-lifecycle</code> (1.4.17 / 1.5.20, BVD governs).</li>
+      <li><b>Four-L2 Catalog lifecycle</b> — 1.4.14, 1.4.15, 1.5.16, 1.5.17 here (Operational Readiness + Content) pair with S2R-side Catalog Planning (1.4.16/1.5.18) + Catalog Lifecycle (1.4.13/1.5.15).</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

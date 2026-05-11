@@ -167,6 +167,28 @@ flowchart TB
 
 `*` 1.5.5 Resource Order spans Fulfillment + Operations Readiness & Support; 1.5.7 Resource Data spans all four OFAB verticals. Both placed under primary vertical per Session State decisions; reconfirm during Batch 6.
 
+## Visual exports
+
+A boxes-in-boxes treemap render of this capability map for printing, embedding, and stakeholder presentations. The render shows the same 17 L2 + 8 H5 anchors as the Mermaid frame above, but with H5 sub-capabilities visually nested inside their parent L2 boxes — closer to the canonical TMF / business-architecture capability-map visual style than the Mermaid flowchart frame. Resource Support Management's 4 H5 anchors (security + workforce + inventory + test) — the densest sub-capability cluster in the corpus — render cleanly as nested cells.
+
+![Capability Map — Operations Lifecycle Area](diagrams/capability-map.png)
+
+Files in [`diagrams/`](diagrams/) (regenerable via `diagrams/render.sh`):
+
+- **[capability-map.pdf](diagrams/capability-map.pdf)** — A3 landscape, print-quality
+- **[capability-map.png](diagrams/capability-map.png)** — 1800×1400 @ 2× DPI, for screen / embedding (rendered above)
+- **[capability-map.html](diagrams/capability-map.html)** — source HTML; edit + re-render to iterate
+
+**Combined view** — both Lifecycle Areas (this page + sister-page S2R area in one diagram, all 47 anchors visible together; useful when you want to see cross-Lifecycle composability — Test row / Anomaly pair / Catalog 4-L2 — in a single glance):
+
+- [capability-map-combined.pdf](diagrams/capability-map-combined.pdf) — A2 landscape
+- [capability-map-combined.png](diagrams/capability-map-combined.png)
+- [capability-map-combined.html](diagrams/capability-map-combined.html)
+
+**S2R-area sister render** — [capability-map-s2r.pdf](diagrams/capability-map-s2r.pdf) · [capability-map-s2r.png](diagrams/capability-map-s2r.png) · [capability-map-s2r.html](diagrams/capability-map-s2r.html).
+
+The diagram renders are derivative artefacts of this view page; they do not add new TMF facts. For normative claims, follow the wikilinks from individual capability anchors (below) to source pages.
+
 ## Service Domain — L2 Capabilities (in scope)
 
 _Awaiting batch decisions. Skeleton structure shown; capability content populated batch-by-batch with user sign-off._

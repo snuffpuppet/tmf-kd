@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Capability Map — Strategy-to-Readiness Lifecycle Area</title>
+<style>
+  /* Page setup — A3 landscape gives room for 22 anchors at readable size */
+  @page { size: A3 landscape; margin: 12mm; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    padding: 16px 20px;
+  }
+
+  /* Title bar */
+  .title {
+    border-bottom: 3px solid #1f3b6b;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+  .title h1 {
+    font-size: 18pt;
+    margin: 0 0 4px 0;
+    color: #1f3b6b;
+    letter-spacing: 0.2px;
+  }
+  .title .sub {
+    font-size: 9pt;
+    color: #555;
+  }
+  .title .sub b { color: #1f3b6b; }
+
+  /* Outer matrix grid — 1 vertical-label column + 2 domain columns */
+  .matrix {
+    display: grid;
+    grid-template-columns: 110px 1fr 1fr;
+    grid-auto-rows: auto;
+    border: 2px solid #1f3b6b;
+    background: #1f3b6b;
+    gap: 2px;
+  }
+
+  /* Top corner cell (empty) */
+  .corner { background: #fff; }
+
+  /* Domain header cells (across the top) */
+  .domain-hdr {
+    background: #1f3b6b;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .domain-hdr .name { font-size: 12pt; font-weight: 600; letter-spacing: 0.5px; }
+  .domain-hdr .ref { font-size: 8pt; opacity: 0.85; margin-top: 2px; }
+
+  /* Vertical row labels (down the side) */
+  .vertical-label {
+    background: #2a5298;
+    color: #fff;
+    padding: 12px 8px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 10.5pt;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Cells that hold L2 boxes — one per (domain, vertical) intersection */
+  .cell {
+    background: #f5f7fb;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 8px;
+    align-content: start;
+  }
+  .cell.single { grid-template-columns: 1fr; }
+
+  /* L2 capability boxes */
+  .l2 {
+    background: #fff;
+    border: 1.5px solid #2a5298;
+    border-radius: 4px;
+    padding: 7px 9px 8px 9px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    min-height: 56px;
+  }
+  .l2.span2 { grid-column: span 2; }
+  .l2 .id {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 8pt;
+    color: #2a5298;
+    font-weight: 600;
+  }
+  .l2 .name {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 1px 0 3px 0;
+    line-height: 1.15;
+  }
+  .l2 .anchor {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 7pt;
+    color: #888;
+    margin-top: auto;
+  }
+
+  /* Net-in-v25.5 marker */
+  .l2 .badges { font-size: 7pt; margin-top: 3px; }
+  .badge {
+    display: inline-block;
+    background: #fff7e6;
+    color: #a06000;
+    border: 1px solid #e6c98a;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-size: 6.5pt;
+    margin-right: 3px;
+    font-weight: 500;
+  }
+  .badge.lineage {
+    background: #eef5e8;
+    color: #3a6b1a;
+    border-color: #b8d8a0;
+  }
+  .badge.cross {
+    background: #f0e8f5;
+    color: #5a2a7a;
+    border-color: #c8a8d8;
+  }
+
+  /* H5 sub-capabilities — nested boxes inside parent L2 */
+  .h5-list {
+    margin-top: 6px;
+    padding-top: 5px;
+    border-top: 1px dashed #c0c8d8;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .h5 {
+    background: #fff7d6;
+    border: 1px solid #d8b860;
+    border-radius: 2px;
+    padding: 3px 6px;
+    font-size: 7.5pt;
+    line-height: 1.2;
+  }
+  .h5 .h5-name { font-weight: 600; color: #6a4810; }
+  .h5 .h5-src {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 6.5pt;
+    color: #999;
+    margin-top: 1px;
+  }
+  .h5 .h5-anchor {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 6pt;
+    color: #b08840;
+    margin-top: 1px;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 14px;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+    font-size: 8pt;
+    color: #555;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .footer h4 {
+    margin: 0 0 4px 0;
+    font-size: 8.5pt;
+    color: #1f3b6b;
+  }
+  .footer ul { margin: 0; padding-left: 14px; line-height: 1.4; }
+  .footer .legend-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 2px 0;
+  }
+  .swatch {
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    border-radius: 2px;
+    border: 1px solid #888;
+  }
+  .swatch.l2 { background: #fff; border-color: #2a5298; border-width: 1.5px; }
+  .swatch.h5 { background: #fff7d6; border-color: #d8b860; }
+  .swatch.netnew { background: #fff7e6; border-color: #e6c98a; }
+  .swatch.lineage { background: #eef5e8; border-color: #b8d8a0; }
+  .swatch.cross { background: #f0e8f5; border-color: #c8a8d8; }
+</style>
+</head>
+<body>
+
+<div class="title">
+  <h1>Capability Map — Strategy-to-Readiness Lifecycle Area</h1>
+  <div class="sub">
+    OSS-layer capability frame for transformation roadmap, derived from <b>GB921 v25.5</b>.
+    Service + Resource Domains × Strategy / Capability Management / Business Value Development verticals.
+    <b>22 stable heat-map anchors</b> (16 L2 + 6 H5). Sister page: capability-map.md (Operations area, 25 anchors). Phase 3 — 2026-05-12.
+  </div>
+</div>
+
+<div class="matrix">
+
+  <!-- Row 1: domain headers -->
+  <div class="corner"></div>
+  <div class="domain-hdr">
+    <div class="name">SERVICE DOMAIN</div>
+    <div class="ref">GB991 §1.1.1.5</div>
+  </div>
+  <div class="domain-hdr">
+    <div class="name">RESOURCE DOMAIN</div>
+    <div class="ref">GB991 §1.1.1.6</div>
+  </div>
+
+  <!-- Row 2: Strategy Management -->
+  <div class="vertical-label">STRATEGY MANAGEMENT</div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.4.1</div>
+      <div class="name">Service Strategy Management</div>
+      <div class="badges"><span class="badge cross">v24.0 rename</span></div>
+      <div class="anchor">cap-service-strategy</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Test management strategy</div>
+          <div class="h5-src">L3 1.4.1.8 + 1.4.1.9</div>
+          <div class="h5-anchor">cap-service-strategy-test</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cell single">
+    <div class="l2">
+      <div class="id">1.5.1</div>
+      <div class="name">Resource Strategy Management</div>
+      <div class="badges"><span class="badge cross">v24.0 rename</span></div>
+      <div class="anchor">cap-resource-strategy</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Test management strategy</div>
+          <div class="h5-src">L3 1.5.1.8 + 1.5.1.9</div>
+          <div class="h5-anchor">cap-resource-strategy-test</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: Capability Management -->
+  <div class="vertical-label">CAPABILITY MANAGEMENT</div>
+  <div class="cell">
+    <div class="l2">
+      <div class="id">1.4.2</div>
+      <div class="name">Service Capability Delivery</div>
+      <div class="anchor">cap-service-capability-delivery</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.12</div>
+      <div class="name">Service Capacity Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-service-capacity</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.16</div>
+      <div class="name">Service Catalog Planning Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-service-catalog-planning</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.19</div>
+      <div class="name">Service Specification Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-service-specification</div>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="l2">
+      <div class="id">1.5.2</div>
+      <div class="name">Resource Capability Delivery</div>
+      <div class="anchor">cap-resource-capability-delivery</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.14</div>
+      <div class="name">Resource Capacity Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-resource-capacity</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.18</div>
+      <div class="name">Resource Catalog Planning Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-resource-catalog-planning</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.19</div>
+      <div class="name">Resource Specification Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-resource-specification</div>
+    </div>
+  </div>
+
+  <!-- Row 4: Business Value Development -->
+  <div class="vertical-label">BUSINESS VALUE DEVELOPMENT</div>
+  <div class="cell">
+    <div class="l2 span2">
+      <div class="id">1.4.3</div>
+      <div class="name">Service Specification Lifecycle Management</div>
+      <div class="badges"><span class="badge lineage">R20.5 lineage</span><span class="badge cross">v24.0 rename</span></div>
+      <div class="anchor">cap-service-specification-lifecycle</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Test catalogue development &amp; retirement</div>
+          <div class="h5-src">L3 1.4.3.8 (new in v25.5)</div>
+          <div class="h5-anchor">cap-service-specification-lifecycle-test</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Service end-of-life management</div>
+          <div class="h5-src">L3 1.4.3.7 (narrative-only, 0 L4s)</div>
+          <div class="h5-anchor">cap-service-specification-lifecycle-exit</div>
+        </div>
+      </div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.13</div>
+      <div class="name">Service Catalog Lifecycle Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-service-catalog-lifecycle</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.4.17</div>
+      <div class="name">Service Anomaly Lifecycle Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-service-anomaly-lifecycle</div>
+    </div>
+  </div>
+  <div class="cell">
+    <div class="l2 span2">
+      <div class="id">1.5.3</div>
+      <div class="name">Resource Specification Lifecycle Management</div>
+      <div class="badges"><span class="badge lineage">R20.5 lineage</span><span class="badge cross">v24.0 rename</span></div>
+      <div class="anchor">cap-resource-specification-lifecycle</div>
+      <div class="h5-list">
+        <div class="h5">
+          <div class="h5-name">Test catalogue development &amp; retirement</div>
+          <div class="h5-src">L3 1.5.3.8 (new in v25.5)</div>
+          <div class="h5-anchor">cap-resource-specification-lifecycle-test</div>
+        </div>
+        <div class="h5">
+          <div class="h5-name">Resource end-of-life management</div>
+          <div class="h5-src">L3 1.5.3.7 (4 L4s — PSR-asymmetric depth)</div>
+          <div class="h5-anchor">cap-resource-specification-lifecycle-exit</div>
+        </div>
+      </div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.15</div>
+      <div class="name">Resource Catalog Lifecycle Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-resource-catalog-lifecycle</div>
+    </div>
+    <div class="l2">
+      <div class="id">1.5.20</div>
+      <div class="name">Resource Anomaly Lifecycle Management</div>
+      <div class="badges"><span class="badge">net-new v25.5</span></div>
+      <div class="anchor">cap-resource-anomaly-lifecycle</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div>
+    <h4>Legend</h4>
+    <div class="legend-row"><span class="swatch l2"></span> L2 capability anchor (16 total)</div>
+    <div class="legend-row"><span class="swatch h5"></span> H5 sub-capability anchor (6 total — Test ×4, Exit ×2)</div>
+    <div class="legend-row"><span class="swatch netnew"></span> Net-new in v25.5 (Original PID = None)</div>
+    <div class="legend-row"><span class="swatch lineage"></span> R20.5 lineage (pre-v25 history)</div>
+    <div class="legend-row"><span class="swatch cross"></span> v24.0 rename (provenance noted on source page)</div>
+  </div>
+  <div>
+    <h4>Cross-Lifecycle composability (links to Operations capability map)</h4>
+    <ul>
+      <li><b>3-stage × 2-PSR Test maturity row</b> — Strategy-test + Lifecycle-test H5s above pair with Operations-side <code>cap-{service,resource}-support-test</code> (L3 1.4.4.6 / 1.5.4.9).</li>
+      <li><b>Two-L2 Anomaly pattern</b> — 1.4.17 / 1.5.20 here pair with Operations-side <code>cap-{service,resource}-anomaly</code> (1.4.18 / 1.5.21). BVD governs / Operations executes.</li>
+      <li><b>Four-L2 Catalog lifecycle</b> — Catalog Planning (1.4.16/1.5.18) + Catalog Lifecycle (1.4.13/1.5.15) here pair with Operations-side <code>cap-{service,resource}-catalog-{operational-readiness,content}</code> (1.4.14, 1.4.15, 1.5.16, 1.5.17).</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
