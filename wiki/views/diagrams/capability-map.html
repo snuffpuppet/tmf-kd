@@ -97,6 +97,13 @@
     margin: 1px 0 3px 0;
     line-height: 1.15;
   }
+  .l2 .l2-desc {
+    font-size: 7.5pt;
+    font-style: italic;
+    color: #555;
+    line-height: 1.25;
+    margin: 0 0 4px 0;
+  }
   .l2 .anchor {
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-size: 7pt;
@@ -143,6 +150,14 @@
     line-height: 1.2;
   }
   .h5 .h5-name { font-weight: 600; color: #6a4810; }
+  .h5 .h5-desc {
+    font-size: 6.5pt;
+    font-style: italic;
+    color: #6a4810;
+    opacity: 0.85;
+    line-height: 1.2;
+    margin: 1px 0 0 0;
+  }
   .h5 .h5-src {
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-size: 6.5pt;
@@ -210,21 +225,25 @@
     <div class="l2 span2">
       <div class="id">1.4.4</div>
       <div class="name">Service Support Management</div>
+      <div class="l2-desc">Operational substrate for all Service FAB processes</div>
       <div class="badges"><span class="badge cross">v23.5 / v24.0 renames</span></div>
       <div class="anchor">cap-service-support</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Security &amp; risk responsibilities</div>
+          <div class="h5-desc">Vulnerability mgmt, threat assessments, risk assessments + mitigation</div>
           <div class="h5-src">L2 responsibilities block (Vulnerability / Threat / Risk)</div>
           <div class="h5-anchor">cap-service-support-security</div>
         </div>
         <div class="h5">
           <div class="h5-name">Inventory management</div>
+          <div class="h5-desc">Manage Service Inventory DB + processes; audit; track; identify issues</div>
           <div class="h5-src">L3 1.4.4.1 (4 L4s — incl. Audit Tests)</div>
           <div class="h5-anchor">cap-service-support-inventory</div>
         </div>
         <div class="h5">
           <div class="h5-name">Test management</div>
+          <div class="h5-desc">Execute end-to-end service tests; orchestrate Product + Resource test composition</div>
           <div class="h5-src">L3 1.4.4.6</div>
           <div class="h5-anchor">cap-service-support-test</div>
         </div>
@@ -233,11 +252,13 @@
     <div class="l2">
       <div class="id">1.4.14</div>
       <div class="name">Service Catalog — Operational Readiness</div>
+      <div class="l2-desc">Operate the Service Catalog as a production service</div>
       <div class="anchor">cap-service-catalog-operational-readiness</div>
     </div>
     <div class="l2">
       <div class="id">1.4.15</div>
       <div class="name">Service Catalog — Content</div>
+      <div class="l2-desc">Manage what's in the published Service Catalog</div>
       <div class="anchor">cap-service-catalog-content</div>
     </div>
   </div>
@@ -245,26 +266,31 @@
     <div class="l2 span2">
       <div class="id">1.5.4</div>
       <div class="name">Resource Support Management</div>
+      <div class="l2-desc">Operational substrate for all Resource FAB; workforce establishment lives here</div>
       <div class="badges"><span class="badge cross">v23.5 / v24.0 renames</span></div>
       <div class="anchor">cap-resource-support</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Security &amp; risk responsibilities</div>
+          <div class="h5-desc">Vulnerability mgmt, threat assessments, risk assessments + mitigation</div>
           <div class="h5-src">L2 responsibilities block</div>
           <div class="h5-anchor">cap-resource-support-security</div>
         </div>
         <div class="h5">
           <div class="h5-name">Workforce management (establishment)</div>
+          <div class="h5-desc">Manage field workforce roster, skills, training (establishment side)</div>
           <div class="h5-src">L3 1.5.4.8 Manage Field Workforce</div>
           <div class="h5-anchor">cap-resource-support-workforce</div>
         </div>
         <div class="h5">
           <div class="h5-name">Inventory management</div>
+          <div class="h5-desc">Manage Resource Inventory DB + processes; track; identify issues</div>
           <div class="h5-src">L3 1.5.4.5 (3 L4s — no Audit Tests, asymmetric to Service)</div>
           <div class="h5-anchor">cap-resource-support-inventory</div>
         </div>
         <div class="h5">
           <div class="h5-name">Test management</div>
+          <div class="h5-desc">Execute end-to-end resource tests; bottom of cross-PSR test composition</div>
           <div class="h5-src">L3 1.5.4.9 (carries OQ-045-family source-text quirk)</div>
           <div class="h5-anchor">cap-resource-support-test</div>
         </div>
@@ -273,17 +299,20 @@
     <div class="l2">
       <div class="id">1.5.7*</div>
       <div class="name">Resource Data Management</div>
+      <div class="l2-desc">Collect / distribute / manage resource data across all OFAB verticals</div>
       <div class="badges"><span class="badge cross">v23.5 rename</span><span class="badge multi">multi-vertical</span></div>
       <div class="anchor">cap-resource-data</div>
     </div>
     <div class="l2">
       <div class="id">1.5.16</div>
       <div class="name">Resource Catalog — Operational Readiness</div>
+      <div class="l2-desc">Operate the Resource Catalog as a production service</div>
       <div class="anchor">cap-resource-catalog-operational-readiness</div>
     </div>
     <div class="l2">
       <div class="id">1.5.17</div>
       <div class="name">Resource Catalog — Content</div>
+      <div class="l2-desc">Manage what's in the published Resource Catalog</div>
       <div class="anchor">cap-resource-catalog-content</div>
     </div>
   </div>
@@ -294,6 +323,7 @@
     <div class="l2">
       <div class="id">1.4.5</div>
       <div class="name">Service Activation Management</div>
+      <div class="l2-desc">Activate and configure service instances per customer order</div>
       <div class="badges"><span class="badge cross">v24.0 rename</span></div>
       <div class="anchor">cap-service-activation</div>
     </div>
@@ -302,11 +332,13 @@
     <div class="l2">
       <div class="id">1.5.5*</div>
       <div class="name">Resource Order Management</div>
+      <div class="l2-desc">Capture / schedule / allocate resource orders; work-order execution</div>
       <div class="badges"><span class="badge cross">R20.5 rename (Workforce Mgmt → Resource Order)</span><span class="badge multi">multi-vertical</span></div>
       <div class="anchor">cap-resource-order</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Workforce-related work orders (execution)</div>
+          <div class="h5-desc">Allocate work orders to field workforce per resource order (execution side)</div>
           <div class="h5-src">L3 1.5.5.7 Manage Resource Work Order</div>
           <div class="h5-anchor">cap-resource-order-workforce</div>
         </div>
@@ -320,17 +352,20 @@
     <div class="l2">
       <div class="id">1.4.6</div>
       <div class="name">Service Problem Management</div>
+      <div class="l2-desc">Restore service; isolate cause of customer-impacting service issues</div>
       <div class="anchor">cap-service-problem</div>
     </div>
     <div class="l2">
       <div class="id">1.4.7</div>
       <div class="name">Service Performance Management</div>
+      <div class="l2-desc">Monitor / measure / report on service KPIs and SLAs</div>
       <div class="badges"><span class="badge cross">v23.5 rename (Service Quality Mgmt → Perf)</span></div>
       <div class="anchor">cap-service-performance</div>
     </div>
     <div class="l2 span2">
       <div class="id">1.4.18</div>
       <div class="name">Service Anomaly Management</div>
+      <div class="l2-desc">Predict / detect / assess / mitigate anomalies before they become Problems</div>
       <div class="anchor">cap-service-anomaly</div>
     </div>
   </div>
@@ -338,16 +373,19 @@
     <div class="l2">
       <div class="id">1.5.8</div>
       <div class="name">Resource Trouble Management</div>
+      <div class="l2-desc">Detect / isolate / fix resource faults; convergence for alarms + performance</div>
       <div class="anchor">cap-resource-trouble</div>
     </div>
     <div class="l2">
       <div class="id">1.5.9</div>
       <div class="name">Resource Performance Management</div>
+      <div class="l2-desc">Monitor / measure / report on resource KPIs</div>
       <div class="anchor">cap-resource-performance</div>
     </div>
     <div class="l2 span2">
       <div class="id">1.5.21</div>
       <div class="name">Resource Anomaly Management</div>
+      <div class="l2-desc">Predict / detect / assess / mitigate resource anomalies</div>
       <div class="anchor">cap-resource-anomaly</div>
     </div>
   </div>
@@ -358,6 +396,7 @@
     <div class="l2">
       <div class="id">1.4.8</div>
       <div class="name">Service Guiding &amp; Mediation</div>
+      <div class="l2-desc">Pre-billing mediation of service usage events</div>
       <div class="anchor">cap-service-guiding-and-mediation</div>
     </div>
   </div>
@@ -365,6 +404,7 @@
     <div class="l2">
       <div class="id">1.5.10</div>
       <div class="name">Resource Mediation &amp; Reporting</div>
+      <div class="l2-desc">Pre-billing mediation of resource usage events</div>
       <div class="anchor">cap-resource-mediation-and-reporting</div>
     </div>
   </div>

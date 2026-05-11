@@ -108,6 +108,13 @@
     margin: 1px 0 3px 0;
     line-height: 1.15;
   }
+  .l2 .l2-desc {
+    font-size: 7.5pt;
+    font-style: italic;
+    color: #555;
+    line-height: 1.25;
+    margin: 0 0 4px 0;
+  }
   .l2 .anchor {
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-size: 7pt;
@@ -157,6 +164,14 @@
     line-height: 1.2;
   }
   .h5 .h5-name { font-weight: 600; color: #6a4810; }
+  .h5 .h5-desc {
+    font-size: 6.5pt;
+    font-style: italic;
+    color: #6a4810;
+    opacity: 0.85;
+    line-height: 1.2;
+    margin: 1px 0 0 0;
+  }
   .h5 .h5-src {
     font-family: "SF Mono", Menlo, Consolas, monospace;
     font-size: 6.5pt;
@@ -237,11 +252,13 @@
     <div class="l2">
       <div class="id">1.4.1</div>
       <div class="name">Service Strategy Management</div>
+      <div class="l2-desc">Annual and multi-year strategic plans for services and service directions</div>
       <div class="badges"><span class="badge cross">v24.0 rename</span></div>
       <div class="anchor">cap-service-strategy</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Test management strategy</div>
+          <div class="h5-desc">Define test types per business activity; analyze test quality offline</div>
           <div class="h5-src">L3 1.4.1.8 + 1.4.1.9</div>
           <div class="h5-anchor">cap-service-strategy-test</div>
         </div>
@@ -252,11 +269,13 @@
     <div class="l2">
       <div class="id">1.5.1</div>
       <div class="name">Resource Strategy Management</div>
+      <div class="l2-desc">Annual and multi-year resource strategies; v25.5 carries AI-readiness guidance</div>
       <div class="badges"><span class="badge cross">v24.0 rename</span></div>
       <div class="anchor">cap-resource-strategy</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Test management strategy</div>
+          <div class="h5-desc">Define test types per business activity; analyze test quality offline</div>
           <div class="h5-src">L3 1.5.1.8 + 1.5.1.9</div>
           <div class="h5-anchor">cap-resource-strategy-test</div>
         </div>
@@ -270,23 +289,27 @@
     <div class="l2">
       <div class="id">1.4.2</div>
       <div class="name">Service Capability Delivery</div>
+      <div class="l2-desc">Plan and deliver new and enhanced service capabilities (project-driven)</div>
       <div class="anchor">cap-service-capability-delivery</div>
     </div>
     <div class="l2">
       <div class="id">1.4.12</div>
       <div class="name">Service Capacity Management</div>
+      <div class="l2-desc">Plan / forecast / optimize service capacity vs SLA / SLO / SLR</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-service-capacity</div>
     </div>
     <div class="l2">
       <div class="id">1.4.16</div>
       <div class="name">Service Catalog Planning Management</div>
+      <div class="l2-desc">Design the catalog scheme; define the Service Catalog Specification</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-service-catalog-planning</div>
     </div>
     <div class="l2">
       <div class="id">1.4.19</div>
       <div class="name">Service Specification Management</div>
+      <div class="l2-desc">Describe / model / analyze service specification artefacts (ongoing maintenance)</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-service-specification</div>
     </div>
@@ -295,23 +318,27 @@
     <div class="l2">
       <div class="id">1.5.2</div>
       <div class="name">Resource Capability Delivery</div>
+      <div class="l2-desc">Deploy new and enhanced technology and resources; logical and physical</div>
       <div class="anchor">cap-resource-capability-delivery</div>
     </div>
     <div class="l2">
       <div class="id">1.5.14</div>
       <div class="name">Resource Capacity Management</div>
+      <div class="l2-desc">Plan / forecast / optimize resource capacity vs business objectives</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-resource-capacity</div>
     </div>
     <div class="l2">
       <div class="id">1.5.18</div>
       <div class="name">Resource Catalog Planning Management</div>
+      <div class="l2-desc">Design the catalog scheme; define the Resource Catalog Specification</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-resource-catalog-planning</div>
     </div>
     <div class="l2">
       <div class="id">1.5.19</div>
       <div class="name">Resource Specification Management</div>
+      <div class="l2-desc">Develop / master / analyze + version Resource Specifications (ongoing maintenance)</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-resource-specification</div>
     </div>
@@ -323,16 +350,19 @@
     <div class="l2 span2">
       <div class="id">1.4.3</div>
       <div class="name">Service Specification Lifecycle Management</div>
+      <div class="l2-desc">Project-driven introduction-to-retirement of new service classes; Test catalogue</div>
       <div class="badges"><span class="badge lineage">R20.5 lineage</span><span class="badge cross">v24.0 rename</span></div>
       <div class="anchor">cap-service-specification-lifecycle</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Test catalogue development &amp; retirement</div>
+          <div class="h5-desc">Specify each Service Test (roles, methods, rules, thresholds); composes Resource Test</div>
           <div class="h5-src">L3 1.4.3.8 (new in v25.5)</div>
           <div class="h5-anchor">cap-service-specification-lifecycle-test</div>
         </div>
         <div class="h5">
           <div class="h5-name">Service end-of-life management</div>
+          <div class="h5-desc">Identify unviable service classes; impacted products / customers; manage exit</div>
           <div class="h5-src">L3 1.4.3.7 (narrative-only, 0 L4s)</div>
           <div class="h5-anchor">cap-service-specification-lifecycle-exit</div>
         </div>
@@ -341,12 +371,14 @@
     <div class="l2">
       <div class="id">1.4.13</div>
       <div class="name">Service Catalog Lifecycle Management</div>
+      <div class="l2-desc">Catalog implementation lifecycle: design → build → policy</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-service-catalog-lifecycle</div>
     </div>
     <div class="l2">
       <div class="id">1.4.17</div>
       <div class="name">Service Anomaly Lifecycle Management</div>
+      <div class="l2-desc">Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-service-anomaly-lifecycle</div>
     </div>
@@ -355,16 +387,19 @@
     <div class="l2 span2">
       <div class="id">1.5.3</div>
       <div class="name">Resource Specification Lifecycle Management</div>
+      <div class="l2-desc">Same — with explicit 4-step Exit decomposition (Resource decommissioning is heavier)</div>
       <div class="badges"><span class="badge lineage">R20.5 lineage</span><span class="badge cross">v24.0 rename</span></div>
       <div class="anchor">cap-resource-specification-lifecycle</div>
       <div class="h5-list">
         <div class="h5">
           <div class="h5-name">Test catalogue development &amp; retirement</div>
+          <div class="h5-desc">Specify each Resource Test; base of cross-PSR test composition stack</div>
           <div class="h5-src">L3 1.5.3.8 (new in v25.5)</div>
           <div class="h5-anchor">cap-resource-specification-lifecycle-test</div>
         </div>
         <div class="h5">
           <div class="h5-name">Resource end-of-life management</div>
+          <div class="h5-desc">Identify unviable resources; impacted customers; transition strategies; manage exit</div>
           <div class="h5-src">L3 1.5.3.7 (4 L4s — PSR-asymmetric depth)</div>
           <div class="h5-anchor">cap-resource-specification-lifecycle-exit</div>
         </div>
@@ -373,12 +408,14 @@
     <div class="l2">
       <div class="id">1.5.15</div>
       <div class="name">Resource Catalog Lifecycle Management</div>
+      <div class="l2-desc">Catalog implementation lifecycle: design → build → policy</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-resource-catalog-lifecycle</div>
     </div>
     <div class="l2">
       <div class="id">1.5.20</div>
       <div class="name">Resource Anomaly Lifecycle Management</div>
+      <div class="l2-desc">Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)</div>
       <div class="badges"><span class="badge">net-new v25.5</span></div>
       <div class="anchor">cap-resource-anomaly-lifecycle</div>
     </div>
