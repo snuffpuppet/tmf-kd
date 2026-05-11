@@ -173,11 +173,16 @@ Files in [`diagrams/`](diagrams/) (regenerable via `diagrams/render.sh`):
 - **[capability-map-s2r.png](diagrams/capability-map-s2r.png)** — 1800×1200 @ 2× DPI, for screen / embedding (rendered above)
 - **[capability-map-s2r.html](diagrams/capability-map-s2r.html)** — source HTML; edit + re-render to iterate
 
-**Combined view** — both Lifecycle Areas (this page + sister-page Operations area in one diagram, all 47 anchors visible together; useful when you want to see cross-Lifecycle composability — Test row / Anomaly pair / Catalog 4-L2 — in a single glance):
+**Combined view** — both Lifecycle Areas (this page + sister-page Operations area in one diagram, all 47 anchors visible together; useful when you want to see cross-Lifecycle composability — Test row / Anomaly pair / Catalog 4-L2 — in a single glance). Two layouts available:
 
-- [capability-map-combined.pdf](diagrams/capability-map-combined.pdf) — A2 landscape
-- [capability-map-combined.png](diagrams/capability-map-combined.png)
-- [capability-map-combined.html](diagrams/capability-map-combined.html)
+- **Combined (areas stacked)** — verticals down the side; S2R block above Operations block. The original combined layout.
+    - [capability-map-combined.pdf](diagrams/capability-map-combined.pdf) — A2 landscape
+    - [capability-map-combined.png](diagrams/capability-map-combined.png)
+    - [capability-map-combined.html](diagrams/capability-map-combined.html)
+- **Combined (roadmap layout)** — verticals across the top (Strategy → Capability → BVD → ORS → Fulfillment → Assurance → Billing reads as the OSS modernisation roadmap); domains down the side (Service above Resource for direct PSR-pair comparison per vertical). All 47 anchors in a single 2-row × 7-column grid.
+    - [capability-map-roadmap.pdf](diagrams/capability-map-roadmap.pdf) — A2 landscape
+    - [capability-map-roadmap.png](diagrams/capability-map-roadmap.png)
+    - [capability-map-roadmap.html](diagrams/capability-map-roadmap.html)
 
 **Operations-area sister render** — [capability-map.pdf](diagrams/capability-map.pdf) · [capability-map.png](diagrams/capability-map.png) · [capability-map.html](diagrams/capability-map.html).
 

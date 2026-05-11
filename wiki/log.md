@@ -2434,3 +2434,26 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Cross-page consistency.** Same color palette, same description data, same anchor IDs as the HTML renders — practitioners overlaying heat-map data against the .drawio see the same cells they'd see in the HTML/PDF/PNG versions.
     - **Pending decisions:** none.
     - **Next action:** _(none from this iteration. If the user wants the .drawio re-rendered to PNG/PDF as a default static export — separate from the HTML-driven renders — `drawio --export --format png --page-index N capability-map.drawio` produces it on demand.)_
+
+---
+
+## 2026-05-12T18:00Z — DIAGRAMS — Roadmap layout: vertical-major combined view (verticals across top, domains down side)
+
+- **File(s):** none ingested. Derivative visual artefact.
+- **Pages created/updated:**
+    - **NEW** `wiki/views/diagrams/capability-map-roadmap.html` — alternative layout for the combined capability map. Same 47 anchors as `capability-map-combined.html` but with axes transposed: 7 vertical columns across the top (3 S2R + 4 Operations); 2 domain rows down the left (Service / Resource). Lifecycle Area band labels span the appropriate column ranges above the column headers. Reads left-to-right as the OSS modernisation roadmap progression (Strategy → Capability → BVD → ORS → Fulfillment → Assurance → Billing) and top-to-bottom as the PSR pair (Service above Resource). A2 landscape page size.
+    - **NEW** `wiki/views/diagrams/capability-map-roadmap.{pdf,png}` — rendered outputs (A2 landscape; 440 KB / 1.3 MB).
+    - `wiki/views/diagrams/render.sh` — `TARGETS` array extended with `capability-map-roadmap 2400 1500` so the roadmap render regenerates with the rest.
+    - `wiki/views/capability-map-s2r.md` — Visual exports section's combined-view entry restructured to list both layouts (areas-stacked + roadmap) as siblings.
+    - `wiki/views/capability-map.md` — same restructuring in parallel.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Layout choice and rationale.** The original combined view places verticals as rows (down the side) and stacks the two Lifecycle Areas as separate matrix blocks. The roadmap layout transposes — verticals as columns (across the top), all 7 verticals in one row of column headers separated by Lifecycle Area band labels. This is the canonical "L1 Frame for OSS Layer" arrangement: Service capabilities sit directly above their Resource peers in the same vertical, making PSR-pair comparison the dominant visual axis; left-to-right reading naturally maps to the modernisation roadmap progression.
+    - **Both layouts kept available.** They serve different reading purposes — the original is better for "show me everything in one Lifecycle Area" (each area is a discrete block); the roadmap is better for "show me PSR symmetry per vertical" and "trace a capability's lifecycle progression". Heat-map overlays apply equally to either layout because the underlying anchor IDs are identical (47 stable IDs unchanged).
+    - **L2 stacking within cells.** Each (domain, vertical) intersection cell stacks its L2s vertically. This handles the variable L2 density per cell uniformly — Strategy and Fulfillment cells have 1 L2 each; Capability Mgmt cells have 4 L2s; ORS cells have 3 (Service) or 4 (Resource). The 2-column packing used in the original combined view doesn't transfer cleanly to a 7-column wide layout (would create excessive horizontal pressure).
+    - **Cell background tint by Lifecycle Area** — light blue for S2R cells, light green for Operations cells. L2 box borders also color-coded by area. Lets a reader scanning across a row immediately see where the area boundary crosses (between BVD and ORS columns).
+    - **Roadmap-reading footer.** Footer carries explicit "read it like a roadmap" guidance — left-to-right is the OSS modernisation Lifecycle progression; top-to-bottom is PSR-paired comparison. Practitioners unfamiliar with the layout convention get the framing immediately.
+    - **Pending decisions:** none.
+    - **Next action:** _(none unless user wants the roadmap layout added as a 4th page in `capability-map.drawio` — the .drawio file currently has 3 pages matching the original combined layout's structure. Adding a vertical-major page would require ~150 lines of additional layout code in `_build_drawio.py`. Worth doing if the user prefers this layout for editing.)_
