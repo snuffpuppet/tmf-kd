@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T06:14:00.000Z" version="22.0.0" type="device">
+<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T06:21:02.000Z" version="22.0.0" type="device">
   <diagram id="S2R-area" name="S2R area">
     <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1190" math="0" shadow="0" background="#FFFFFF">
       <root>
@@ -11,12 +11,10 @@
         <mxCell id="3" value="GB921 v25.5  ·  Service + Resource Domains × Strategy / Capability Mgmt / BVD verticals  ·  22 stable heat-map anchors (16 L2 + 6 H5)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#555;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="30" y="60" width="1620" height="18" as="geometry"/>
         </mxCell>
-        <mxCell id="4" value="SERVICE DOMAIN
-GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="4" value="SERVICE DOMAIN&#10;GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="90" width="720" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="5" value="RESOURCE DOMAIN
-GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="5" value="RESOURCE DOMAIN&#10;GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="870" y="90" width="720" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="6" value="STRATEGY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
@@ -372,12 +370,10 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strok
         <mxCell id="3" value="GB921 v25.5  ·  Service + Resource Domains × OFAB verticals  ·  25 stable heat-map anchors (17 L2 + 8 H5)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#555;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="30" y="60" width="1620" height="18" as="geometry"/>
         </mxCell>
-        <mxCell id="4" value="SERVICE DOMAIN
-GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="4" value="SERVICE DOMAIN&#10;GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="90" width="720" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="5" value="RESOURCE DOMAIN
-GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="5" value="RESOURCE DOMAIN&#10;GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="870" y="90" width="720" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="6" value="ORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
@@ -784,12 +780,10 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strok
         <mxCell id="4" value="  STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=12;fontColor=#FFFFFF;align=left;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="90" width="1620" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="5" value="SERVICE DOMAIN
-GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="5" value="SERVICE DOMAIN&#10;GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="120" width="720" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="6" value="RESOURCE DOMAIN
-GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="6" value="RESOURCE DOMAIN&#10;GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="870" y="120" width="720" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="7" value="STRATEGY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
@@ -1134,12 +1128,10 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strok
         <mxCell id="120" value="  OPERATIONS LIFECYCLE AREA — day-to-day customer operations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=12;fontColor=#FFFFFF;align=left;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="907" width="1620" height="26" as="geometry"/>
         </mxCell>
-        <mxCell id="121" value="SERVICE DOMAIN
-GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="121" value="SERVICE DOMAIN&#10;GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="130" y="937" width="720" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="122" value="RESOURCE DOMAIN
-GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="122" value="RESOURCE DOMAIN&#10;GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="870" y="937" width="720" height="50" as="geometry"/>
         </mxCell>
         <mxCell id="123" value="ORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
@@ -1549,53 +1541,31 @@ GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strok
         <mxCell id="5" value="OPERATIONS LIFECYCLE AREA — day-to-day customer operations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1103" y="90" width="1216" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="6" value="STRATEGY MANAGEMENT
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="6" value="STRATEGY MANAGEMENT&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="182" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="7" value="CAPABILITY MANAGEMENT
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="7" value="CAPABILITY MANAGEMENT&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="489" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="8" value="BUSINESS VALUE DEVELOPMENT
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="8" value="BUSINESS VALUE DEVELOPMENT&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="796" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="9" value="OPERATIONS READINESS &amp; SUPPORT
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="9" value="OPERATIONS READINESS &amp; SUPPORT&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1103" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="10" value="FULFILLMENT
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="10" value="FULFILLMENT&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1410" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="11" value="ASSURANCE
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="11" value="ASSURANCE&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="1717" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="12" value="BILLING
-GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="12" value="BILLING&#10;GB991 §1.1.2.2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="2024" y="124" width="295" height="56" as="geometry"/>
         </mxCell>
-        <mxCell id="13" value="SERVICE
-DOMAIN
-
-GB991 §1.1.1.5
-
-&quot;What is sold&quot;
-— services realizing
-Product offerings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#444444;strokeColor=#444444;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="13" value="SERVICE DOMAIN&#10;&#10;GB991 §1.1.1.5&#10;&#10;&quot;What is sold&quot; — services realizing Product offerings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#444444;strokeColor=#444444;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="184" width="140" height="460" as="geometry"/>
         </mxCell>
-        <mxCell id="14" value="RESOURCE
-DOMAIN
-
-GB991 §1.1.1.6
-
-&quot;What runs
-underneath&quot;
-— infrastructure
-realizing Services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#444444;strokeColor=#444444;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="14" value="RESOURCE DOMAIN&#10;&#10;GB991 §1.1.1.6&#10;&#10;&quot;What runs underneath&quot; — infrastructure realizing Services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#444444;strokeColor=#444444;fontSize=12;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="30" y="656" width="140" height="619" as="geometry"/>
         </mxCell>
         <mxCell id="15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
