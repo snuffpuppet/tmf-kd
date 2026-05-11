@@ -2408,3 +2408,29 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **No CLAUDE.md amendment needed.** Diagrams are derivative output, not corpus content per CLAUDE.md §2 (corpus content = `raw/` + `wiki/`-as-source-derivative; the diagrams are derivative-of-derivative). No new authority statements; no new TMF facts; no new trilateral linking. The existing CLAUDE.md §13 Obsidian conventions cover the inline-image + markdown-link choices.
     - **Pending decisions:** none.
     - **Next action:** _(none unless user wants iteration on the visualisation — alternative color schemes, SVG connector lines, additional viewport sizes for specific use cases, etc.)_
+
+---
+
+## 2026-05-12T17:00Z — DIAGRAMS — Editable draw.io source for all three capability maps
+
+- **File(s):** none ingested. Derivative visual artefact + generator script.
+- **Pages created/updated:**
+    - **NEW** `wiki/views/diagrams/capability-map.drawio` — single multi-page draw.io file (3 pages: S2R / Operations / Combined) covering all 47 stable heat-map anchors. 506 mxCell elements; structurally validated (zero broken parent references). Verified via `drawio --export --format png` for all three pages.
+    - **NEW** `wiki/views/diagrams/_build_drawio.py` — generator script. Same description data as the HTML renders (L2 + H5 names, descriptions, anchors). Emits valid mxGraph XML using standard draw.io shapes only — rounded rectangles + plain text labels + container groups (`container=1` on L2 boxes so H5s nest visually and move with their parent). No external shape libraries required; opens in any draw.io install.
+    - `wiki/views/capability-map.md` — `## Visual exports` section extended with **Editable draw.io source** entry pointing to the new `.drawio` file + generator script.
+    - `wiki/views/capability-map-s2r.md` — same addition in parallel position.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Standard-shapes-only constraint.** The user request was specifically for shapes available in a typical draw.io install — no custom shape libraries. Implemented using:
+        - Plain rounded rectangles (`rounded=0;whiteSpace=wrap;html=1`) for L2 + H5 boxes and matrix cells.
+        - Plain text labels (`text;html=1;strokeColor=none;fillColor=none`) for titles, descriptions, anchor IDs.
+        - Container styling (`container=1;collapsible=0`) on L2 boxes so H5 sub-capabilities nest visually inside their parent and move together when the L2 is repositioned.
+        - Rotated text (`rotation=-90`) for vertical row labels.
+        - All shapes are part of the default draw.io General library — no plugins or custom libraries required.
+    - **Editable vs presentation-quality split.** The HTML/PDF/PNG renders are presentation/print artefacts (fixed layout); the `.drawio` file is the editable source. The two are deliberately not auto-synced — practitioners using the .drawio for stakeholder slides will likely re-position cells, recolor for emphasis, or add annotation arrows that don't belong in the wiki's canonical view.
+    - **Page sizes match the HTML renders.** S2R = A3 landscape (1684×1190 pt); Operations = A3 landscape extended to 1400 pt height to fit the 4 OFAB rows + dense Resource Support H5 cluster; Combined = A2 landscape (2384×1684 pt).
+    - **Cross-page consistency.** Same color palette, same description data, same anchor IDs as the HTML renders — practitioners overlaying heat-map data against the .drawio see the same cells they'd see in the HTML/PDF/PNG versions.
+    - **Pending decisions:** none.
+    - **Next action:** _(none from this iteration. If the user wants the .drawio re-rendered to PNG/PDF as a default static export — separate from the HTML-driven renders — `drawio --export --format png --page-index N capability-map.drawio` produces it on demand.)_

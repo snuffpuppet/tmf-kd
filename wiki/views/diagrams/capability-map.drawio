@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="capability-map-generator" agent="python-build_drawio.py" modified="2026-05-11T05:46:34.000Z" version="22.0.0" type="device">
+  <diagram id="S2R-area" name="S2R area">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1190" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Capability Map  —  Strategy-to-Readiness Lifecycle Area" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#1F3B6B;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="1620" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="GB921 v25.5  ·  Service + Resource Domains × Strategy / Capability Mgmt / BVD verticals  ·  22 stable heat-map anchors (16 L2 + 6 H5)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#555;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="1620" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="SERVICE DOMAIN
+GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="RESOURCE DOMAIN
+GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="90" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="STRATEGY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="155" width="80" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="155" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="155" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="7">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="1.4.1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="9">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="Service Strategy Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="9">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="Annual and multi-year strategic plans for services and service directions" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="9">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="9">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="Test management strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="13">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="Define test types per business activity; analyze test quality offline" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="13">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="L3 1.4.1.8 + 1.4.1.9  —  cap-service-strategy-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="13">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="cap-service-strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="9">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="1.5.1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="18">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="Resource Strategy Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="18">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="Annual and multi-year resource strategies; v25.5 carries AI-readiness guidance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="18">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="18">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="Test management strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="22">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="Define test types per business activity; analyze test quality offline" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="22">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="L3 1.5.1.8 + 1.5.1.9  —  cap-resource-strategy-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="22">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="cap-resource-strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="18">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="CAPABILITY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="312" width="80" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="312" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="312" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="28">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="1.4.2" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="30">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="Service Capability Delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="30">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="Plan and deliver new and enhanced service capabilities (project-driven)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="30">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="cap-service-capability-delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="30">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="28">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="1.4.12" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="35">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="Service Capacity Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="35">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="Plan / forecast / optimize service capacity vs SLA / SLO / SLR" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="35">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="cap-service-capacity" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="35">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="28">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="1.4.16" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="40">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="Service Catalog Planning Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="40">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="Design the catalog scheme; define the Service Catalog Specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="40">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="44" value="cap-service-catalog-planning" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="40">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="45" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="28">
+          <mxGeometry x="367" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="46" value="1.4.19" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="45">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="47" value="Service Specification Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="45">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="Describe / model / analyze service specification artefacts (ongoing maintenance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="45">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="49" value="cap-service-specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="45">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="1.5.2" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="50">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="Resource Capability Delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="50">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="Deploy new and enhanced technology and resources; logical and physical" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="50">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" value="cap-resource-capability-delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="50">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="55" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="1.5.14" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="55">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="Resource Capacity Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="55">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="58" value="Plan / forecast / optimize resource capacity vs business objectives" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="55">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="59" value="cap-resource-capacity" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="55">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="60" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="61" value="1.5.18" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="60">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="62" value="Resource Catalog Planning Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="60">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="63" value="Design the catalog scheme; define the Resource Catalog Specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="60">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="64" value="cap-resource-catalog-planning" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="60">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="65" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="367" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="66" value="1.5.19" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="65">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="67" value="Resource Specification Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="65">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="68" value="Develop / master / analyze + version Resource Specifications (ongoing maintenance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="65">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="69" value="cap-resource-specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="65">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="70" value="BVD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="546" width="80" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="546" width="720" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="546" width="720" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="71">
+          <mxGeometry x="12" y="12" width="340" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="74" value="1.4.3" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="73">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="75" value="Service Specification Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="73">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="76" value="Project-driven introduction-to-retirement of new service classes; Test catalogue" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="73">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="77" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="78" value="Test catalogue dev &amp; retirement" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="77">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="79" value="Specify each Service Test (roles, methods, rules, thresholds); composes Resource Test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="77">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="80" value="L3 1.4.3.8 (new in v25.5)  —  cap-service-specification-lifecycle-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="77">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="81" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="82" value="Service end-of-life management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="81">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="83" value="Identify unviable service classes; impacted products / customers; manage exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="81">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="84" value="L3 1.4.3.7 (narrative-only)  —  cap-service-specification-lifecycle-exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="81">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="85" value="cap-service-specification-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="73">
+          <mxGeometry x="6" y="158" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="86" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="71">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="87" value="1.4.13" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="86">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="88" value="Service Catalog Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="86">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="89" value="Catalog implementation lifecycle: design → build → policy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="86">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="90" value="cap-service-catalog-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="86">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="91" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="71">
+          <mxGeometry x="12" y="199" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="92" value="1.4.17" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="91">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="93" value="Service Anomaly Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="91">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="94" value="Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="91">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="95" value="cap-service-anomaly-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="91">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="96" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="12" y="12" width="340" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="97" value="1.5.3" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="96">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="98" value="Resource Specification Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="96">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="99" value="Same — with explicit 4-step Exit decomposition (Resource decommissioning is heavier)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="96">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="96">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" value="Test catalogue dev &amp; retirement" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="100">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" value="Specify each Resource Test; base of cross-PSR test composition stack" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="100">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" value="L3 1.5.3.8 (new in v25.5)  —  cap-resource-specification-lifecycle-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="100">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="104" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="96">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="105" value="Resource end-of-life management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="104">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="106" value="Identify unviable resources; impacted customers; transition strategies; manage exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="104">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="107" value="L3 1.5.3.7 (4 L4s — PSR-asymm)  —  cap-resource-specification-lifecycle-exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="104">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="108" value="cap-resource-specification-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="96">
+          <mxGeometry x="6" y="158" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="109" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="110" value="1.5.15" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="109">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="111" value="Resource Catalog Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="109">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="112" value="Catalog implementation lifecycle: design → build → policy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="109">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="113" value="cap-resource-catalog-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="109">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="114" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="12" y="199" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="115" value="1.5.20" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="114">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="116" value="Resource Anomaly Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="114">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="117" value="Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="114">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="118" value="cap-resource-anomaly-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="114">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Operations-area" name="Operations area">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1684" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Capability Map  —  Operations Lifecycle Area" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#1A5F4A;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="1620" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="GB921 v25.5  ·  Service + Resource Domains × OFAB verticals  ·  25 stable heat-map anchors (17 L2 + 8 H5)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#555;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="1620" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="SERVICE DOMAIN
+GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="RESOURCE DOMAIN
+GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="90" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="ORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="155" width="80" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="155" width="720" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="155" width="720" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="7">
+          <mxGeometry x="12" y="12" width="340" height="226" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="1.4.4" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="9">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="Service Support Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="9">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="Operational substrate for all Service FAB processes" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="9">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="9">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="Security &amp; risk responsibilities" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="13">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="Vulnerability mgmt, threat assessments, risk assessments + mitigation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="13">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="L2 responsibilities block  —  cap-service-support-security" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="13">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="9">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Inventory management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="17">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="Manage Service Inventory DB + processes; audit; track; identify issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="17">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="L3 1.4.4.1 (4 L4s)  —  cap-service-support-inventory" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="17">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="9">
+          <mxGeometry x="6" y="164" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="Test management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="21">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="Execute end-to-end service tests; orchestrate Product + Resource test composition" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="21">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="L3 1.4.4.6  —  cap-service-support-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="21">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="cap-service-support" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="9">
+          <mxGeometry x="6" y="212" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="7">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="1.4.14" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="26">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="Service Catalog — Operational Readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="26">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="Operate the Service Catalog as a production service" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="26">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="cap-service-catalog-operational-readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="26">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="7">
+          <mxGeometry x="12" y="253" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="1.4.15" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="31">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="Service Catalog — Content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="31">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="Manage what's in the published Service Catalog" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="31">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="cap-service-catalog-content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="31">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="12" y="12" width="340" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="1.5.4" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="36">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="Resource Support Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="36">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="Operational substrate for all Resource FAB; workforce establishment lives here" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="36">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="36">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="Security &amp; risk responsibilities" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="40">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="Vulnerability mgmt, threat assessments, risk assessments + mitigation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="40">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="L2 responsibilities block  —  cap-resource-support-security" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="40">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="44" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="36">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="45" value="Workforce management (establishment)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="44">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="46" value="Manage field workforce roster, skills, training (establishment side)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="44">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="47" value="L3 1.5.4.8 Manage Field Workforce  —  cap-resource-support-workforce" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="44">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="36">
+          <mxGeometry x="6" y="164" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="49" value="Inventory management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="48">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" value="Manage Resource Inventory DB + processes; track; identify issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="48">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="L3 1.5.4.5 (3 L4s — PSR-asymm)  —  cap-resource-support-inventory" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="48">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="36">
+          <mxGeometry x="6" y="218" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="Test management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="52">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" value="Execute end-to-end resource tests; bottom of cross-PSR test composition" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="52">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="55" value="L3 1.5.4.9  —  cap-resource-support-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="52">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="cap-resource-support" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="36">
+          <mxGeometry x="6" y="266" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="58" value="1.5.7*" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="57">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="59" value="Resource Data Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="57">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="60" value="Collect / distribute / manage resource data across all OFAB verticals" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="57">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="61" value="cap-resource-data" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="57">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="62" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="12" y="307" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="63" value="1.5.16" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="62">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="64" value="Resource Catalog — Operational Readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="62">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="65" value="Operate the Resource Catalog as a production service" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="62">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="66" value="cap-resource-catalog-operational-readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="62">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="67" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="367" y="307" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="68" value="1.5.17" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="67">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="69" value="Resource Catalog — Content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="67">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="70" value="Manage what's in the published Resource Catalog" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="67">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="cap-resource-catalog-content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="67">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="FULFILLMENT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="579" width="80" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="579" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="74" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="579" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="75" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="76" value="1.4.5" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="75">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="77" value="Service Activation Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="75">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="78" value="Activate and configure service instances per customer order" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="75">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="79" value="cap-service-activation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="75">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="74">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="81" value="1.5.5*" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="80">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="82" value="Resource Order Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="80">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="83" value="Capture / schedule / allocate resource orders; work-order execution" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="80">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="84" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="80">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="85" value="Workforce-related work orders (execution)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="84">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="86" value="Allocate work orders to field workforce per resource order (execution side)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="84">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="87" value="L3 1.5.5.7 Manage Resource Work Order  —  cap-resource-order-workforce" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="84">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="88" value="cap-resource-order" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="80">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="89" value="ASSURANCE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="736" width="80" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="90" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="736" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="91" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="736" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="92" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="90">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="93" value="1.4.6" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="92">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="94" value="Service Problem Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="92">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="95" value="Restore service; isolate cause of customer-impacting service issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="92">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="96" value="cap-service-problem" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="92">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="97" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="90">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="98" value="1.4.7" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="97">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="99" value="Service Performance Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="97">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="100" value="Monitor / measure / report on service KPIs and SLAs" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="97">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" value="cap-service-performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="97">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="90">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" value="1.4.18" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="102">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="104" value="Service Anomaly Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="102">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="105" value="Predict / detect / assess / mitigate anomalies before they become Problems" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="102">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="106" value="cap-service-anomaly" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="102">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="107" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="91">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="108" value="1.5.8" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="107">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="109" value="Resource Trouble Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="107">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="110" value="Detect / isolate / fix resource faults; convergence for alarms + performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="107">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="111" value="cap-resource-trouble" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="107">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="112" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="91">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="113" value="1.5.9" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="112">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="114" value="Resource Performance Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="112">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="115" value="Monitor / measure / report on resource KPIs" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="112">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="116" value="cap-resource-performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="112">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="117" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="91">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="118" value="1.5.21" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="117">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="119" value="Resource Anomaly Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="117">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="120" value="Predict / detect / assess / mitigate resource anomalies" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="117">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="121" value="cap-resource-anomaly" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="117">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="122" value="BILLING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="970" width="80" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="123" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="970" width="720" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="124" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="970" width="720" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="125" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="123">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="126" value="1.4.8" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="125">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="127" value="Service Guiding &amp; Mediation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="125">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="128" value="Pre-billing mediation of service usage events" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="125">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="129" value="cap-service-guiding-and-mediation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="125">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="130" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="124">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="131" value="1.5.10" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="130">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="132" value="Resource Mediation &amp; Reporting" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="130">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="133" value="Pre-billing mediation of resource usage events" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="130">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="134" value="cap-resource-mediation-and-reporting" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="130">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Combined" name="Combined">
+    <mxGraphModel dx="1700" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2384" pageHeight="1684" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="Combined Capability Map  —  TMF eTOM v25.5 OSS Layer  —  both Lifecycle Areas" style="text;html=1;strokeColor=none;fillColor=none;fontSize=18;fontColor=#1A1A1A;align=left;verticalAlign=middle;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="30" width="1620" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Service + Resource Domains × 7 verticals  ·  47 stable heat-map anchors total (33 L2 + 14 H5)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#555;align=left;verticalAlign=middle;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="1620" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="  STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=12;fontColor=#FFFFFF;align=left;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="1620" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="SERVICE DOMAIN
+GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="RESOURCE DOMAIN
+GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F3B6B;strokeColor=#1F3B6B;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="120" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="STRATEGY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="185" width="80" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="185" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="185" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="8">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="1.4.1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="10">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="Service Strategy Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="10">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="Annual and multi-year strategic plans for services and service directions" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="10">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="10">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="Test management strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="14">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="Define test types per business activity; analyze test quality offline" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="14">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="L3 1.4.1.8 + 1.4.1.9  —  cap-service-strategy-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="14">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="cap-service-strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="10">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="9">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="1.5.1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="19">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="Resource Strategy Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="19">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="Annual and multi-year resource strategies; v25.5 carries AI-readiness guidance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="19">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="19">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="Test management strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="23">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="Define test types per business activity; analyze test quality offline" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="23">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="L3 1.5.1.8 + 1.5.1.9  —  cap-resource-strategy-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="23">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="cap-resource-strategy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="19">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="CAPABILITY MGMT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="342" width="80" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="342" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="342" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="1.4.2" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="31">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="Service Capability Delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="31">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="Plan and deliver new and enhanced service capabilities (project-driven)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="31">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="cap-service-capability-delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="31">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="1.4.12" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="36">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="Service Capacity Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="36">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="Plan / forecast / optimize service capacity vs SLA / SLO / SLR" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="36">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="cap-service-capacity" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="36">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="1.4.16" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="41">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="Service Catalog Planning Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="41">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="44" value="Design the catalog scheme; define the Service Catalog Specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="41">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="45" value="cap-service-catalog-planning" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="41">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="46" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="29">
+          <mxGeometry x="367" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="47" value="1.4.19" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="46">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="Service Specification Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="46">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="49" value="Describe / model / analyze service specification artefacts (ongoing maintenance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="46">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" value="cap-service-specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="46">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="30">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="1.5.2" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="51">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="Resource Capability Delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="51">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" value="Deploy new and enhanced technology and resources; logical and physical" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="51">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="55" value="cap-resource-capability-delivery" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="51">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="30">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="1.5.14" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="56">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="58" value="Resource Capacity Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="56">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="59" value="Plan / forecast / optimize resource capacity vs business objectives" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="56">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="60" value="cap-resource-capacity" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="56">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="61" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="30">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="62" value="1.5.18" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="61">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="63" value="Resource Catalog Planning Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="61">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="64" value="Design the catalog scheme; define the Resource Catalog Specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="61">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="65" value="cap-resource-catalog-planning" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="61">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="66" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="30">
+          <mxGeometry x="367" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="67" value="1.5.19" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="66">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="68" value="Resource Specification Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="66">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="69" value="Develop / master / analyze + version Resource Specifications (ongoing maintenance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="66">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="70" value="cap-resource-specification" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="66">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="71" value="BVD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A5298;strokeColor=#2A5298;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="576" width="80" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="576" width="720" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="73" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F7FB;strokeColor=#2A5298;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="576" width="720" height="301" as="geometry"/>
+        </mxCell>
+        <mxCell id="74" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="12" y="12" width="340" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="75" value="1.4.3" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="74">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="76" value="Service Specification Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="74">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="77" value="Project-driven introduction-to-retirement of new service classes; Test catalogue" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="74">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="78" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="74">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="79" value="Test catalogue dev &amp; retirement" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="78">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="80" value="Specify each Service Test (roles, methods, rules, thresholds); composes Resource Test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="78">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="81" value="L3 1.4.3.8 (new in v25.5)  —  cap-service-specification-lifecycle-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="78">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="82" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="74">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="83" value="Service end-of-life management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="82">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="84" value="Identify unviable service classes; impacted products / customers; manage exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="82">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="85" value="L3 1.4.3.7 (narrative-only)  —  cap-service-specification-lifecycle-exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="82">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="86" value="cap-service-specification-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="74">
+          <mxGeometry x="6" y="158" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="87" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="88" value="1.4.13" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="87">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="89" value="Service Catalog Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="87">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="90" value="Catalog implementation lifecycle: design → build → policy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="87">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="91" value="cap-service-catalog-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="87">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="92" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="72">
+          <mxGeometry x="12" y="199" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="93" value="1.4.17" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="92">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="94" value="Service Anomaly Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="92">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="95" value="Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="92">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="96" value="cap-service-anomaly-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="92">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="97" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="12" y="12" width="340" height="172" as="geometry"/>
+        </mxCell>
+        <mxCell id="98" value="1.5.3" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="97">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="99" value="Resource Specification Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="97">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="100" value="Same — with explicit 4-step Exit decomposition (Resource decommissioning is heavier)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="97">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="97">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="102" value="Test catalogue dev &amp; retirement" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="101">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="103" value="Specify each Resource Test; base of cross-PSR test composition stack" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="101">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="104" value="L3 1.5.3.8 (new in v25.5)  —  cap-resource-specification-lifecycle-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="101">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="105" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="97">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="106" value="Resource end-of-life management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="105">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="107" value="Identify unviable resources; impacted customers; transition strategies; manage exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="105">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="108" value="L3 1.5.3.7 (4 L4s — PSR-asymm)  —  cap-resource-specification-lifecycle-exit" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="105">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="109" value="cap-resource-specification-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="97">
+          <mxGeometry x="6" y="158" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="110" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="111" value="1.5.15" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="110">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="112" value="Resource Catalog Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="110">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="113" value="Catalog implementation lifecycle: design → build → policy" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="110">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="114" value="cap-resource-catalog-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="110">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="115" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="73">
+          <mxGeometry x="12" y="199" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="116" value="1.5.20" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="115">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="117" value="Resource Anomaly Lifecycle Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="115">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="118" value="Define / orchestrate / monitor Anomaly Closed Loops (OODA-anchored governance)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="115">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="119" value="cap-resource-anomaly-lifecycle" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="115">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="120" value="  OPERATIONS LIFECYCLE AREA — day-to-day customer operations" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=12;fontColor=#FFFFFF;align=left;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="907" width="1620" height="26" as="geometry"/>
+        </mxCell>
+        <mxCell id="121" value="SERVICE DOMAIN
+GB991 §1.1.1.5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="937" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="122" value="RESOURCE DOMAIN
+GB991 §1.1.1.6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1A5F4A;strokeColor=#1A5F4A;fontSize=13;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="937" width="720" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="123" value="ORS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1002" width="80" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="124" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1002" width="720" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="125" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1002" width="720" height="409" as="geometry"/>
+        </mxCell>
+        <mxCell id="126" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="124">
+          <mxGeometry x="12" y="12" width="340" height="226" as="geometry"/>
+        </mxCell>
+        <mxCell id="127" value="1.4.4" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="126">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="128" value="Service Support Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="126">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="129" value="Operational substrate for all Service FAB processes" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="126">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="130" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="126">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="131" value="Security &amp; risk responsibilities" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="130">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="132" value="Vulnerability mgmt, threat assessments, risk assessments + mitigation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="130">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="133" value="L2 responsibilities block  —  cap-service-support-security" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="130">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="134" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="126">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="135" value="Inventory management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="134">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="136" value="Manage Service Inventory DB + processes; audit; track; identify issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="134">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="137" value="L3 1.4.4.1 (4 L4s)  —  cap-service-support-inventory" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="134">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="138" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="126">
+          <mxGeometry x="6" y="164" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="139" value="Test management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="138">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="140" value="Execute end-to-end service tests; orchestrate Product + Resource test composition" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="138">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="141" value="L3 1.4.4.6  —  cap-service-support-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="138">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="142" value="cap-service-support" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="126">
+          <mxGeometry x="6" y="212" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="143" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="124">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="144" value="1.4.14" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="143">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="145" value="Service Catalog — Operational Readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="143">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="146" value="Operate the Service Catalog as a production service" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="143">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="147" value="cap-service-catalog-operational-readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="143">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="148" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="124">
+          <mxGeometry x="12" y="253" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="149" value="1.4.15" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="148">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="150" value="Service Catalog — Content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="148">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="151" value="Manage what's in the published Service Catalog" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="148">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="152" value="cap-service-catalog-content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="148">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="153" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="125">
+          <mxGeometry x="12" y="12" width="340" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="154" value="1.5.4" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="153">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="155" value="Resource Support Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="153">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="156" value="Operational substrate for all Resource FAB; workforce establishment lives here" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="153">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="157" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="153">
+          <mxGeometry x="6" y="56" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="158" value="Security &amp; risk responsibilities" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="157">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="159" value="Vulnerability mgmt, threat assessments, risk assessments + mitigation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="157">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="160" value="L2 responsibilities block  —  cap-resource-support-security" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="157">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="161" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="153">
+          <mxGeometry x="6" y="110" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="162" value="Workforce management (establishment)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="161">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="163" value="Manage field workforce roster, skills, training (establishment side)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="161">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="164" value="L3 1.5.4.8 Manage Field Workforce  —  cap-resource-support-workforce" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="161">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="165" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="153">
+          <mxGeometry x="6" y="164" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="166" value="Inventory management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="165">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="167" value="Manage Resource Inventory DB + processes; track; identify issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="165">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="168" value="L3 1.5.4.5 (3 L4s — PSR-asymm)  —  cap-resource-support-inventory" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="165">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="169" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="153">
+          <mxGeometry x="6" y="218" width="328" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="170" value="Test management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="169">
+          <mxGeometry x="4" y="2" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="171" value="Execute end-to-end resource tests; bottom of cross-PSR test composition" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="169">
+          <mxGeometry x="4" y="16" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="172" value="L3 1.5.4.9  —  cap-resource-support-test" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="169">
+          <mxGeometry x="4" y="32" width="320" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="173" value="cap-resource-support" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="153">
+          <mxGeometry x="6" y="266" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="174" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="125">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="175" value="1.5.7*" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="174">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="176" value="Resource Data Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="174">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="177" value="Collect / distribute / manage resource data across all OFAB verticals" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="174">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="178" value="cap-resource-data" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="174">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="179" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="125">
+          <mxGeometry x="12" y="307" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="180" value="1.5.16" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="179">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="181" value="Resource Catalog — Operational Readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="179">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="182" value="Operate the Resource Catalog as a production service" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="179">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="183" value="cap-resource-catalog-operational-readiness" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="179">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="184" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="125">
+          <mxGeometry x="367" y="307" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="185" value="1.5.17" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="184">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="186" value="Resource Catalog — Content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="184">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="187" value="Manage what's in the published Resource Catalog" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="184">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="188" value="cap-resource-catalog-content" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="184">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="189" value="FULFILLMENT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1426" width="80" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="190" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1426" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="191" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1426" width="720" height="142" as="geometry"/>
+        </mxCell>
+        <mxCell id="192" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="190">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="193" value="1.4.5" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="192">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="194" value="Service Activation Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="192">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="195" value="Activate and configure service instances per customer order" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="192">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="196" value="cap-service-activation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="192">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="197" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="191">
+          <mxGeometry x="12" y="12" width="696" height="118" as="geometry"/>
+        </mxCell>
+        <mxCell id="198" value="1.5.5*" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="197">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="199" value="Resource Order Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="197">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="200" value="Capture / schedule / allocate resource orders; work-order execution" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="197">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="201" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7D6;strokeColor=#D8B860;fontSize=8;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="197">
+          <mxGeometry x="6" y="56" width="684" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="202" value="Workforce-related work orders (execution)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="201">
+          <mxGeometry x="4" y="2" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="203" value="Allocate work orders to field workforce per resource order (execution side)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#6A4810;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="201">
+          <mxGeometry x="4" y="16" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="204" value="L3 1.5.5.7 Manage Resource Work Order  —  cap-resource-order-workforce" style="text;html=1;strokeColor=none;fillColor=none;fontSize=6;fontColor=#999999;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="201">
+          <mxGeometry x="4" y="32" width="676" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="205" value="cap-resource-order" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="197">
+          <mxGeometry x="6" y="104" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="206" value="ASSURANCE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1583" width="80" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="207" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1583" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="208" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1583" width="720" height="219" as="geometry"/>
+        </mxCell>
+        <mxCell id="209" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="207">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="210" value="1.4.6" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="209">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="211" value="Service Problem Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="209">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="212" value="Restore service; isolate cause of customer-impacting service issues" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="209">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="213" value="cap-service-problem" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="209">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="214" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="207">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="215" value="1.4.7" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="214">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="216" value="Service Performance Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="214">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="217" value="Monitor / measure / report on service KPIs and SLAs" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="214">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="218" value="cap-service-performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="214">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="219" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="207">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="220" value="1.4.18" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="219">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="221" value="Service Anomaly Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="219">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="222" value="Predict / detect / assess / mitigate anomalies before they become Problems" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="219">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="223" value="cap-service-anomaly" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="219">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="224" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="208">
+          <mxGeometry x="12" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="225" value="1.5.8" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="224">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="226" value="Resource Trouble Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="224">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="227" value="Detect / isolate / fix resource faults; convergence for alarms + performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="224">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="228" value="cap-resource-trouble" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="224">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="229" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="208">
+          <mxGeometry x="367" y="12" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="230" value="1.5.9" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="229">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="231" value="Resource Performance Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="229">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="232" value="Monitor / measure / report on resource KPIs" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="229">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="233" value="cap-resource-performance" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="229">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="234" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="208">
+          <mxGeometry x="12" y="117" width="340" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="235" value="1.5.21" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="234">
+          <mxGeometry x="6" y="4" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="236" value="Resource Anomaly Management" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="234">
+          <mxGeometry x="6" y="18" width="328" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="237" value="Predict / detect / assess / mitigate resource anomalies" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="234">
+          <mxGeometry x="6" y="36" width="328" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="238" value="cap-resource-anomaly" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="234">
+          <mxGeometry x="6" y="76" width="328" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="239" value="BILLING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2A8268;strokeColor=#2A8268;fontSize=11;fontColor=#FFFFFF;align=center;verticalAlign=middle;fontStyle=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1817" width="80" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="240" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="1817" width="720" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="241" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F4FAF7;strokeColor=#2A8268;fontSize=8;fontColor=#1A1A1A;align=center;verticalAlign=middle;container=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1817" width="720" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="242" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="240">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="243" value="1.4.8" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="242">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="244" value="Service Guiding &amp; Mediation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="242">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="245" value="Pre-billing mediation of service usage events" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="242">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="246" value="cap-service-guiding-and-mediation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="242">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+        <mxCell id="247" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2A5298;fontSize=10;fontColor=#1A1A1A;align=left;verticalAlign=top;container=1;collapsible=0;" vertex="1" parent="241">
+          <mxGeometry x="12" y="12" width="696" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="248" value="1.5.10" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#2A5298;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="247">
+          <mxGeometry x="6" y="4" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="249" value="Resource Mediation &amp; Reporting" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;fontColor=#1A1A1A;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=1;" vertex="1" parent="247">
+          <mxGeometry x="6" y="18" width="684" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="250" value="Pre-billing mediation of resource usage events" style="text;html=1;strokeColor=none;fillColor=none;fontSize=8;fontColor=#555555;align=left;verticalAlign=top;whiteSpace=wrap;fontStyle=2;" vertex="1" parent="247">
+          <mxGeometry x="6" y="36" width="684" height="14" as="geometry"/>
+        </mxCell>
+        <mxCell id="251" value="cap-resource-mediation-and-reporting" style="text;html=1;strokeColor=none;fillColor=none;fontSize=7;fontColor=#888888;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="247">
+          <mxGeometry x="6" y="76" width="684" height="12" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

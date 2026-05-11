@@ -187,6 +187,8 @@ Files in [`diagrams/`](diagrams/) (regenerable via `diagrams/render.sh`):
 
 **S2R-area sister render** — [capability-map-s2r.pdf](diagrams/capability-map-s2r.pdf) · [capability-map-s2r.png](diagrams/capability-map-s2r.png) · [capability-map-s2r.html](diagrams/capability-map-s2r.html).
 
+**Editable draw.io source** — [capability-map.drawio](diagrams/capability-map.drawio) — a single multi-page draw.io file with all three diagrams (S2R / Operations / Combined) rendered using only standard draw.io shapes (rounded rectangles + text labels + container groups) so it opens in any draw.io install without external libraries. Useful when you want to manually re-position, recolor, or annotate cells for stakeholder presentations. Generator: [`_build_drawio.py`](diagrams/_build_drawio.py); same description data as the HTML renders.
+
 The diagram renders are derivative artefacts of this view page; they do not add new TMF facts. For normative claims, follow the wikilinks from individual capability anchors (below) to source pages.
 
 ## Service Domain — L2 Capabilities (in scope)
