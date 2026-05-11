@@ -833,24 +833,25 @@ def build_roadmap_page(idgen):
     note_h = 22
     note_gap = 8  # gap between matrix bottom and note; matched gap below to footer
     note_y = footer_y - note_gap - note_h
-    note_text = ("    ⓘ   *  L2 spans multiple verticals — placed under primary vertical only.    "
+    note_text = ("ⓘ   *  L2 spans multiple verticals — placed under primary vertical only.    "
                  "1.5.5  Resource Order Management:  Fulfillment + Operations Readiness & Support.    "
                  "1.5.7  Resource Data Management:  all four OFAB verticals.")
+    bar_w = 4
     note_style = (
         "rounded=0;whiteSpace=wrap;html=1;"
         "fillColor=#EEF2F7;strokeColor=#C8D4E0;"
         "strokeWidth=1;"
         "fontSize=9;fontColor=#3A4A5E;fontStyle=2;"  # italic
         "align=left;verticalAlign=middle;"
-        # Thick left border in note-blue acts as the "info callout" indicator
+        "spacingLeft=12;"  # internal padding so the icon doesn't sit flush against the bar
         "shadow=0;"
     )
+    # Note text cell — starts AFTER the blue bar so they never overlap
     out.append(cell(next(idgen), note_text,
-                    margin, note_y, body_w, note_h, note_style))
-    # Thick left bar (acts as the note-callout indicator), placed on top of the
-    # note's left edge as a separate cell so the box's own stroke stays subtle.
+                    margin + bar_w, note_y, body_w - bar_w, note_h, note_style))
+    # Thick left bar (acts as the note-callout indicator)
     out.append(cell(next(idgen), "",
-                    margin, note_y, 4, note_h,
+                    margin, note_y, bar_w, note_h,
                     "rounded=0;whiteSpace=wrap;html=1;"
                     "fillColor=#5BB6E8;strokeColor=#5BB6E8;"))
 

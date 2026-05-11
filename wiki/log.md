@@ -2650,3 +2650,11 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **HTML/PDF/PNG renders unchanged.** The decision to drop the other pages applies only to the .drawio file. The HTML-driven exports (`capability-map.{html,pdf,png}`, `capability-map-s2r.{html,pdf,png}`, `capability-map-combined.{html,pdf,png}`) still render the per-area views. The Visual exports section on the view pages still links to all of them.
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T23:15Z — DIAGRAMS — Note callout: separate bar and text cells with spacingLeft
+
+- **Pages updated:** `wiki/views/diagrams/_build_drawio.py` — note cell now starts at `x = margin + bar_w` (after the blue bar) rather than overlapping it; added `spacingLeft=12` internal padding so the ⓘ icon has breathing room from the bar's right edge. `wiki/views/diagrams/capability-map.drawio` regenerated.
+- **Lint result:** PASS — see lint following.
+- **Notes:** User reported the ⓘ icon was visually touching the blue left-edge bar. Was caused by both cells starting at the same `x = margin` — the blue bar overlaid the note's left padding area. Now bar and text are non-overlapping cells; `spacingLeft` controls the icon-to-bar gap precisely.
