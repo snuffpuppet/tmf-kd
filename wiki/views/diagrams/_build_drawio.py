@@ -744,11 +744,10 @@ FOOTER_CONTENT_BG = "#FFFFFF"
 FOOTER_BORDER = "#A0A0A0"
 
 
-def emit_footer(idgen, x, y, w, h, fields, legend=None):
-    """Emit a single-row footer strip: dark filler on the left (optionally
-    carrying a small legend note in white text), then alternating blue label +
-    white content cells for each (label, value) tuple in fields.
-    Returns the XML string."""
+def emit_footer(idgen, x, y, w, h, fields):
+    """Emit a single-row footer strip: dark filler on the left (purely visual,
+    no text), then alternating blue label + white content cells for each
+    (label, value) tuple in fields. Returns the XML string."""
     out = []
     label_w = 80
     content_w = 130
@@ -760,13 +759,11 @@ def emit_footer(idgen, x, y, w, h, fields, legend=None):
         filler_w = 0  # safety; would mean too many pairs for the width
 
     cur_x = x
-    # Dark filler (left) — carries an optional legend note
+    # Dark filler (left) — visual delimiter only, no text
     if filler_w > 0:
-        out.append(cell(next(idgen), legend or "",
+        out.append(cell(next(idgen), "",
                         cur_x, y, filler_w, h,
-                        style_box(FOOTER_DARK, FOOTER_DARK,
-                                  font_size=8, font_color="#DDDDDD",
-                                  align="left", valign="middle")))
+                        style_box(FOOTER_DARK, FOOTER_DARK, font_size=8)))
         cur_x += filler_w
 
     # Label + content pairs
@@ -813,12 +810,12 @@ def build_roadmap_page(idgen):
 
     # Matrix
     matrix_y = margin + 42
-    grid_xml, _, _ = emit_grid_roadmap(idgen,
-                                       x_start=margin,
-                                       y_start=matrix_y)
+    grid_xml, _, grid_h = emit_grid_roadmap(idgen,
+                                            x_start=margin,
+                                            y_start=matrix_y)
     out.append(grid_xml)
 
-    # Footer at bottom — dark filler carries the asterisk legend
+    # Footer at bottom (positioned absolutely from page bottom)
     footer_h = 26
     footer_y = PAGE_H - margin - footer_h
     fields = [
@@ -827,9 +824,37 @@ def build_roadmap_page(idgen):
         ("Version", "1.0"),
         ("Last Updated", "11 May 2026"),
     ]
-    legend = ("    *  L2 spans multiple verticals, placed under primary vertical  "
-              "—  1.5.5: Fulfillment + ORS  |  1.5.7: all four OFAB verticals")
-    out.append(emit_footer(idgen, margin, footer_y, body_w, footer_h, fields, legend=legend))
+    out.append(emit_footer(idgen, margin, footer_y, body_w, footer_h, fields))
+
+    # Legend / note strip — sits between the matrix and the footer.
+    # Styled as a callout note: light blue-gray fill + thicker left border
+    # in note-blue so it reads as info-callout, distinct from both the matrix
+    # cells (white with colored borders) and the footer (dark/blue/white bars).
+    note_h = 22
+    note_gap = 8  # gap between matrix bottom and note; matched gap below to footer
+    note_y = footer_y - note_gap - note_h
+    note_text = ("    ⓘ   *  L2 spans multiple verticals — placed under primary vertical only.    "
+                 "1.5.5  Resource Order Management:  Fulfillment + Operations Readiness & Support.    "
+                 "1.5.7  Resource Data Management:  all four OFAB verticals.")
+    note_style = (
+        "rounded=0;whiteSpace=wrap;html=1;"
+        "fillColor=#EEF2F7;strokeColor=#C8D4E0;"
+        "strokeWidth=1;"
+        "fontSize=9;fontColor=#3A4A5E;fontStyle=2;"  # italic
+        "align=left;verticalAlign=middle;"
+        # Thick left border in note-blue acts as the "info callout" indicator
+        "shadow=0;"
+    )
+    out.append(cell(next(idgen), note_text,
+                    margin, note_y, body_w, note_h, note_style))
+    # Thick left bar (acts as the note-callout indicator), placed on top of the
+    # note's left edge as a separate cell so the box's own stroke stays subtle.
+    out.append(cell(next(idgen), "",
+                    margin, note_y, 4, note_h,
+                    "rounded=0;whiteSpace=wrap;html=1;"
+                    "fillColor=#5BB6E8;strokeColor=#5BB6E8;"))
+
+    return "\n".join(out)
 
     return "\n".join(out)
 
@@ -839,22 +864,15 @@ def build_roadmap_page(idgen):
 # ----------------------------------------------------------------------
 
 def main():
-    # Build pages with separate ID counters per page
-    # (drawio requires unique IDs only within a page)
-    s2r_body = build_s2r_page(count(2))
-    ops_body = build_ops_page(count(2))
-    comb_body = build_combined_page(count(2))
+    # Single-page output: only the Roadmap page is kept. The previous S2R /
+    # Operations / Combined pages are deprecated — Roadmap covers all 47 anchors
+    # in one A3 landscape view. Wiki source pages still carry the per-area detail.
     road_body = build_roadmap_page(count(2))
 
-    pages = []
-    # Roadmap page — drawio's A3 landscape preset (1654 x 1169 pt) — page 1
-    pages.append(build_page("Roadmap", road_body, 1654, 1169))
-    # S2R page — A3 landscape preset
-    pages.append(build_page("S2R area", s2r_body, 1654, 1169))
-    # Operations page — A3 landscape preset, extended height for dense ORS row
-    pages.append(build_page("Operations area", ops_body, 1654, 1400))
-    # Combined page — A2 landscape preset (2339 x 1654)
-    pages.append(build_page("Combined", comb_body, 2339, 1654))
+    pages = [
+        # Roadmap — drawio's A3 landscape preset (1654 x 1169 pt)
+        build_page("Roadmap", road_body, 1654, 1169),
+    ]
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     xml = (

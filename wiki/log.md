@@ -2631,3 +2631,22 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Other pages still don't carry this legend** — they have asterisks too (Operations and Combined pages render 1.5.5 and 1.5.7 with the same asterisk marker). Could be added there in a follow-up; the HTML renders' footers already explain the asterisk in their separate legend section.
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T23:00Z — DIAGRAMS — Roadmap-only file + asterisk legend repositioned as info-callout note
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        - **`main()` reduced to single-page output.** S2R / Operations / Combined pages dropped from `capability-map.drawio` per user direction (the Roadmap page covers all 47 anchors in a single A3 view; per-area detail still lives on the wiki source pages). File size dropped from ~233 KB → ~70 KB.
+        - **Asterisk legend removed from footer dark filler.** That area is purely visual delimiter per user direction; restored to no-text style.
+        - **Legend strip added between matrix and footer**, styled as an info-callout note: light blue-gray fill (`#EEF2F7`), subtle gray border, italic dark-blue text, with a thick blue (`#5BB6E8`) left-edge bar acting as the "info" indicator. ⓘ icon prefix. Distinct from both the matrix cells (white with colored borders) and the footer (dark filler + blue/white labelled bars).
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated as single-page A3 landscape file.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **HTML/PDF/PNG renders unchanged.** The decision to drop the other pages applies only to the .drawio file. The HTML-driven exports (`capability-map.{html,pdf,png}`, `capability-map-s2r.{html,pdf,png}`, `capability-map-combined.{html,pdf,png}`) still render the per-area views. The Visual exports section on the view pages still links to all of them.
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
