@@ -2658,3 +2658,11 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
 - **Pages updated:** `wiki/views/diagrams/_build_drawio.py` — note cell now starts at `x = margin + bar_w` (after the blue bar) rather than overlapping it; added `spacingLeft=12` internal padding so the ⓘ icon has breathing room from the bar's right edge. `wiki/views/diagrams/capability-map.drawio` regenerated.
 - **Lint result:** PASS — see lint following.
 - **Notes:** User reported the ⓘ icon was visually touching the blue left-edge bar. Was caused by both cells starting at the same `x = margin` — the blue bar overlaid the note's left padding area. Now bar and text are non-overlapping cells; `spacingLeft` controls the icon-to-bar gap precisely.
+
+---
+
+## 2026-05-12T23:30Z — DOCS — Resume prompt for capability-map refinement (relocated to repo root)
+
+- **Pages updated:** Moved `wiki/views/diagrams/RESUME-PROMPT.md` → `CAPABILITY-MAP-RESUME-PROMPT.md` (repo root) — process-management artifact, consistent with `S2R-EXPANSION-SCOPE.md` placement; lives outside `wiki/` so the linter doesn't require corpus-type frontmatter.
+- **Lint result:** PASS — see lint following.
+- **Notes:** Prompt captures orientation steps, the always-export-PDF-and-PNG directive, established design decisions, and workflow conventions. Drop the file content into a fresh session as the opening message to continue capability-map refinement work without re-explaining context.
