@@ -256,8 +256,10 @@ CELL_PADDING = 12
 # ----------------------------------------------------------------------
 
 def cell(id_, value, x, y, w, h, style, parent="1"):
-    """Return an mxCell XML string (vertex). Escapes &, <, > and " in value."""
-    safe_value = escape(value, {'"': "&quot;"})
+    """Return an mxCell XML string (vertex). Escapes &, <, > and " in value.
+    Converts literal \\n to &#10; (XML newline entity) so drawio renders them
+    as line breaks rather than whitespace under html=1 mode."""
+    safe_value = escape(value, {'"': "&quot;"}).replace("\n", "&#10;")
     return (
         f'        <mxCell id="{id_}" value="{safe_value}" '
         f'style="{style}" vertex="1" parent="{parent}">\n'
@@ -630,14 +632,15 @@ def emit_grid_roadmap(idgen, x_start, y_start):
 
     cells_y = hdr_y + ROAD_HDR_H + 4
 
-    # Domain row labels (left edge, span full row height per domain)
+    # Domain row labels (left edge, span full row height per domain).
+    # Three centered lines: domain name, GB991 ref, description.
     dlabel_style = style_box("#444444", "#444444", font_size=12,
                              font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
-                    "SERVICE\nDOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\"\n— services realizing\nProduct offerings",
+                    "SERVICE DOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\" — services realizing Product offerings",
                     x_start, cells_y, ROAD_DOMAIN_LABEL_W, svc_row_h, dlabel_style))
     out.append(cell(next(idgen),
-                    "RESOURCE\nDOMAIN\n\nGB991 §1.1.1.6\n\n\"What runs\nunderneath\"\n— infrastructure\nrealizing Services",
+                    "RESOURCE DOMAIN\n\nGB991 §1.1.1.6\n\n\"What runs underneath\" — infrastructure realizing Services",
                     x_start, cells_y + svc_row_h + ROAD_CELL_GAP,
                     ROAD_DOMAIN_LABEL_W, res_row_h, dlabel_style))
 

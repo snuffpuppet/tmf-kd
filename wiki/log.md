@@ -2499,3 +2499,22 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Why `background="#FFFFFF"` rather than relying on draw.io defaults.** The drawio file format does not strictly require a `background` attribute — when omitted, draw.io applications fall back to the user's current theme color. Light-theme users see white; dark-theme users see dark. Setting it explicitly in the file overrides the theme so the file renders consistently regardless of viewer setup. Same pattern applied to all 4 pages for consistency.
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T19:30Z — DIAGRAMS — Roadmap page: line-break rendering fix + domain label restructure
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        1. **`cell()` helper now converts `\n` to `&#10;`** (XML newline entity) after escape. Under drawio's `html=1` rendering mode, literal newline characters are treated as whitespace; the `&#10;` entity forces actual line breaks. Fixes column headers and domain labels appearing as run-on text rather than multi-line stacked.
+        2. **Domain row labels restructured** — was `"SERVICE\nDOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\"\n— services realizing\nProduct offerings"` (which split "SERVICE DOMAIN" across two lines and chunked the description awkwardly); now `"SERVICE DOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\" — services realizing Product offerings"` (three centered lines: name / ref / description). Same shape on Resource side.
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated with both fixes.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **drawio html=1 line-break behavior.** The `html=1` style flag tells drawio to render the cell value as HTML; under HTML, `\n` collapses to whitespace. The XML entity `&#10;` (or `&#xa;`) is the canonical way to encode an actual newline character that drawio renders as a break. Drawio's own UI emits files this way.
+    - **Why apply globally to `cell()` helper rather than per-callsite.** All cells in this file use `html=1` styling (set by `style_box()` and `style_text()` defaults). A central `\n` → `&#10;` conversion in the cell() emitter ensures every multi-line value renders consistently regardless of where in the script it's constructed. Single-line values are unaffected (no `\n` to convert).
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
