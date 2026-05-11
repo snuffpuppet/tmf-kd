@@ -314,16 +314,22 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None, compact=False):
     if stroke is None:
         stroke = S2R_MID
 
-    # Layout dimensions — switch to compact for the A3-fit Roadmap page
+    # Layout dimensions — switch to compact for the A3-fit Roadmap page.
+    # In compact mode each text cell gets enough fixed height for 2-line wrap so
+    # rendered text never overflows into the next cell (which would visually
+    # overlap). Compact mode also drops the L2 anchor footer and H5 source line
+    # to claw back vertical space; their info is preserved on the other pages.
     if compact:
-        l2_h_base = 88
-        l2_name_h = 46
-        h5_h = 38
+        # L2 layout: 4 (top pad) + 12 (id) + 28 (name 2-line) + 24 (desc 2-line) + 2 (gap) = 70
+        l2_name_h = 70  # y-position where H5 children start
+        l2_h_base = 72  # min L2 height (covers id+name+desc with tiny bottom margin)
+        h5_h = 4 + 14 + 26  # name 1-line + desc 2-line + padding = 44
         h5_g = 3
         font_id, font_name, font_desc, font_anchor = 8, 9, 7, 6
         font_h5_name, font_h5_desc, font_h5_src = 8, 7, 6
-        line_id_h, line_name_h, line_desc_h = 12, 16, 12
-        line_h5_name, line_h5_desc, line_h5_src = 12, 13, 11
+        line_id_h, line_name_h, line_desc_h = 12, 28, 24  # 2-line allocations for name + desc
+        line_h5_name, line_h5_desc, line_h5_src = 14, 26, 0  # 2-line desc; src dropped
+        show_anchor_footer = False  # dropped to save vertical space
     else:
         l2_h_base = L2_HEIGHT_BASE
         l2_name_h = L2_NAME_HEIGHT
@@ -333,6 +339,7 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None, compact=False):
         font_h5_name, font_h5_desc, font_h5_src = 9, 7, 6
         line_id_h, line_name_h, line_desc_h = 14, 18, 14
         line_h5_name, line_h5_desc, line_h5_src = 14, 14, 14
+        show_anchor_footer = True
 
     h5s = H5S.get(l2_id, [])
     body_h = l2_name_h + (len(h5s) * (h5_h + h5_g) if h5s else 0) + L2_PADDING
@@ -363,7 +370,7 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None, compact=False):
                     style_text(font_size=font_desc, font_color=DESC_COLOR, font_style=2, align="left"),
                     parent=box_id))
 
-    # H5 children — yellow containers stacked below, each with name+desc+src+anchor inside
+    # H5 children — yellow containers stacked below, each with name+desc(+src) inside
     h5_y = l2_name_h
     for (h5_anchor, h5_name, h5_src, h5_desc) in h5s:
         h5_id = next(idgen)
@@ -378,18 +385,20 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None, compact=False):
         out.append(cell(h5_desc_id, h5_desc, 4, 1 + line_h5_name, w-18, line_h5_desc,
                         style_text(font_size=font_h5_desc, font_color="#6A4810", font_style=2, align="left"),
                         parent=h5_id))
-        h5_src_id = next(idgen)
-        out.append(cell(h5_src_id, h5_src + "  —  " + h5_anchor,
-                        4, 1 + line_h5_name + line_h5_desc, w-18, line_h5_src,
-                        style_text(font_size=font_h5_src, font_color="#999999", align="left"),
-                        parent=h5_id))
+        if line_h5_src > 0:
+            h5_src_id = next(idgen)
+            out.append(cell(h5_src_id, h5_src + "  —  " + h5_anchor,
+                            4, 1 + line_h5_name + line_h5_desc, w-18, line_h5_src,
+                            style_text(font_size=font_h5_src, font_color="#999999", align="left"),
+                            parent=h5_id))
         h5_y += h5_h + h5_g
 
-    # Anchor ID footer (placed near bottom — leave 6px clearance for the box border)
-    anchor_id = next(idgen)
-    out.append(cell(anchor_id, anchor, 6, box_h - 18, w-12, 12,
-                    style_text(font_size=7, font_color="#888888", align="left"),
-                    parent=box_id))
+    # Anchor ID footer — placed near bottom; skipped in compact mode to save vertical space.
+    if show_anchor_footer:
+        anchor_id = next(idgen)
+        out.append(cell(anchor_id, anchor, 6, box_h - 18, w-12, 12,
+                        style_text(font_size=7, font_color="#888888", align="left"),
+                        parent=box_id))
 
     return "\n".join(out), box_h
 
@@ -596,12 +605,13 @@ ROAD_COL_W = 207
 ROAD_BAND_H = 22
 ROAD_HDR_H = 36
 ROAD_CELL_GAP = 5
-ROAD_CELL_PADDING = 5
-ROAD_L2_GAP = 5
-# Compact L2 dimensions used in roadmap (mirror the compact branch in emit_l2_box)
-ROAD_L2_HEIGHT_BASE = 88
-ROAD_L2_NAME_HEIGHT = 46
-ROAD_H5_HEIGHT = 38
+ROAD_CELL_PADDING = 4
+ROAD_L2_GAP = 3
+# Compact L2 dimensions used in roadmap (mirror the compact branch in emit_l2_box).
+# Values must match the `if compact:` branch in emit_l2_box for accurate row sizing.
+ROAD_L2_HEIGHT_BASE = 72
+ROAD_L2_NAME_HEIGHT = 70  # 4 (top pad) + 12 (id) + 28 (name 2-line) + 24 (desc 2-line) + 2 (gap)
+ROAD_H5_HEIGHT = 44       # 4 + 14 (name 1-line) + 26 (desc 2-line)
 ROAD_H5_GAP = 3
 
 

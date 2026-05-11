@@ -2587,3 +2587,27 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Why `1654×1169` not `1684×1190` for A3 landscape.** drawio uses 100dpi for paper conversions: 297mm × 100/25.4 = 1169.29; 420mm × 100/25.4 = 1653.54. drawio's preset rounds to 1169 / 1654. Setting these exact values makes drawio's UI display the page as "A3 (Landscape)" rather than "Custom".
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T22:00Z — DIAGRAMS — Roadmap text overlap fix (2-line allocations for wrapping fields)
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        - **L2 name cell height** in compact mode increased from 16px (1 line) to 28px (2 lines). When a name like *"Service Specification Lifecycle Management"* wraps to 2 lines, the rendered text now stays inside the name cell rather than spilling into the desc cell below.
+        - **L2 desc cell height** increased from 12px (1 line) to 24px (2 lines). Same fix for descriptions.
+        - **H5 desc cell height** increased from 13px (1 line) to 26px (2 lines). Same fix for the yellow sub-capability boxes — wrapped descriptions no longer cover the source/anchor label below.
+        - **H5 source line dropped** in compact mode (`line_h5_src = 0`) — saves ~13px per H5. The src+anchor info is preserved in non-compact pages and on the wiki source pages.
+        - **L2 anchor footer dropped** in compact mode via new `show_anchor_footer` flag. Also a vertical-space saving; anchor info preserved elsewhere.
+        - Tightened `ROAD_*` constants to fit the now-taller cells inside A3 landscape: `ROAD_CELL_PADDING` 5→4, `ROAD_L2_GAP` 4→3, `ROAD_L2_HEIGHT_BASE` 88→72, `ROAD_L2_NAME_HEIGHT` updated to 70 (matches new compact branch).
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why the overlap happened.** drawio cells use absolute positioning with fixed widths and heights. Text inside a cell with `whiteSpace=wrap` flows internally but the cell boundary is fixed. When text wrapped to a second line, it rendered beyond the cell's bottom edge — and since the next cell (description) was positioned at `cell_top + previous_cell_height`, the wrapped text visually overlapped it. Fix: allocate enough height in the wrapping cell so 2-line text fits within the cell boundary.
+    - **Why fixed-height cells rather than auto-flow.** drawio doesn't have CSS-style auto-layout where one cell pushes the next down. Each cell has absolute coordinates. The only way to prevent overlap is either (a) allocate enough height up front, or (b) use a single multi-line cell with HTML formatting. Approach (a) is simpler and what's done here.
+    - **What was sacrificed to fit A3.** The L2 anchor footer (small grey text at the bottom of each L2 box) and the H5 source line (`L3 1.4.1.8 — cap-...`) are hidden in compact mode. Both are still visible on the S2R / Operations / Combined pages (which use larger page sizes) and in the wiki source pages. The trade-off: the Roadmap page is now overview-friendly at A3 size; readers needing the source/anchor citations can drill into the other pages.
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
