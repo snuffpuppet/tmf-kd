@@ -243,8 +243,8 @@ CELL_PADDING = 12
 # ----------------------------------------------------------------------
 
 def cell(id_, value, x, y, w, h, style, parent="1"):
-    """Return an mxCell XML string (vertex)."""
-    safe_value = escape(value)
+    """Return an mxCell XML string (vertex). Escapes &, <, > and " in value."""
+    safe_value = escape(value, {'"': "&quot;"})
     return (
         f'        <mxCell id="{id_}" value="{safe_value}" '
         f'style="{style}" vertex="1" parent="{parent}">\n'
@@ -289,9 +289,14 @@ def style_text(font_size=10, font_color="#333", font_style=0, align="left", vali
 # Higher-level emit functions
 # ----------------------------------------------------------------------
 
-def emit_l2_box(idgen, l2_id, x, y, w, parent="1"):
+def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None):
     """Emit an L2 box with name/desc/id text inside, plus any H5 children
-    nested as containers within. Returns (cells_xml, total_height)."""
+    nested as containers within. Returns (cells_xml, total_height).
+
+    stroke: stroke color for the L2 box border + ID-text color (defaults to
+    S2R_MID; pass OPS_MID for Operations-area L2s in the roadmap layout)."""
+    if stroke is None:
+        stroke = S2R_MID
     h5s = H5S.get(l2_id, [])
     body_h = L2_NAME_HEIGHT + (len(h5s) * (H5_HEIGHT + H5_GAP) if h5s else 0) + L2_PADDING
     box_h = max(L2_HEIGHT_BASE, body_h)
@@ -303,18 +308,15 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1"):
     pid_label = l2_id + ("*" if name.endswith("*") else "")
     name_clean = name.rstrip("*")
 
-    # The L2 box itself — container, white fill, mid-color stroke.
-    # Stroke color depends on which area this L2 lives in (set by caller via parent placement;
-    # for simplicity we use S2R_MID universally here and override in the combined builder).
-    box_style = style_box(L2_FILL, S2R_MID, font_size=10,
+    box_style = style_box(L2_FILL, stroke, font_size=10,
                           container=True, align="left", valign="top")
     out = [cell(box_id, "", x, y, w, box_h, box_style, parent=parent)]
 
     # Inside-the-L2 children use box_id as parent; positions are relative to the L2's geometry.
-    # Header: ID line (small monospace-style, top-left)
+    # Header: ID line (small monospace-style, top-left) — colored to match stroke
     id_label_id = next(idgen)
     out.append(cell(id_label_id, pid_label, 6, 4, w-12, 14,
-                    style_text(font_size=9, font_color=S2R_MID, font_style=1, align="left"),
+                    style_text(font_size=9, font_color=stroke, font_style=1, align="left"),
                     parent=box_id))
     # Name
     name_id = next(idgen)
@@ -435,7 +437,8 @@ def emit_grid(idgen, grid, area_dark, area_mid, area_cell, x_start, y_start, par
                     inner_y += row_max_h + ROW_GAP
                     row_max_h = 0
                 inner_x = CELL_PADDING + col * (w + ROW_GAP)
-                xml, _ = emit_l2_box(idgen, lid, inner_x, inner_y, w, parent=cell_id)
+                xml, _ = emit_l2_box(idgen, lid, inner_x, inner_y, w,
+                                     parent=cell_id, stroke=area_mid)
                 out.append(xml)
                 row_max_h = max(row_max_h, heights[i])
 
@@ -537,24 +540,168 @@ def build_combined_page(idgen):
 
 
 # ----------------------------------------------------------------------
+# Roadmap layout — verticals across the top, domains down the side
+# ----------------------------------------------------------------------
+
+# Roadmap-specific layout constants (wider columns, taller cells)
+ROAD_DOMAIN_LABEL_W = 140
+ROAD_COL_W = 295
+ROAD_BAND_H = 30
+ROAD_HDR_H = 56
+ROAD_CELL_GAP = 12
+
+
+def stacked_height(l2_ids):
+    """Height needed to stack L2s vertically inside a roadmap cell."""
+    if not l2_ids:
+        return L2_HEIGHT_BASE + 2 * CELL_PADDING
+    total = 0
+    for lid in l2_ids:
+        h5_count = len(H5S.get(lid, []))
+        l2_h = max(L2_HEIGHT_BASE,
+                   L2_NAME_HEIGHT + h5_count * (H5_HEIGHT + H5_GAP) + L2_PADDING)
+        total += l2_h
+    total += (len(l2_ids) - 1) * ROW_GAP
+    return total + 2 * CELL_PADDING
+
+
+def emit_grid_roadmap(idgen, x_start, y_start):
+    """Roadmap-orientation grid: 7 vertical columns across, 2 domain rows down.
+    S2R verticals (3) on the left half; Operations verticals (4) on the right.
+    Returns (xml, total_width, total_height)."""
+    out = []
+    n_s2r = len(S2R_GRID)
+    n_ops = len(OPS_GRID)
+    all_grids = S2R_GRID + OPS_GRID
+
+    cols_x_start = x_start + ROAD_DOMAIN_LABEL_W + ROAD_CELL_GAP
+
+    # Lifecycle Area band labels (row 1)
+    s2r_band_w = n_s2r * ROAD_COL_W + (n_s2r - 1) * ROAD_CELL_GAP
+    ops_band_w = n_ops * ROAD_COL_W + (n_ops - 1) * ROAD_CELL_GAP
+
+    band_style_s2r = style_box(S2R_DARK, S2R_DARK, font_size=12,
+                               font_color="#FFFFFF", font_style=1, align="center")
+    out.append(cell(next(idgen),
+                    "STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver",
+                    cols_x_start, y_start, s2r_band_w, ROAD_BAND_H, band_style_s2r))
+
+    ops_band_x = cols_x_start + s2r_band_w + ROAD_CELL_GAP
+    band_style_ops = style_box(OPS_DARK, OPS_DARK, font_size=12,
+                               font_color="#FFFFFF", font_style=1, align="center")
+    out.append(cell(next(idgen),
+                    "OPERATIONS LIFECYCLE AREA — day-to-day customer operations",
+                    ops_band_x, y_start, ops_band_w, ROAD_BAND_H, band_style_ops))
+
+    # Vertical column headers (row 2)
+    hdr_y = y_start + ROAD_BAND_H + 4
+    for i, (vname, _, _) in enumerate(all_grids):
+        is_s2r = i < n_s2r
+        hdr_color = S2R_MID if is_s2r else OPS_MID
+        hdr_style = style_box(hdr_color, hdr_color, font_size=11,
+                              font_color="#FFFFFF", font_style=1)
+        col_x = cols_x_start + i * (ROAD_COL_W + ROAD_CELL_GAP)
+        # Two-line column header: name + GB991 ref
+        out.append(cell(next(idgen),
+                        vname + "\nGB991 §1.1.2.2",
+                        col_x, hdr_y, ROAD_COL_W, ROAD_HDR_H, hdr_style))
+
+    # Pre-compute row heights from densest cell per row
+    svc_heights = [stacked_height(svc_l2s) for (_, svc_l2s, _) in all_grids]
+    res_heights = [stacked_height(res_l2s) for (_, _, res_l2s) in all_grids]
+    svc_row_h = max(svc_heights)
+    res_row_h = max(res_heights)
+
+    cells_y = hdr_y + ROAD_HDR_H + 4
+
+    # Domain row labels (left edge, span full row height per domain)
+    dlabel_style = style_box("#444444", "#444444", font_size=12,
+                             font_color="#FFFFFF", font_style=1, align="center")
+    out.append(cell(next(idgen),
+                    "SERVICE\nDOMAIN\n\nGB991 §1.1.1.5\n\n\"What is sold\"\n— services realizing\nProduct offerings",
+                    x_start, cells_y, ROAD_DOMAIN_LABEL_W, svc_row_h, dlabel_style))
+    out.append(cell(next(idgen),
+                    "RESOURCE\nDOMAIN\n\nGB991 §1.1.1.6\n\n\"What runs\nunderneath\"\n— infrastructure\nrealizing Services",
+                    x_start, cells_y + svc_row_h + ROAD_CELL_GAP,
+                    ROAD_DOMAIN_LABEL_W, res_row_h, dlabel_style))
+
+    # Cells: 2 rows × 7 columns. For each (domain, vertical) intersection,
+    # create a cell container and stack L2 boxes inside vertically.
+    rows = [
+        ("svc", cells_y, svc_row_h),
+        ("res", cells_y + svc_row_h + ROAD_CELL_GAP, res_row_h),
+    ]
+    for (domain_key, row_y, row_h) in rows:
+        for i, (vname, svc_l2s, res_l2s) in enumerate(all_grids):
+            l2_ids = svc_l2s if domain_key == "svc" else res_l2s
+            is_s2r = i < n_s2r
+            cell_color = S2R_CELL if is_s2r else OPS_CELL
+            cell_stroke = S2R_MID if is_s2r else OPS_MID
+
+            col_x = cols_x_start + i * (ROAD_COL_W + ROAD_CELL_GAP)
+            cell_style = style_box(cell_color, cell_stroke, font_size=8, container=True)
+            cell_id = next(idgen)
+            out.append(cell(cell_id, "", col_x, row_y, ROAD_COL_W, row_h, cell_style))
+
+            # Stack L2s vertically inside the cell
+            l2_w = ROAD_COL_W - 2 * CELL_PADDING
+            inner_y = CELL_PADDING
+            for lid in l2_ids:
+                xml, l2_h = emit_l2_box(idgen, lid, CELL_PADDING, inner_y, l2_w,
+                                        parent=cell_id, stroke=cell_stroke)
+                out.append(xml)
+                inner_y += l2_h + ROW_GAP
+
+    total_w = ROAD_DOMAIN_LABEL_W + ROAD_CELL_GAP + n_total_cols(all_grids) * ROAD_COL_W \
+              + (n_total_cols(all_grids) - 1) * ROAD_CELL_GAP
+    total_h = (cells_y - y_start) + svc_row_h + ROAD_CELL_GAP + res_row_h
+    return "\n".join(out), total_w, total_h
+
+
+def n_total_cols(all_grids):
+    return len(all_grids)
+
+
+def build_roadmap_page(idgen):
+    out = []
+    out.append(cell(next(idgen),
+                    "Combined Capability Map — Roadmap Layout",
+                    PAGE_MARGIN, PAGE_MARGIN, 2200, 30,
+                    style_text(font_size=20, font_color="#1A1A1A", font_style=1, align="left", valign="middle")))
+    out.append(cell(next(idgen),
+                    "Verticals across (Strategy → Capability → BVD → ORS → Fulfillment → Assurance → Billing)  ·  "
+                    "Domains down (Service / Resource)  ·  47 stable heat-map anchors  ·  Phase 3 — 2026-05-12",
+                    PAGE_MARGIN, PAGE_MARGIN+30, 2200, 18,
+                    style_text(font_size=9, font_color="#555", align="left", valign="middle")))
+
+    grid_xml, _, _ = emit_grid_roadmap(idgen,
+                                       x_start=PAGE_MARGIN,
+                                       y_start=PAGE_MARGIN + 60)
+    out.append(grid_xml)
+    return "\n".join(out)
+
+
+# ----------------------------------------------------------------------
 # Top-level: emit the .drawio file
 # ----------------------------------------------------------------------
 
 def main():
-    counter = count(2)  # 0 and 1 are reserved for root/parent
-
-    # Build pages with separate ID counters per page (drawio requires unique IDs only within a page)
+    # Build pages with separate ID counters per page
+    # (drawio requires unique IDs only within a page)
     s2r_body = build_s2r_page(count(2))
     ops_body = build_ops_page(count(2))
     comb_body = build_combined_page(count(2))
+    road_body = build_roadmap_page(count(2))
 
     pages = []
     # S2R page — A3 landscape (1684 x 1190 pt at 1 pt/px)
     pages.append(build_page("S2R area", s2r_body, 1684, 1190))
-    # Operations page — A3 landscape
+    # Operations page — A3 landscape, extended height for dense ORS row
     pages.append(build_page("Operations area", ops_body, 1684, 1400))
     # Combined page — A2 landscape (2384 x 1684)
     pages.append(build_page("Combined", comb_body, 2384, 1684))
+    # Roadmap page — custom width to fit 7 columns × ~295pt + label column + margins
+    pages.append(build_page("Roadmap", road_body, 2480, 1500))
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     xml = (
@@ -566,7 +713,7 @@ def main():
     )
 
     OUT.write_text(xml)
-    print(f"wrote {OUT.name} ({OUT.stat().st_size:,} bytes, 3 pages)")
+    print(f"wrote {OUT.name} ({OUT.stat().st_size:,} bytes, {len(pages)} pages)")
 
 
 if __name__ == "__main__":

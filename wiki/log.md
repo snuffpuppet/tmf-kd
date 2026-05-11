@@ -2457,3 +2457,26 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Roadmap-reading footer.** Footer carries explicit "read it like a roadmap" guidance — left-to-right is the OSS modernisation Lifecycle progression; top-to-bottom is PSR-paired comparison. Practitioners unfamiliar with the layout convention get the framing immediately.
     - **Pending decisions:** none.
     - **Next action:** _(none unless user wants the roadmap layout added as a 4th page in `capability-map.drawio` — the .drawio file currently has 3 pages matching the original combined layout's structure. Adding a vertical-major page would require ~150 lines of additional layout code in `_build_drawio.py`. Worth doing if the user prefers this layout for editing.)_
+
+---
+
+## 2026-05-12T18:30Z — DIAGRAMS — Roadmap layout added as Page 4 of capability-map.drawio
+
+- **File(s):** none ingested. Derivative visual artefact.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/capability-map.drawio` — added 4th page **"Roadmap"** matching the HTML render's vertical-major orientation (verticals across the top, domains down the side). 250 mxCell elements on the new page; total file now 244 KB; structurally validated (4 pages, zero broken parent references). Custom 2480×1500 page size to fit 7 columns of 295pt + label column + margins.
+    - `wiki/views/diagrams/_build_drawio.py` — extended with:
+        - `emit_grid_roadmap()` — transposed-orientation grid emitter (S2R band spans first 3 column ranges; Operations band spans next 4; vertical column headers below; domain row labels on left; cells stack L2s vertically).
+        - `build_roadmap_page()` — top-level page builder.
+        - `stacked_height()` helper for computing the vertical stack height needed per (domain, vertical) intersection.
+        - Refactored `emit_l2_box()` to take a `stroke` color parameter so L2 box borders match their Lifecycle Area in the new layout (blue for S2R columns, green for Operations columns). Backward-compatible default keeps existing pages rendering as before, and threaded through `emit_grid()` so the existing combined-page L2 borders are now also area-colored.
+        - Bug fix: `cell()` helper now escapes `"` in the `value` attribute (was breaking on the domain row labels containing *"What is sold"* / *"What runs underneath"* phrases).
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Page 4 mirrors `capability-map-roadmap.html` orientation.** Same 47 anchors, same descriptions, same color palette. The HTML render is the print/presentation export; the .drawio page is the editable equivalent.
+    - **L2 border color now Lifecycle-Area-aware across all pages.** The original `emit_l2_box()` hardcoded `S2R_MID` for the L2 border color regardless of which area the L2 lived in. Refactor adds a `stroke` parameter; `emit_grid()` and `emit_grid_roadmap()` now both pass the area-appropriate color through. Side effect: the existing "Combined" page (Page 3) now also shows correct area-colored L2 borders — a minor improvement to the combined page that also landed in this commit.
+    - **Custom page size for Roadmap.** A2 landscape (1684×1190) is too narrow for 7 columns at comfortable reading width — would require columns ~210pt wide, cramping L2 names. Roadmap page uses custom 2480×1500 to fit 7 columns of 295pt + 140pt label column + gaps. drawio handles custom page sizes natively (`pageWidth` / `pageHeight` in mxGraphModel).
+    - **Pending decisions:** none.
+    - **Next action:** _(none — capability-map.drawio now contains all 4 layouts: 3 area-specific renders + 2 combined views. Practitioners can pick whichever matches their immediate task.)_
