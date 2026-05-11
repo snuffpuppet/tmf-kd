@@ -2537,3 +2537,30 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Verbatim discipline (CLAUDE.md §1) reinforced.** The *"LIFECYCLE AREA"* and descriptive phrases I had added were technically derivative content — fine in narrative prose but problematic on a diagram label that reads as if it were the canonical TMF term. Stripping back to just the GB991 verbatim terms is the right call. Applies to both view pages too if I add Lifecycle Area band labels there (currently they don't have them — capability-map.md and capability-map-s2r.md identify their area in the page H1 / Session State, not via embedded band labels).
     - **Pending decisions:** none.
     - **Next action:** _(none.)_
+
+---
+
+## 2026-05-12T20:30Z — DIAGRAMS — Roadmap promoted to Page 1 + A3 landscape + footer + centered title
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py`:
+        - **Page order changed.** Roadmap promoted to Page 1; S2R / Operations / Combined slide down to pages 2 / 3 / 4. Reflects that the Roadmap layout is now the primary view.
+        - **Roadmap page resized to A3 landscape (1684×1190 pt).** Fits TMForum's standard print/share format — was 2480×1500 custom which didn't match any standard paper size.
+        - **Compact-mode L2 boxes** to make all 47 anchors fit in A3 landscape:
+            - Roadmap-specific layout constants (`ROAD_DOMAIN_LABEL_W=100`, `ROAD_COL_W=205`, `ROAD_BAND_H=22`, `ROAD_HDR_H=38`, `ROAD_CELL_GAP=6`, `ROAD_CELL_PADDING=6`, `ROAD_L2_GAP=6`).
+            - `emit_l2_box()` extended with a `compact=True` flag — switches to tighter dimensions (L2 base 88, name area 46, H5 height 38, smaller fonts: id 8pt, name 9pt, desc 7pt; H5: name 8pt, desc 7pt, src 6pt). Default `compact=False` preserves existing pages unchanged.
+            - `stacked_height()` extended with same `compact` flag for accurate per-cell row sizing.
+        - **Centered title and subtitle** on the Roadmap page (was left-aligned). Title text simplified to *"OSS Capability Map — Roadmap Layout"*.
+        - **New `emit_footer()` helper** — emits a single-row footer strip: dark filler on the left, then alternating blue label + white content cells. Mirrors the user-supplied screenshot. Used on the Roadmap page with fields: Document = "OSS Capability Map", Author = "Adam Moyes", Version = "1.0", Last Updated = "11 May 2026".
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated. Roadmap is now Page 1, A3 landscape, with title centered and footer at bottom. 259 mxCells on the Roadmap page (up from 250 — added footer cells); 4 pages total; zero broken parent references.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why compact-mode rather than larger A3 page.** The Roadmap layout's natural width is ~2300 pt at comfortable reading sizes. Forcing it onto A3 landscape (1684 wide) requires column compression to ~205pt and proportional reductions across all L2/H5 dimensions. A3 is the most-printed paper size in business contexts; the trade-off (smaller fonts, tighter layout) buys universal print compatibility.
+    - **Why pre-defined compact dimensions rather than auto-fit.** Auto-fitting would require iterative layout (compute → measure → adjust → recompute) which complicates the generator. Pre-defined compact constants are a one-time tuning exercise; the constants are easy to adjust if the user wants different sizing.
+    - **Footer width allocation.** Each label-content pair is 80+130 = 210pt. 4 pairs = 840pt. Page body width minus 4 pairs = the dark filler width on the left (auto-sized). Dark filler doesn't carry any text — it's a visual anchor that mirrors the source image's layout (likely a placeholder for branding / page number in the original document template).
+    - **Other pages unchanged.** S2R / Operations / Combined pages still render as before (verticals down side, etc.). Only the Roadmap page got the A3 + footer + center treatment.
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
