@@ -2480,3 +2480,22 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
     - **Custom page size for Roadmap.** A2 landscape (1684×1190) is too narrow for 7 columns at comfortable reading width — would require columns ~210pt wide, cramping L2 names. Roadmap page uses custom 2480×1500 to fit 7 columns of 295pt + 140pt label column + gaps. drawio handles custom page sizes natively (`pageWidth` / `pageHeight` in mxGraphModel).
     - **Pending decisions:** none.
     - **Next action:** _(none — capability-map.drawio now contains all 4 layouts: 3 area-specific renders + 2 combined views. Practitioners can pick whichever matches their immediate task.)_
+
+---
+
+## 2026-05-12T19:00Z — DIAGRAMS — Fix: full vertical names in Roadmap headers + explicit white page background
+
+- **File(s):** none ingested.
+- **Pages created/updated:**
+    - `wiki/views/diagrams/_build_drawio.py` — two fixes:
+        1. Added `FULL_VERTICAL_NAMES` mapping (e.g. `"BVD"` → `"BUSINESS VALUE DEVELOPMENT"`, `"ORS"` → `"OPERATIONS READINESS & SUPPORT"`). Used by `emit_grid_roadmap()` for the horizontal column headers; the original Combined page still uses the short labels in its rotated/vertical labels (where compact text fits the cell shape better).
+        2. Added `background="#FFFFFF"` to every `mxGraphModel` element via `build_page()`. Forces white canvas regardless of the user's draw.io theme — without it, dark-mode draw.io desktop renders the canvas dark, which made the matrix gridlines (cell strokes) appear very prominent against a dark background.
+    - `wiki/views/diagrams/capability-map.drawio` — regenerated. Both fixes verified in the XML; `STRATEGY MANAGEMENT`, `CAPABILITY MANAGEMENT`, `BUSINESS VALUE DEVELOPMENT`, `OPERATIONS READINESS & SUPPORT` all present in roadmap-page column headers; `background="#FFFFFF"` present on all 4 pages.
+- **Sections skipped:** N/A.
+- **Lint result:** PASS — see lint following.
+- **Open questions filed:** none.
+- **Notes:**
+    - **Why a separate FULL_VERTICAL_NAMES dict rather than changing S2R_GRID/OPS_GRID directly.** The grid data is shared between `emit_grid()` (used by S2R / Operations / Combined pages — labels rendered as rotated text in narrow cells where short labels fit better) and `emit_grid_roadmap()` (Roadmap page — labels rendered as horizontal column headers in wide cells where full names fit comfortably). Keeping the data short and mapping at render time per layout preserves both use cases.
+    - **Why `background="#FFFFFF"` rather than relying on draw.io defaults.** The drawio file format does not strictly require a `background` attribute — when omitted, draw.io applications fall back to the user's current theme color. Light-theme users see white; dark-theme users see dark. Setting it explicitly in the file overrides the theme so the file renders consistently regardless of viewer setup. Same pattern applied to all 4 pages for consistency.
+    - **Pending decisions:** none.
+    - **Next action:** _(none.)_
