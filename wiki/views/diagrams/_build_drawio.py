@@ -243,7 +243,7 @@ VLABEL_WIDTH = 80
 DOMAIN_WIDTH = 720
 COL_GAP = 20
 ROW_GAP = 15
-L2_HEIGHT_BASE = 90
+L2_HEIGHT_BASE = 108  # tall enough to fit ID + name + desc + anchor footer without clipping
 L2_HEIGHT_PER_H5 = 56
 L2_NAME_HEIGHT = 56  # space at top of L2 box reserved for name + desc + id
 L2_PADDING = 8
@@ -366,9 +366,9 @@ def emit_l2_box(idgen, l2_id, x, y, w, parent="1", stroke=None):
                         parent=h5_id))
         h5_y += H5_HEIGHT + H5_GAP
 
-    # Anchor ID footer (placed at bottom — relative to L2 box)
+    # Anchor ID footer (placed near bottom — leave 6px clearance for the box border)
     anchor_id = next(idgen)
-    out.append(cell(anchor_id, anchor, 6, box_h - 14, w-12, 12,
+    out.append(cell(anchor_id, anchor, 6, box_h - 18, w-12, 12,
                     style_text(font_size=7, font_color="#888888", align="left"),
                     parent=box_id))
 
@@ -535,7 +535,7 @@ def build_combined_page(idgen):
     band_y = PAGE_MARGIN + 60
     band_style = style_box(S2R_DARK, S2R_DARK, font_size=12, font_color="#FFFFFF", font_style=1, align="left")
     out.append(cell(next(idgen),
-                    "  STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver",
+                    "  STRATEGY-TO-READINESS",
                     PAGE_MARGIN, band_y, 1620, 26, band_style))
 
     s2r_xml, s2r_h = emit_grid(idgen, S2R_GRID, S2R_DARK, S2R_MID, S2R_CELL,
@@ -546,7 +546,7 @@ def build_combined_page(idgen):
     ops_band_y = band_y + 30 + s2r_h + 15
     ops_band_style = style_box(OPS_DARK, OPS_DARK, font_size=12, font_color="#FFFFFF", font_style=1, align="left")
     out.append(cell(next(idgen),
-                    "  OPERATIONS LIFECYCLE AREA — day-to-day customer operations",
+                    "  OPERATIONS",
                     PAGE_MARGIN, ops_band_y, 1620, 26, ops_band_style))
 
     ops_xml, _ = emit_grid(idgen, OPS_GRID, OPS_DARK, OPS_MID, OPS_CELL,
@@ -600,14 +600,14 @@ def emit_grid_roadmap(idgen, x_start, y_start):
     band_style_s2r = style_box(S2R_DARK, S2R_DARK, font_size=12,
                                font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
-                    "STRATEGY-TO-READINESS LIFECYCLE AREA — what to build / how to deliver",
+                    "STRATEGY-TO-READINESS",
                     cols_x_start, y_start, s2r_band_w, ROAD_BAND_H, band_style_s2r))
 
     ops_band_x = cols_x_start + s2r_band_w + ROAD_CELL_GAP
     band_style_ops = style_box(OPS_DARK, OPS_DARK, font_size=12,
                                font_color="#FFFFFF", font_style=1, align="center")
     out.append(cell(next(idgen),
-                    "OPERATIONS LIFECYCLE AREA — day-to-day customer operations",
+                    "OPERATIONS",
                     ops_band_x, y_start, ops_band_w, ROAD_BAND_H, band_style_ops))
 
     # Vertical column headers (row 2) — use full vertical names for readability
