@@ -2666,3 +2666,11 @@ Never edit existing entries. Format defined in [[CLAUDE]] §9.
 - **Pages updated:** Moved `wiki/views/diagrams/RESUME-PROMPT.md` → `CAPABILITY-MAP-RESUME-PROMPT.md` (repo root) — process-management artifact, consistent with `S2R-EXPANSION-SCOPE.md` placement; lives outside `wiki/` so the linter doesn't require corpus-type frontmatter.
 - **Lint result:** PASS — see lint following.
 - **Notes:** Prompt captures orientation steps, the always-export-PDF-and-PNG directive, established design decisions, and workflow conventions. Drop the file content into a fresh session as the opening message to continue capability-map refinement work without re-explaining context.
+
+---
+
+## 2026-05-12T23:45Z — DOCS — View pages: .drawio description corrected to single-page Roadmap
+
+- **Pages updated:** `wiki/views/capability-map.md` + `wiki/views/capability-map-s2r.md` — Visual exports section's "Editable draw.io source" paragraph was stale (described the .drawio as a "single multi-page draw.io file with all three diagrams"); corrected to reflect the now-current "single-page A3-landscape Roadmap layout" reality. Also tweaked `CAPABILITY-MAP-RESUME-PROMPT.md` — render-command wording mentions the `TARGETS` array (so future additions don't silently invalidate the prompt) and the log-reading instruction recommends `grep + Read offset/limit` over a large `tail -N` (avoids tool-output cap).
+- **Lint result:** PASS — see lint following.
+- **Notes:** Surfaced by a fresh-session test of the resume prompt — the test agent flagged the stale view-page paragraphs and suggested the prompt tweaks. Bug-fixes only; no design change.

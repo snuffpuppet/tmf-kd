@@ -22,8 +22,10 @@ the Service and Resource Domains.
 3. **`wiki/views/diagrams/`** directory listing — see what's there.
 4. **`wiki/views/capability-map.md`** + **`wiki/views/capability-map-s2r.md`**
    `## Visual exports` sections — they index every artefact in `diagrams/`.
-5. **`wiki/log.md`** tail (`tail -300 wiki/log.md`) — recent design iterations
-   on the capability-map diagrams (look for `DIAGRAMS —` entries).
+5. **`wiki/log.md`** — recent design iterations on the capability-map diagrams.
+   Use `grep -n 'DIAGRAMS —' wiki/log.md | tail -10` to index recent diagram
+   entries, then read the relevant slices via `Read` with `offset`/`limit` —
+   this is much cheaper than `tail -300` (which can blow the tool-output cap).
 6. Run `python3 lint/lint.py` — must report `PASS — 147 page(s) checked, 0
    findings.` If it doesn't, fix the lint failure before any other work.
 
@@ -34,7 +36,7 @@ outputs in the same turn, before committing:
 
 | Source you changed | Regenerate command |
 |---|---|
-| Any `*.html` file in `wiki/views/diagrams/` | `bash wiki/views/diagrams/render.sh` (regenerates PDF + PNG for all 4 HTML files) |
+| Any `*.html` file in `wiki/views/diagrams/` | `bash wiki/views/diagrams/render.sh` (regenerates PDF + PNG for every entry in the script's `TARGETS` array — currently 4 HTML files) |
 | `_build_drawio.py` | `python3 wiki/views/diagrams/_build_drawio.py` (regenerates `capability-map.drawio`) |
 | `_apply_l2_descriptions.py` or `_apply_h5_descriptions.py` | Run that script, then `bash render.sh` to refresh exports |
 
