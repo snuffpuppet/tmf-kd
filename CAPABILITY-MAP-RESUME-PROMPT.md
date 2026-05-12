@@ -64,7 +64,9 @@ drawio --export --format png --page-index 1 \
   `_build_drawio.py`; they're independent.
 - **`render.sh`** — Chrome-headless render script; regenerates PDF + PNG for
   every HTML in the `TARGETS` array.
-- **`RESUME-PROMPT.md`** — this file.
+
+This prompt file lives at the **repo root** as `CAPABILITY-MAP-RESUME-PROMPT.md`
+(not inside `wiki/views/diagrams/`).
 
 ### Rendered artefacts (regenerate, don't hand-edit)
 - `*.pdf` — print-quality, A2/A3 landscape per the HTML's `@page` rule
@@ -112,7 +114,16 @@ drawio --export --format png --page-index 1 \
     - Thick blue left-edge bar (`#5BB6E8`, 4pt wide) — info-callout indicator
     - Note text cell starts at `x = margin + bar_w` (NOT overlapping the bar);
       `spacingLeft=12` adds internal padding so the ⓘ icon has breathing room
-    - Currently explains the `*` on multi-vertical L2 IDs (1.5.5*, 1.5.7*)
+    - Currently explains the `*` on multi-vertical L2 IDs (see below)
+- **Multi-vertical `*` convention**: GB921 v25.5's `Vertical Group` field places
+  some L2s under more than one vertical. The diagram renders each L2 once under
+  its primary vertical and suffixes the L2 ID with `*` to flag the multi-vertical
+  status. Currently two L2s carry it: **`1.5.5*`** Resource Order Management
+  (Fulfillment + Operations Readiness & Support) and **`1.5.7*`** Resource Data
+  Management (all four OFAB verticals — Assurance + Billing + Fulfillment + ORS).
+  The asterisks are baked into `L2_NAME` values in `_build_drawio.py` and parsed
+  out in the rendering loop; the legend strip on the Roadmap page documents them
+  for the reader.
 - **Newline rendering**: `cell()` helper converts `\n` → `&#10;` so multi-line
   values render as actual line breaks under `html=1` mode.
 
